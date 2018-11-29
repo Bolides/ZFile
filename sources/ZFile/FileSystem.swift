@@ -75,7 +75,7 @@ public protocol ItemProtocol {
  */
 // sourcery:AutoGenerateSelectiveProtocol
 public class FileSystem: FileSystemProtocol {
-    static let shared = FileSystem()
+    public static let shared = FileSystem()
     
     let fileManager: FileManager
     
