@@ -138,6 +138,15 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
         try super.init(path: path, kind: .folder, using: .default)
     }
     
+    /**
+     *  Initialize an instance of this class with a path pointing to a folder
+     *
+     *  - parameter path: The path of the folder to create a representation of
+     *  - parameter fileManager: Optionally give a custom file manager to use to look up the folder
+     *
+     *  - throws: `FileSystemItem.Error` in case an empty path was given, or if the path given doesn't
+     *    point to a readable folder.
+     */
     public init(path: String, fileManager: FileManager) throws {
         var path = path
         
@@ -150,6 +159,20 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
         }
         
         try super.init(path: path, kind: .folder, using: fileManager)
+    }
+    
+    
+    /**
+     *  Initialize an instance of this class with a relative path pointing to a folder
+     *
+     *  - parameter path: The path of the folder to create a representation of (If you leave the path empty you will get the current folder)
+     *  - parameter folder: Optionally give folder where the path starts.
+     *
+     *  - throws: `FileSystemItem.Error` in case an empty path was given, or if the path given doesn't
+     *    point to a readable folder.
+     */
+    public init(relativePath: String, to folder: FolderProtocol = FileSystem.shared.currentFolder, using fileManager: FileManager = FileManager.default) throws {        
+        try super.init(path: folder.path.appending(relativePath), kind: .folder, using: fileManager)
     }
     
     /**
