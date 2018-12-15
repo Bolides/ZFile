@@ -286,7 +286,8 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      */
     // sourcery:selectedForProtocol
     @discardableResult public func createFileIfNeeded(named fileName: String) throws -> FileProtocol {
-        return try FileSystem(using: .default).createFileIfNeeded(at: "\(self.path)/\(fileName)", contents: Data())
+        let pathWithSlash = "\(self.path.hasSuffix("/") ? self.path : "\(self.path)/")"
+        return try FileSystem(using: .default).createFileIfNeeded(at: "\(pathWithSlash)\(fileName)", contents: Data())
     }
     
     /**
