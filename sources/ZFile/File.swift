@@ -62,8 +62,8 @@ open class File: FileSystem.Item, FileProtocol {
         }
     }
     
-    public required init() {
-        try! super.init(path: "\(Date().timeIntervalSince1970)", kind: .file, using: .default)
+    public required init() throws {
+        try super.init(path: "\(Date().timeIntervalSince1970)", kind: .file, using: .default)
     }
     
     /**

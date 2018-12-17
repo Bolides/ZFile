@@ -37,7 +37,7 @@ public protocol FileSystemProtocol {
 /// Protocol adopted by file system types that may be iterated over (this protocol is an implementation detail)
 public protocol FileSystemIterable {
     /// Initialize an instance with a path that is the date and a file manager that is the default. Creates if needed.
-    init()
+    init() throws
     /// Initialize an instance with a path and a file manager
     init(path: String) throws
 }
