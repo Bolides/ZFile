@@ -1,0 +1,15 @@
+[submodule "Carthage/Checkouts/Sourcery"]
+	path = sources/Carthage/Checkouts/Sourcery
+	url = https://github.com/krzysztofzablocki/Sourcery.git
+[submodule "Carthage/Checkouts/Quick"]
+	path = sources/Carthage/Checkouts/Quick
+	url = https://github.com/doozMen/Quick.git
+[submodule "Carthage/Checkouts/TestAppDelegateExample"]
+	path = sources/Carthage/Checkouts/TestAppDelegateExample
+	url = https://github.com/mokacoding/TestAppDelegateExample.git
+[submodule "Carthage/Checkouts/template-sourcery"]
+	path = sources/Carthage/Checkouts/template-sourcery
+	url = https://github.com/doozMen/template-sourcery.git
+[submodule "Carthage/Checkouts/highway"]
+	path = sources/Carthage/Checkouts/highway
+	url = https://github.com/doozMen/highway.git
