@@ -1,15 +1,15 @@
 //
-//  ZFile_macosTests.swift
-//  ZFile_macosTests
+//  AutomateZFileTests.swift
+//  AutomateZFileTests
 //
-//  Created by Stijn on 29/11/2018.
+//  Created by Stijn on 21/12/2018.
 //  Copyright © 2018 dooz. All rights reserved.
 //
 
 import XCTest
-import ZFile
+@testable import AutomateZFile
 
-class ZFile_macosTests: XCTestCase {
+class AutomateZFileTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
