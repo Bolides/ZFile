@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDB7AA2421CD84960045DDA8"
-               BuildableName = "AutomateZFile.app"
-               BlueprintName = "AutomateZFile"
-               ReferencedContainer = "container:AutomateZFile.xcodeproj">
+               BlueprintIdentifier = "FDDB939221CDA9D500B6D5E9"
+               BuildableName = "ZFileIOSUseCase.app"
+               BlueprintName = "ZFileIOSUseCase"
+               ReferencedContainer = "container:ZFile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FD737DD121B03DC4001BB507"
-               BuildableName = "ZFileTests-macos.xctest"
-               BlueprintName = "ZFileTests-macos"
+               BlueprintIdentifier = "FDDB93A521CDA9D500B6D5E9"
+               BuildableName = "ZFileIOSUseCaseTests.xctest"
+               BlueprintName = "ZFileIOSUseCaseTests"
                ReferencedContainer = "container:ZFile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,30 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FD737DD121B03DC4001BB507"
-               BuildableName = "ZFileTests-macos.xctest"
-               BlueprintName = "ZFileTests-macos"
+               BlueprintIdentifier = "FDDB93A521CDA9D500B6D5E9"
+               BuildableName = "ZFileIOSUseCaseTests.xctest"
+               BlueprintName = "ZFileIOSUseCaseTests"
                ReferencedContainer = "container:ZFile.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDB7AA3621CD84970045DDA8"
-               BuildableName = "AutomateZFileTests.xctest"
-               BlueprintName = "AutomateZFileTests"
-               ReferencedContainer = "container:AutomateZFile.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDB7AA2421CD84960045DDA8"
-            BuildableName = "AutomateZFile.app"
-            BlueprintName = "AutomateZFile"
-            ReferencedContainer = "container:AutomateZFile.xcodeproj">
+            BlueprintIdentifier = "FDDB939221CDA9D500B6D5E9"
+            BuildableName = "ZFileIOSUseCase.app"
+            BlueprintName = "ZFileIOSUseCase"
+            ReferencedContainer = "container:ZFile.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -89,10 +79,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDB7AA2421CD84960045DDA8"
-            BuildableName = "AutomateZFile.app"
-            BlueprintName = "AutomateZFile"
-            ReferencedContainer = "container:AutomateZFile.xcodeproj">
+            BlueprintIdentifier = "FDDB939221CDA9D500B6D5E9"
+            BuildableName = "ZFileIOSUseCase.app"
+            BlueprintName = "ZFileIOSUseCase"
+            ReferencedContainer = "container:ZFile.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -108,10 +98,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDB7AA2421CD84960045DDA8"
-            BuildableName = "AutomateZFile.app"
-            BlueprintName = "AutomateZFile"
-            ReferencedContainer = "container:AutomateZFile.xcodeproj">
+            BlueprintIdentifier = "FDDB939221CDA9D500B6D5E9"
+            BuildableName = "ZFileIOSUseCase.app"
+            BlueprintName = "ZFileIOSUseCase"
+            ReferencedContainer = "container:ZFile.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
