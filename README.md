@@ -12,7 +12,7 @@ It builds:
 
 ```bash
 cd Sources
-
+carthage update --use-submodules --nobuild
 ```
 # Integrate ZFile
 
