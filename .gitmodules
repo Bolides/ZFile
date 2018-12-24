@@ -13,3 +13,6 @@
 [submodule "Carthage/Checkouts/Nimble"]
 	path = sources/Carthage/Checkouts/Nimble
 	url = https://github.com/doozMen/Nimble.git
+[submodule "Carthage/Checkouts/highway"]
+	path = sources/Carthage/Checkouts/highway
+	url = https://github.com/doozMen/highway.git
