@@ -1,7 +1,7 @@
-import Foundation
+import ZFile
 import os
 import SourceryAutoProtocols
-import ZFile
+import Foundation
 
 
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
@@ -21,6 +21,65 @@ import ZFile
 
 
 
+
+
+// MARK: - BundleProtocolMock
+
+open class BundleProtocolMock: BundleProtocol {
+
+    public init() {}
+
+
+
+  // MARK: - <string> - parameters
+
+  public var stringForThrowableError: Error?
+  public var stringForCallsCount = 0
+  public var stringForCalled: Bool {
+    return stringForCallsCount > 0
+  }
+  public var stringForReceivedKey: AnyRawRepresentable<String>?
+  public var stringForReturnValue: String?
+
+  // MARK: - <string> - closure mocks
+
+  public var stringForClosure: ((AnyRawRepresentable<String>) throws  -> String)? = nil
+
+
+
+  // MARK: - <string> - method mocked
+
+  open func string(for key: AnyRawRepresentable<String>) throws -> String {
+
+
+      // <string> - Throwable method implementation
+
+    if let error = stringForThrowableError {
+        throw error
+    }
+
+      stringForCallsCount += 1
+      stringForReceivedKey = key
+
+      // <string> - Return Value mock implementation
+
+      guard let closureReturn = stringForClosure else {
+          guard let returnValue = stringForReturnValue else {
+              let message = """
+                🧙‍♂️ 🔥asked to return a value for name parameters:
+                    stringFor
+                    but this case(s) is(are) not implemented in
+                    BundleProtocol for method stringForClosure.
+                """
+              let error = SourceryMockError.implementErrorCaseFor(message)
+                 throw error
+          }
+          return returnValue
+      }
+
+      return try closureReturn(key)
+  }
+}
 
 
 // MARK: - FileProtocolMock

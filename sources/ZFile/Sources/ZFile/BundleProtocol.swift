@@ -14,7 +14,7 @@ import FoundationGenericHelper
 
 public protocol BundleProtocol: AutoMockable {
     /// sourcery:inline:Bundle.AutoGenerateProtocol
-    
+
     func string(for key: AnyRawRepresentable<String>) throws  -> String
     /// sourcery:end
 }

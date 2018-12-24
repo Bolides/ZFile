@@ -70,3 +70,4 @@ fastlane/test_output
 contents.xcworkspacedata
 IDEWorkspaceChecks.plist
 /sources/ZFile/.build.nosync
+/sources/ZFile/.sourcery-ZFile.yml
