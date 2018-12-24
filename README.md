@@ -2,10 +2,10 @@
 
 An effort to have a throwable alternative to using files
 
-It builds:
+Build ZFile
 
 1. ZFile for macos and ios.
-2. FoundationGenericHelpers 
+2. FoundationGenericHelpers
 3. Mocks for both
 
 # Use it
