@@ -2,13 +2,19 @@
 
 An effort to have a throwable alternative to using files
 
-Build ZFile
+It builds:
 
 1. ZFile for macos and ios.
 2. FoundationGenericHelpers
 3. Mocks for both
 
-# Use it
+# Build ZFile
+
+```bash
+cd Sources
+
+```
+# Integrate ZFile
 
 2 projects build the code. The project you should is in your project is ZFile.xcodeproj. AutomateZFile.xcproj builds all dependencies, runs tests and generates mock code.
 

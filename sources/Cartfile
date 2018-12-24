@@ -16,7 +16,3 @@ github "doozMen/Nimble" "feature/v7.3.1-withoutWarnings"
 # TestAppdelegate
 
 github "mokacoding/TestAppDelegateExample" "master"
-
-# Alfred Snippets (not compiled)
-
-github "doozMen/alfred-snippets" "v1.0"
