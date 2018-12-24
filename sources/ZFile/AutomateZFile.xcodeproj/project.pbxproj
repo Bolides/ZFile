@@ -13,6 +13,7 @@
 		FD841E0B21D0F61300C8843F /* ZFileSourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD841DF321D0F61300C8843F /* ZFileSourceryWorker.swift */; };
 		FD841E0C21D0F61300C8843F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD841DF421D0F61300C8843F /* AppDelegate.swift */; };
 		FD841E2021D0F6B900C8843F /* ZFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD841E1621D0F61B00C8843F /* ZFileTests.swift */; };
+		FD841E2221D103BB00C8843F /* ZFileFolderWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD841E2121D103BB00C8843F /* ZFileFolderWorker.swift */; };
 		FDDB922221CD8F6000B6D5E9 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91AF21CD8D3F00B6D5E9 /* Arguments.framework */; };
 		FDDB922321CD8F6000B6D5E9 /* Arguments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91AF21CD8D3F00B6D5E9 /* Arguments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDDB922621CD8F6000B6D5E9 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91CF21CD8D3F00B6D5E9 /* Keychain.framework */; };
@@ -614,6 +615,7 @@
 		FD841DF521D0F61300C8843F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD841E1621D0F61B00C8843F /* ZFileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFileTests.swift; sourceTree = "<group>"; };
 		FD841E1721D0F61B00C8843F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD841E2121D103BB00C8843F /* ZFileFolderWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZFileFolderWorker.swift; sourceTree = "<group>"; };
 		FDB7AA2521CD84960045DDA8 /* AutomateZFile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutomateZFile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB7AA3721CD84970045DDA8 /* AutomateZFileTests-macos.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AutomateZFileTests-macos.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDB905921CD84E900B6D5E9 /* ZFile.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ZFile.xcodeproj; sourceTree = "<group>"; };
@@ -683,6 +685,7 @@
 				FD841DF021D0F61300C8843F /* AutomateZFileViewController.swift */,
 				FD841DF121D0F61300C8843F /* Main.storyboard */,
 				FD841DF321D0F61300C8843F /* ZFileSourceryWorker.swift */,
+				FD841E2121D103BB00C8843F /* ZFileFolderWorker.swift */,
 				FD841DF421D0F61300C8843F /* AppDelegate.swift */,
 				FD841DF521D0F61300C8843F /* Info.plist */,
 			);
@@ -1384,6 +1387,7 @@
 			files = (
 				FD841E0B21D0F61300C8843F /* ZFileSourceryWorker.swift in Sources */,
 				FD841E0C21D0F61300C8843F /* AppDelegate.swift in Sources */,
+				FD841E2221D103BB00C8843F /* ZFileFolderWorker.swift in Sources */,
 				FD841E0921D0F61300C8843F /* AutomateZFileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

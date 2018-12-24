@@ -20,20 +20,6 @@
                ReferencedContainer = "container:AutomateZFile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDB7AA3621CD84970045DDA8"
-               BuildableName = "AutomateZFileTests-macos.xctest"
-               BlueprintName = "AutomateZFileTests-macos"
-               ReferencedContainer = "container:AutomateZFile.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -42,16 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDB7AA3621CD84970045DDA8"
-               BuildableName = "AutomateZFileTests-macos.xctest"
-               BlueprintName = "AutomateZFileTests-macos"
-               ReferencedContainer = "container:AutomateZFile.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

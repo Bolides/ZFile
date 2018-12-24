@@ -71,3 +71,5 @@ contents.xcworkspacedata
 IDEWorkspaceChecks.plist
 /sources/ZFile/.build.nosync
 /sources/ZFile/.sourcery-ZFile.yml
+/sources/ZFile/.sourcery-FoundationGenericHelper.yml
+/sources/ZFile/.sourcery-AutomateZFile.yml
