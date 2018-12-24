@@ -20,20 +20,6 @@
                ReferencedContainer = "container:AutomateZFile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FD737DD121B03DC4001BB507"
-               BuildableName = "ZFileTests-macos.xctest"
-               BlueprintName = "ZFileTests-macos"
-               ReferencedContainer = "container:ZFile.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -42,26 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FD737DD121B03DC4001BB507"
-               BuildableName = "ZFileTests-macos.xctest"
-               BlueprintName = "ZFileTests-macos"
-               ReferencedContainer = "container:ZFile.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDB7AA3621CD84970045DDA8"
-               BuildableName = "AutomateZFileTests.xctest"
-               BlueprintName = "AutomateZFileTests"
-               ReferencedContainer = "container:AutomateZFile.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

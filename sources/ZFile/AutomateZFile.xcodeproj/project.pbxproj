@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FDB7AA2921CD84960045DDA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7AA2821CD84960045DDA8 /* AppDelegate.swift */; };
-		FDB7AA2B21CD84960045DDA8 /* AutomateZFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7AA2A21CD84960045DDA8 /* AutomateZFileViewController.swift */; };
-		FDB7AA2D21CD84970045DDA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDB7AA2C21CD84970045DDA8 /* Assets.xcassets */; };
-		FDB7AA3021CD84970045DDA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB7AA2E21CD84970045DDA8 /* Main.storyboard */; };
-		FDB7AA3C21CD84970045DDA8 /* AutomateZFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB7AA3B21CD84970045DDA8 /* AutomateZFileTests.swift */; };
-		FDDB906921CD856700B6D5E9 /* ZFileSourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB906821CD856700B6D5E9 /* ZFileSourceryWorker.swift */; };
+		FD841E0821D0F61300C8843F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD841DEF21D0F61300C8843F /* Assets.xcassets */; };
+		FD841E0921D0F61300C8843F /* AutomateZFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD841DF021D0F61300C8843F /* AutomateZFileViewController.swift */; };
+		FD841E0A21D0F61300C8843F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD841DF121D0F61300C8843F /* Main.storyboard */; };
+		FD841E0B21D0F61300C8843F /* ZFileSourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD841DF321D0F61300C8843F /* ZFileSourceryWorker.swift */; };
+		FD841E0C21D0F61300C8843F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD841DF421D0F61300C8843F /* AppDelegate.swift */; };
+		FD841E2021D0F6B900C8843F /* ZFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD841E1621D0F61B00C8843F /* ZFileTests.swift */; };
 		FDDB922221CD8F6000B6D5E9 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91AF21CD8D3F00B6D5E9 /* Arguments.framework */; };
 		FDDB922321CD8F6000B6D5E9 /* Arguments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91AF21CD8D3F00B6D5E9 /* Arguments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDDB922621CD8F6000B6D5E9 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91CF21CD8D3F00B6D5E9 /* Keychain.framework */; };
@@ -45,11 +45,24 @@
 		FDDB937321CDA6FE00B6D5E9 /* ZFile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB92C121CD921C00B6D5E9 /* ZFile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDDB937A21CDA7FA00B6D5E9 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB92C121CD921C00B6D5E9 /* ZFile.framework */; };
 		FDDB937F21CDA81100B6D5E9 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB931F21CD96E900B6D5E9 /* ZFileMock.framework */; };
-		FDDB938721CDA89A00B6D5E9 /* AutomateZFile_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB938621CDA89A00B6D5E9 /* AutomateZFile_iosTests.swift */; };
 		FDDB938E21CDA8AC00B6D5E9 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB92BD21CD921C00B6D5E9 /* ZFile.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FD841DBA21D0F5EC00C8843F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB905921CD84E900B6D5E9 /* ZFile.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD1B88A721CE27B70055C2C1;
+			remoteInfo = "FoundationGenericHelper-ios";
+		};
+		FD841DBC21D0F5EC00C8843F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB905921CD84E900B6D5E9 /* ZFile.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD1B88B421CE27D80055C2C1;
+			remoteInfo = "FoundationGenericHelper-macos";
+		};
 		FDB7AA3821CD84970045DDA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FDB7AA1D21CD84960045DDA8 /* Project object */;
@@ -512,26 +525,12 @@
 			remoteGlobalIDString = FD737D9221B03BD3001BB507;
 			remoteInfo = "ZFile-iOS";
 		};
-		FDDB92BE21CD921C00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB905921CD84E900B6D5E9 /* ZFile.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FD737D9B21B03BD3001BB507;
-			remoteInfo = ZFileTests;
-		};
 		FDDB92C021CD921C00B6D5E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FDDB905921CD84E900B6D5E9 /* ZFile.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = FD737DC021B03D25001BB507;
 			remoteInfo = "ZFile-macos";
-		};
-		FDDB92C221CD921C00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB905921CD84E900B6D5E9 /* ZFile.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FD737DD221B03DC4001BB507;
-			remoteInfo = ZFile_macosTests;
 		};
 		FDDB931C21CD96E900B6D5E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -606,25 +605,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FD841DEE21D0F61300C8843F /* AutomateZFile.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = AutomateZFile.entitlements; sourceTree = "<group>"; };
+		FD841DEF21D0F61300C8843F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD841DF021D0F61300C8843F /* AutomateZFileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomateZFileViewController.swift; sourceTree = "<group>"; };
+		FD841DF221D0F61300C8843F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FD841DF321D0F61300C8843F /* ZFileSourceryWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFileSourceryWorker.swift; sourceTree = "<group>"; };
+		FD841DF421D0F61300C8843F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FD841DF521D0F61300C8843F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD841E1621D0F61B00C8843F /* ZFileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFileTests.swift; sourceTree = "<group>"; };
+		FD841E1721D0F61B00C8843F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDB7AA2521CD84960045DDA8 /* AutomateZFile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutomateZFile.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDB7AA2821CD84960045DDA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FDB7AA2A21CD84960045DDA8 /* AutomateZFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomateZFileViewController.swift; sourceTree = "<group>"; };
-		FDB7AA2C21CD84970045DDA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FDB7AA2F21CD84970045DDA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FDB7AA3121CD84970045DDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDB7AA3221CD84970045DDA8 /* AutomateZFile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutomateZFile.entitlements; sourceTree = "<group>"; };
-		FDB7AA3721CD84970045DDA8 /* AutomateZFileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutomateZFileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDB7AA3B21CD84970045DDA8 /* AutomateZFileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomateZFileTests.swift; sourceTree = "<group>"; };
-		FDB7AA3D21CD84970045DDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDB7AA3721CD84970045DDA8 /* AutomateZFileTests-macos.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AutomateZFileTests-macos.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDB905921CD84E900B6D5E9 /* ZFile.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ZFile.xcodeproj; sourceTree = "<group>"; };
-		FDDB906821CD856700B6D5E9 /* ZFileSourceryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZFileSourceryWorker.swift; sourceTree = "<group>"; };
 		FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "🛣.xcodeproj"; path = "../Carthage/Checkouts/highway/🛣.xcodeproj"; sourceTree = "<group>"; };
 		FDDB90E321CD861900B6D5E9 /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = ../Carthage/Checkouts/Quick/Quick.xcodeproj; sourceTree = "<group>"; };
 		FDDB91EE21CD8D5900B6D5E9 /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = ../Carthage/Checkouts/Nimble/Nimble.xcodeproj; sourceTree = "<group>"; };
 		FDDB933B21CDA62600B6D5E9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
-		FDDB938421CDA89A00B6D5E9 /* AutomateZFile-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AutomateZFile-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDDB938621CDA89A00B6D5E9 /* AutomateZFile_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomateZFile_iosTests.swift; sourceTree = "<group>"; };
-		FDDB938821CDA89A00B6D5E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDDB938421CDA89A00B6D5E9 /* AutomateZFileTests-ios.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AutomateZFileTests-ios.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -670,13 +667,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD841DD021D0F61300C8843F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FD841DED21D0F61300C8843F /* AutomateZFile */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		FD841DED21D0F61300C8843F /* AutomateZFile */ = {
+			isa = PBXGroup;
+			children = (
+				FD841DEE21D0F61300C8843F /* AutomateZFile.entitlements */,
+				FD841DEF21D0F61300C8843F /* Assets.xcassets */,
+				FD841DF021D0F61300C8843F /* AutomateZFileViewController.swift */,
+				FD841DF121D0F61300C8843F /* Main.storyboard */,
+				FD841DF321D0F61300C8843F /* ZFileSourceryWorker.swift */,
+				FD841DF421D0F61300C8843F /* AppDelegate.swift */,
+				FD841DF521D0F61300C8843F /* Info.plist */,
+			);
+			path = AutomateZFile;
+			sourceTree = "<group>";
+		};
+		FD841E0E21D0F61B00C8843F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FD841E1521D0F61B00C8843F /* ZFileTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		FD841E1521D0F61B00C8843F /* ZFileTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD841E1621D0F61B00C8843F /* ZFileTests.swift */,
+				FD841E1721D0F61B00C8843F /* Info.plist */,
+			);
+			path = ZFileTests;
+			sourceTree = "<group>";
+		};
 		FDB7AA1C21CD84960045DDA8 = {
 			isa = PBXGroup;
 			children = (
 				FDDB933B21CDA62600B6D5E9 /* README.md */,
-				FDB7AA2721CD84960045DDA8 /* AutomateZFile */,
-				FDB7AA3A21CD84970045DDA8 /* AutomateZFileTests */,
-				FDDB938521CDA89A00B6D5E9 /* AutomateZFile-iosTests */,
+				FD841DD021D0F61300C8843F /* Sources */,
+				FD841E0E21D0F61B00C8843F /* Tests */,
 				FDB7AA2621CD84960045DDA8 /* Products */,
 				FDDB914C21CD86E100B6D5E9 /* Frameworks */,
 				FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */,
@@ -690,35 +725,10 @@
 			isa = PBXGroup;
 			children = (
 				FDB7AA2521CD84960045DDA8 /* AutomateZFile.app */,
-				FDB7AA3721CD84970045DDA8 /* AutomateZFileTests.xctest */,
-				FDDB938421CDA89A00B6D5E9 /* AutomateZFile-iosTests.xctest */,
+				FDB7AA3721CD84970045DDA8 /* AutomateZFileTests-macos.xctest */,
+				FDDB938421CDA89A00B6D5E9 /* AutomateZFileTests-ios.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		FDB7AA2721CD84960045DDA8 /* AutomateZFile */ = {
-			isa = PBXGroup;
-			children = (
-				FDB7AA2821CD84960045DDA8 /* AppDelegate.swift */,
-				FDB7AA2A21CD84960045DDA8 /* AutomateZFileViewController.swift */,
-				FDDB906821CD856700B6D5E9 /* ZFileSourceryWorker.swift */,
-				FDB7AA2C21CD84970045DDA8 /* Assets.xcassets */,
-				FDB7AA2E21CD84970045DDA8 /* Main.storyboard */,
-				FDB7AA3121CD84970045DDA8 /* Info.plist */,
-				FDB7AA3221CD84970045DDA8 /* AutomateZFile.entitlements */,
-			);
-			name = AutomateZFile;
-			path = sources/AutomateZFile;
-			sourceTree = "<group>";
-		};
-		FDB7AA3A21CD84970045DDA8 /* AutomateZFileTests */ = {
-			isa = PBXGroup;
-			children = (
-				FDB7AA3B21CD84970045DDA8 /* AutomateZFileTests.swift */,
-				FDB7AA3D21CD84970045DDA8 /* Info.plist */,
-			);
-			name = AutomateZFileTests;
-			path = tests/AutomateZFileTests;
 			sourceTree = "<group>";
 		};
 		FDDB914C21CD86E100B6D5E9 /* Frameworks */ = {
@@ -806,19 +816,10 @@
 				FDDB931D21CD96E900B6D5E9 /* ZFileMock.framework */,
 				FDDB92C121CD921C00B6D5E9 /* ZFile.framework */,
 				FDDB931F21CD96E900B6D5E9 /* ZFileMock.framework */,
-				FDDB92BF21CD921C00B6D5E9 /* ZFileTests-ios.xctest */,
-				FDDB92C321CD921C00B6D5E9 /* ZFileTests-macos.xctest */,
+				FD841DBB21D0F5EC00C8843F /* FoundationGenericHelper.framework */,
+				FD841DBD21D0F5EC00C8843F /* FoundationGenericHelper.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		FDDB938521CDA89A00B6D5E9 /* AutomateZFile-iosTests */ = {
-			isa = PBXGroup;
-			children = (
-				FDDB938621CDA89A00B6D5E9 /* AutomateZFile_iosTests.swift */,
-				FDDB938821CDA89A00B6D5E9 /* Info.plist */,
-			);
-			path = "AutomateZFile-iosTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -857,9 +858,9 @@
 			productReference = FDB7AA2521CD84960045DDA8 /* AutomateZFile.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FDB7AA3621CD84970045DDA8 /* AutomateZFileTests */ = {
+		FDB7AA3621CD84970045DDA8 /* AutomateZFileTests-macos */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FDB7AA4321CD84970045DDA8 /* Build configuration list for PBXNativeTarget "AutomateZFileTests" */;
+			buildConfigurationList = FDB7AA4321CD84970045DDA8 /* Build configuration list for PBXNativeTarget "AutomateZFileTests-macos" */;
 			buildPhases = (
 				FDB7AA3321CD84970045DDA8 /* Sources */,
 				FDB7AA3421CD84970045DDA8 /* Frameworks */,
@@ -872,14 +873,14 @@
 				FDDB937921CDA7EC00B6D5E9 /* PBXTargetDependency */,
 				FDB7AA3921CD84970045DDA8 /* PBXTargetDependency */,
 			);
-			name = AutomateZFileTests;
+			name = "AutomateZFileTests-macos";
 			productName = AutomateZFileTests;
-			productReference = FDB7AA3721CD84970045DDA8 /* AutomateZFileTests.xctest */;
+			productReference = FDB7AA3721CD84970045DDA8 /* AutomateZFileTests-macos.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FDDB938321CDA89A00B6D5E9 /* AutomateZFile-iosTests */ = {
+		FDDB938321CDA89A00B6D5E9 /* AutomateZFileTests-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FDDB938921CDA89A00B6D5E9 /* Build configuration list for PBXNativeTarget "AutomateZFile-iosTests" */;
+			buildConfigurationList = FDDB938921CDA89A00B6D5E9 /* Build configuration list for PBXNativeTarget "AutomateZFileTests-ios" */;
 			buildPhases = (
 				FDDB938021CDA89A00B6D5E9 /* Sources */,
 				FDDB938121CDA89A00B6D5E9 /* Frameworks */,
@@ -890,9 +891,9 @@
 			dependencies = (
 				FDDB938D21CDA8A400B6D5E9 /* PBXTargetDependency */,
 			);
-			name = "AutomateZFile-iosTests";
+			name = "AutomateZFileTests-ios";
 			productName = "AutomateZFile-iosTests";
-			productReference = FDDB938421CDA89A00B6D5E9 /* AutomateZFile-iosTests.xctest */;
+			productReference = FDDB938421CDA89A00B6D5E9 /* AutomateZFileTests-ios.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -949,13 +950,27 @@
 			projectRoot = "";
 			targets = (
 				FDB7AA2421CD84960045DDA8 /* AutomateZFile */,
-				FDB7AA3621CD84970045DDA8 /* AutomateZFileTests */,
-				FDDB938321CDA89A00B6D5E9 /* AutomateZFile-iosTests */,
+				FDB7AA3621CD84970045DDA8 /* AutomateZFileTests-macos */,
+				FDDB938321CDA89A00B6D5E9 /* AutomateZFileTests-ios */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		FD841DBB21D0F5EC00C8843F /* FoundationGenericHelper.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FoundationGenericHelper.framework;
+			remoteRef = FD841DBA21D0F5EC00C8843F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD841DBD21D0F5EC00C8843F /* FoundationGenericHelper.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FoundationGenericHelper.framework;
+			remoteRef = FD841DBC21D0F5EC00C8843F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		FDDB917521CD8D2F00B6D5E9 /* Quick.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -1313,25 +1328,11 @@
 			remoteRef = FDDB92BC21CD921C00B6D5E9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FDDB92BF21CD921C00B6D5E9 /* ZFileTests-ios.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "ZFileTests-ios.xctest";
-			remoteRef = FDDB92BE21CD921C00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		FDDB92C121CD921C00B6D5E9 /* ZFile.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ZFile.framework;
 			remoteRef = FDDB92C021CD921C00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB92C321CD921C00B6D5E9 /* ZFileTests-macos.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "ZFileTests-macos.xctest";
-			remoteRef = FDDB92C221CD921C00B6D5E9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		FDDB931D21CD96E900B6D5E9 /* ZFileMock.framework */ = {
@@ -1355,8 +1356,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDB7AA2D21CD84970045DDA8 /* Assets.xcassets in Resources */,
-				FDB7AA3021CD84970045DDA8 /* Main.storyboard in Resources */,
+				FD841E0A21D0F61300C8843F /* Main.storyboard in Resources */,
+				FD841E0821D0F61300C8843F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1381,9 +1382,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDDB906921CD856700B6D5E9 /* ZFileSourceryWorker.swift in Sources */,
-				FDB7AA2B21CD84960045DDA8 /* AutomateZFileViewController.swift in Sources */,
-				FDB7AA2921CD84960045DDA8 /* AppDelegate.swift in Sources */,
+				FD841E0B21D0F61300C8843F /* ZFileSourceryWorker.swift in Sources */,
+				FD841E0C21D0F61300C8843F /* AppDelegate.swift in Sources */,
+				FD841E0921D0F61300C8843F /* AutomateZFileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1391,7 +1392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDB7AA3C21CD84970045DDA8 /* AutomateZFileTests.swift in Sources */,
+				FD841E2021D0F6B900C8843F /* ZFileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1399,7 +1400,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDDB938721CDA89A00B6D5E9 /* AutomateZFile_iosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1504,10 +1504,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FDB7AA2E21CD84970045DDA8 /* Main.storyboard */ = {
+		FD841DF121D0F61300C8843F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FDB7AA2F21CD84970045DDA8 /* Base */,
+				FD841DF221D0F61300C8843F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1644,7 +1644,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WWFDRU947Q;
-				INFOPLIST_FILE = "$(SRCROOT)/sources/AutomateZFile/Info.plist";
+				INFOPLIST_FILE = Sources/AutomateZFile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1666,7 +1666,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WWFDRU947Q;
-				INFOPLIST_FILE = "$(SRCROOT)/sources/AutomateZFile/Info.plist";
+				INFOPLIST_FILE = Sources/AutomateZFile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1687,7 +1687,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WWFDRU947Q;
-				INFOPLIST_FILE = tests/AutomateZFileTests/Info.plist;
+				INFOPLIST_FILE = Tests/ZFileTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1710,7 +1710,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WWFDRU947Q;
-				INFOPLIST_FILE = tests/AutomateZFileTests/Info.plist;
+				INFOPLIST_FILE = Tests/ZFileTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1729,7 +1729,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "AutomateZFile-iosTests/Info.plist";
+				INFOPLIST_FILE = Tests/ZFileTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1749,7 +1749,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "AutomateZFile-iosTests/Info.plist";
+				INFOPLIST_FILE = Tests/ZFileTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1786,7 +1786,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FDB7AA4321CD84970045DDA8 /* Build configuration list for PBXNativeTarget "AutomateZFileTests" */ = {
+		FDB7AA4321CD84970045DDA8 /* Build configuration list for PBXNativeTarget "AutomateZFileTests-macos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FDB7AA4421CD84970045DDA8 /* Debug */,
@@ -1795,7 +1795,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FDDB938921CDA89A00B6D5E9 /* Build configuration list for PBXNativeTarget "AutomateZFile-iosTests" */ = {
+		FDDB938921CDA89A00B6D5E9 /* Build configuration list for PBXNativeTarget "AutomateZFileTests-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FDDB938A21CDA89A00B6D5E9 /* Debug */,

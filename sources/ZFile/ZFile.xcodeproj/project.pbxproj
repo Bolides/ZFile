@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FD16F2D021B07127004DA755 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD737D9221B03BD3001BB507 /* ZFile.framework */; };
 		FD1B88B821CE27D80055C2C1 /* FoundationGenericHelper-macos.h in Headers */ = {isa = PBXBuildFile; fileRef = FD1B88B621CE27D80055C2C1 /* FoundationGenericHelper-macos.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD1B88BE21CE284C0055C2C1 /* FoundationGenericHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B88A721CE27B70055C2C1 /* FoundationGenericHelper.framework */; };
 		FD1B88C121CE28620055C2C1 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD737D9221B03BD3001BB507 /* ZFile.framework */; };
@@ -20,7 +19,6 @@
 		FD1B88D621CE29DC0055C2C1 /* AnyRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1B88D521CE29DC0055C2C1 /* AnyRawRepresentable.swift */; };
 		FD1B88D721CE29DC0055C2C1 /* AnyRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1B88D521CE29DC0055C2C1 /* AnyRawRepresentable.swift */; };
 		FD1B88DA21CE2AE70055C2C1 /* FoundationGenericHelper-ios.h in Headers */ = {isa = PBXBuildFile; fileRef = FD1B88D921CE2AC80055C2C1 /* FoundationGenericHelper-ios.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD737DA121B03BD3001BB507 /* ZFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DA021B03BD3001BB507 /* ZFileTests.swift */; };
 		FD737DA321B03BD3001BB507 /* ZFile.h in Headers */ = {isa = PBXBuildFile; fileRef = FD737D9521B03BD3001BB507 /* ZFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD737DB221B03C66001BB507 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DAC21B03C66001BB507 /* File.swift */; };
 		FD737DB321B03C66001BB507 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DAD21B03C66001BB507 /* Folder.swift */; };
@@ -34,9 +32,6 @@
 		FD737DCB21B03D30001BB507 /* FileSystemInterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DAE21B03C66001BB507 /* FileSystemInterator.swift */; };
 		FD737DCC21B03D30001BB507 /* FileSystemSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DB021B03C66001BB507 /* FileSystemSequence.swift */; };
 		FD737DCD21B03D30001BB507 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DAD21B03C66001BB507 /* Folder.swift */; };
-		FD737DD721B03DC4001BB507 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD737DC021B03D25001BB507 /* ZFile.framework */; };
-		FDDB931421CD966100B6D5E9 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB930A21CD955600B6D5E9 /* ZFileMock.framework */; };
-		FDDB931721CD967400B6D5E9 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB92FD21CD953400B6D5E9 /* ZFileMock.framework */; };
 		FDDB932321CD99C100B6D5E9 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB92F521CD93F000B6D5E9 /* AutoMockable.generated.swift */; };
 		FDDB932421CD99C600B6D5E9 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB92F521CD93F000B6D5E9 /* AutoMockable.generated.swift */; };
 /* End PBXBuildFile section */
@@ -70,34 +65,6 @@
 			remoteGlobalIDString = FD1B88B321CE27D80055C2C1;
 			remoteInfo = "FoundationGenericHelper-macos";
 		};
-		FD737D9D21B03BD3001BB507 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FD737D8921B03BD3001BB507 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FD737D9121B03BD3001BB507;
-			remoteInfo = ZFile;
-		};
-		FD737DD821B03DC4001BB507 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FD737D8921B03BD3001BB507 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FD737DBF21B03D25001BB507;
-			remoteInfo = "ZFile-macos";
-		};
-		FDDB931221CD965A00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FD737D8921B03BD3001BB507 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FDDB930921CD955600B6D5E9;
-			remoteInfo = "ZFileMock-ios";
-		};
-		FDDB931821CD968100B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FD737D8921B03BD3001BB507 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FDDB92FC21CD953400B6D5E9;
-			remoteInfo = "ZFileMock-macos";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -114,9 +81,6 @@
 		FD737D9221B03BD3001BB507 /* ZFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD737D9521B03BD3001BB507 /* ZFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFile.h; sourceTree = "<group>"; };
 		FD737D9621B03BD3001BB507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD737D9B21B03BD3001BB507 /* ZFileTests-ios.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ZFileTests-ios.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD737DA021B03BD3001BB507 /* ZFileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZFileTests.swift; sourceTree = "<group>"; };
-		FD737DA221B03BD3001BB507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD737DAC21B03C66001BB507 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		FD737DAD21B03C66001BB507 /* Folder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
 		FD737DAE21B03C66001BB507 /* FileSystemInterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystemInterator.swift; sourceTree = "<group>"; };
@@ -125,7 +89,6 @@
 		FD737DB121B03C66001BB507 /* FileSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystem.swift; sourceTree = "<group>"; };
 		FD737DB921B03C71001BB507 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FD737DC021B03D25001BB507 /* ZFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD737DD221B03DC4001BB507 /* ZFileTests-macos.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ZFileTests-macos.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDB92F521CD93F000B6D5E9 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDDB92FD21CD953400B6D5E9 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDB930A21CD955600B6D5E9 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,29 +119,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD737D9821B03BD3001BB507 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FDDB931421CD966100B6D5E9 /* ZFileMock.framework in Frameworks */,
-				FD16F2D021B07127004DA755 /* ZFile.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FD737DBD21B03D25001BB507 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FD1B88CA21CE28A50055C2C1 /* FoundationGenericHelper.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FD737DCF21B03DC4001BB507 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FDDB931721CD967400B6D5E9 /* ZFileMock.framework in Frameworks */,
-				FD737DD721B03DC4001BB507 /* ZFile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,8 +160,8 @@
 		FD737D8821B03BD3001BB507 = {
 			isa = PBXGroup;
 			children = (
-				FDDB92F621CD949700B6D5E9 /* sources */,
-				FDDB92F721CD94B000B6D5E9 /* tests */,
+				FDDB92F621CD949700B6D5E9 /* Sources */,
+				FDDB92F721CD94B000B6D5E9 /* Tests */,
 				FD737D9321B03BD3001BB507 /* Products */,
 				FD737DB821B03C71001BB507 /* Frameworks */,
 			);
@@ -226,9 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				FD737D9221B03BD3001BB507 /* ZFile.framework */,
-				FD737D9B21B03BD3001BB507 /* ZFileTests-ios.xctest */,
 				FD737DC021B03D25001BB507 /* ZFile.framework */,
-				FD737DD221B03DC4001BB507 /* ZFileTests-macos.xctest */,
 				FDDB92FD21CD953400B6D5E9 /* ZFileMock.framework */,
 				FDDB930A21CD955600B6D5E9 /* ZFileMock.framework */,
 				FD1B88A721CE27B70055C2C1 /* FoundationGenericHelper.framework */,
@@ -251,15 +194,6 @@
 				FD737D9621B03BD3001BB507 /* Info.plist */,
 			);
 			path = ZFile;
-			sourceTree = "<group>";
-		};
-		FD737D9F21B03BD3001BB507 /* ZFileTests */ = {
-			isa = PBXGroup;
-			children = (
-				FD737DA021B03BD3001BB507 /* ZFileTests.swift */,
-				FD737DA221B03BD3001BB507 /* Info.plist */,
-			);
-			path = ZFileTests;
 			sourceTree = "<group>";
 		};
 		FD737DB821B03C71001BB507 /* Frameworks */ = {
@@ -291,22 +225,21 @@
 			path = sources/AutoGeneratedCode/ZFile;
 			sourceTree = "<group>";
 		};
-		FDDB92F621CD949700B6D5E9 /* sources */ = {
+		FDDB92F621CD949700B6D5E9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				FD1B88B521CE27D80055C2C1 /* FoundationGenericHelper */,
 				FDDB92F221CD93F000B6D5E9 /* AutoGeneratedCode */,
 				FD737D9421B03BD3001BB507 /* ZFile */,
 			);
-			path = sources;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		FDDB92F721CD94B000B6D5E9 /* tests */ = {
+		FDDB92F721CD94B000B6D5E9 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				FD737D9F21B03BD3001BB507 /* ZFileTests */,
 			);
-			path = tests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,25 +348,6 @@
 			productReference = FD737D9221B03BD3001BB507 /* ZFile.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FD737D9A21B03BD3001BB507 /* ZFileTests-ios */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FD737DA921B03BD3001BB507 /* Build configuration list for PBXNativeTarget "ZFileTests-ios" */;
-			buildPhases = (
-				FD737D9721B03BD3001BB507 /* Sources */,
-				FD737D9821B03BD3001BB507 /* Frameworks */,
-				FD737D9921B03BD3001BB507 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FDDB931321CD965A00B6D5E9 /* PBXTargetDependency */,
-				FD737D9E21B03BD3001BB507 /* PBXTargetDependency */,
-			);
-			name = "ZFileTests-ios";
-			productName = ZFileTests;
-			productReference = FD737D9B21B03BD3001BB507 /* ZFileTests-ios.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		FD737DBF21B03D25001BB507 /* ZFile-macos */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD737DC521B03D26001BB507 /* Build configuration list for PBXNativeTarget "ZFile-macos" */;
@@ -452,25 +366,6 @@
 			productName = "ZFile-macos";
 			productReference = FD737DC021B03D25001BB507 /* ZFile.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		FD737DD121B03DC4001BB507 /* ZFileTests-macos */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FD737DDA21B03DC4001BB507 /* Build configuration list for PBXNativeTarget "ZFileTests-macos" */;
-			buildPhases = (
-				FD737DCE21B03DC4001BB507 /* Sources */,
-				FD737DCF21B03DC4001BB507 /* Frameworks */,
-				FD737DD021B03DC4001BB507 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FDDB931921CD968100B6D5E9 /* PBXTargetDependency */,
-				FD737DD921B03DC4001BB507 /* PBXTargetDependency */,
-			);
-			name = "ZFileTests-macos";
-			productName = ZFile_macosTests;
-			productReference = FD737DD221B03DC4001BB507 /* ZFileTests-macos.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		FDDB92FC21CD953400B6D5E9 /* ZFileMock-macos */ = {
 			isa = PBXNativeTarget;
@@ -532,13 +427,7 @@
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
 					};
-					FD737D9A21B03BD3001BB507 = {
-						CreatedOnToolsVersion = 10.1;
-					};
 					FD737DBF21B03D25001BB507 = {
-						CreatedOnToolsVersion = 10.1;
-					};
-					FD737DD121B03DC4001BB507 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 					FDDB92FC21CD953400B6D5E9 = {
@@ -567,8 +456,6 @@
 				FDDB92FC21CD953400B6D5E9 /* ZFileMock-macos */,
 				FD1B88A621CE27B70055C2C1 /* FoundationGenericHelper-ios */,
 				FD1B88B321CE27D80055C2C1 /* FoundationGenericHelper-macos */,
-				FD737D9A21B03BD3001BB507 /* ZFileTests-ios */,
-				FD737DD121B03DC4001BB507 /* ZFileTests-macos */,
 			);
 		};
 /* End PBXProject section */
@@ -595,21 +482,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD737D9921B03BD3001BB507 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FD737DBE21B03D25001BB507 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FD737DD021B03DC4001BB507 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -663,14 +536,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD737D9721B03BD3001BB507 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FD737DA121B03BD3001BB507 /* ZFileTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FD737DBC21B03D25001BB507 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -682,13 +547,6 @@
 				FD737DC821B03D30001BB507 /* File.swift in Sources */,
 				FD1B88D321CE29970055C2C1 /* BundleProtocol.swift in Sources */,
 				FD737DCD21B03D30001BB507 /* Folder.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FD737DCE21B03DC4001BB507 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,26 +588,6 @@
 			isa = PBXTargetDependency;
 			target = FD1B88B321CE27D80055C2C1 /* FoundationGenericHelper-macos */;
 			targetProxy = FD1B88C821CE289B0055C2C1 /* PBXContainerItemProxy */;
-		};
-		FD737D9E21B03BD3001BB507 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FD737D9121B03BD3001BB507 /* ZFile-iOS */;
-			targetProxy = FD737D9D21B03BD3001BB507 /* PBXContainerItemProxy */;
-		};
-		FD737DD921B03DC4001BB507 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FD737DBF21B03D25001BB507 /* ZFile-macos */;
-			targetProxy = FD737DD821B03DC4001BB507 /* PBXContainerItemProxy */;
-		};
-		FDDB931321CD965A00B6D5E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FDDB930921CD955600B6D5E9 /* ZFileMock-ios */;
-			targetProxy = FDDB931221CD965A00B6D5E9 /* PBXContainerItemProxy */;
-		};
-		FDDB931921CD968100B6D5E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FDDB92FC21CD953400B6D5E9 /* ZFileMock-macos */;
-			targetProxy = FDDB931821CD968100B6D5E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1041,40 +879,6 @@
 			};
 			name = Release;
 		};
-		FD737DAA21B03BD3001BB507 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = tests/ZFileTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.ZFileTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		FD737DAB21B03BD3001BB507 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = tests/ZFileTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.ZFileTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		FD737DC621B03D26001BB507 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1121,48 +925,6 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
-		FD737DDB21B03DC4001BB507 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = tests/ZFileTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = "be.dooz.ZFile-macosTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 4.2;
-			};
-			name = Debug;
-		};
-		FD737DDC21B03DC4001BB507 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = tests/ZFileTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = "be.dooz.ZFile-macosTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
@@ -1298,29 +1060,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FD737DA921B03BD3001BB507 /* Build configuration list for PBXNativeTarget "ZFileTests-ios" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FD737DAA21B03BD3001BB507 /* Debug */,
-				FD737DAB21B03BD3001BB507 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		FD737DC521B03D26001BB507 /* Build configuration list for PBXNativeTarget "ZFile-macos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD737DC621B03D26001BB507 /* Debug */,
 				FD737DC721B03D26001BB507 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FD737DDA21B03DC4001BB507 /* Build configuration list for PBXNativeTarget "ZFileTests-macos" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FD737DDB21B03DC4001BB507 /* Debug */,
-				FD737DDC21B03DC4001BB507 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
