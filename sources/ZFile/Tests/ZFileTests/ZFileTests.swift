@@ -6,28 +6,54 @@
 //  Copyright © 2018 dooz. All rights reserved.
 //
 
-import XCTest
-@testable import AutomateZFile
+import Quick
+import Nimble
+import ZFile
+import ZFileMock
+import SourceryAutoProtocols
 
-class AutomateZFileTests: XCTestCase {
+class FileSpec: QuickSpec {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    override func spec() {
+        
+        describe("File creation") {
+            
+            it("can create current file") {
+                expect { try File(path: "\(#file)") }.toNot(throwError())
+            }
+            
+            it("throws for not existing path") {
+                expect { try Folder(path: "/wrongPathFolder") }.to(throwError())
+            }
+            
+        }
+        
+        describe("File mocking") {
+            
+            var sut: FileProtocolMock!
+            
+            beforeEach {
+                expect { sut = try FileProtocolMock() }.toNot(throwError())
+            }
+            
+            it("can init a mock") {
+                expect(sut).toNot(beNil())
+            }
+            
+            context("Functions without return value") {
+                
+                it("throws for not implemented stuff") {
+                    expect { try sut.write(string: "mock test \(#file)", encoding: .utf8) }.toNot(throwError())
+                }
+            }
+            context("Throw error when return value is not implemented") {
+                
+                it("throws for not implemented stuff") {
+                    expect { try sut.copy(to: FolderProtocolMock()) }
+                        .to(throwError(SourceryMockError.implementErrorCaseFor("No returnValue implemented for copyToClosure")))
+                }
+            }
+            
         }
     }
 

@@ -97,7 +97,7 @@ struct ZFileSourceryWorker: ZFileSourceryWorkerProtocol, AutoGenerateProtocol {
 
         } catch {
             signPost.message("⚠️ Failed to runn from current folder at\(currentFolder.path) ⚠️")
-            signPost.message("💁🏻‍♂️ Will try to run from folder defined in Info.plist with key \(ZFileFolderWorker.Key.scrRoot) ...")
+            signPost.message("💁🏻‍♂️ Will try to run from folder defined in Info.plist with key \(ZFileFolderWorker.Key.scrRoot.rawValue) ...")
             
             currentFolder = try ZFileFolderWorker().scrRoot.folder
             projectFolder = currentFolder

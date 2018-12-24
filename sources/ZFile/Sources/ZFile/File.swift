@@ -6,30 +6,35 @@
 //
 
 import Foundation
+import SourceryAutoProtocols
 
 /**
  *  Class representing a file that's stored by a file system
  *
  *  You initialize this class with a path, or by asking a folder to return a file for a given name
  */
-// sourcery:AutoMockable
 // sourcery:skipPublicInit
-public protocol FileProtocol: ItemProtocol, FileSystemIterable {
+public protocol FileProtocol: ItemProtocol, FileSystemIterable, AutoMockable {
     
     /// sourcery:inline:File.AutoGenerateSelectiveProtocol
     var localizedDate: String {  get }
 
-    func readAllLines() throws -> [String]
-    func read() throws -> Data
-    func readAsString() throws -> String
+    func readAllLines() throws  -> [String]
+    func read() throws  -> Data
+    func readAsString() throws  -> String
+    func readAsInt() throws  -> Int
     func write(data: Data) throws 
+    func write(string: String) throws 
     func write(string: String, encoding: String.Encoding) throws 
-    func copy(to folder: Folder) throws -> FileProtocol
+    func append(data: Data) throws 
+    func append(string: String) throws 
+    func append(string: String, encoding: String.Encoding) throws 
+    func copy(to folder: FolderProtocol) throws  -> FileProtocol
     
     /// sourcery:end
 }
 
-open class File: FileSystem.Item, FileProtocol {
+open class File: FileSystem.Item, FileProtocol, AutoGenerateSelectiveProtocol {
     
     // sourcery:selectedForProtocol
     public func readAllLines() throws -> [String] {
@@ -120,6 +125,7 @@ open class File: FileSystem.Item, FileProtocol {
      *
      *  - throws: `File.Error.readFailed` if the file's data couldn't be read as an int
      */
+    // sourcery:selectedForProtocol
     public func readAsInt() throws -> Int {
         guard let int = try Int(readAsString()) else {
             throw Error.readFailed
@@ -152,6 +158,7 @@ open class File: FileSystem.Item, FileProtocol {
      *
      *  - throws: `File.Error.writeFailed` if the string couldn't be encoded, or written to the file
      */
+    // sourcery:selectedForProtocol
     public func write(string: String) throws {
         try write(string: string, encoding: .utf8)
     }
@@ -172,6 +179,7 @@ open class File: FileSystem.Item, FileProtocol {
      *
      *  - throws: `File.Error.writeFailed` if the file couldn't be written to
      */
+    // sourcery:selectedForProtocol
     public func append(data: Data) throws {
         do {
             let handle = try FileHandle(forWritingTo: URL(fileURLWithPath: path))
@@ -191,7 +199,13 @@ open class File: FileSystem.Item, FileProtocol {
      *
      *  - throws: `File.Error.writeFailed` if the string couldn't be encoded, or written to the file
      */
-    public func append(string: String, encoding: String.Encoding = .utf8) throws {
+    // sourcery:selectedForProtocol
+    public func append(string: String) throws {
+        try append(string: string, encoding: .utf8)
+    }
+    
+    // sourcery:selectedForProtocol
+    public func append(string: String, encoding: String.Encoding) throws {
         guard let data = string.data(using: encoding) else {
             throw Error.writeFailed
         }
@@ -207,7 +221,7 @@ open class File: FileSystem.Item, FileProtocol {
      *  - throws: `FileSystem.Item.OperationError.copyFailed` if the file couldn't be copied
      */
     // sourcery:selectedForProtocol
-    @discardableResult public func copy(to folder: Folder) throws -> FileProtocol {
+    @discardableResult public func copy(to folder: FolderProtocol) throws -> FileProtocol {
         let newPath = folder.path + name
         
         do {

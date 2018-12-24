@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD4E545921D111DD00B5A776 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91BF21CD8D3F00B6D5E9 /* SourceryAutoProtocols.framework */; };
+		FD4E546921D1137200B5A776 /* ZFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD841E1621D0F61B00C8843F /* ZFileTests.swift */; };
+		FD4E546C21D1138300B5A776 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB917521CD8D2F00B6D5E9 /* Quick.framework */; };
+		FD4E546F21D1139100B5A776 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91F921CD8D5A00B6D5E9 /* Nimble.framework */; };
+		FD4E547221D113A900B5A776 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB917D21CD8D2F00B6D5E9 /* Quick.framework */; };
+		FD4E547721D113C800B5A776 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91FD21CD8D5A00B6D5E9 /* Nimble.framework */; };
+		FD4E547F21D1140900B5A776 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4E547E21D1140900B5A776 /* AppDelegate.swift */; };
+		FD4E548121D1140900B5A776 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4E548021D1140900B5A776 /* ViewController.swift */; };
+		FD4E548421D1140900B5A776 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD4E548221D1140900B5A776 /* Main.storyboard */; };
+		FD4E548621D1140B00B5A776 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD4E548521D1140B00B5A776 /* Assets.xcassets */; };
+		FD4E548921D1140B00B5A776 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD4E548721D1140B00B5A776 /* LaunchScreen.storyboard */; };
+		FD4E549221D1147600B5A776 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB931D21CD96E900B6D5E9 /* ZFileMock.framework */; };
 		FD841E0821D0F61300C8843F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD841DEF21D0F61300C8843F /* Assets.xcassets */; };
 		FD841E0921D0F61300C8843F /* AutomateZFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD841DF021D0F61300C8843F /* AutomateZFileViewController.swift */; };
 		FD841E0A21D0F61300C8843F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD841DF121D0F61300C8843F /* Main.storyboard */; };
@@ -50,6 +62,62 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FD4E545721D111D300B5A776 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::SourceryAutoProtocols";
+			remoteInfo = SourceryAutoProtocols;
+		};
+		FD4E546A21D1137D00B5A776 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90E321CD861900B6D5E9 /* Quick.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DAEB6B8D1943873100289F44;
+			remoteInfo = "Quick-macOS";
+		};
+		FD4E546D21D1138A00B5A776 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB91EE21CD8D5900B6D5E9 /* Nimble.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F925EAC195C0D6300ED456B;
+			remoteInfo = "Nimble-macOS";
+		};
+		FD4E547021D1139F00B5A776 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90E321CD861900B6D5E9 /* Quick.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A5D117B19473F2100F6D13D;
+			remoteInfo = "Quick-iOS";
+		};
+		FD4E547521D113BF00B5A776 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB91EE21CD8D5900B6D5E9 /* Nimble.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F1A74281940169200FFFC47;
+			remoteInfo = "Nimble-iOS";
+		};
+		FD4E548E21D1143600B5A776 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDB7AA1D21CD84960045DDA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD4E547B21D1140900B5A776;
+			remoteInfo = HostiOSTests;
+		};
+		FD4E549021D1146700B5A776 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB905921CD84E900B6D5E9 /* ZFile.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FDDB930921CD955600B6D5E9;
+			remoteInfo = "ZFileMock-ios";
+		};
+		FD4E549321D1178600B5A776 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB905921CD84E900B6D5E9 /* ZFile.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FD737DBF21B03D25001BB507;
+			remoteInfo = "ZFile-macos";
+		};
 		FD841DBA21D0F5EC00C8843F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FDDB905921CD84E900B6D5E9 /* ZFile.xcodeproj */;
@@ -547,13 +615,6 @@
 			remoteGlobalIDString = FDDB92FD21CD953400B6D5E9;
 			remoteInfo = "ZFileMock-macos";
 		};
-		FDDB937421CDA6FE00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB905921CD84E900B6D5E9 /* ZFile.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = FD737DBF21B03D25001BB507;
-			remoteInfo = "ZFile-macos";
-		};
 		FDDB937821CDA7EC00B6D5E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FDDB905921CD84E900B6D5E9 /* ZFile.xcodeproj */;
@@ -606,6 +667,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FD4E547C21D1140900B5A776 /* HostiOSTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HostiOSTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD4E547E21D1140900B5A776 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FD4E548021D1140900B5A776 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FD4E548321D1140900B5A776 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FD4E548521D1140B00B5A776 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD4E548821D1140B00B5A776 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FD4E548A21D1140B00B5A776 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD4E549521D119D200B5A776 /* template-sourcery */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "template-sourcery"; path = "../Carthage/Checkouts/template-sourcery"; sourceTree = "<group>"; };
 		FD841DEE21D0F61300C8843F /* AutomateZFile.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = AutomateZFile.entitlements; sourceTree = "<group>"; };
 		FD841DEF21D0F61300C8843F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD841DF021D0F61300C8843F /* AutomateZFileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomateZFileViewController.swift; sourceTree = "<group>"; };
@@ -627,16 +696,23 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FD4E547921D1140900B5A776 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDB7AA2221CD84960045DDA8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDDB925E21CD8FB400B6D5E9 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDDB923221CD8F6000B6D5E9 /* XCBuild.framework in Frameworks */,
 				FDDB923A21CD8F6000B6D5E9 /* Errors.framework in Frameworks */,
 				FDDB924621CD8F6000B6D5E9 /* Deliver.framework in Frameworks */,
 				FDDB923621CD8F6000B6D5E9 /* Result.framework in Frameworks */,
 				FDDB922E21CD8F6000B6D5E9 /* POSIX.framework in Frameworks */,
-				FDDB925E21CD8FB400B6D5E9 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDDB925A21CD8F6100B6D5E9 /* SignPost.framework in Frameworks */,
 				FDDB924A21CD8F6000B6D5E9 /* Task.framework in Frameworks */,
 				FDDB922621CD8F6000B6D5E9 /* Keychain.framework in Frameworks */,
@@ -653,6 +729,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD4E546F21D1139100B5A776 /* Nimble.framework in Frameworks */,
+				FD4E546C21D1138300B5A776 /* Quick.framework in Frameworks */,
+				FD4E545921D111DD00B5A776 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDDB937F21CDA81100B6D5E9 /* ZFileMock.framework in Frameworks */,
 				FDDB937A21CDA7FA00B6D5E9 /* ZFile.framework in Frameworks */,
 			);
@@ -662,6 +741,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD4E549221D1147600B5A776 /* ZFileMock.framework in Frameworks */,
+				FD4E547721D113C800B5A776 /* Nimble.framework in Frameworks */,
+				FD4E547221D113A900B5A776 /* Quick.framework in Frameworks */,
 				FDDB938E21CDA8AC00B6D5E9 /* ZFile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -669,9 +751,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD4E547D21D1140900B5A776 /* HostiOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD4E547E21D1140900B5A776 /* AppDelegate.swift */,
+				FD4E548021D1140900B5A776 /* ViewController.swift */,
+				FD4E548221D1140900B5A776 /* Main.storyboard */,
+				FD4E548521D1140B00B5A776 /* Assets.xcassets */,
+				FD4E548721D1140B00B5A776 /* LaunchScreen.storyboard */,
+				FD4E548A21D1140B00B5A776 /* Info.plist */,
+			);
+			path = HostiOSTests;
+			sourceTree = "<group>";
+		};
 		FD841DD021D0F61300C8843F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				FD4E547D21D1140900B5A776 /* HostiOSTests */,
 				FD841DED21D0F61300C8843F /* AutomateZFile */,
 			);
 			path = Sources;
@@ -717,6 +813,7 @@
 				FD841E0E21D0F61B00C8843F /* Tests */,
 				FDB7AA2621CD84960045DDA8 /* Products */,
 				FDDB914C21CD86E100B6D5E9 /* Frameworks */,
+				FD4E549521D119D200B5A776 /* template-sourcery */,
 				FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */,
 				FDDB905921CD84E900B6D5E9 /* ZFile.xcodeproj */,
 				FDDB91EE21CD8D5900B6D5E9 /* Nimble.xcodeproj */,
@@ -730,6 +827,7 @@
 				FDB7AA2521CD84960045DDA8 /* AutomateZFile.app */,
 				FDB7AA3721CD84970045DDA8 /* AutomateZFileTests-macos.xctest */,
 				FDDB938421CDA89A00B6D5E9 /* AutomateZFileTests-ios.xctest */,
+				FD4E547C21D1140900B5A776 /* HostiOSTests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -828,6 +926,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FD4E547B21D1140900B5A776 /* HostiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD4E548B21D1140B00B5A776 /* Build configuration list for PBXNativeTarget "HostiOSTests" */;
+			buildPhases = (
+				FD4E547821D1140900B5A776 /* Sources */,
+				FD4E547921D1140900B5A776 /* Frameworks */,
+				FD4E547A21D1140900B5A776 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HostiOSTests;
+			productName = HostiOSTests;
+			productReference = FD4E547C21D1140900B5A776 /* HostiOSTests.app */;
+			productType = "com.apple.product-type.application";
+		};
 		FDB7AA2421CD84960045DDA8 /* AutomateZFile */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDB7AA4021CD84970045DDA8 /* Build configuration list for PBXNativeTarget "AutomateZFile" */;
@@ -840,6 +955,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD4E549421D1178600B5A776 /* PBXTargetDependency */,
 				FDDB926121CD8FB400B6D5E9 /* PBXTargetDependency */,
 				FDDB922521CD8F6000B6D5E9 /* PBXTargetDependency */,
 				FDDB922921CD8F6000B6D5E9 /* PBXTargetDependency */,
@@ -854,7 +970,6 @@
 				FDDB925121CD8F6000B6D5E9 /* PBXTargetDependency */,
 				FDDB925521CD8F6100B6D5E9 /* PBXTargetDependency */,
 				FDDB925D21CD8F6100B6D5E9 /* PBXTargetDependency */,
-				FDDB937521CDA6FE00B6D5E9 /* PBXTargetDependency */,
 			);
 			name = AutomateZFile;
 			productName = AutomateZFile;
@@ -872,6 +987,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD4E546E21D1138A00B5A776 /* PBXTargetDependency */,
+				FD4E546B21D1137D00B5A776 /* PBXTargetDependency */,
+				FD4E545821D111D300B5A776 /* PBXTargetDependency */,
 				FDDB937E21CDA80800B6D5E9 /* PBXTargetDependency */,
 				FDDB937921CDA7EC00B6D5E9 /* PBXTargetDependency */,
 				FDB7AA3921CD84970045DDA8 /* PBXTargetDependency */,
@@ -893,6 +1011,10 @@
 			);
 			dependencies = (
 				FDDB938D21CDA8A400B6D5E9 /* PBXTargetDependency */,
+				FD4E549121D1146700B5A776 /* PBXTargetDependency */,
+				FD4E547621D113BF00B5A776 /* PBXTargetDependency */,
+				FD4E547121D1139F00B5A776 /* PBXTargetDependency */,
+				FD4E548F21D1143600B5A776 /* PBXTargetDependency */,
 			);
 			name = "AutomateZFileTests-ios";
 			productName = "AutomateZFile-iosTests";
@@ -909,6 +1031,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = dooz;
 				TargetAttributes = {
+					FD4E547B21D1140900B5A776 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					FDB7AA2421CD84960045DDA8 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -918,6 +1043,7 @@
 					};
 					FDDB938321CDA89A00B6D5E9 = {
 						CreatedOnToolsVersion = 10.1;
+						TestTargetID = FD4E547B21D1140900B5A776;
 					};
 				};
 			};
@@ -955,6 +1081,7 @@
 				FDB7AA2421CD84960045DDA8 /* AutomateZFile */,
 				FDB7AA3621CD84970045DDA8 /* AutomateZFileTests-macos */,
 				FDDB938321CDA89A00B6D5E9 /* AutomateZFileTests-ios */,
+				FD4E547B21D1140900B5A776 /* HostiOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1355,6 +1482,16 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FD4E547A21D1140900B5A776 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD4E548921D1140B00B5A776 /* LaunchScreen.storyboard in Resources */,
+				FD4E548621D1140B00B5A776 /* Assets.xcassets in Resources */,
+				FD4E548421D1140900B5A776 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDB7AA2321CD84960045DDA8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1381,6 +1518,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FD4E547821D1140900B5A776 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD4E548121D1140900B5A776 /* ViewController.swift in Sources */,
+				FD4E547F21D1140900B5A776 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDB7AA2121CD84960045DDA8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1404,12 +1550,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD4E546921D1137200B5A776 /* ZFileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FD4E545821D111D300B5A776 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SourceryAutoProtocols;
+			targetProxy = FD4E545721D111D300B5A776 /* PBXContainerItemProxy */;
+		};
+		FD4E546B21D1137D00B5A776 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Quick-macOS";
+			targetProxy = FD4E546A21D1137D00B5A776 /* PBXContainerItemProxy */;
+		};
+		FD4E546E21D1138A00B5A776 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Nimble-macOS";
+			targetProxy = FD4E546D21D1138A00B5A776 /* PBXContainerItemProxy */;
+		};
+		FD4E547121D1139F00B5A776 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Quick-iOS";
+			targetProxy = FD4E547021D1139F00B5A776 /* PBXContainerItemProxy */;
+		};
+		FD4E547621D113BF00B5A776 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Nimble-iOS";
+			targetProxy = FD4E547521D113BF00B5A776 /* PBXContainerItemProxy */;
+		};
+		FD4E548F21D1143600B5A776 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD4E547B21D1140900B5A776 /* HostiOSTests */;
+			targetProxy = FD4E548E21D1143600B5A776 /* PBXContainerItemProxy */;
+		};
+		FD4E549121D1146700B5A776 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ZFileMock-ios";
+			targetProxy = FD4E549021D1146700B5A776 /* PBXContainerItemProxy */;
+		};
+		FD4E549421D1178600B5A776 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ZFile-macos";
+			targetProxy = FD4E549321D1178600B5A776 /* PBXContainerItemProxy */;
+		};
 		FDB7AA3921CD84970045DDA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FDB7AA2421CD84960045DDA8 /* AutomateZFile */;
@@ -1485,11 +1672,6 @@
 			name = SourceryAutoProtocols;
 			targetProxy = FDDB926021CD8FB400B6D5E9 /* PBXContainerItemProxy */;
 		};
-		FDDB937521CDA6FE00B6D5E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ZFile-macos";
-			targetProxy = FDDB937421CDA6FE00B6D5E9 /* PBXContainerItemProxy */;
-		};
 		FDDB937921CDA7EC00B6D5E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "ZFile-macos";
@@ -1508,6 +1690,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		FD4E548221D1140900B5A776 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD4E548321D1140900B5A776 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FD4E548721D1140B00B5A776 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD4E548821D1140B00B5A776 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		FD841DF121D0F61300C8843F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1519,6 +1717,49 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FD4E548C21D1140B00B5A776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
+				INFOPLIST_FILE = Sources/HostiOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.HostiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD4E548D21D1140B00B5A776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
+				INFOPLIST_FILE = Sources/HostiOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.HostiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		FDB7AA3E21CD84970045DDA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1745,6 +1986,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HostiOSTests.app/HostiOSTests";
 			};
 			name = Debug;
 		};
@@ -1765,6 +2007,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HostiOSTests.app/HostiOSTests";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1772,6 +2015,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FD4E548B21D1140B00B5A776 /* Build configuration list for PBXNativeTarget "HostiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD4E548C21D1140B00B5A776 /* Debug */,
+				FD4E548D21D1140B00B5A776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FDB7AA2021CD84960045DDA8 /* Build configuration list for PBXProject "AutomateZFile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
