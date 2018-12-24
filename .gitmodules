@@ -10,9 +10,6 @@
 [submodule "Carthage/Checkouts/template-sourcery"]
 	path = sources/Carthage/Checkouts/template-sourcery
 	url = https://github.com/doozMen/template-sourcery.git
-[submodule "Carthage/Checkouts/highway"]
-	path = sources/Carthage/Checkouts/highway
-	url = https://github.com/doozMen/highway.git
 [submodule "Carthage/Checkouts/Nimble"]
 	path = sources/Carthage/Checkouts/Nimble
 	url = https://github.com/doozMen/Nimble.git
