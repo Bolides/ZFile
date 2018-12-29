@@ -3,7 +3,7 @@
 [submodule "Carthage/Checkouts/highway"]
 	url = https://github.com/doozMen/highway.git
 [submodule "Carthage/Checkouts/Sourcery"]
-	url = https://github.com/krzysztofzablocki/Sourcery.git
+	url = https://github.com/doozMen/Sourcery.git
 [submodule "Carthage/Checkouts/TestAppDelegateExample"]
 	url = https://github.com/mokacoding/TestAppDelegateExample.git
 [submodule "Carthage/Checkouts/template-sourcery"]

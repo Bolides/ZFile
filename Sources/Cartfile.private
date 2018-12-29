@@ -1,0 +1,17 @@
+# Automation
+
+#github "doozMen/highway"
+
+# Auto generate Code
+
+github "doozMen/Sourcery"
+github "doozMen/template-sourcery"
+
+# Testing
+
+github "doozMen/Quick"
+github "doozMen/Nimble"
+
+# TestAppdelegate
+
+github "mokacoding/TestAppDelegateExample" "master"
