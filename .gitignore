@@ -1,1 +1,6 @@
 
+.DS_Store
+/Sources/ZFile/.sourcery-AutomateZFile.yml
+/Sources/ZFile/.sourcery-FoundationGenericHelper.yml
+/Sources/ZFile/.sourcery-ZFile.yml
+xcuserdata

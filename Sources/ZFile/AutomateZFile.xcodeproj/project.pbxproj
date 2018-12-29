@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FD4E545921D111DD00B5A776 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91BF21CD8D3F00B6D5E9 /* SourceryAutoProtocols.framework */; };
 		FD4E546921D1137200B5A776 /* ZFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD841E1621D0F61B00C8843F /* ZFileTests.swift */; };
 		FD4E546C21D1138300B5A776 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB917521CD8D2F00B6D5E9 /* Quick.framework */; };
 		FD4E546F21D1139100B5A776 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91F921CD8D5A00B6D5E9 /* Nimble.framework */; };
@@ -26,49 +25,44 @@
 		FD841E0C21D0F61300C8843F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD841DF421D0F61300C8843F /* AppDelegate.swift */; };
 		FD841E2021D0F6B900C8843F /* ZFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD841E1621D0F61B00C8843F /* ZFileTests.swift */; };
 		FD841E2221D103BB00C8843F /* ZFileFolderWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD841E2121D103BB00C8843F /* ZFileFolderWorker.swift */; };
-		FDDB922221CD8F6000B6D5E9 /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91AF21CD8D3F00B6D5E9 /* Arguments.framework */; };
-		FDDB922321CD8F6000B6D5E9 /* Arguments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91AF21CD8D3F00B6D5E9 /* Arguments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDB922621CD8F6000B6D5E9 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91CF21CD8D3F00B6D5E9 /* Keychain.framework */; };
-		FDDB922721CD8F6000B6D5E9 /* Keychain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91CF21CD8D3F00B6D5E9 /* Keychain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDB922A21CD8F6000B6D5E9 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91B721CD8D3F00B6D5E9 /* Terminal.framework */; };
-		FDDB922B21CD8F6000B6D5E9 /* Terminal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91B721CD8D3F00B6D5E9 /* Terminal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDB922E21CD8F6000B6D5E9 /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91C521CD8D3F00B6D5E9 /* POSIX.framework */; };
-		FDDB922F21CD8F6000B6D5E9 /* POSIX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91C521CD8D3F00B6D5E9 /* POSIX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDB923221CD8F6000B6D5E9 /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91C921CD8D3F00B6D5E9 /* XCBuild.framework */; };
-		FDDB923321CD8F6000B6D5E9 /* XCBuild.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91C921CD8D3F00B6D5E9 /* XCBuild.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDB923621CD8F6000B6D5E9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91D121CD8D3F00B6D5E9 /* Result.framework */; };
-		FDDB923721CD8F6000B6D5E9 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91D121CD8D3F00B6D5E9 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDB923A21CD8F6000B6D5E9 /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91C721CD8D3F00B6D5E9 /* Errors.framework */; };
-		FDDB923B21CD8F6000B6D5E9 /* Errors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91C721CD8D3F00B6D5E9 /* Errors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDB924221CD8F6000B6D5E9 /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91D521CD8D3F00B6D5E9 /* Git.framework */; };
-		FDDB924321CD8F6000B6D5E9 /* Git.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91D521CD8D3F00B6D5E9 /* Git.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDB924621CD8F6000B6D5E9 /* Deliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91CD21CD8D3F00B6D5E9 /* Deliver.framework */; };
-		FDDB924721CD8F6000B6D5E9 /* Deliver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91CD21CD8D3F00B6D5E9 /* Deliver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDB924A21CD8F6000B6D5E9 /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91BB21CD8D3F00B6D5E9 /* Task.framework */; };
-		FDDB924B21CD8F6000B6D5E9 /* Task.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91BB21CD8D3F00B6D5E9 /* Task.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDB924E21CD8F6000B6D5E9 /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91CB21CD8D3F00B6D5E9 /* Url.framework */; };
-		FDDB924F21CD8F6000B6D5E9 /* Url.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91CB21CD8D3F00B6D5E9 /* Url.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDB925221CD8F6000B6D5E9 /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91C121CD8D3F00B6D5E9 /* SourceryWorker.framework */; };
-		FDDB925321CD8F6000B6D5E9 /* SourceryWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91C121CD8D3F00B6D5E9 /* SourceryWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDB925A21CD8F6100B6D5E9 /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91B321CD8D3F00B6D5E9 /* SignPost.framework */; };
-		FDDB925B21CD8F6100B6D5E9 /* SignPost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91B321CD8D3F00B6D5E9 /* SignPost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDB925E21CD8FB400B6D5E9 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91BF21CD8D3F00B6D5E9 /* SourceryAutoProtocols.framework */; };
-		FDDB925F21CD8FB400B6D5E9 /* SourceryAutoProtocols.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB91BF21CD8D3F00B6D5E9 /* SourceryAutoProtocols.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDDB937221CDA6FE00B6D5E9 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB92C121CD921C00B6D5E9 /* ZFile.framework */; };
 		FDDB937321CDA6FE00B6D5E9 /* ZFile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB92C121CD921C00B6D5E9 /* ZFile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDDB937A21CDA7FA00B6D5E9 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB92C121CD921C00B6D5E9 /* ZFile.framework */; };
 		FDDB937F21CDA81100B6D5E9 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB931F21CD96E900B6D5E9 /* ZFileMock.framework */; };
 		FDDB938E21CDA8AC00B6D5E9 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB92BD21CD921C00B6D5E9 /* ZFile.framework */; };
+		FDE0B71121D7BD2B0093CBCB /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B69C21D7BC910093CBCB /* Arguments.framework */; };
+		FDE0B71221D7BD2B0093CBCB /* Arguments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B69C21D7BC910093CBCB /* Arguments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDE0B71521D7BD2B0093CBCB /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6BE21D7BC910093CBCB /* Keychain.framework */; };
+		FDE0B71621D7BD2B0093CBCB /* Keychain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6BE21D7BC910093CBCB /* Keychain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDE0B71921D7BD2B0093CBCB /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6A421D7BC910093CBCB /* Terminal.framework */; };
+		FDE0B71A21D7BD2B0093CBCB /* Terminal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6A421D7BC910093CBCB /* Terminal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDE0B71D21D7BD2B0093CBCB /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6B421D7BC910093CBCB /* POSIX.framework */; };
+		FDE0B71E21D7BD2B0093CBCB /* POSIX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6B421D7BC910093CBCB /* POSIX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDE0B72121D7BD2B0093CBCB /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6B821D7BC910093CBCB /* XCBuild.framework */; };
+		FDE0B72221D7BD2B0093CBCB /* XCBuild.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6B821D7BC910093CBCB /* XCBuild.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDE0B72521D7BD2B0093CBCB /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6C021D7BC910093CBCB /* Result.framework */; };
+		FDE0B72621D7BD2B0093CBCB /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6C021D7BC910093CBCB /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDE0B72921D7BD2B0093CBCB /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6B621D7BC910093CBCB /* Errors.framework */; };
+		FDE0B72A21D7BD2B0093CBCB /* Errors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6B621D7BC910093CBCB /* Errors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDE0B72D21D7BD2B0093CBCB /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6AC21D7BC910093CBCB /* SourceryAutoProtocols.framework */; };
+		FDE0B72E21D7BD2B0093CBCB /* SourceryAutoProtocols.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6AC21D7BC910093CBCB /* SourceryAutoProtocols.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDE0B73121D7BD2B0093CBCB /* Deliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6BC21D7BC910093CBCB /* Deliver.framework */; };
+		FDE0B73221D7BD2B0093CBCB /* Deliver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6BC21D7BC910093CBCB /* Deliver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDE0B73521D7BD2B0093CBCB /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6A821D7BC910093CBCB /* Task.framework */; };
+		FDE0B73621D7BD2B0093CBCB /* Task.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6A821D7BC910093CBCB /* Task.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDE0B73921D7BD2B0093CBCB /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6BA21D7BC910093CBCB /* Url.framework */; };
+		FDE0B73A21D7BD2B0093CBCB /* Url.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6BA21D7BC910093CBCB /* Url.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDE0B73D21D7BD2B0093CBCB /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6B021D7BC910093CBCB /* SourceryWorker.framework */; };
+		FDE0B73E21D7BD2B0093CBCB /* SourceryWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6B021D7BC910093CBCB /* SourceryWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDE0B74521D7BD2B0093CBCB /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6A021D7BC910093CBCB /* SignPost.framework */; };
+		FDE0B74621D7BD2B0093CBCB /* SignPost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6A021D7BC910093CBCB /* SignPost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDE0B74921D7BD2B0093CBCB /* TestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6C221D7BC910093CBCB /* TestKit.framework */; };
+		FDE0B74A21D7BD2B0093CBCB /* TestKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B6C221D7BC910093CBCB /* TestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDE0B76021D7BE090093CBCB /* CupertinoJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B75B21D7BDEC0093CBCB /* CupertinoJWT.framework */; };
+		FDE0B76121D7BE090093CBCB /* CupertinoJWT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0B75B21D7BDEC0093CBCB /* CupertinoJWT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FD4E545721D111D300B5A776 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
-		};
 		FD4E546A21D1137D00B5A776 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FDDB90E321CD861900B6D5E9 /* Quick.xcodeproj */;
@@ -223,230 +217,6 @@
 			remoteGlobalIDString = 64076D1A1D6D7CEA00E2B499;
 			remoteInfo = "QuickAfterSuite - tvOSTests";
 		};
-		FDDB91AE21CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "highway::Arguments::Product";
-			remoteInfo = Arguments;
-		};
-		FDDB91B021CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FDB7A98321CD6B5D0045DDA8;
-			remoteInfo = ArgumentsMock;
-		};
-		FDDB91B221CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FD1126CC21C77F050072607D;
-			remoteInfo = SignPost;
-		};
-		FDDB91B421CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FDB7A9C721CD6F7F0045DDA8;
-			remoteInfo = SignPostMock;
-		};
-		FDDB91B621CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "highway::Terminal::Product";
-			remoteInfo = Terminal;
-		};
-		FDDB91B821CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FDB7A9E221CD736C0045DDA8;
-			remoteInfo = TerminalMock;
-		};
-		FDDB91BA21CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "highway::Task::Product";
-			remoteInfo = Task;
-		};
-		FDDB91BC21CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FDB7A9FC21CD7E8C0045DDA8;
-			remoteInfo = TaskMock;
-		};
-		FDDB91BE21CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols::Product";
-			remoteInfo = SourceryAutoProtocols;
-		};
-		FDDB91C021CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FDC156DB21C5347C00E04B44;
-			remoteInfo = SourceryWorker;
-		};
-		FDDB91C221CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FDB7AA0D21CD81DC0045DDA8;
-			remoteInfo = SourceryWorkerMock;
-		};
-		FDDB91C421CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "highway::POSIX::Product";
-			remoteInfo = POSIX;
-		};
-		FDDB91C621CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "highway::Errors::Product";
-			remoteInfo = Errors;
-		};
-		FDDB91C821CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "highway::XCBuild::Product";
-			remoteInfo = XCBuild;
-		};
-		FDDB91CA21CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "highway::Url::Product";
-			remoteInfo = Url;
-		};
-		FDDB91CC21CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "highway::Deliver::Product";
-			remoteInfo = Deliver;
-		};
-		FDDB91CE21CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "highway::Keychain::Product";
-			remoteInfo = Keychain;
-		};
-		FDDB91D021CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "highway::Result::Product";
-			remoteInfo = Result;
-		};
-		FDDB91D221CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FDB7A8B921CD5EA10045DDA8;
-			remoteInfo = TestKit;
-		};
-		FDDB91D421CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "highway::Git::Product";
-			remoteInfo = Git;
-		};
-		FDDB91D621CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FDE9B6F721C58ED400D1F50A;
-			remoteInfo = "SourceryAutoProtocols-iOS";
-		};
-		FDDB91D821CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "highway::ArgumentsTests::Product";
-			remoteInfo = ArgumentsTests;
-		};
-		FDDB91DA21CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "highway::DeliverTests::Product";
-			remoteInfo = DeliverTests;
-		};
-		FDDB91DC21CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "highway::GitTests::Product";
-			remoteInfo = GitTests;
-		};
-		FDDB91DE21CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "highway::POSIXTests::Product";
-			remoteInfo = POSIXTests;
-		};
-		FDDB91E021CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "highway::ResultTests::Product";
-			remoteInfo = ResultTests;
-		};
-		FDDB91E221CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "highway::TaskTests::Product";
-			remoteInfo = TaskTests;
-		};
-		FDDB91E421CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "highway::TerminalTests::Product";
-			remoteInfo = TerminalTests;
-		};
-		FDDB91E621CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "highway::UrlTests::Product";
-			remoteInfo = UrlTests;
-		};
-		FDDB91E821CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "highway::XCBuildTests::Product";
-			remoteInfo = XCBuildTests;
-		};
-		FDDB91EA21CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FDC156E321C5347D00E04B44;
-			remoteInfo = SourceryWorkerTests;
-		};
-		FDDB91EC21CD8D3F00B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FD1126D421C77F050072607D;
-			remoteInfo = SignPostTests;
-		};
 		FDDB91F821CD8D5A00B6D5E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FDDB91EE21CD8D5900B6D5E9 /* Nimble.xcodeproj */;
@@ -488,104 +258,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 1F5DF15E1BDCA0CE00C3A531;
 			remoteInfo = "Nimble-tvOSTests";
-		};
-		FDDB922421CD8F6000B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Arguments";
-			remoteInfo = Arguments;
-		};
-		FDDB922821CD8F6000B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Keychain";
-			remoteInfo = Keychain;
-		};
-		FDDB922C21CD8F6000B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Terminal";
-			remoteInfo = Terminal;
-		};
-		FDDB923021CD8F6000B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::POSIX";
-			remoteInfo = POSIX;
-		};
-		FDDB923421CD8F6000B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::XCBuild";
-			remoteInfo = XCBuild;
-		};
-		FDDB923821CD8F6000B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Result";
-			remoteInfo = Result;
-		};
-		FDDB923C21CD8F6000B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Errors";
-			remoteInfo = Errors;
-		};
-		FDDB924421CD8F6000B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Git";
-			remoteInfo = Git;
-		};
-		FDDB924821CD8F6000B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Deliver";
-			remoteInfo = Deliver;
-		};
-		FDDB924C21CD8F6000B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Task";
-			remoteInfo = Task;
-		};
-		FDDB925021CD8F6000B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::Url";
-			remoteInfo = Url;
-		};
-		FDDB925421CD8F6100B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = FDC156DA21C5347C00E04B44;
-			remoteInfo = SourceryWorker;
-		};
-		FDDB925C21CD8F6100B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = FD1126CB21C77F050072607D;
-			remoteInfo = SignPost;
-		};
-		FDDB926021CD8FB400B6D5E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = "highway::SourceryAutoProtocols";
-			remoteInfo = SourceryAutoProtocols;
 		};
 		FDDB92BC21CD921C00B6D5E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -636,6 +308,370 @@
 			remoteGlobalIDString = FD737D9121B03BD3001BB507;
 			remoteInfo = "ZFile-iOS";
 		};
+		FDE0B69B21D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::Arguments::Product";
+			remoteInfo = Arguments;
+		};
+		FDE0B69D21D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDB7A98321CD6B5D0045DDA8;
+			remoteInfo = ArgumentsMock;
+		};
+		FDE0B69F21D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD1126CC21C77F050072607D;
+			remoteInfo = SignPost;
+		};
+		FDE0B6A121D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDB7A9C721CD6F7F0045DDA8;
+			remoteInfo = SignPostMock;
+		};
+		FDE0B6A321D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::Terminal::Product";
+			remoteInfo = Terminal;
+		};
+		FDE0B6A521D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDB7A9E221CD736C0045DDA8;
+			remoteInfo = TerminalMock;
+		};
+		FDE0B6A721D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::Task::Product";
+			remoteInfo = Task;
+		};
+		FDE0B6A921D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDB7A9FC21CD7E8C0045DDA8;
+			remoteInfo = TaskMock;
+		};
+		FDE0B6AB21D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::SourceryAutoProtocols::Product";
+			remoteInfo = "SourceryAutoProtocols-macos";
+		};
+		FDE0B6AD21D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDE9B6F721C58ED400D1F50A;
+			remoteInfo = "SourceryAutoProtocols-ios";
+		};
+		FDE0B6AF21D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDC156DB21C5347C00E04B44;
+			remoteInfo = SourceryWorker;
+		};
+		FDE0B6B121D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDB7AA0D21CD81DC0045DDA8;
+			remoteInfo = SourceryWorkerMock;
+		};
+		FDE0B6B321D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::POSIX::Product";
+			remoteInfo = POSIX;
+		};
+		FDE0B6B521D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::Errors::Product";
+			remoteInfo = Errors;
+		};
+		FDE0B6B721D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::XCBuild::Product";
+			remoteInfo = XCBuild;
+		};
+		FDE0B6B921D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::Url::Product";
+			remoteInfo = Url;
+		};
+		FDE0B6BB21D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::Deliver::Product";
+			remoteInfo = Deliver;
+		};
+		FDE0B6BD21D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::Keychain::Product";
+			remoteInfo = Keychain;
+		};
+		FDE0B6BF21D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::Result::Product";
+			remoteInfo = Result;
+		};
+		FDE0B6C121D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDB7A8B921CD5EA10045DDA8;
+			remoteInfo = TestKit;
+		};
+		FDE0B6C321D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::Git::Product";
+			remoteInfo = Git;
+		};
+		FDE0B6C521D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::ArgumentsTests::Product";
+			remoteInfo = ArgumentsTests;
+		};
+		FDE0B6C721D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::DeliverTests::Product";
+			remoteInfo = DeliverTests;
+		};
+		FDE0B6C921D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::GitTests::Product";
+			remoteInfo = GitTests;
+		};
+		FDE0B6CB21D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::POSIXTests::Product";
+			remoteInfo = POSIXTests;
+		};
+		FDE0B6CD21D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::ResultTests::Product";
+			remoteInfo = ResultTests;
+		};
+		FDE0B6CF21D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::TaskTests::Product";
+			remoteInfo = TaskTests;
+		};
+		FDE0B6D121D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::TerminalTests::Product";
+			remoteInfo = TerminalTests;
+		};
+		FDE0B6D321D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::UrlTests::Product";
+			remoteInfo = UrlTests;
+		};
+		FDE0B6D521D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "highway::XCBuildTests::Product";
+			remoteInfo = XCBuildTests;
+		};
+		FDE0B6D721D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDC156E321C5347D00E04B44;
+			remoteInfo = SourceryWorkerTests;
+		};
+		FDE0B6D921D7BC910093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD1126D421C77F050072607D;
+			remoteInfo = SignPostTests;
+		};
+		FDE0B71321D7BD2B0093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Arguments";
+			remoteInfo = Arguments;
+		};
+		FDE0B71721D7BD2B0093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Keychain";
+			remoteInfo = Keychain;
+		};
+		FDE0B71B21D7BD2B0093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Terminal";
+			remoteInfo = Terminal;
+		};
+		FDE0B71F21D7BD2B0093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::POSIX";
+			remoteInfo = POSIX;
+		};
+		FDE0B72321D7BD2B0093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::XCBuild";
+			remoteInfo = XCBuild;
+		};
+		FDE0B72721D7BD2B0093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Result";
+			remoteInfo = Result;
+		};
+		FDE0B72B21D7BD2B0093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Errors";
+			remoteInfo = Errors;
+		};
+		FDE0B72F21D7BD2B0093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::SourceryAutoProtocols";
+			remoteInfo = "SourceryAutoProtocols-macos";
+		};
+		FDE0B73321D7BD2B0093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Deliver";
+			remoteInfo = Deliver;
+		};
+		FDE0B73721D7BD2B0093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Task";
+			remoteInfo = Task;
+		};
+		FDE0B73B21D7BD2B0093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = "highway::Url";
+			remoteInfo = Url;
+		};
+		FDE0B73F21D7BD2B0093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FDC156DA21C5347C00E04B44;
+			remoteInfo = SourceryWorker;
+		};
+		FDE0B74721D7BD2B0093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FD1126CB21C77F050072607D;
+			remoteInfo = SignPost;
+		};
+		FDE0B74B21D7BD2B0093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FDB7A8B821CD5EA10045DDA8;
+			remoteInfo = TestKit;
+		};
+		FDE0B75621D7BDEC0093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDE0B74D21D7BDEB0093CBCB /* CupertinoJWT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6CCBCF96212E6444009DD9AC;
+			remoteInfo = "CupertinoJWT iOS";
+		};
+		FDE0B75821D7BDEC0093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDE0B74D21D7BDEB0093CBCB /* CupertinoJWT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6CCBD070212E92CF009DD9AC;
+			remoteInfo = "CupertinoJWT Tests";
+		};
+		FDE0B75A21D7BDEC0093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDE0B74D21D7BDEB0093CBCB /* CupertinoJWT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D1E18D821B6BFB80073A4FC;
+			remoteInfo = "CupertinoJWT macOS";
+		};
+		FDE0B75C21D7BDEC0093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDE0B74D21D7BDEB0093CBCB /* CupertinoJWT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D244D9C21B82C0000907D0B;
+			remoteInfo = "CupertinoJWT watchOS";
+		};
+		FDE0B75E21D7BDEC0093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDE0B74D21D7BDEB0093CBCB /* CupertinoJWT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D244DAF21B82CE200907D0B;
+			remoteInfo = "CupertinoJWT tvOS";
+		};
+		FDE0B76221D7BE090093CBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDE0B74D21D7BDEB0093CBCB /* CupertinoJWT.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D1E18C721B6BFB80073A4FC;
+			remoteInfo = "CupertinoJWT macOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -645,21 +681,22 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FDDB923321CD8F6000B6D5E9 /* XCBuild.framework in Embed Frameworks */,
-				FDDB923B21CD8F6000B6D5E9 /* Errors.framework in Embed Frameworks */,
-				FDDB924721CD8F6000B6D5E9 /* Deliver.framework in Embed Frameworks */,
-				FDDB923721CD8F6000B6D5E9 /* Result.framework in Embed Frameworks */,
-				FDDB922F21CD8F6000B6D5E9 /* POSIX.framework in Embed Frameworks */,
-				FDDB925F21CD8FB400B6D5E9 /* SourceryAutoProtocols.framework in Embed Frameworks */,
-				FDDB925B21CD8F6100B6D5E9 /* SignPost.framework in Embed Frameworks */,
-				FDDB924B21CD8F6000B6D5E9 /* Task.framework in Embed Frameworks */,
-				FDDB922721CD8F6000B6D5E9 /* Keychain.framework in Embed Frameworks */,
+				FDE0B76121D7BE090093CBCB /* CupertinoJWT.framework in Embed Frameworks */,
+				FDE0B72221D7BD2B0093CBCB /* XCBuild.framework in Embed Frameworks */,
+				FDE0B72A21D7BD2B0093CBCB /* Errors.framework in Embed Frameworks */,
+				FDE0B72621D7BD2B0093CBCB /* Result.framework in Embed Frameworks */,
+				FDE0B71E21D7BD2B0093CBCB /* POSIX.framework in Embed Frameworks */,
+				FDE0B73A21D7BD2B0093CBCB /* Url.framework in Embed Frameworks */,
+				FDE0B74A21D7BD2B0093CBCB /* TestKit.framework in Embed Frameworks */,
+				FDE0B73221D7BD2B0093CBCB /* Deliver.framework in Embed Frameworks */,
+				FDE0B71621D7BD2B0093CBCB /* Keychain.framework in Embed Frameworks */,
+				FDE0B72E21D7BD2B0093CBCB /* SourceryAutoProtocols.framework in Embed Frameworks */,
+				FDE0B73621D7BD2B0093CBCB /* Task.framework in Embed Frameworks */,
+				FDE0B74621D7BD2B0093CBCB /* SignPost.framework in Embed Frameworks */,
 				FDDB937321CDA6FE00B6D5E9 /* ZFile.framework in Embed Frameworks */,
-				FDDB924F21CD8F6000B6D5E9 /* Url.framework in Embed Frameworks */,
-				FDDB925321CD8F6000B6D5E9 /* SourceryWorker.framework in Embed Frameworks */,
-				FDDB924321CD8F6000B6D5E9 /* Git.framework in Embed Frameworks */,
-				FDDB922B21CD8F6000B6D5E9 /* Terminal.framework in Embed Frameworks */,
-				FDDB922321CD8F6000B6D5E9 /* Arguments.framework in Embed Frameworks */,
+				FDE0B73E21D7BD2B0093CBCB /* SourceryWorker.framework in Embed Frameworks */,
+				FDE0B71A21D7BD2B0093CBCB /* Terminal.framework in Embed Frameworks */,
+				FDE0B71221D7BD2B0093CBCB /* Arguments.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -688,11 +725,12 @@
 		FDB7AA2521CD84960045DDA8 /* AutomateZFile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutomateZFile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB7AA3721CD84970045DDA8 /* AutomateZFileTests-macos.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AutomateZFileTests-macos.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDB905921CD84E900B6D5E9 /* ZFile.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ZFile.xcodeproj; sourceTree = "<group>"; };
-		FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "🛣.xcodeproj"; path = "../Carthage/Checkouts/highway/🛣.xcodeproj"; sourceTree = "<group>"; };
+		FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "🛣.xcodeproj"; path = "../Carthage/Checkouts/highway/Sources/highway/🛣.xcodeproj"; sourceTree = "<group>"; };
 		FDDB90E321CD861900B6D5E9 /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = ../Carthage/Checkouts/Quick/Quick.xcodeproj; sourceTree = "<group>"; };
 		FDDB91EE21CD8D5900B6D5E9 /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = ../Carthage/Checkouts/Nimble/Nimble.xcodeproj; sourceTree = "<group>"; };
 		FDDB933B21CDA62600B6D5E9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		FDDB938421CDA89A00B6D5E9 /* AutomateZFileTests-ios.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AutomateZFileTests-ios.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDE0B74D21D7BDEB0093CBCB /* CupertinoJWT.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CupertinoJWT.xcodeproj; path = ../Carthage/Checkouts/highway/Sources/Carthage/Checkouts/CupertinoJWT/CupertinoJWT.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -707,21 +745,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDDB925E21CD8FB400B6D5E9 /* SourceryAutoProtocols.framework in Frameworks */,
-				FDDB923221CD8F6000B6D5E9 /* XCBuild.framework in Frameworks */,
-				FDDB923A21CD8F6000B6D5E9 /* Errors.framework in Frameworks */,
-				FDDB924621CD8F6000B6D5E9 /* Deliver.framework in Frameworks */,
-				FDDB923621CD8F6000B6D5E9 /* Result.framework in Frameworks */,
-				FDDB922E21CD8F6000B6D5E9 /* POSIX.framework in Frameworks */,
-				FDDB925A21CD8F6100B6D5E9 /* SignPost.framework in Frameworks */,
-				FDDB924A21CD8F6000B6D5E9 /* Task.framework in Frameworks */,
-				FDDB922621CD8F6000B6D5E9 /* Keychain.framework in Frameworks */,
+				FDE0B76021D7BE090093CBCB /* CupertinoJWT.framework in Frameworks */,
+				FDE0B72121D7BD2B0093CBCB /* XCBuild.framework in Frameworks */,
+				FDE0B72921D7BD2B0093CBCB /* Errors.framework in Frameworks */,
+				FDE0B72521D7BD2B0093CBCB /* Result.framework in Frameworks */,
+				FDE0B71D21D7BD2B0093CBCB /* POSIX.framework in Frameworks */,
+				FDE0B73921D7BD2B0093CBCB /* Url.framework in Frameworks */,
+				FDE0B74921D7BD2B0093CBCB /* TestKit.framework in Frameworks */,
+				FDE0B73121D7BD2B0093CBCB /* Deliver.framework in Frameworks */,
+				FDE0B71521D7BD2B0093CBCB /* Keychain.framework in Frameworks */,
+				FDE0B72D21D7BD2B0093CBCB /* SourceryAutoProtocols.framework in Frameworks */,
+				FDE0B73521D7BD2B0093CBCB /* Task.framework in Frameworks */,
+				FDE0B74521D7BD2B0093CBCB /* SignPost.framework in Frameworks */,
 				FDDB937221CDA6FE00B6D5E9 /* ZFile.framework in Frameworks */,
-				FDDB924E21CD8F6000B6D5E9 /* Url.framework in Frameworks */,
-				FDDB925221CD8F6000B6D5E9 /* SourceryWorker.framework in Frameworks */,
-				FDDB924221CD8F6000B6D5E9 /* Git.framework in Frameworks */,
-				FDDB922A21CD8F6000B6D5E9 /* Terminal.framework in Frameworks */,
-				FDDB922221CD8F6000B6D5E9 /* Arguments.framework in Frameworks */,
+				FDE0B73D21D7BD2B0093CBCB /* SourceryWorker.framework in Frameworks */,
+				FDE0B71921D7BD2B0093CBCB /* Terminal.framework in Frameworks */,
+				FDE0B71121D7BD2B0093CBCB /* Arguments.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,7 +770,6 @@
 			files = (
 				FD4E546F21D1139100B5A776 /* Nimble.framework in Frameworks */,
 				FD4E546C21D1138300B5A776 /* Quick.framework in Frameworks */,
-				FD4E545921D111DD00B5A776 /* SourceryAutoProtocols.framework in Frameworks */,
 				FDDB937F21CDA81100B6D5E9 /* ZFileMock.framework in Frameworks */,
 				FDDB937A21CDA7FA00B6D5E9 /* ZFile.framework in Frameworks */,
 			);
@@ -814,6 +852,7 @@
 				FDB7AA2621CD84960045DDA8 /* Products */,
 				FDDB914C21CD86E100B6D5E9 /* Frameworks */,
 				FD4E549521D119D200B5A776 /* template-sourcery */,
+				FDE0B74D21D7BDEB0093CBCB /* CupertinoJWT.xcodeproj */,
 				FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */,
 				FDDB905921CD84E900B6D5E9 /* ZFile.xcodeproj */,
 				FDDB91EE21CD8D5900B6D5E9 /* Nimble.xcodeproj */,
@@ -858,45 +897,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FDDB918C21CD8D3F00B6D5E9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FDDB91AF21CD8D3F00B6D5E9 /* Arguments.framework */,
-				FDDB91B121CD8D3F00B6D5E9 /* ArgumentsMock.framework */,
-				FDDB91B321CD8D3F00B6D5E9 /* SignPost.framework */,
-				FDDB91B521CD8D3F00B6D5E9 /* SignPostMock.framework */,
-				FDDB91B721CD8D3F00B6D5E9 /* Terminal.framework */,
-				FDDB91B921CD8D3F00B6D5E9 /* TerminalMock.framework */,
-				FDDB91BB21CD8D3F00B6D5E9 /* Task.framework */,
-				FDDB91BD21CD8D3F00B6D5E9 /* TaskMock.framework */,
-				FDDB91BF21CD8D3F00B6D5E9 /* SourceryAutoProtocols.framework */,
-				FDDB91C121CD8D3F00B6D5E9 /* SourceryWorker.framework */,
-				FDDB91C321CD8D3F00B6D5E9 /* SourceryWorkerMock.framework */,
-				FDDB91C521CD8D3F00B6D5E9 /* POSIX.framework */,
-				FDDB91C721CD8D3F00B6D5E9 /* Errors.framework */,
-				FDDB91C921CD8D3F00B6D5E9 /* XCBuild.framework */,
-				FDDB91CB21CD8D3F00B6D5E9 /* Url.framework */,
-				FDDB91CD21CD8D3F00B6D5E9 /* Deliver.framework */,
-				FDDB91CF21CD8D3F00B6D5E9 /* Keychain.framework */,
-				FDDB91D121CD8D3F00B6D5E9 /* Result.framework */,
-				FDDB91D321CD8D3F00B6D5E9 /* TestKit.framework */,
-				FDDB91D521CD8D3F00B6D5E9 /* Git.framework */,
-				FDDB91D721CD8D3F00B6D5E9 /* SourceryAutoProtocols.framework */,
-				FDDB91D921CD8D3F00B6D5E9 /* ArgumentsTests.xctest */,
-				FDDB91DB21CD8D3F00B6D5E9 /* DeliverTests.xctest */,
-				FDDB91DD21CD8D3F00B6D5E9 /* GitTests.xctest */,
-				FDDB91DF21CD8D3F00B6D5E9 /* POSIXTests.xctest */,
-				FDDB91E121CD8D3F00B6D5E9 /* ResultTests.xctest */,
-				FDDB91E321CD8D3F00B6D5E9 /* TaskTests.xctest */,
-				FDDB91E521CD8D3F00B6D5E9 /* TerminalTests.xctest */,
-				FDDB91E721CD8D3F00B6D5E9 /* UrlTests.xctest */,
-				FDDB91E921CD8D3F00B6D5E9 /* XCBuildTests.xctest */,
-				FDDB91EB21CD8D3F00B6D5E9 /* SourceryWorkerTests.xctest */,
-				FDDB91ED21CD8D3F00B6D5E9 /* SignPostTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		FDDB91EF21CD8D5900B6D5E9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -919,6 +919,57 @@
 				FDDB931F21CD96E900B6D5E9 /* ZFileMock.framework */,
 				FD841DBB21D0F5EC00C8843F /* FoundationGenericHelper.framework */,
 				FD841DBD21D0F5EC00C8843F /* FoundationGenericHelper.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDE0B67921D7BC910093CBCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDE0B69C21D7BC910093CBCB /* Arguments.framework */,
+				FDE0B69E21D7BC910093CBCB /* ArgumentsMock.framework */,
+				FDE0B6A021D7BC910093CBCB /* SignPost.framework */,
+				FDE0B6A221D7BC910093CBCB /* SignPostMock.framework */,
+				FDE0B6A421D7BC910093CBCB /* Terminal.framework */,
+				FDE0B6A621D7BC910093CBCB /* TerminalMock.framework */,
+				FDE0B6A821D7BC910093CBCB /* Task.framework */,
+				FDE0B6AA21D7BC910093CBCB /* TaskMock.framework */,
+				FDE0B6AC21D7BC910093CBCB /* SourceryAutoProtocols.framework */,
+				FDE0B6AE21D7BC910093CBCB /* SourceryAutoProtocols.framework */,
+				FDE0B6B021D7BC910093CBCB /* SourceryWorker.framework */,
+				FDE0B6B221D7BC910093CBCB /* SourceryWorkerMock.framework */,
+				FDE0B6B421D7BC910093CBCB /* POSIX.framework */,
+				FDE0B6B621D7BC910093CBCB /* Errors.framework */,
+				FDE0B6B821D7BC910093CBCB /* XCBuild.framework */,
+				FDE0B6BA21D7BC910093CBCB /* Url.framework */,
+				FDE0B6BC21D7BC910093CBCB /* Deliver.framework */,
+				FDE0B6BE21D7BC910093CBCB /* Keychain.framework */,
+				FDE0B6C021D7BC910093CBCB /* Result.framework */,
+				FDE0B6C221D7BC910093CBCB /* TestKit.framework */,
+				FDE0B6C421D7BC910093CBCB /* Git.framework */,
+				FDE0B6C621D7BC910093CBCB /* ArgumentsTests.xctest */,
+				FDE0B6C821D7BC910093CBCB /* DeliverTests.xctest */,
+				FDE0B6CA21D7BC910093CBCB /* GitTests.xctest */,
+				FDE0B6CC21D7BC910093CBCB /* POSIXTests.xctest */,
+				FDE0B6CE21D7BC910093CBCB /* ResultTests.xctest */,
+				FDE0B6D021D7BC910093CBCB /* TaskTests.xctest */,
+				FDE0B6D221D7BC910093CBCB /* TerminalTests.xctest */,
+				FDE0B6D421D7BC910093CBCB /* UrlTests.xctest */,
+				FDE0B6D621D7BC910093CBCB /* XCBuildTests.xctest */,
+				FDE0B6D821D7BC910093CBCB /* SourceryWorkerTests.xctest */,
+				FDE0B6DA21D7BC910093CBCB /* SignPostTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDE0B74E21D7BDEB0093CBCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDE0B75721D7BDEC0093CBCB /* CupertinoJWT.framework */,
+				FDE0B75921D7BDEC0093CBCB /* CupertinoJWT Tests.xctest */,
+				FDE0B75B21D7BDEC0093CBCB /* CupertinoJWT.framework */,
+				FDE0B75D21D7BDEC0093CBCB /* CupertinoJWT.framework */,
+				FDE0B75F21D7BDEC0093CBCB /* CupertinoJWT.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -956,20 +1007,21 @@
 			);
 			dependencies = (
 				FD4E549421D1178600B5A776 /* PBXTargetDependency */,
-				FDDB926121CD8FB400B6D5E9 /* PBXTargetDependency */,
-				FDDB922521CD8F6000B6D5E9 /* PBXTargetDependency */,
-				FDDB922921CD8F6000B6D5E9 /* PBXTargetDependency */,
-				FDDB922D21CD8F6000B6D5E9 /* PBXTargetDependency */,
-				FDDB923121CD8F6000B6D5E9 /* PBXTargetDependency */,
-				FDDB923521CD8F6000B6D5E9 /* PBXTargetDependency */,
-				FDDB923921CD8F6000B6D5E9 /* PBXTargetDependency */,
-				FDDB923D21CD8F6000B6D5E9 /* PBXTargetDependency */,
-				FDDB924521CD8F6000B6D5E9 /* PBXTargetDependency */,
-				FDDB924921CD8F6000B6D5E9 /* PBXTargetDependency */,
-				FDDB924D21CD8F6000B6D5E9 /* PBXTargetDependency */,
-				FDDB925121CD8F6000B6D5E9 /* PBXTargetDependency */,
-				FDDB925521CD8F6100B6D5E9 /* PBXTargetDependency */,
-				FDDB925D21CD8F6100B6D5E9 /* PBXTargetDependency */,
+				FDE0B71421D7BD2B0093CBCB /* PBXTargetDependency */,
+				FDE0B71821D7BD2B0093CBCB /* PBXTargetDependency */,
+				FDE0B71C21D7BD2B0093CBCB /* PBXTargetDependency */,
+				FDE0B72021D7BD2B0093CBCB /* PBXTargetDependency */,
+				FDE0B72421D7BD2B0093CBCB /* PBXTargetDependency */,
+				FDE0B72821D7BD2B0093CBCB /* PBXTargetDependency */,
+				FDE0B72C21D7BD2B0093CBCB /* PBXTargetDependency */,
+				FDE0B73021D7BD2B0093CBCB /* PBXTargetDependency */,
+				FDE0B73421D7BD2B0093CBCB /* PBXTargetDependency */,
+				FDE0B73821D7BD2B0093CBCB /* PBXTargetDependency */,
+				FDE0B73C21D7BD2B0093CBCB /* PBXTargetDependency */,
+				FDE0B74021D7BD2B0093CBCB /* PBXTargetDependency */,
+				FDE0B74821D7BD2B0093CBCB /* PBXTargetDependency */,
+				FDE0B74C21D7BD2B0093CBCB /* PBXTargetDependency */,
+				FDE0B76321D7BE090093CBCB /* PBXTargetDependency */,
 			);
 			name = AutomateZFile;
 			productName = AutomateZFile;
@@ -989,7 +1041,6 @@
 			dependencies = (
 				FD4E546E21D1138A00B5A776 /* PBXTargetDependency */,
 				FD4E546B21D1137D00B5A776 /* PBXTargetDependency */,
-				FD4E545821D111D300B5A776 /* PBXTargetDependency */,
 				FDDB937E21CDA80800B6D5E9 /* PBXTargetDependency */,
 				FDDB937921CDA7EC00B6D5E9 /* PBXTargetDependency */,
 				FDB7AA3921CD84970045DDA8 /* PBXTargetDependency */,
@@ -1060,6 +1111,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = FDE0B74E21D7BDEB0093CBCB /* Products */;
+					ProjectRef = FDE0B74D21D7BDEB0093CBCB /* CupertinoJWT.xcodeproj */;
+				},
+				{
 					ProductGroup = FDDB91EF21CD8D5900B6D5E9 /* Products */;
 					ProjectRef = FDDB91EE21CD8D5900B6D5E9 /* Nimble.xcodeproj */;
 				},
@@ -1072,7 +1127,7 @@
 					ProjectRef = FDDB905921CD84E900B6D5E9 /* ZFile.xcodeproj */;
 				},
 				{
-					ProductGroup = FDDB918C21CD8D3F00B6D5E9 /* Products */;
+					ProductGroup = FDE0B67921D7BC910093CBCB /* Products */;
 					ProjectRef = FDDB90CD21CD861100B6D5E9 /* 🛣.xcodeproj */;
 				},
 			);
@@ -1185,230 +1240,6 @@
 			remoteRef = FDDB918A21CD8D2F00B6D5E9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FDDB91AF21CD8D3F00B6D5E9 /* Arguments.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Arguments.framework;
-			remoteRef = FDDB91AE21CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91B121CD8D3F00B6D5E9 /* ArgumentsMock.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ArgumentsMock.framework;
-			remoteRef = FDDB91B021CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91B321CD8D3F00B6D5E9 /* SignPost.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SignPost.framework;
-			remoteRef = FDDB91B221CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91B521CD8D3F00B6D5E9 /* SignPostMock.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SignPostMock.framework;
-			remoteRef = FDDB91B421CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91B721CD8D3F00B6D5E9 /* Terminal.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Terminal.framework;
-			remoteRef = FDDB91B621CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91B921CD8D3F00B6D5E9 /* TerminalMock.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = TerminalMock.framework;
-			remoteRef = FDDB91B821CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91BB21CD8D3F00B6D5E9 /* Task.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Task.framework;
-			remoteRef = FDDB91BA21CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91BD21CD8D3F00B6D5E9 /* TaskMock.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = TaskMock.framework;
-			remoteRef = FDDB91BC21CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91BF21CD8D3F00B6D5E9 /* SourceryAutoProtocols.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SourceryAutoProtocols.framework;
-			remoteRef = FDDB91BE21CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91C121CD8D3F00B6D5E9 /* SourceryWorker.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SourceryWorker.framework;
-			remoteRef = FDDB91C021CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91C321CD8D3F00B6D5E9 /* SourceryWorkerMock.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SourceryWorkerMock.framework;
-			remoteRef = FDDB91C221CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91C521CD8D3F00B6D5E9 /* POSIX.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = POSIX.framework;
-			remoteRef = FDDB91C421CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91C721CD8D3F00B6D5E9 /* Errors.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Errors.framework;
-			remoteRef = FDDB91C621CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91C921CD8D3F00B6D5E9 /* XCBuild.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = XCBuild.framework;
-			remoteRef = FDDB91C821CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91CB21CD8D3F00B6D5E9 /* Url.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Url.framework;
-			remoteRef = FDDB91CA21CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91CD21CD8D3F00B6D5E9 /* Deliver.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Deliver.framework;
-			remoteRef = FDDB91CC21CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91CF21CD8D3F00B6D5E9 /* Keychain.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Keychain.framework;
-			remoteRef = FDDB91CE21CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91D121CD8D3F00B6D5E9 /* Result.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Result.framework;
-			remoteRef = FDDB91D021CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91D321CD8D3F00B6D5E9 /* TestKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = TestKit.framework;
-			remoteRef = FDDB91D221CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91D521CD8D3F00B6D5E9 /* Git.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Git.framework;
-			remoteRef = FDDB91D421CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91D721CD8D3F00B6D5E9 /* SourceryAutoProtocols.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SourceryAutoProtocols.framework;
-			remoteRef = FDDB91D621CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91D921CD8D3F00B6D5E9 /* ArgumentsTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ArgumentsTests.xctest;
-			remoteRef = FDDB91D821CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91DB21CD8D3F00B6D5E9 /* DeliverTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = DeliverTests.xctest;
-			remoteRef = FDDB91DA21CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91DD21CD8D3F00B6D5E9 /* GitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GitTests.xctest;
-			remoteRef = FDDB91DC21CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91DF21CD8D3F00B6D5E9 /* POSIXTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = POSIXTests.xctest;
-			remoteRef = FDDB91DE21CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91E121CD8D3F00B6D5E9 /* ResultTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ResultTests.xctest;
-			remoteRef = FDDB91E021CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91E321CD8D3F00B6D5E9 /* TaskTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = TaskTests.xctest;
-			remoteRef = FDDB91E221CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91E521CD8D3F00B6D5E9 /* TerminalTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = TerminalTests.xctest;
-			remoteRef = FDDB91E421CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91E721CD8D3F00B6D5E9 /* UrlTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = UrlTests.xctest;
-			remoteRef = FDDB91E621CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91E921CD8D3F00B6D5E9 /* XCBuildTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = XCBuildTests.xctest;
-			remoteRef = FDDB91E821CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91EB21CD8D3F00B6D5E9 /* SourceryWorkerTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SourceryWorkerTests.xctest;
-			remoteRef = FDDB91EA21CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FDDB91ED21CD8D3F00B6D5E9 /* SignPostTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SignPostTests.xctest;
-			remoteRef = FDDB91EC21CD8D3F00B6D5E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		FDDB91F921CD8D5A00B6D5E9 /* Nimble.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -1477,6 +1308,265 @@
 			fileType = wrapper.framework;
 			path = ZFileMock.framework;
 			remoteRef = FDDB931E21CD96E900B6D5E9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B69C21D7BC910093CBCB /* Arguments.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Arguments.framework;
+			remoteRef = FDE0B69B21D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B69E21D7BC910093CBCB /* ArgumentsMock.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ArgumentsMock.framework;
+			remoteRef = FDE0B69D21D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6A021D7BC910093CBCB /* SignPost.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SignPost.framework;
+			remoteRef = FDE0B69F21D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6A221D7BC910093CBCB /* SignPostMock.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SignPostMock.framework;
+			remoteRef = FDE0B6A121D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6A421D7BC910093CBCB /* Terminal.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Terminal.framework;
+			remoteRef = FDE0B6A321D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6A621D7BC910093CBCB /* TerminalMock.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TerminalMock.framework;
+			remoteRef = FDE0B6A521D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6A821D7BC910093CBCB /* Task.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Task.framework;
+			remoteRef = FDE0B6A721D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6AA21D7BC910093CBCB /* TaskMock.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TaskMock.framework;
+			remoteRef = FDE0B6A921D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6AC21D7BC910093CBCB /* SourceryAutoProtocols.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SourceryAutoProtocols.framework;
+			remoteRef = FDE0B6AB21D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6AE21D7BC910093CBCB /* SourceryAutoProtocols.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SourceryAutoProtocols.framework;
+			remoteRef = FDE0B6AD21D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6B021D7BC910093CBCB /* SourceryWorker.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SourceryWorker.framework;
+			remoteRef = FDE0B6AF21D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6B221D7BC910093CBCB /* SourceryWorkerMock.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SourceryWorkerMock.framework;
+			remoteRef = FDE0B6B121D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6B421D7BC910093CBCB /* POSIX.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = POSIX.framework;
+			remoteRef = FDE0B6B321D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6B621D7BC910093CBCB /* Errors.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Errors.framework;
+			remoteRef = FDE0B6B521D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6B821D7BC910093CBCB /* XCBuild.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XCBuild.framework;
+			remoteRef = FDE0B6B721D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6BA21D7BC910093CBCB /* Url.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Url.framework;
+			remoteRef = FDE0B6B921D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6BC21D7BC910093CBCB /* Deliver.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Deliver.framework;
+			remoteRef = FDE0B6BB21D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6BE21D7BC910093CBCB /* Keychain.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Keychain.framework;
+			remoteRef = FDE0B6BD21D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6C021D7BC910093CBCB /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = FDE0B6BF21D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6C221D7BC910093CBCB /* TestKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TestKit.framework;
+			remoteRef = FDE0B6C121D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6C421D7BC910093CBCB /* Git.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Git.framework;
+			remoteRef = FDE0B6C321D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6C621D7BC910093CBCB /* ArgumentsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ArgumentsTests.xctest;
+			remoteRef = FDE0B6C521D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6C821D7BC910093CBCB /* DeliverTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DeliverTests.xctest;
+			remoteRef = FDE0B6C721D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6CA21D7BC910093CBCB /* GitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GitTests.xctest;
+			remoteRef = FDE0B6C921D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6CC21D7BC910093CBCB /* POSIXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = POSIXTests.xctest;
+			remoteRef = FDE0B6CB21D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6CE21D7BC910093CBCB /* ResultTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResultTests.xctest;
+			remoteRef = FDE0B6CD21D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6D021D7BC910093CBCB /* TaskTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TaskTests.xctest;
+			remoteRef = FDE0B6CF21D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6D221D7BC910093CBCB /* TerminalTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TerminalTests.xctest;
+			remoteRef = FDE0B6D121D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6D421D7BC910093CBCB /* UrlTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UrlTests.xctest;
+			remoteRef = FDE0B6D321D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6D621D7BC910093CBCB /* XCBuildTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = XCBuildTests.xctest;
+			remoteRef = FDE0B6D521D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6D821D7BC910093CBCB /* SourceryWorkerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SourceryWorkerTests.xctest;
+			remoteRef = FDE0B6D721D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B6DA21D7BC910093CBCB /* SignPostTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SignPostTests.xctest;
+			remoteRef = FDE0B6D921D7BC910093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B75721D7BDEC0093CBCB /* CupertinoJWT.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CupertinoJWT.framework;
+			remoteRef = FDE0B75621D7BDEC0093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B75921D7BDEC0093CBCB /* CupertinoJWT Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "CupertinoJWT Tests.xctest";
+			remoteRef = FDE0B75821D7BDEC0093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B75B21D7BDEC0093CBCB /* CupertinoJWT.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CupertinoJWT.framework;
+			remoteRef = FDE0B75A21D7BDEC0093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B75D21D7BDEC0093CBCB /* CupertinoJWT.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CupertinoJWT.framework;
+			remoteRef = FDE0B75C21D7BDEC0093CBCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE0B75F21D7BDEC0093CBCB /* CupertinoJWT.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CupertinoJWT.framework;
+			remoteRef = FDE0B75E21D7BDEC0093CBCB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1557,11 +1647,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FD4E545821D111D300B5A776 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SourceryAutoProtocols;
-			targetProxy = FD4E545721D111D300B5A776 /* PBXContainerItemProxy */;
-		};
 		FD4E546B21D1137D00B5A776 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Quick-macOS";
@@ -1602,76 +1687,6 @@
 			target = FDB7AA2421CD84960045DDA8 /* AutomateZFile */;
 			targetProxy = FDB7AA3821CD84970045DDA8 /* PBXContainerItemProxy */;
 		};
-		FDDB922521CD8F6000B6D5E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Arguments;
-			targetProxy = FDDB922421CD8F6000B6D5E9 /* PBXContainerItemProxy */;
-		};
-		FDDB922921CD8F6000B6D5E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Keychain;
-			targetProxy = FDDB922821CD8F6000B6D5E9 /* PBXContainerItemProxy */;
-		};
-		FDDB922D21CD8F6000B6D5E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Terminal;
-			targetProxy = FDDB922C21CD8F6000B6D5E9 /* PBXContainerItemProxy */;
-		};
-		FDDB923121CD8F6000B6D5E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = POSIX;
-			targetProxy = FDDB923021CD8F6000B6D5E9 /* PBXContainerItemProxy */;
-		};
-		FDDB923521CD8F6000B6D5E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = XCBuild;
-			targetProxy = FDDB923421CD8F6000B6D5E9 /* PBXContainerItemProxy */;
-		};
-		FDDB923921CD8F6000B6D5E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Result;
-			targetProxy = FDDB923821CD8F6000B6D5E9 /* PBXContainerItemProxy */;
-		};
-		FDDB923D21CD8F6000B6D5E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Errors;
-			targetProxy = FDDB923C21CD8F6000B6D5E9 /* PBXContainerItemProxy */;
-		};
-		FDDB924521CD8F6000B6D5E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Git;
-			targetProxy = FDDB924421CD8F6000B6D5E9 /* PBXContainerItemProxy */;
-		};
-		FDDB924921CD8F6000B6D5E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Deliver;
-			targetProxy = FDDB924821CD8F6000B6D5E9 /* PBXContainerItemProxy */;
-		};
-		FDDB924D21CD8F6000B6D5E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Task;
-			targetProxy = FDDB924C21CD8F6000B6D5E9 /* PBXContainerItemProxy */;
-		};
-		FDDB925121CD8F6000B6D5E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Url;
-			targetProxy = FDDB925021CD8F6000B6D5E9 /* PBXContainerItemProxy */;
-		};
-		FDDB925521CD8F6100B6D5E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SourceryWorker;
-			targetProxy = FDDB925421CD8F6100B6D5E9 /* PBXContainerItemProxy */;
-		};
-		FDDB925D21CD8F6100B6D5E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SignPost;
-			targetProxy = FDDB925C21CD8F6100B6D5E9 /* PBXContainerItemProxy */;
-		};
-		FDDB926121CD8FB400B6D5E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SourceryAutoProtocols;
-			targetProxy = FDDB926021CD8FB400B6D5E9 /* PBXContainerItemProxy */;
-		};
 		FDDB937921CDA7EC00B6D5E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "ZFile-macos";
@@ -1686,6 +1701,81 @@
 			isa = PBXTargetDependency;
 			name = "ZFile-iOS";
 			targetProxy = FDDB938C21CDA8A400B6D5E9 /* PBXContainerItemProxy */;
+		};
+		FDE0B71421D7BD2B0093CBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Arguments;
+			targetProxy = FDE0B71321D7BD2B0093CBCB /* PBXContainerItemProxy */;
+		};
+		FDE0B71821D7BD2B0093CBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Keychain;
+			targetProxy = FDE0B71721D7BD2B0093CBCB /* PBXContainerItemProxy */;
+		};
+		FDE0B71C21D7BD2B0093CBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Terminal;
+			targetProxy = FDE0B71B21D7BD2B0093CBCB /* PBXContainerItemProxy */;
+		};
+		FDE0B72021D7BD2B0093CBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = POSIX;
+			targetProxy = FDE0B71F21D7BD2B0093CBCB /* PBXContainerItemProxy */;
+		};
+		FDE0B72421D7BD2B0093CBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XCBuild;
+			targetProxy = FDE0B72321D7BD2B0093CBCB /* PBXContainerItemProxy */;
+		};
+		FDE0B72821D7BD2B0093CBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Result;
+			targetProxy = FDE0B72721D7BD2B0093CBCB /* PBXContainerItemProxy */;
+		};
+		FDE0B72C21D7BD2B0093CBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Errors;
+			targetProxy = FDE0B72B21D7BD2B0093CBCB /* PBXContainerItemProxy */;
+		};
+		FDE0B73021D7BD2B0093CBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SourceryAutoProtocols-macos";
+			targetProxy = FDE0B72F21D7BD2B0093CBCB /* PBXContainerItemProxy */;
+		};
+		FDE0B73421D7BD2B0093CBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Deliver;
+			targetProxy = FDE0B73321D7BD2B0093CBCB /* PBXContainerItemProxy */;
+		};
+		FDE0B73821D7BD2B0093CBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Task;
+			targetProxy = FDE0B73721D7BD2B0093CBCB /* PBXContainerItemProxy */;
+		};
+		FDE0B73C21D7BD2B0093CBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Url;
+			targetProxy = FDE0B73B21D7BD2B0093CBCB /* PBXContainerItemProxy */;
+		};
+		FDE0B74021D7BD2B0093CBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SourceryWorker;
+			targetProxy = FDE0B73F21D7BD2B0093CBCB /* PBXContainerItemProxy */;
+		};
+		FDE0B74821D7BD2B0093CBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SignPost;
+			targetProxy = FDE0B74721D7BD2B0093CBCB /* PBXContainerItemProxy */;
+		};
+		FDE0B74C21D7BD2B0093CBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TestKit;
+			targetProxy = FDE0B74B21D7BD2B0093CBCB /* PBXContainerItemProxy */;
+		};
+		FDE0B76321D7BE090093CBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CupertinoJWT macOS";
+			targetProxy = FDE0B76221D7BE090093CBCB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1798,7 +1888,7 @@
 				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/.build.nosync/Products/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				FRAMEWORK_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1861,7 +1951,7 @@
 				DEVELOPMENT_TEAM = WWFDRU947Q;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/.build.nosync/Products/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				FRAMEWORK_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1884,9 +1974,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = sources/AutomateZFile/AutomateZFile.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Sources/AutomateZFile/AutomateZFile.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WWFDRU947Q;
 				INFOPLIST_FILE = Sources/AutomateZFile/Info.plist;
@@ -1906,9 +1996,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = sources/AutomateZFile/AutomateZFile.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Sources/AutomateZFile/AutomateZFile.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WWFDRU947Q;
 				INFOPLIST_FILE = Sources/AutomateZFile/Info.plist;
