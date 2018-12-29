@@ -13,3 +13,6 @@
 [submodule "Carthage/Checkouts/Sourcery"]
 	path = Sources/Carthage/Checkouts/Sourcery
 	url = https://github.com/doozMen/Sourcery.git
+[submodule "Carthage/Checkouts/highway"]
+	path = Sources/Carthage/Checkouts/highway
+	url = https://github.com/doozMen/highway.git
