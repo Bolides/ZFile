@@ -35,6 +35,8 @@ public protocol FolderProtocol: ItemProtocol, FileSystemIterable {
     func createSubfolderIfNeeded(withName folderName: String) throws -> FolderProtocol
     func makeFileSequence(recursive: Bool, includeHidden: Bool)-> FileSystemSequence<File>
     func copy(to folder: FolderProtocol) throws -> Folder
+    
+    func url() throws -> URL
     /// sourcery:end
 }
 
@@ -63,6 +65,7 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
         case noParent
         case nofolderWithPrefix(String)
         case noSubfolders(inFolder: FolderProtocol)
+        case invalid(path: String)
         
         @available(*, deprecated: 1.4.0, renamed: "creatingFolderFailed")
         case creatingSubfolderFailed
@@ -80,6 +83,8 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
                 return "no folder with prefix \(prefix)"
             case let .noSubfolders(inFolder: folder):
                 return "no subfolders in \(folder)"
+            case let .invalid(path: path):
+                return "invalid \(path)"
             }
         }
     }
@@ -197,6 +202,13 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
         return result
     }
     
+    public func url() throws -> URL {
+        guard let url = URL(string: self.path) else {
+            throw Error.noParent
+        }
+        
+        return url
+    }
     /**
      *  Return a file with a given name that is contained in this folder
      *
