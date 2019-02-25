@@ -4,3 +4,7 @@
 github "Bolides/highway"
 github "antitypical/Result" ~> 4.0
 github "nicklockwood/SwiftFormat"
+
+# JWT Token generation
+
+github "Bolides/CupertinoJWT"
