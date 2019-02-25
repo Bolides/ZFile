@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../../Result/Result.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../../SwiftFormat/SwiftFormat.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:../../../highway/Sources/highway/Highway.xcodeproj">
    </FileRef>
    <FileRef
