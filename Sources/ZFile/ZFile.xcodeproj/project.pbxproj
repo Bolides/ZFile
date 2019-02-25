@@ -76,6 +76,8 @@
 		FDDDD6AB222419F5004CFFFC /* ProjectFolderWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6A9222419F5004CFFFC /* ProjectFolderWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDDDD6AC222419F5004CFFFC /* FoundationGenericHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B88B421CE27D80055C2C1 /* FoundationGenericHelper.framework */; };
 		FDDDD6AD222419F5004CFFFC /* FoundationGenericHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B88B421CE27D80055C2C1 /* FoundationGenericHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDDD6B122241AFC004CFFFC /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6B022241AFC004CFFFC /* Result.framework */; };
+		FDDDD6B222241AFC004CFFFC /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6B022241AFC004CFFFC /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +139,7 @@
 				FDDDD68A222419F5004CFFFC /* Terminal.framework in Embed Frameworks */,
 				FDDDD693222419F5004CFFFC /* Errors.framework in Embed Frameworks */,
 				FDDDD696222419F5004CFFFC /* SourceryAutoProtocols.framework in Embed Frameworks */,
+				FDDDD6B222241AFC004CFFFC /* Result.framework in Embed Frameworks */,
 				FDDDD67C222419B8004CFFFC /* ZFile.framework in Embed Frameworks */,
 				FDDDD6A2222419F5004CFFFC /* Url.framework in Embed Frameworks */,
 				FDDDD69F222419F5004CFFFC /* Task.framework in Embed Frameworks */,
@@ -206,6 +209,7 @@
 		FDDDD6A3222419F5004CFFFC /* SourceryWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDDD6A6222419F5004CFFFC /* SignPost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SignPost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDDD6A9222419F5004CFFFC /* ProjectFolderWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProjectFolderWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDDD6B022241AFC004CFFFC /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +274,7 @@
 				FDDDD689222419F5004CFFFC /* Terminal.framework in Frameworks */,
 				FDDDD692222419F5004CFFFC /* Errors.framework in Frameworks */,
 				FDDDD695222419F5004CFFFC /* SourceryAutoProtocols.framework in Frameworks */,
+				FDDDD6B122241AFC004CFFFC /* Result.framework in Frameworks */,
 				FDDDD67B222419B8004CFFFC /* ZFile.framework in Frameworks */,
 				FDDDD6A1222419F5004CFFFC /* Url.framework in Frameworks */,
 				FDDDD69E222419F5004CFFFC /* Task.framework in Frameworks */,
@@ -311,6 +316,7 @@
 		FD737D8821B03BD3001BB507 = {
 			isa = PBXGroup;
 			children = (
+				FDDDD6B022241AFC004CFFFC /* Result.framework */,
 				FDDDD6A9222419F5004CFFFC /* ProjectFolderWorker.framework */,
 				FDDDD6A6222419F5004CFFFC /* SignPost.framework */,
 				FDDDD6A3222419F5004CFFFC /* SourceryWorker.framework */,
