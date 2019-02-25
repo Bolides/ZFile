@@ -36,6 +36,46 @@
 		FD737DCD21B03D30001BB507 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DAD21B03C66001BB507 /* Folder.swift */; };
 		FDDB932321CD99C100B6D5E9 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB92F521CD93F000B6D5E9 /* AutoMockable.generated.swift */; };
 		FDDB932421CD99C600B6D5E9 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB92F521CD93F000B6D5E9 /* AutoMockable.generated.swift */; };
+		FDDDD673222418D5004CFFFC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDDD672222418D5004CFFFC /* main.swift */; };
+		FDDDD6752224194B004CFFFC /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6742224194B004CFFFC /* SignPost.framework */; };
+		FDDDD6762224194B004CFFFC /* SignPost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6742224194B004CFFFC /* SignPost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDDD67822241953004CFFFC /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B88CD21CE29120055C2C1 /* SourceryAutoProtocols.framework */; };
+		FDDDD67922241953004CFFFC /* SourceryAutoProtocols.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B88CD21CE29120055C2C1 /* SourceryAutoProtocols.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDDD67A2224199D004CFFFC /* ZFileSourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDDD65A22241854004CFFFC /* ZFileSourceryWorker.swift */; };
+		FDDDD67B222419B8004CFFFC /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD737DC021B03D25001BB507 /* ZFile.framework */; };
+		FDDDD67C222419B8004CFFFC /* ZFile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD737DC021B03D25001BB507 /* ZFile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDDD680222419C7004CFFFC /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD67F222419C7004CFFFC /* Terminal.framework */; };
+		FDDDD681222419C7004CFFFC /* Terminal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD67F222419C7004CFFFC /* Terminal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDDD683222419F5004CFFFC /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD682222419F5004CFFFC /* Arguments.framework */; };
+		FDDDD684222419F5004CFFFC /* Arguments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD682222419F5004CFFFC /* Arguments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDDD686222419F5004CFFFC /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD685222419F5004CFFFC /* Keychain.framework */; };
+		FDDDD687222419F5004CFFFC /* Keychain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD685222419F5004CFFFC /* Keychain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDDD689222419F5004CFFFC /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD688222419F5004CFFFC /* Terminal.framework */; };
+		FDDDD68A222419F5004CFFFC /* Terminal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD688222419F5004CFFFC /* Terminal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDDD68C222419F5004CFFFC /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD68B222419F5004CFFFC /* POSIX.framework */; };
+		FDDDD68D222419F5004CFFFC /* POSIX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD68B222419F5004CFFFC /* POSIX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDDD68F222419F5004CFFFC /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD68E222419F5004CFFFC /* XCBuild.framework */; };
+		FDDDD690222419F5004CFFFC /* XCBuild.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD68E222419F5004CFFFC /* XCBuild.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDDD692222419F5004CFFFC /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD691222419F5004CFFFC /* Errors.framework */; };
+		FDDDD693222419F5004CFFFC /* Errors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD691222419F5004CFFFC /* Errors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDDD695222419F5004CFFFC /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD694222419F5004CFFFC /* SourceryAutoProtocols.framework */; };
+		FDDDD696222419F5004CFFFC /* SourceryAutoProtocols.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD694222419F5004CFFFC /* SourceryAutoProtocols.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDDD698222419F5004CFFFC /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD697222419F5004CFFFC /* Git.framework */; };
+		FDDDD699222419F5004CFFFC /* Git.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD697222419F5004CFFFC /* Git.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDDD69B222419F5004CFFFC /* Deliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD69A222419F5004CFFFC /* Deliver.framework */; };
+		FDDDD69C222419F5004CFFFC /* Deliver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD69A222419F5004CFFFC /* Deliver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDDD69E222419F5004CFFFC /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD69D222419F5004CFFFC /* Task.framework */; };
+		FDDDD69F222419F5004CFFFC /* Task.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD69D222419F5004CFFFC /* Task.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDDD6A1222419F5004CFFFC /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6A0222419F5004CFFFC /* Url.framework */; };
+		FDDDD6A2222419F5004CFFFC /* Url.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6A0222419F5004CFFFC /* Url.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDDD6A4222419F5004CFFFC /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6A3222419F5004CFFFC /* SourceryWorker.framework */; };
+		FDDDD6A5222419F5004CFFFC /* SourceryWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6A3222419F5004CFFFC /* SourceryWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDDD6A7222419F5004CFFFC /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6A6222419F5004CFFFC /* SignPost.framework */; };
+		FDDDD6A8222419F5004CFFFC /* SignPost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6A6222419F5004CFFFC /* SignPost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDDD6AA222419F5004CFFFC /* ProjectFolderWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6A9222419F5004CFFFC /* ProjectFolderWorker.framework */; };
+		FDDDD6AB222419F5004CFFFC /* ProjectFolderWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6A9222419F5004CFFFC /* ProjectFolderWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDDD6AC222419F5004CFFFC /* FoundationGenericHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B88B421CE27D80055C2C1 /* FoundationGenericHelper.framework */; };
+		FDDDD6AD222419F5004CFFFC /* FoundationGenericHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B88B421CE27D80055C2C1 /* FoundationGenericHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +107,53 @@
 			remoteGlobalIDString = FD1B88B321CE27D80055C2C1;
 			remoteInfo = "FoundationGenericHelper-macos";
 		};
+		FDDDD67D222419B8004CFFFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD737D8921B03BD3001BB507 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD737DBF21B03D25001BB507;
+			remoteInfo = "ZFile-macos";
+		};
+		FDDDD6AE222419F5004CFFFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD737D8921B03BD3001BB507 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD1B88B321CE27D80055C2C1;
+			remoteInfo = "FoundationGenericHelper-macos";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FDDDD6772224194B004CFFFC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FDDDD6A8222419F5004CFFFC /* SignPost.framework in Embed Frameworks */,
+				FDDDD69C222419F5004CFFFC /* Deliver.framework in Embed Frameworks */,
+				FDDDD690222419F5004CFFFC /* XCBuild.framework in Embed Frameworks */,
+				FDDDD687222419F5004CFFFC /* Keychain.framework in Embed Frameworks */,
+				FDDDD68A222419F5004CFFFC /* Terminal.framework in Embed Frameworks */,
+				FDDDD693222419F5004CFFFC /* Errors.framework in Embed Frameworks */,
+				FDDDD696222419F5004CFFFC /* SourceryAutoProtocols.framework in Embed Frameworks */,
+				FDDDD67C222419B8004CFFFC /* ZFile.framework in Embed Frameworks */,
+				FDDDD6A2222419F5004CFFFC /* Url.framework in Embed Frameworks */,
+				FDDDD69F222419F5004CFFFC /* Task.framework in Embed Frameworks */,
+				FDDDD6762224194B004CFFFC /* SignPost.framework in Embed Frameworks */,
+				FDDDD6A5222419F5004CFFFC /* SourceryWorker.framework in Embed Frameworks */,
+				FDDDD681222419C7004CFFFC /* Terminal.framework in Embed Frameworks */,
+				FDDDD684222419F5004CFFFC /* Arguments.framework in Embed Frameworks */,
+				FDDDD6AB222419F5004CFFFC /* ProjectFolderWorker.framework in Embed Frameworks */,
+				FDDDD6AD222419F5004CFFFC /* FoundationGenericHelper.framework in Embed Frameworks */,
+				FDDDD699222419F5004CFFFC /* Git.framework in Embed Frameworks */,
+				FDDDD68D222419F5004CFFFC /* POSIX.framework in Embed Frameworks */,
+				FDDDD67922241953004CFFFC /* SourceryAutoProtocols.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FD1B889221CE253C0055C2C1 /* BundleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleProtocol.swift; sourceTree = "<group>"; };
@@ -97,6 +183,29 @@
 		FDDB92F521CD93F000B6D5E9 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDDB92FD21CD953400B6D5E9 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDB930A21CD955600B6D5E9 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDDD65522241854004CFFFC /* ZFileFolderWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZFileFolderWorker.swift; sourceTree = "<group>"; };
+		FDDDD65622241854004CFFFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDDDD65A22241854004CFFFC /* ZFileSourceryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZFileSourceryWorker.swift; sourceTree = "<group>"; };
+		FDDDD65C22241854004CFFFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDDDD6612224188F004CFFFC /* AutomateZFile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutomateZFile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDDD671222418D5004CFFFC /* AutomateZFile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AutomateZFile-Bridging-Header.h"; sourceTree = "<group>"; };
+		FDDDD672222418D5004CFFFC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		FDDDD6742224194B004CFFFC /* SignPost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SignPost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDDD67F222419C7004CFFFC /* Terminal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Terminal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDDD682222419F5004CFFFC /* Arguments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Arguments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDDD685222419F5004CFFFC /* Keychain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Keychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDDD688222419F5004CFFFC /* Terminal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Terminal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDDD68B222419F5004CFFFC /* POSIX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = POSIX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDDD68E222419F5004CFFFC /* XCBuild.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XCBuild.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDDD691222419F5004CFFFC /* Errors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Errors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDDD694222419F5004CFFFC /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDDD697222419F5004CFFFC /* Git.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Git.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDDD69A222419F5004CFFFC /* Deliver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Deliver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDDD69D222419F5004CFFFC /* Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDDD6A0222419F5004CFFFC /* Url.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Url.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDDD6A3222419F5004CFFFC /* SourceryWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDDD6A6222419F5004CFFFC /* SignPost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SignPost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDDD6A9222419F5004CFFFC /* ProjectFolderWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProjectFolderWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +259,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDDDD65E2224188F004CFFFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDDDD6A7222419F5004CFFFC /* SignPost.framework in Frameworks */,
+				FDDDD69B222419F5004CFFFC /* Deliver.framework in Frameworks */,
+				FDDDD68F222419F5004CFFFC /* XCBuild.framework in Frameworks */,
+				FDDDD686222419F5004CFFFC /* Keychain.framework in Frameworks */,
+				FDDDD689222419F5004CFFFC /* Terminal.framework in Frameworks */,
+				FDDDD692222419F5004CFFFC /* Errors.framework in Frameworks */,
+				FDDDD695222419F5004CFFFC /* SourceryAutoProtocols.framework in Frameworks */,
+				FDDDD67B222419B8004CFFFC /* ZFile.framework in Frameworks */,
+				FDDDD6A1222419F5004CFFFC /* Url.framework in Frameworks */,
+				FDDDD69E222419F5004CFFFC /* Task.framework in Frameworks */,
+				FDDDD6752224194B004CFFFC /* SignPost.framework in Frameworks */,
+				FDDDD6A4222419F5004CFFFC /* SourceryWorker.framework in Frameworks */,
+				FDDDD680222419C7004CFFFC /* Terminal.framework in Frameworks */,
+				FDDDD683222419F5004CFFFC /* Arguments.framework in Frameworks */,
+				FDDDD6AA222419F5004CFFFC /* ProjectFolderWorker.framework in Frameworks */,
+				FDDDD6AC222419F5004CFFFC /* FoundationGenericHelper.framework in Frameworks */,
+				FDDDD698222419F5004CFFFC /* Git.framework in Frameworks */,
+				FDDDD68C222419F5004CFFFC /* POSIX.framework in Frameworks */,
+				FDDDD67822241953004CFFFC /* SourceryAutoProtocols.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -176,6 +311,23 @@
 		FD737D8821B03BD3001BB507 = {
 			isa = PBXGroup;
 			children = (
+				FDDDD6A9222419F5004CFFFC /* ProjectFolderWorker.framework */,
+				FDDDD6A6222419F5004CFFFC /* SignPost.framework */,
+				FDDDD6A3222419F5004CFFFC /* SourceryWorker.framework */,
+				FDDDD6A0222419F5004CFFFC /* Url.framework */,
+				FDDDD69D222419F5004CFFFC /* Task.framework */,
+				FDDDD69A222419F5004CFFFC /* Deliver.framework */,
+				FDDDD697222419F5004CFFFC /* Git.framework */,
+				FDDDD694222419F5004CFFFC /* SourceryAutoProtocols.framework */,
+				FDDDD691222419F5004CFFFC /* Errors.framework */,
+				FDDDD68E222419F5004CFFFC /* XCBuild.framework */,
+				FDDDD68B222419F5004CFFFC /* POSIX.framework */,
+				FDDDD688222419F5004CFFFC /* Terminal.framework */,
+				FDDDD685222419F5004CFFFC /* Keychain.framework */,
+				FDDDD682222419F5004CFFFC /* Arguments.framework */,
+				FDDDD67F222419C7004CFFFC /* Terminal.framework */,
+				FDDDD6742224194B004CFFFC /* SignPost.framework */,
+				FDDDD65322241854004CFFFC /* AutomateZFile */,
 				FDDB92F621CD949700B6D5E9 /* Sources */,
 				FDDB92F721CD94B000B6D5E9 /* Tests */,
 				FD737D9321B03BD3001BB507 /* Products */,
@@ -192,6 +344,7 @@
 				FDDB930A21CD955600B6D5E9 /* ZFileMock.framework */,
 				FD1B88A721CE27B70055C2C1 /* FoundationGenericHelper.framework */,
 				FD1B88B421CE27D80055C2C1 /* FoundationGenericHelper.framework */,
+				FDDDD6612224188F004CFFFC /* AutomateZFile.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -259,6 +412,20 @@
 			children = (
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		FDDDD65322241854004CFFFC /* AutomateZFile */ = {
+			isa = PBXGroup;
+			children = (
+				FDDDD65522241854004CFFFC /* ZFileFolderWorker.swift */,
+				FDDDD65622241854004CFFFC /* Assets.xcassets */,
+				FDDDD65A22241854004CFFFC /* ZFileSourceryWorker.swift */,
+				FDDDD672222418D5004CFFFC /* main.swift */,
+				FDDDD65C22241854004CFFFC /* Info.plist */,
+				FDDDD671222418D5004CFFFC /* AutomateZFile-Bridging-Header.h */,
+			);
+			name = AutomateZFile;
+			path = Sources/AutomateZFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,6 +591,26 @@
 			productReference = FDDB930A21CD955600B6D5E9 /* ZFileMock.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		FDDDD6602224188F004CFFFC /* AutomateZFile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDDDD66C22241891004CFFFC /* Build configuration list for PBXNativeTarget "AutomateZFile" */;
+			buildPhases = (
+				FDDDD65D2224188F004CFFFC /* Sources */,
+				FDDDD65E2224188F004CFFFC /* Frameworks */,
+				FDDDD65F2224188F004CFFFC /* Resources */,
+				FDDDD6772224194B004CFFFC /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDDDD67E222419B8004CFFFC /* PBXTargetDependency */,
+				FDDDD6AF222419F5004CFFFC /* PBXTargetDependency */,
+			);
+			name = AutomateZFile;
+			productName = AutomateZFile;
+			productReference = FDDDD6612224188F004CFFFC /* AutomateZFile.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -455,6 +642,10 @@
 					FDDB930921CD955600B6D5E9 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					FDDDD6602224188F004CFFFC = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
 				};
 			};
 			buildConfigurationList = FD737D8C21B03BD3001BB507 /* Build configuration list for PBXProject "ZFile" */;
@@ -463,6 +654,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = FD737D8821B03BD3001BB507;
 			productRefGroup = FD737D9321B03BD3001BB507 /* Products */;
@@ -475,6 +667,7 @@
 				FDDB92FC21CD953400B6D5E9 /* ZFileMock-macos */,
 				FD1B88A621CE27B70055C2C1 /* FoundationGenericHelper-ios */,
 				FD1B88B321CE27D80055C2C1 /* FoundationGenericHelper-macos */,
+				FDDDD6602224188F004CFFFC /* AutomateZFile */,
 			);
 		};
 /* End PBXProject section */
@@ -516,6 +709,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FDDB930821CD955600B6D5E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDDDD65F2224188F004CFFFC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -585,6 +785,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDDDD65D2224188F004CFFFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDDDD67A2224199D004CFFFC /* ZFileSourceryWorker.swift in Sources */,
+				FDDDD673222418D5004CFFFC /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -607,6 +816,16 @@
 			isa = PBXTargetDependency;
 			target = FD1B88B321CE27D80055C2C1 /* FoundationGenericHelper-macos */;
 			targetProxy = FD1B88C821CE289B0055C2C1 /* PBXContainerItemProxy */;
+		};
+		FDDDD67E222419B8004CFFFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD737DBF21B03D25001BB507 /* ZFile-macos */;
+			targetProxy = FDDDD67D222419B8004CFFFC /* PBXContainerItemProxy */;
+		};
+		FDDDD6AF222419F5004CFFFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD1B88B321CE27D80055C2C1 /* FoundationGenericHelper-macos */;
+			targetProxy = FDDDD6AE222419F5004CFFFC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -666,11 +885,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -694,11 +912,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -826,9 +1043,9 @@
 		FD61D981221C772F00CC87F8 /* BetaRelease */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -900,11 +1117,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1039,9 +1255,9 @@
 		FD61D988221C773700CC87F8 /* Local */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1114,11 +1330,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1316,9 +1531,9 @@
 		FD737DC621B03D26001BB507 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1340,9 +1555,9 @@
 		FD737DC721B03D26001BB507 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1453,6 +1668,104 @@
 			};
 			name = Release;
 		};
+		FDDDD66D22241891004CFFFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/AutomateZFile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.AutomateZFile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/AutomateZFile/AutomateZFile-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		FDDDD66E22241891004CFFFC /* Local */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/AutomateZFile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.AutomateZFile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/AutomateZFile/AutomateZFile-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Local;
+		};
+		FDDDD66F22241891004CFFFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/AutomateZFile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.AutomateZFile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/AutomateZFile/AutomateZFile-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		FDDDD67022241891004CFFFC /* BetaRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/AutomateZFile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.AutomateZFile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/AutomateZFile/AutomateZFile-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+			};
+			name = BetaRelease;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1529,6 +1842,17 @@
 				FD61D987221C773700CC87F8 /* Local */,
 				FDDB931121CD955600B6D5E9 /* Release */,
 				FD61D980221C772F00CC87F8 /* BetaRelease */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDDDD66C22241891004CFFFC /* Build configuration list for PBXNativeTarget "AutomateZFile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDDDD66D22241891004CFFFC /* Debug */,
+				FDDDD66E22241891004CFFFC /* Local */,
+				FDDDD66F22241891004CFFFC /* Release */,
+				FDDDD67022241891004CFFFC /* BetaRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
