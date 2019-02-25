@@ -15,3 +15,10 @@ import Foundation
 //: ---
 
 
+
+
+
+// Generated protocol inline for Bundle -> See code in the file of that type
+
+// Selective Generated protocol inline for File -> See code in the file of that type
+

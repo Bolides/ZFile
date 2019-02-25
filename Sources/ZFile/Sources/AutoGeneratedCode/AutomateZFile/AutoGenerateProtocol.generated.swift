@@ -15,3 +15,8 @@ import Foundation
 //: ---
 
 
+
+
+
+// Generated protocol inline for ZFileSourceryWorker -> See code in the file of that type
+

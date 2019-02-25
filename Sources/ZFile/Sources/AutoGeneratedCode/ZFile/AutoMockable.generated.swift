@@ -1871,6 +1871,48 @@ open class FolderProtocolMock: FolderProtocol {
       return try closureReturn(folder)
   }
 
+  // MARK: - <url> - parameters
+
+  public var urlThrowableError: Error?
+  public var urlCallsCount = 0
+  public var urlCalled: Bool {
+    return urlCallsCount > 0
+  }
+  public var urlReturnValue: URL?
+
+  // MARK: - <url> - closure mocks
+
+  public var urlClosure: (() throws  -> URL)? = nil
+
+
+
+  // MARK: - <url> - method mocked
+
+  open func url() throws -> URL {
+
+
+      // <url> - Throwable method implementation
+
+    if let error = urlThrowableError {
+        throw error
+    }
+
+      urlCallsCount += 1
+
+      // <url> - Return Value mock implementation
+
+      guard let closureReturn = urlClosure else {
+          guard let returnValue = urlReturnValue else {
+              let message = "No returnValue implemented for urlClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+                 throw error
+          }
+          return returnValue
+      }
+
+      return try closureReturn()
+  }
+
   // MARK: - <parentFolder> - parameters
 
   public var parentFolderThrowableError: Error?

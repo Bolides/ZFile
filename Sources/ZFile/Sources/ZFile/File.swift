@@ -31,8 +31,6 @@ public protocol FileProtocol: ItemProtocol, FileSystemIterable, AutoMockable {
     func append(string: String, encoding: String.Encoding) throws 
     func copy(to folder: FolderProtocol) throws  -> FileProtocol
     
-    func url() throws -> URL
-    
     /// sourcery:end
 }
 

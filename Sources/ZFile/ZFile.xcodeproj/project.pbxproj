@@ -30,6 +30,7 @@
 		FD737DCB21B03D30001BB507 /* FileSystemInterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DAE21B03C66001BB507 /* FileSystemInterator.swift */; };
 		FD737DCC21B03D30001BB507 /* FileSystemSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DB021B03C66001BB507 /* FileSystemSequence.swift */; };
 		FD737DCD21B03D30001BB507 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DAD21B03C66001BB507 /* Folder.swift */; };
+		FDCA4670222427700005EBA3 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCA466F222427700005EBA3 /* SourceryAutoProtocols.framework */; };
 		FDCB537F22241BF400FA6DD9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB537E22241BF400FA6DD9 /* Result.framework */; };
 		FDCB538022241BF400FA6DD9 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB537E22241BF400FA6DD9 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDCB538222241BFF00FA6DD9 /* SwiftFormat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB538122241BFF00FA6DD9 /* SwiftFormat.framework */; };
@@ -183,6 +184,7 @@
 		FD737DB121B03C66001BB507 /* FileSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystem.swift; sourceTree = "<group>"; };
 		FD737DB921B03C71001BB507 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FD737DC021B03D25001BB507 /* ZFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCA466F222427700005EBA3 /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCB537E22241BF400FA6DD9 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCB538122241BFF00FA6DD9 /* SwiftFormat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFormat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCB538422241CF800FA6DD9 /* CupertinoJWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CupertinoJWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -258,6 +260,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDCA4670222427700005EBA3 /* SourceryAutoProtocols.framework in Frameworks */,
 				FD1B88C121CE28620055C2C1 /* ZFile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +361,7 @@
 		FD737DB821B03C71001BB507 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FDCA466F222427700005EBA3 /* SourceryAutoProtocols.framework */,
 				FDCB537E22241BF400FA6DD9 /* Result.framework */,
 				FDDDD6B022241AFC004CFFFC /* Result.framework */,
 				FDDDD6A9222419F5004CFFFC /* ProjectFolderWorker.framework */,

@@ -24,20 +24,5 @@ import SourceryAutoProtocols
 
 
 
-// MARK: - ZFileFolderWorkerProtocolMock
-
-open class ZFileFolderWorkerProtocolMock: ZFileFolderWorkerProtocol {
-
-    public init() {}
-
-  public  var scrRoot: (folder: FolderProtocol, key: ZFileFolderWorker.Key) {
-      get { return underlyingScrRoot }
-      set(value) { underlyingScrRoot = value }
-  }
-  public  var underlyingScrRoot: (folder: FolderProtocol, key: ZFileFolderWorker.Key)!
-
-}
-
-
 // MARK: - OBJECTIVE-C
 
