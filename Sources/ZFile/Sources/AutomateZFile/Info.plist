@@ -28,7 +28,5 @@
 	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-	<key>BE_DOOZ_SRCROOT</key>
-	<string>$(SRCROOT)</string>
 </dict>
 </plist>

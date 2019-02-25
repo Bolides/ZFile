@@ -12,15 +12,11 @@
 		FD1B88C121CE28620055C2C1 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD737D9221B03BD3001BB507 /* ZFile.framework */; };
 		FD1B88C721CE28910055C2C1 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD737DC021B03D25001BB507 /* ZFile.framework */; };
 		FD1B88CA21CE28A50055C2C1 /* FoundationGenericHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B88B421CE27D80055C2C1 /* FoundationGenericHelper.framework */; };
-		FD1B88D021CE292D0055C2C1 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B88CF21CE292D0055C2C1 /* SourceryAutoProtocols.framework */; };
-		FD1B88D221CE29390055C2C1 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B88D121CE29390055C2C1 /* SourceryAutoProtocols.framework */; };
 		FD1B88D321CE29970055C2C1 /* BundleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1B889221CE253C0055C2C1 /* BundleProtocol.swift */; };
 		FD1B88D421CE29980055C2C1 /* BundleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1B889221CE253C0055C2C1 /* BundleProtocol.swift */; };
 		FD1B88D621CE29DC0055C2C1 /* AnyRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1B88D521CE29DC0055C2C1 /* AnyRawRepresentable.swift */; };
 		FD1B88D721CE29DC0055C2C1 /* AnyRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1B88D521CE29DC0055C2C1 /* AnyRawRepresentable.swift */; };
 		FD1B88DA21CE2AE70055C2C1 /* FoundationGenericHelper-ios.h in Headers */ = {isa = PBXBuildFile; fileRef = FD1B88D921CE2AC80055C2C1 /* FoundationGenericHelper-ios.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD4E542B21D1104C00B5A776 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4E542A21D1104C00B5A776 /* SourceryAutoProtocols.framework */; };
-		FD4E542D21D1105E00B5A776 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4E542C21D1105E00B5A776 /* SourceryAutoProtocols.framework */; };
 		FD737DA321B03BD3001BB507 /* ZFile.h in Headers */ = {isa = PBXBuildFile; fileRef = FD737D9521B03BD3001BB507 /* ZFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD737DB221B03C66001BB507 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DAC21B03C66001BB507 /* File.swift */; };
 		FD737DB321B03C66001BB507 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DAD21B03C66001BB507 /* Folder.swift */; };
@@ -42,14 +38,11 @@
 		FDCB538622241CF800FA6DD9 /* CupertinoJWT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB538422241CF800FA6DD9 /* CupertinoJWT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDCB538822241D0F00FA6DD9 /* ProjectFolderWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB538722241D0F00FA6DD9 /* ProjectFolderWorker.framework */; };
 		FDCB538922241D0F00FA6DD9 /* ProjectFolderWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB538722241D0F00FA6DD9 /* ProjectFolderWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDCB538A22241D4800FA6DD9 /* ZFileFolderWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDDD65522241854004CFFFC /* ZFileFolderWorker.swift */; };
 		FDDB932321CD99C100B6D5E9 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB92F521CD93F000B6D5E9 /* AutoMockable.generated.swift */; };
 		FDDB932421CD99C600B6D5E9 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB92F521CD93F000B6D5E9 /* AutoMockable.generated.swift */; };
 		FDDDD673222418D5004CFFFC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDDD672222418D5004CFFFC /* main.swift */; };
 		FDDDD6752224194B004CFFFC /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6742224194B004CFFFC /* SignPost.framework */; };
 		FDDDD6762224194B004CFFFC /* SignPost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6742224194B004CFFFC /* SignPost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDDD67822241953004CFFFC /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B88CD21CE29120055C2C1 /* SourceryAutoProtocols.framework */; };
-		FDDDD67922241953004CFFFC /* SourceryAutoProtocols.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B88CD21CE29120055C2C1 /* SourceryAutoProtocols.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDDDD67A2224199D004CFFFC /* ZFileSourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDDD65A22241854004CFFFC /* ZFileSourceryWorker.swift */; };
 		FDDDD67B222419B8004CFFFC /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD737DC021B03D25001BB507 /* ZFile.framework */; };
 		FDDDD67C222419B8004CFFFC /* ZFile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD737DC021B03D25001BB507 /* ZFile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -164,7 +157,6 @@
 				FDDDD6AD222419F5004CFFFC /* FoundationGenericHelper.framework in Embed Frameworks */,
 				FDDDD699222419F5004CFFFC /* Git.framework in Embed Frameworks */,
 				FDDDD68D222419F5004CFFFC /* POSIX.framework in Embed Frameworks */,
-				FDDDD67922241953004CFFFC /* SourceryAutoProtocols.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,13 +169,8 @@
 		FD1B88B421CE27D80055C2C1 /* FoundationGenericHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoundationGenericHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1B88B621CE27D80055C2C1 /* FoundationGenericHelper-macos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoundationGenericHelper-macos.h"; sourceTree = "<group>"; };
 		FD1B88B721CE27D80055C2C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD1B88CD21CE29120055C2C1 /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD1B88CF21CE292D0055C2C1 /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD1B88D121CE29390055C2C1 /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1B88D521CE29DC0055C2C1 /* AnyRawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyRawRepresentable.swift; sourceTree = "<group>"; };
 		FD1B88D921CE2AC80055C2C1 /* FoundationGenericHelper-ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoundationGenericHelper-ios.h"; sourceTree = "<group>"; };
-		FD4E542A21D1104C00B5A776 /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD4E542C21D1105E00B5A776 /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD4E545C21D1128600B5A776 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FD737D9221B03BD3001BB507 /* ZFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD737D9521B03BD3001BB507 /* ZFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFile.h; sourceTree = "<group>"; };
@@ -203,7 +190,6 @@
 		FDDB92F521CD93F000B6D5E9 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDDB92FD21CD953400B6D5E9 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDB930A21CD955600B6D5E9 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDDDD65522241854004CFFFC /* ZFileFolderWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZFileFolderWorker.swift; sourceTree = "<group>"; };
 		FDDDD65622241854004CFFFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDDDD65A22241854004CFFFC /* ZFileSourceryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZFileSourceryWorker.swift; sourceTree = "<group>"; };
 		FDDDD65C22241854004CFFFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -234,7 +220,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD1B88D021CE292D0055C2C1 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +227,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD1B88D221CE29390055C2C1 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +234,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD4E542B21D1104C00B5A776 /* SourceryAutoProtocols.framework in Frameworks */,
 				FD1B88BE21CE284C0055C2C1 /* FoundationGenericHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,7 +242,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD4E542D21D1105E00B5A776 /* SourceryAutoProtocols.framework in Frameworks */,
 				FD1B88CA21CE28A50055C2C1 /* FoundationGenericHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,7 +289,6 @@
 				FDDDD6AC222419F5004CFFFC /* FoundationGenericHelper.framework in Frameworks */,
 				FDDDD698222419F5004CFFFC /* Git.framework in Frameworks */,
 				FDDDD68C222419F5004CFFFC /* POSIX.framework in Frameworks */,
-				FDDDD67822241953004CFFFC /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,27 +318,6 @@
 		FD737D8821B03BD3001BB507 = {
 			isa = PBXGroup;
 			children = (
-				FDCB538722241D0F00FA6DD9 /* ProjectFolderWorker.framework */,
-				FDCB538422241CF800FA6DD9 /* CupertinoJWT.framework */,
-				FDCB538122241BFF00FA6DD9 /* SwiftFormat.framework */,
-				FDCB537E22241BF400FA6DD9 /* Result.framework */,
-				FDDDD6B022241AFC004CFFFC /* Result.framework */,
-				FDDDD6A9222419F5004CFFFC /* ProjectFolderWorker.framework */,
-				FDDDD6A6222419F5004CFFFC /* SignPost.framework */,
-				FDDDD6A3222419F5004CFFFC /* SourceryWorker.framework */,
-				FDDDD6A0222419F5004CFFFC /* Url.framework */,
-				FDDDD69D222419F5004CFFFC /* Task.framework */,
-				FDDDD69A222419F5004CFFFC /* Deliver.framework */,
-				FDDDD697222419F5004CFFFC /* Git.framework */,
-				FDDDD694222419F5004CFFFC /* SourceryAutoProtocols.framework */,
-				FDDDD691222419F5004CFFFC /* Errors.framework */,
-				FDDDD68E222419F5004CFFFC /* XCBuild.framework */,
-				FDDDD68B222419F5004CFFFC /* POSIX.framework */,
-				FDDDD688222419F5004CFFFC /* Terminal.framework */,
-				FDDDD685222419F5004CFFFC /* Keychain.framework */,
-				FDDDD682222419F5004CFFFC /* Arguments.framework */,
-				FDDDD67F222419C7004CFFFC /* Terminal.framework */,
-				FDDDD6742224194B004CFFFC /* SignPost.framework */,
 				FDDB92F621CD949700B6D5E9 /* Sources */,
 				FDDB92F721CD94B000B6D5E9 /* Tests */,
 				FD737D9321B03BD3001BB507 /* Products */,
@@ -398,11 +358,27 @@
 		FD737DB821B03C71001BB507 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FD4E542C21D1105E00B5A776 /* SourceryAutoProtocols.framework */,
-				FD4E542A21D1104C00B5A776 /* SourceryAutoProtocols.framework */,
-				FD1B88D121CE29390055C2C1 /* SourceryAutoProtocols.framework */,
-				FD1B88CF21CE292D0055C2C1 /* SourceryAutoProtocols.framework */,
-				FD1B88CD21CE29120055C2C1 /* SourceryAutoProtocols.framework */,
+				FDCB537E22241BF400FA6DD9 /* Result.framework */,
+				FDDDD6B022241AFC004CFFFC /* Result.framework */,
+				FDDDD6A9222419F5004CFFFC /* ProjectFolderWorker.framework */,
+				FDCB538722241D0F00FA6DD9 /* ProjectFolderWorker.framework */,
+				FDCB538422241CF800FA6DD9 /* CupertinoJWT.framework */,
+				FDCB538122241BFF00FA6DD9 /* SwiftFormat.framework */,
+				FDDDD697222419F5004CFFFC /* Git.framework */,
+				FDDDD694222419F5004CFFFC /* SourceryAutoProtocols.framework */,
+				FDDDD691222419F5004CFFFC /* Errors.framework */,
+				FDDDD68E222419F5004CFFFC /* XCBuild.framework */,
+				FDDDD68B222419F5004CFFFC /* POSIX.framework */,
+				FDDDD682222419F5004CFFFC /* Arguments.framework */,
+				FDDDD67F222419C7004CFFFC /* Terminal.framework */,
+				FDDDD685222419F5004CFFFC /* Keychain.framework */,
+				FDDDD688222419F5004CFFFC /* Terminal.framework */,
+				FDDDD6742224194B004CFFFC /* SignPost.framework */,
+				FDDDD6A6222419F5004CFFFC /* SignPost.framework */,
+				FDDDD6A3222419F5004CFFFC /* SourceryWorker.framework */,
+				FDDDD6A0222419F5004CFFFC /* Url.framework */,
+				FDDDD69D222419F5004CFFFC /* Task.framework */,
+				FDDDD69A222419F5004CFFFC /* Deliver.framework */,
 				FD737DB921B03C71001BB507 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -448,7 +424,6 @@
 		FDDDD65322241854004CFFFC /* AutomateZFile */ = {
 			isa = PBXGroup;
 			children = (
-				FDDDD65522241854004CFFFC /* ZFileFolderWorker.swift */,
 				FDDDD65622241854004CFFFC /* Assets.xcassets */,
 				FDDDD65A22241854004CFFFC /* ZFileSourceryWorker.swift */,
 				FDDDD672222418D5004CFFFC /* main.swift */,
@@ -820,7 +795,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDDDD67A2224199D004CFFFC /* ZFileSourceryWorker.swift in Sources */,
-				FDCB538A22241D4800FA6DD9 /* ZFileFolderWorker.swift in Sources */,
 				FDDDD673222418D5004CFFFC /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

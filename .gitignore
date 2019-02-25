@@ -5,3 +5,4 @@
 /Sources/ZFile/.sourcery-ZFile.yml
 xcuserdata
 /Carthage
+/Sources/ZFile/.build

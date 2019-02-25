@@ -8,3 +8,8 @@ github "nicklockwood/SwiftFormat"
 # JWT Token generation
 
 github "Bolides/CupertinoJWT"
+
+# Auto generate Code
+
+github "doozMen/Sourcery"
+github "doozMen/template-sourcery"
