@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FD737D9121B03BD3001BB507"
+               BlueprintIdentifier = "FD737DBF21B03D25001BB507"
                BuildableName = "ZFile.framework"
-               BlueprintName = "ZFile-iOS"
+               BlueprintName = "ZFile-macos"
                ReferencedContainer = "container:ZFile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDDB930921CD955600B6D5E9"
+               BlueprintIdentifier = "FDDB92FC21CD953400B6D5E9"
                BuildableName = "ZFileMock.framework"
-               BlueprintName = "ZFileMock-ios"
+               BlueprintName = "ZFileMock-macos"
                ReferencedContainer = "container:ZFile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,9 +42,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDCA468722242AF70005EBA3"
-               BuildableName = "ZFileTests-iOS.xctest"
-               BlueprintName = "ZFileTests-iOS"
+               BlueprintIdentifier = "FDCA467622242AE60005EBA3"
+               BuildableName = "ZFileTests-macOS.xctest"
+               BlueprintName = "ZFileTests-macOS"
                ReferencedContainer = "container:ZFile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -56,13 +56,23 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FDCA467622242AE60005EBA3"
+               BuildableName = "ZFileTests-macOS.xctest"
+               BlueprintName = "ZFileTests-macOS"
+               ReferencedContainer = "container:ZFile.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FD737D9121B03BD3001BB507"
+            BlueprintIdentifier = "FD737DBF21B03D25001BB507"
             BuildableName = "ZFile.framework"
-            BlueprintName = "ZFile-iOS"
+            BlueprintName = "ZFile-macos"
             ReferencedContainer = "container:ZFile.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +92,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FD737D9121B03BD3001BB507"
+            BlueprintIdentifier = "FD737DBF21B03D25001BB507"
             BuildableName = "ZFile.framework"
-            BlueprintName = "ZFile-iOS"
+            BlueprintName = "ZFile-macos"
             ReferencedContainer = "container:ZFile.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -100,9 +110,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FD737D9121B03BD3001BB507"
+            BlueprintIdentifier = "FD737DBF21B03D25001BB507"
             BuildableName = "ZFile.framework"
-            BlueprintName = "ZFile-iOS"
+            BlueprintName = "ZFile-macos"
             ReferencedContainer = "container:ZFile.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

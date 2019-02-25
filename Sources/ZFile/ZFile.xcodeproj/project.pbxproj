@@ -31,6 +31,13 @@
 		FD737DCC21B03D30001BB507 /* FileSystemSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DB021B03C66001BB507 /* FileSystemSequence.swift */; };
 		FD737DCD21B03D30001BB507 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DAD21B03C66001BB507 /* Folder.swift */; };
 		FDCA4670222427700005EBA3 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCA466F222427700005EBA3 /* SourceryAutoProtocols.framework */; };
+		FDCA46C622242C900005EBA3 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCA46C522242C900005EBA3 /* SourceryAutoProtocols.framework */; };
+		FDCA46CA22242E010005EBA3 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCA46C922242E010005EBA3 /* SourceryAutoProtocols.framework */; };
+		FDCA46D422242ED60005EBA3 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD737D9221B03BD3001BB507 /* ZFile.framework */; };
+		FDCA46DC22242F200005EBA3 /* ZFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA467122242AC80005EBA3 /* ZFileTests.swift */; };
+		FDCA46DE22242F420005EBA3 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCA46DD22242F420005EBA3 /* Quick.framework */; };
+		FDCA46E022242F480005EBA3 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCA46DF22242F480005EBA3 /* Nimble.framework */; };
+		FDCA46E122242FDA0005EBA3 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB930A21CD955600B6D5E9 /* ZFileMock.framework */; };
 		FDCB537F22241BF400FA6DD9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB537E22241BF400FA6DD9 /* Result.framework */; };
 		FDCB538022241BF400FA6DD9 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB537E22241BF400FA6DD9 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDCB538222241BFF00FA6DD9 /* SwiftFormat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB538122241BFF00FA6DD9 /* SwiftFormat.framework */; };
@@ -112,6 +119,13 @@
 			remoteGlobalIDString = FD1B88B321CE27D80055C2C1;
 			remoteInfo = "FoundationGenericHelper-macos";
 		};
+		FDCA46D522242ED60005EBA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD737D8921B03BD3001BB507 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD737D9121B03BD3001BB507;
+			remoteInfo = "ZFile-iOS";
+		};
 		FDDDD67D222419B8004CFFFC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FD737D8921B03BD3001BB507 /* Project object */;
@@ -185,6 +199,15 @@
 		FD737DB921B03C71001BB507 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FD737DC021B03D25001BB507 /* ZFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCA466F222427700005EBA3 /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCA467122242AC80005EBA3 /* ZFileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZFileTests.swift; path = ZFileTests/ZFileTests.swift; sourceTree = "<group>"; };
+		FDCA46BF22242BBC0005EBA3 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCA46C122242BC30005EBA3 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCA46C522242C900005EBA3 /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCA46C922242E010005EBA3 /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCA46CF22242ED60005EBA3 /* iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCA46D322242ED60005EBA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDCA46DD22242F420005EBA3 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCA46DF22242F480005EBA3 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCB537E22241BF400FA6DD9 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCB538122241BFF00FA6DD9 /* SwiftFormat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFormat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCB538422241CF800FA6DD9 /* CupertinoJWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CupertinoJWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +259,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDCA46CA22242E010005EBA3 /* SourceryAutoProtocols.framework in Frameworks */,
 				FD1B88BE21CE284C0055C2C1 /* FoundationGenericHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,7 +268,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDCA46C622242C900005EBA3 /* SourceryAutoProtocols.framework in Frameworks */,
 				FD1B88CA21CE28A50055C2C1 /* FoundationGenericHelper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDCA46CC22242ED60005EBA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDCA46E122242FDA0005EBA3 /* ZFileMock.framework in Frameworks */,
+				FDCA46E022242F480005EBA3 /* Nimble.framework in Frameworks */,
+				FDCA46DE22242F420005EBA3 /* Quick.framework in Frameworks */,
+				FDCA46D422242ED60005EBA3 /* ZFile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +359,7 @@
 			children = (
 				FDDB92F621CD949700B6D5E9 /* Sources */,
 				FDDB92F721CD94B000B6D5E9 /* Tests */,
+				FDCA46D022242ED60005EBA3 /* iOSTests */,
 				FD737D9321B03BD3001BB507 /* Products */,
 				FD737DB821B03C71001BB507 /* Frameworks */,
 			);
@@ -338,6 +375,7 @@
 				FD1B88A721CE27B70055C2C1 /* FoundationGenericHelper.framework */,
 				FD1B88B421CE27D80055C2C1 /* FoundationGenericHelper.framework */,
 				FDDDD6612224188F004CFFFC /* AutomateZFile.app */,
+				FDCA46CF22242ED60005EBA3 /* iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -361,6 +399,12 @@
 		FD737DB821B03C71001BB507 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FDCA46DF22242F480005EBA3 /* Nimble.framework */,
+				FDCA46DD22242F420005EBA3 /* Quick.framework */,
+				FDCA46C922242E010005EBA3 /* SourceryAutoProtocols.framework */,
+				FDCA46C522242C900005EBA3 /* SourceryAutoProtocols.framework */,
+				FDCA46C122242BC30005EBA3 /* Nimble.framework */,
+				FDCA46BF22242BBC0005EBA3 /* Quick.framework */,
 				FDCA466F222427700005EBA3 /* SourceryAutoProtocols.framework */,
 				FDCB537E22241BF400FA6DD9 /* Result.framework */,
 				FDDDD6B022241AFC004CFFFC /* Result.framework */,
@@ -386,6 +430,14 @@
 				FD737DB921B03C71001BB507 /* Foundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDCA46D022242ED60005EBA3 /* iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA46D322242ED60005EBA3 /* Info.plist */,
+			);
+			path = iOSTests;
 			sourceTree = "<group>";
 		};
 		FDDB92F221CD93F000B6D5E9 /* AutoGeneratedCode */ = {
@@ -421,6 +473,7 @@
 		FDDB92F721CD94B000B6D5E9 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				FDCA467122242AC80005EBA3 /* ZFileTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -562,6 +615,24 @@
 			productReference = FD737DC021B03D25001BB507 /* ZFile.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		FDCA46CE22242ED60005EBA3 /* iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDCA46D722242ED60005EBA3 /* Build configuration list for PBXNativeTarget "iOSTests" */;
+			buildPhases = (
+				FDCA46CB22242ED60005EBA3 /* Sources */,
+				FDCA46CC22242ED60005EBA3 /* Frameworks */,
+				FDCA46CD22242ED60005EBA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDCA46D622242ED60005EBA3 /* PBXTargetDependency */,
+			);
+			name = iOSTests;
+			productName = iOSTests;
+			productReference = FDCA46CF22242ED60005EBA3 /* iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FDDB92FC21CD953400B6D5E9 /* ZFileMock-macos */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDDB930221CD953400B6D5E9 /* Build configuration list for PBXNativeTarget "ZFileMock-macos" */;
@@ -645,6 +716,9 @@
 					FD737DBF21B03D25001BB507 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					FDCA46CE22242ED60005EBA3 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					FDDB92FC21CD953400B6D5E9 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -677,6 +751,7 @@
 				FD1B88A621CE27B70055C2C1 /* FoundationGenericHelper-ios */,
 				FD1B88B321CE27D80055C2C1 /* FoundationGenericHelper-macos */,
 				FDDDD6602224188F004CFFFC /* AutomateZFile */,
+				FDCA46CE22242ED60005EBA3 /* iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -704,6 +779,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FD737DBE21B03D25001BB507 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDCA46CD22242ED60005EBA3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -778,6 +860,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDCA46CB22242ED60005EBA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDCA46DC22242F200005EBA3 /* ZFileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDDB92F921CD953400B6D5E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -825,6 +915,11 @@
 			isa = PBXTargetDependency;
 			target = FD1B88B321CE27D80055C2C1 /* FoundationGenericHelper-macos */;
 			targetProxy = FD1B88C821CE289B0055C2C1 /* PBXContainerItemProxy */;
+		};
+		FDCA46D622242ED60005EBA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD737D9121B03BD3001BB507 /* ZFile-iOS */;
+			targetProxy = FDCA46D522242ED60005EBA3 /* PBXContainerItemProxy */;
 		};
 		FDDDD67E222419B8004CFFFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1585,6 +1680,86 @@
 			};
 			name = Release;
 		};
+		FDCA46D822242ED60005EBA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
+				INFOPLIST_FILE = iOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.iOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FDCA46D922242ED60005EBA3 /* Local */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
+				INFOPLIST_FILE = iOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.iOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Local;
+		};
+		FDCA46DA22242ED60005EBA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
+				INFOPLIST_FILE = iOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.iOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FDCA46DB22242ED60005EBA3 /* BetaRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
+				INFOPLIST_FILE = iOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.iOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = BetaRelease;
+		};
 		FDDB930321CD953400B6D5E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1829,6 +2004,17 @@
 				FD61D988221C773700CC87F8 /* Local */,
 				FD737DC721B03D26001BB507 /* Release */,
 				FD61D981221C772F00CC87F8 /* BetaRelease */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDCA46D722242ED60005EBA3 /* Build configuration list for PBXNativeTarget "iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDCA46D822242ED60005EBA3 /* Debug */,
+				FDCA46D922242ED60005EBA3 /* Local */,
+				FDCA46DA22242ED60005EBA3 /* Release */,
+				FDCA46DB22242ED60005EBA3 /* BetaRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

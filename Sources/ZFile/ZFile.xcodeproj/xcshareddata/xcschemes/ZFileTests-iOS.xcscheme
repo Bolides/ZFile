@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FD737D9121B03BD3001BB507"
-               BuildableName = "ZFile.framework"
-               BlueprintName = "ZFile-iOS"
+               BlueprintIdentifier = "FDCA46CE22242ED60005EBA3"
+               BuildableName = "iOSTests.xctest"
+               BlueprintName = "iOSTests"
                ReferencedContainer = "container:ZFile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FDCA46CE22242ED60005EBA3"
+               BuildableName = "iOSTests.xctest"
+               BlueprintName = "iOSTests"
+               ReferencedContainer = "container:ZFile.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <AdditionalOptions>
       </AdditionalOptions>
@@ -45,9 +55,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FD737D9121B03BD3001BB507"
-            BuildableName = "ZFile.framework"
-            BlueprintName = "ZFile-iOS"
+            BlueprintIdentifier = "FDCA46CE22242ED60005EBA3"
+            BuildableName = "iOSTests.xctest"
+            BlueprintName = "iOSTests"
             ReferencedContainer = "container:ZFile.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +73,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FD737D9121B03BD3001BB507"
-            BuildableName = "ZFile.framework"
-            BlueprintName = "ZFile-iOS"
+            BlueprintIdentifier = "FDCA46CE22242ED60005EBA3"
+            BuildableName = "iOSTests.xctest"
+            BlueprintName = "iOSTests"
             ReferencedContainer = "container:ZFile.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
