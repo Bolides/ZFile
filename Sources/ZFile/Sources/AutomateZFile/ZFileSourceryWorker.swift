@@ -150,10 +150,17 @@ struct ZFileSourceryWorker: ZFileSourceryWorkerProtocol, AutoGenerateProtocol {
     
     
     
-    func attempt() throws {
-        return try workers.forEach {
-            let output = try $0.attempt()
-            signPost.verbose("\(output.joined(separator: "\n"))")
+    func attempt() {
+        let signPost = self.signPost
+        workers.forEach {
+            let output = $0.attempt {
+                do {
+                    let output = try $0()
+                    signPost.verbose("\(output.joined(separator: "\n"))")
+                } catch {
+                    signPost.error("\(error)")
+                }
+            }
         }
     }
 }

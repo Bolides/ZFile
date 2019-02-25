@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ZFile.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../../CupertinoJWT/CupertinoJWT.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:../../../Result/Result.xcodeproj">
    </FileRef>
    <FileRef
@@ -9,8 +15,5 @@
    </FileRef>
    <FileRef
       location = "group:../../../highway/Sources/highway/Highway.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:ZFile.xcodeproj">
    </FileRef>
 </Workspace>

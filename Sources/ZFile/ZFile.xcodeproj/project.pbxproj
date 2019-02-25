@@ -38,6 +38,11 @@
 		FDCB538022241BF400FA6DD9 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB537E22241BF400FA6DD9 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDCB538222241BFF00FA6DD9 /* SwiftFormat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB538122241BFF00FA6DD9 /* SwiftFormat.framework */; };
 		FDCB538322241BFF00FA6DD9 /* SwiftFormat.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB538122241BFF00FA6DD9 /* SwiftFormat.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDCB538522241CF800FA6DD9 /* CupertinoJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB538422241CF800FA6DD9 /* CupertinoJWT.framework */; };
+		FDCB538622241CF800FA6DD9 /* CupertinoJWT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB538422241CF800FA6DD9 /* CupertinoJWT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDCB538822241D0F00FA6DD9 /* ProjectFolderWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB538722241D0F00FA6DD9 /* ProjectFolderWorker.framework */; };
+		FDCB538922241D0F00FA6DD9 /* ProjectFolderWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB538722241D0F00FA6DD9 /* ProjectFolderWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDCB538A22241D4800FA6DD9 /* ZFileFolderWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDDD65522241854004CFFFC /* ZFileFolderWorker.swift */; };
 		FDDB932321CD99C100B6D5E9 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB92F521CD93F000B6D5E9 /* AutoMockable.generated.swift */; };
 		FDDB932421CD99C600B6D5E9 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB92F521CD93F000B6D5E9 /* AutoMockable.generated.swift */; };
 		FDDDD673222418D5004CFFFC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDDD672222418D5004CFFFC /* main.swift */; };
@@ -145,10 +150,12 @@
 				FDDDD693222419F5004CFFFC /* Errors.framework in Embed Frameworks */,
 				FDDDD696222419F5004CFFFC /* SourceryAutoProtocols.framework in Embed Frameworks */,
 				FDDDD6B222241AFC004CFFFC /* Result.framework in Embed Frameworks */,
+				FDCB538622241CF800FA6DD9 /* CupertinoJWT.framework in Embed Frameworks */,
 				FDDDD67C222419B8004CFFFC /* ZFile.framework in Embed Frameworks */,
 				FDDDD6A2222419F5004CFFFC /* Url.framework in Embed Frameworks */,
 				FDDDD69F222419F5004CFFFC /* Task.framework in Embed Frameworks */,
 				FDDDD6762224194B004CFFFC /* SignPost.framework in Embed Frameworks */,
+				FDCB538922241D0F00FA6DD9 /* ProjectFolderWorker.framework in Embed Frameworks */,
 				FDDDD6A5222419F5004CFFFC /* SourceryWorker.framework in Embed Frameworks */,
 				FDDDD681222419C7004CFFFC /* Terminal.framework in Embed Frameworks */,
 				FDDDD684222419F5004CFFFC /* Arguments.framework in Embed Frameworks */,
@@ -191,6 +198,8 @@
 		FD737DC021B03D25001BB507 /* ZFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCB537E22241BF400FA6DD9 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCB538122241BFF00FA6DD9 /* SwiftFormat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFormat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCB538422241CF800FA6DD9 /* CupertinoJWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CupertinoJWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCB538722241D0F00FA6DD9 /* ProjectFolderWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProjectFolderWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDB92F521CD93F000B6D5E9 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDDB92FD21CD953400B6D5E9 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDB930A21CD955600B6D5E9 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,10 +293,12 @@
 				FDDDD692222419F5004CFFFC /* Errors.framework in Frameworks */,
 				FDDDD695222419F5004CFFFC /* SourceryAutoProtocols.framework in Frameworks */,
 				FDDDD6B122241AFC004CFFFC /* Result.framework in Frameworks */,
+				FDCB538522241CF800FA6DD9 /* CupertinoJWT.framework in Frameworks */,
 				FDDDD67B222419B8004CFFFC /* ZFile.framework in Frameworks */,
 				FDDDD6A1222419F5004CFFFC /* Url.framework in Frameworks */,
 				FDDDD69E222419F5004CFFFC /* Task.framework in Frameworks */,
 				FDDDD6752224194B004CFFFC /* SignPost.framework in Frameworks */,
+				FDCB538822241D0F00FA6DD9 /* ProjectFolderWorker.framework in Frameworks */,
 				FDDDD6A4222419F5004CFFFC /* SourceryWorker.framework in Frameworks */,
 				FDDDD680222419C7004CFFFC /* Terminal.framework in Frameworks */,
 				FDDDD683222419F5004CFFFC /* Arguments.framework in Frameworks */,
@@ -326,6 +337,8 @@
 		FD737D8821B03BD3001BB507 = {
 			isa = PBXGroup;
 			children = (
+				FDCB538722241D0F00FA6DD9 /* ProjectFolderWorker.framework */,
+				FDCB538422241CF800FA6DD9 /* CupertinoJWT.framework */,
 				FDCB538122241BFF00FA6DD9 /* SwiftFormat.framework */,
 				FDCB537E22241BF400FA6DD9 /* Result.framework */,
 				FDDDD6B022241AFC004CFFFC /* Result.framework */,
@@ -345,7 +358,6 @@
 				FDDDD682222419F5004CFFFC /* Arguments.framework */,
 				FDDDD67F222419C7004CFFFC /* Terminal.framework */,
 				FDDDD6742224194B004CFFFC /* SignPost.framework */,
-				FDDDD65322241854004CFFFC /* AutomateZFile */,
 				FDDB92F621CD949700B6D5E9 /* Sources */,
 				FDDB92F721CD94B000B6D5E9 /* Tests */,
 				FD737D9321B03BD3001BB507 /* Products */,
@@ -418,6 +430,7 @@
 		FDDB92F621CD949700B6D5E9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				FDDDD65322241854004CFFFC /* AutomateZFile */,
 				FD1B88B521CE27D80055C2C1 /* FoundationGenericHelper */,
 				FDDB92F221CD93F000B6D5E9 /* AutoGeneratedCode */,
 				FD737D9421B03BD3001BB507 /* ZFile */,
@@ -442,8 +455,7 @@
 				FDDDD65C22241854004CFFFC /* Info.plist */,
 				FDDDD671222418D5004CFFFC /* AutomateZFile-Bridging-Header.h */,
 			);
-			name = AutomateZFile;
-			path = Sources/AutomateZFile;
+			path = AutomateZFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -808,6 +820,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDDDD67A2224199D004CFFFC /* ZFileSourceryWorker.swift in Sources */,
+				FDCB538A22241D4800FA6DD9 /* ZFileFolderWorker.swift in Sources */,
 				FDDDD673222418D5004CFFFC /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
