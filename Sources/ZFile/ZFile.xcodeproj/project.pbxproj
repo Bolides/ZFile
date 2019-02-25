@@ -38,6 +38,11 @@
 		FDCA46DE22242F420005EBA3 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCA46DD22242F420005EBA3 /* Quick.framework */; };
 		FDCA46E022242F480005EBA3 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCA46DF22242F480005EBA3 /* Nimble.framework */; };
 		FDCA46E122242FDA0005EBA3 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB930A21CD955600B6D5E9 /* ZFileMock.framework */; };
+		FDCA46EB222430130005EBA3 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD737DC021B03D25001BB507 /* ZFile.framework */; };
+		FDCA46F32224303A0005EBA3 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB92FD21CD953400B6D5E9 /* ZFileMock.framework */; };
+		FDCA46F5222430410005EBA3 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCA46F4222430410005EBA3 /* Quick.framework */; };
+		FDCA46F7222430470005EBA3 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCA46F6222430470005EBA3 /* Nimble.framework */; };
+		FDCA46F82224306C0005EBA3 /* ZFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA467122242AC80005EBA3 /* ZFileTests.swift */; };
 		FDCB537F22241BF400FA6DD9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB537E22241BF400FA6DD9 /* Result.framework */; };
 		FDCB538022241BF400FA6DD9 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB537E22241BF400FA6DD9 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDCB538222241BFF00FA6DD9 /* SwiftFormat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB538122241BFF00FA6DD9 /* SwiftFormat.framework */; };
@@ -126,6 +131,13 @@
 			remoteGlobalIDString = FD737D9121B03BD3001BB507;
 			remoteInfo = "ZFile-iOS";
 		};
+		FDCA46EC222430130005EBA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD737D8921B03BD3001BB507 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD737DBF21B03D25001BB507;
+			remoteInfo = "ZFile-macos";
+		};
 		FDDDD67D222419B8004CFFFC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FD737D8921B03BD3001BB507 /* Project object */;
@@ -208,6 +220,10 @@
 		FDCA46D322242ED60005EBA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDCA46DD22242F420005EBA3 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCA46DF22242F480005EBA3 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCA46E6222430130005EBA3 /* macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = macOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCA46EA222430130005EBA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDCA46F4222430410005EBA3 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCA46F6222430470005EBA3 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCB537E22241BF400FA6DD9 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCB538122241BFF00FA6DD9 /* SwiftFormat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFormat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCB538422241CF800FA6DD9 /* CupertinoJWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CupertinoJWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -281,6 +297,17 @@
 				FDCA46E022242F480005EBA3 /* Nimble.framework in Frameworks */,
 				FDCA46DE22242F420005EBA3 /* Quick.framework in Frameworks */,
 				FDCA46D422242ED60005EBA3 /* ZFile.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDCA46E3222430130005EBA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDCA46F7222430470005EBA3 /* Nimble.framework in Frameworks */,
+				FDCA46F5222430410005EBA3 /* Quick.framework in Frameworks */,
+				FDCA46F32224303A0005EBA3 /* ZFileMock.framework in Frameworks */,
+				FDCA46EB222430130005EBA3 /* ZFile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +387,7 @@
 				FDDB92F621CD949700B6D5E9 /* Sources */,
 				FDDB92F721CD94B000B6D5E9 /* Tests */,
 				FDCA46D022242ED60005EBA3 /* iOSTests */,
+				FDCA46E7222430130005EBA3 /* macOSTests */,
 				FD737D9321B03BD3001BB507 /* Products */,
 				FD737DB821B03C71001BB507 /* Frameworks */,
 			);
@@ -376,6 +404,7 @@
 				FD1B88B421CE27D80055C2C1 /* FoundationGenericHelper.framework */,
 				FDDDD6612224188F004CFFFC /* AutomateZFile.app */,
 				FDCA46CF22242ED60005EBA3 /* iOSTests.xctest */,
+				FDCA46E6222430130005EBA3 /* macOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -399,6 +428,8 @@
 		FD737DB821B03C71001BB507 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FDCA46F6222430470005EBA3 /* Nimble.framework */,
+				FDCA46F4222430410005EBA3 /* Quick.framework */,
 				FDCA46DF22242F480005EBA3 /* Nimble.framework */,
 				FDCA46DD22242F420005EBA3 /* Quick.framework */,
 				FDCA46C922242E010005EBA3 /* SourceryAutoProtocols.framework */,
@@ -438,6 +469,14 @@
 				FDCA46D322242ED60005EBA3 /* Info.plist */,
 			);
 			path = iOSTests;
+			sourceTree = "<group>";
+		};
+		FDCA46E7222430130005EBA3 /* macOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA46EA222430130005EBA3 /* Info.plist */,
+			);
+			path = macOSTests;
 			sourceTree = "<group>";
 		};
 		FDDB92F221CD93F000B6D5E9 /* AutoGeneratedCode */ = {
@@ -633,6 +672,24 @@
 			productReference = FDCA46CF22242ED60005EBA3 /* iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		FDCA46E5222430130005EBA3 /* macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDCA46EE222430130005EBA3 /* Build configuration list for PBXNativeTarget "macOSTests" */;
+			buildPhases = (
+				FDCA46E2222430130005EBA3 /* Sources */,
+				FDCA46E3222430130005EBA3 /* Frameworks */,
+				FDCA46E4222430130005EBA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDCA46ED222430130005EBA3 /* PBXTargetDependency */,
+			);
+			name = macOSTests;
+			productName = macOSTests;
+			productReference = FDCA46E6222430130005EBA3 /* macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FDDB92FC21CD953400B6D5E9 /* ZFileMock-macos */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDDB930221CD953400B6D5E9 /* Build configuration list for PBXNativeTarget "ZFileMock-macos" */;
@@ -719,6 +776,9 @@
 					FDCA46CE22242ED60005EBA3 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					FDCA46E5222430130005EBA3 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					FDDB92FC21CD953400B6D5E9 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -752,6 +812,7 @@
 				FD1B88B321CE27D80055C2C1 /* FoundationGenericHelper-macos */,
 				FDDDD6602224188F004CFFFC /* AutomateZFile */,
 				FDCA46CE22242ED60005EBA3 /* iOSTests */,
+				FDCA46E5222430130005EBA3 /* macOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -786,6 +847,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FDCA46CD22242ED60005EBA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDCA46E4222430130005EBA3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -868,6 +936,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDCA46E2222430130005EBA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDCA46F82224306C0005EBA3 /* ZFileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDDB92F921CD953400B6D5E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -920,6 +996,11 @@
 			isa = PBXTargetDependency;
 			target = FD737D9121B03BD3001BB507 /* ZFile-iOS */;
 			targetProxy = FDCA46D522242ED60005EBA3 /* PBXContainerItemProxy */;
+		};
+		FDCA46ED222430130005EBA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD737DBF21B03D25001BB507 /* ZFile-macos */;
+			targetProxy = FDCA46EC222430130005EBA3 /* PBXContainerItemProxy */;
 		};
 		FDDDD67E222419B8004CFFFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1760,6 +1841,86 @@
 			};
 			name = BetaRelease;
 		};
+		FDCA46EF222430130005EBA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = macOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.macOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		FDCA46F0222430130005EBA3 /* Local */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = macOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.macOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Local;
+		};
+		FDCA46F1222430130005EBA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = macOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.macOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		FDCA46F2222430130005EBA3 /* BetaRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = macOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.macOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = BetaRelease;
+		};
 		FDDB930321CD953400B6D5E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2015,6 +2176,17 @@
 				FDCA46D922242ED60005EBA3 /* Local */,
 				FDCA46DA22242ED60005EBA3 /* Release */,
 				FDCA46DB22242ED60005EBA3 /* BetaRelease */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDCA46EE222430130005EBA3 /* Build configuration list for PBXNativeTarget "macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDCA46EF222430130005EBA3 /* Debug */,
+				FDCA46F0222430130005EBA3 /* Local */,
+				FDCA46F1222430130005EBA3 /* Release */,
+				FDCA46F2222430130005EBA3 /* BetaRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
