@@ -1,7 +1,6 @@
 
 # Automation
 
-github "Bolides/highway"
 github "antitypical/Result" ~> 4.0
 github "nicklockwood/SwiftFormat"
 
