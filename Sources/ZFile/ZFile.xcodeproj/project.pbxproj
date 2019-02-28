@@ -17,6 +17,42 @@
 		FD1B88D621CE29DC0055C2C1 /* AnyRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1B88D521CE29DC0055C2C1 /* AnyRawRepresentable.swift */; };
 		FD1B88D721CE29DC0055C2C1 /* AnyRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1B88D521CE29DC0055C2C1 /* AnyRawRepresentable.swift */; };
 		FD1B88DA21CE2AE70055C2C1 /* FoundationGenericHelper-ios.h in Headers */ = {isa = PBXBuildFile; fileRef = FD1B88D921CE2AC80055C2C1 /* FoundationGenericHelper-ios.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD6B89AA2228761600902B4C /* CLISpinner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89A92228761600902B4C /* CLISpinner.framework */; };
+		FD6B89AB2228761600902B4C /* CLISpinner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89A92228761600902B4C /* CLISpinner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89AD2228761600902B4C /* Rainbow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89AC2228761600902B4C /* Rainbow.framework */; };
+		FD6B89AE2228761600902B4C /* Rainbow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89AC2228761600902B4C /* Rainbow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89B02228761600902B4C /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89AF2228761600902B4C /* Arguments.framework */; };
+		FD6B89B12228761600902B4C /* Arguments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89AF2228761600902B4C /* Arguments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89B32228761600902B4C /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89B22228761600902B4C /* Keychain.framework */; };
+		FD6B89B42228761600902B4C /* Keychain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89B22228761600902B4C /* Keychain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89B62228761600902B4C /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89B52228761600902B4C /* Terminal.framework */; };
+		FD6B89B72228761600902B4C /* Terminal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89B52228761600902B4C /* Terminal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89B92228761600902B4C /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89B82228761600902B4C /* POSIX.framework */; };
+		FD6B89BA2228761600902B4C /* POSIX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89B82228761600902B4C /* POSIX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89BC2228761600902B4C /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89BB2228761600902B4C /* XCBuild.framework */; };
+		FD6B89BD2228761600902B4C /* XCBuild.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89BB2228761600902B4C /* XCBuild.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89BF2228761600902B4C /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89BE2228761600902B4C /* Errors.framework */; };
+		FD6B89C02228761600902B4C /* Errors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89BE2228761600902B4C /* Errors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89C22228761600902B4C /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89C12228761600902B4C /* SourceryAutoProtocols.framework */; };
+		FD6B89C32228761600902B4C /* SourceryAutoProtocols.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89C12228761600902B4C /* SourceryAutoProtocols.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89C52228761600902B4C /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89C42228761600902B4C /* Git.framework */; };
+		FD6B89C62228761600902B4C /* Git.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89C42228761600902B4C /* Git.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89C82228761600902B4C /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89C72228761600902B4C /* Task.framework */; };
+		FD6B89C92228761600902B4C /* Task.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89C72228761600902B4C /* Task.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89CB2228761600902B4C /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89CA2228761600902B4C /* Url.framework */; };
+		FD6B89CC2228761600902B4C /* Url.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89CA2228761600902B4C /* Url.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89CE2228761600902B4C /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89CD2228761600902B4C /* SourceryWorker.framework */; };
+		FD6B89CF2228761600902B4C /* SourceryWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89CD2228761600902B4C /* SourceryWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89D12228761600902B4C /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89D02228761600902B4C /* SignPost.framework */; };
+		FD6B89D22228761600902B4C /* SignPost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89D02228761600902B4C /* SignPost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89D42228761600902B4C /* SwiftFormatWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89D32228761600902B4C /* SwiftFormatWorker.framework */; };
+		FD6B89D52228761600902B4C /* SwiftFormatWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89D32228761600902B4C /* SwiftFormatWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89D72228761600902B4C /* CupertinoJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89D62228761600902B4C /* CupertinoJWT.framework */; };
+		FD6B89D82228761600902B4C /* CupertinoJWT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89D62228761600902B4C /* CupertinoJWT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89DA2228761600902B4C /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89D92228761600902B4C /* Result.framework */; };
+		FD6B89DB2228761600902B4C /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89D92228761600902B4C /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89DD2228761600902B4C /* SwiftFormat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89DC2228761600902B4C /* SwiftFormat.framework */; };
+		FD6B89DE2228761600902B4C /* SwiftFormat.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89DC2228761600902B4C /* SwiftFormat.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD737DA321B03BD3001BB507 /* ZFile.h in Headers */ = {isa = PBXBuildFile; fileRef = FD737D9521B03BD3001BB507 /* ZFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD737DB221B03C66001BB507 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DAC21B03C66001BB507 /* File.swift */; };
 		FD737DB321B03C66001BB507 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DAD21B03C66001BB507 /* Folder.swift */; };
@@ -30,69 +66,20 @@
 		FD737DCB21B03D30001BB507 /* FileSystemInterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DAE21B03C66001BB507 /* FileSystemInterator.swift */; };
 		FD737DCC21B03D30001BB507 /* FileSystemSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DB021B03C66001BB507 /* FileSystemSequence.swift */; };
 		FD737DCD21B03D30001BB507 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DAD21B03C66001BB507 /* Folder.swift */; };
-		FDCA4670222427700005EBA3 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCA466F222427700005EBA3 /* SourceryAutoProtocols.framework */; };
-		FDCA46C622242C900005EBA3 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCA46C522242C900005EBA3 /* SourceryAutoProtocols.framework */; };
-		FDCA46CA22242E010005EBA3 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCA46C922242E010005EBA3 /* SourceryAutoProtocols.framework */; };
 		FDCA46D422242ED60005EBA3 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD737D9221B03BD3001BB507 /* ZFile.framework */; };
 		FDCA46DC22242F200005EBA3 /* ZFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA467122242AC80005EBA3 /* ZFileTests.swift */; };
-		FDCA46DE22242F420005EBA3 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCA46DD22242F420005EBA3 /* Quick.framework */; };
-		FDCA46E022242F480005EBA3 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCA46DF22242F480005EBA3 /* Nimble.framework */; };
 		FDCA46E122242FDA0005EBA3 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB930A21CD955600B6D5E9 /* ZFileMock.framework */; };
 		FDCA46EB222430130005EBA3 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD737DC021B03D25001BB507 /* ZFile.framework */; };
 		FDCA46F32224303A0005EBA3 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB92FD21CD953400B6D5E9 /* ZFileMock.framework */; };
-		FDCA46F5222430410005EBA3 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCA46F4222430410005EBA3 /* Quick.framework */; };
-		FDCA46F7222430470005EBA3 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCA46F6222430470005EBA3 /* Nimble.framework */; };
 		FDCA46F82224306C0005EBA3 /* ZFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA467122242AC80005EBA3 /* ZFileTests.swift */; };
-		FDCB537F22241BF400FA6DD9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB537E22241BF400FA6DD9 /* Result.framework */; };
-		FDCB538022241BF400FA6DD9 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB537E22241BF400FA6DD9 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDCB538222241BFF00FA6DD9 /* SwiftFormat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB538122241BFF00FA6DD9 /* SwiftFormat.framework */; };
-		FDCB538322241BFF00FA6DD9 /* SwiftFormat.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB538122241BFF00FA6DD9 /* SwiftFormat.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDCB538522241CF800FA6DD9 /* CupertinoJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB538422241CF800FA6DD9 /* CupertinoJWT.framework */; };
-		FDCB538622241CF800FA6DD9 /* CupertinoJWT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB538422241CF800FA6DD9 /* CupertinoJWT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDCB538822241D0F00FA6DD9 /* ProjectFolderWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB538722241D0F00FA6DD9 /* ProjectFolderWorker.framework */; };
-		FDCB538922241D0F00FA6DD9 /* ProjectFolderWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB538722241D0F00FA6DD9 /* ProjectFolderWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDDB932321CD99C100B6D5E9 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB92F521CD93F000B6D5E9 /* AutoMockable.generated.swift */; };
 		FDDB932421CD99C600B6D5E9 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB92F521CD93F000B6D5E9 /* AutoMockable.generated.swift */; };
 		FDDDD673222418D5004CFFFC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDDD672222418D5004CFFFC /* main.swift */; };
-		FDDDD6752224194B004CFFFC /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6742224194B004CFFFC /* SignPost.framework */; };
-		FDDDD6762224194B004CFFFC /* SignPost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6742224194B004CFFFC /* SignPost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDDDD67A2224199D004CFFFC /* ZFileSourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDDD65A22241854004CFFFC /* ZFileSourceryWorker.swift */; };
 		FDDDD67B222419B8004CFFFC /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD737DC021B03D25001BB507 /* ZFile.framework */; };
 		FDDDD67C222419B8004CFFFC /* ZFile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD737DC021B03D25001BB507 /* ZFile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDDD680222419C7004CFFFC /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD67F222419C7004CFFFC /* Terminal.framework */; };
-		FDDDD681222419C7004CFFFC /* Terminal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD67F222419C7004CFFFC /* Terminal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDDD683222419F5004CFFFC /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD682222419F5004CFFFC /* Arguments.framework */; };
-		FDDDD684222419F5004CFFFC /* Arguments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD682222419F5004CFFFC /* Arguments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDDD686222419F5004CFFFC /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD685222419F5004CFFFC /* Keychain.framework */; };
-		FDDDD687222419F5004CFFFC /* Keychain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD685222419F5004CFFFC /* Keychain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDDD689222419F5004CFFFC /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD688222419F5004CFFFC /* Terminal.framework */; };
-		FDDDD68A222419F5004CFFFC /* Terminal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD688222419F5004CFFFC /* Terminal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDDD68C222419F5004CFFFC /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD68B222419F5004CFFFC /* POSIX.framework */; };
-		FDDDD68D222419F5004CFFFC /* POSIX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD68B222419F5004CFFFC /* POSIX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDDD68F222419F5004CFFFC /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD68E222419F5004CFFFC /* XCBuild.framework */; };
-		FDDDD690222419F5004CFFFC /* XCBuild.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD68E222419F5004CFFFC /* XCBuild.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDDD692222419F5004CFFFC /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD691222419F5004CFFFC /* Errors.framework */; };
-		FDDDD693222419F5004CFFFC /* Errors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD691222419F5004CFFFC /* Errors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDDD695222419F5004CFFFC /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD694222419F5004CFFFC /* SourceryAutoProtocols.framework */; };
-		FDDDD696222419F5004CFFFC /* SourceryAutoProtocols.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD694222419F5004CFFFC /* SourceryAutoProtocols.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDDD698222419F5004CFFFC /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD697222419F5004CFFFC /* Git.framework */; };
-		FDDDD699222419F5004CFFFC /* Git.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD697222419F5004CFFFC /* Git.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDDD69B222419F5004CFFFC /* Deliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD69A222419F5004CFFFC /* Deliver.framework */; };
-		FDDDD69C222419F5004CFFFC /* Deliver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD69A222419F5004CFFFC /* Deliver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDDD69E222419F5004CFFFC /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD69D222419F5004CFFFC /* Task.framework */; };
-		FDDDD69F222419F5004CFFFC /* Task.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD69D222419F5004CFFFC /* Task.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDDD6A1222419F5004CFFFC /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6A0222419F5004CFFFC /* Url.framework */; };
-		FDDDD6A2222419F5004CFFFC /* Url.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6A0222419F5004CFFFC /* Url.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDDD6A4222419F5004CFFFC /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6A3222419F5004CFFFC /* SourceryWorker.framework */; };
-		FDDDD6A5222419F5004CFFFC /* SourceryWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6A3222419F5004CFFFC /* SourceryWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDDD6A7222419F5004CFFFC /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6A6222419F5004CFFFC /* SignPost.framework */; };
-		FDDDD6A8222419F5004CFFFC /* SignPost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6A6222419F5004CFFFC /* SignPost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDDD6AA222419F5004CFFFC /* ProjectFolderWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6A9222419F5004CFFFC /* ProjectFolderWorker.framework */; };
-		FDDDD6AB222419F5004CFFFC /* ProjectFolderWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6A9222419F5004CFFFC /* ProjectFolderWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDDDD6AC222419F5004CFFFC /* FoundationGenericHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B88B421CE27D80055C2C1 /* FoundationGenericHelper.framework */; };
 		FDDDD6AD222419F5004CFFFC /* FoundationGenericHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B88B421CE27D80055C2C1 /* FoundationGenericHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDDDD6B122241AFC004CFFFC /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6B022241AFC004CFFFC /* Result.framework */; };
-		FDDDD6B222241AFC004CFFFC /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDDDD6B022241AFC004CFFFC /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,29 +148,26 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FDDDD6A8222419F5004CFFFC /* SignPost.framework in Embed Frameworks */,
-				FDDDD69C222419F5004CFFFC /* Deliver.framework in Embed Frameworks */,
-				FDDDD690222419F5004CFFFC /* XCBuild.framework in Embed Frameworks */,
-				FDCB538322241BFF00FA6DD9 /* SwiftFormat.framework in Embed Frameworks */,
-				FDDDD687222419F5004CFFFC /* Keychain.framework in Embed Frameworks */,
-				FDDDD68A222419F5004CFFFC /* Terminal.framework in Embed Frameworks */,
-				FDDDD693222419F5004CFFFC /* Errors.framework in Embed Frameworks */,
-				FDDDD696222419F5004CFFFC /* SourceryAutoProtocols.framework in Embed Frameworks */,
-				FDDDD6B222241AFC004CFFFC /* Result.framework in Embed Frameworks */,
-				FDCB538622241CF800FA6DD9 /* CupertinoJWT.framework in Embed Frameworks */,
+				FD6B89BD2228761600902B4C /* XCBuild.framework in Embed Frameworks */,
+				FD6B89C92228761600902B4C /* Task.framework in Embed Frameworks */,
+				FD6B89DB2228761600902B4C /* Result.framework in Embed Frameworks */,
+				FD6B89DE2228761600902B4C /* SwiftFormat.framework in Embed Frameworks */,
+				FD6B89D82228761600902B4C /* CupertinoJWT.framework in Embed Frameworks */,
+				FD6B89B42228761600902B4C /* Keychain.framework in Embed Frameworks */,
+				FD6B89B72228761600902B4C /* Terminal.framework in Embed Frameworks */,
+				FD6B89C02228761600902B4C /* Errors.framework in Embed Frameworks */,
+				FD6B89D22228761600902B4C /* SignPost.framework in Embed Frameworks */,
+				FD6B89C32228761600902B4C /* SourceryAutoProtocols.framework in Embed Frameworks */,
+				FD6B89AB2228761600902B4C /* CLISpinner.framework in Embed Frameworks */,
 				FDDDD67C222419B8004CFFFC /* ZFile.framework in Embed Frameworks */,
-				FDDDD6A2222419F5004CFFFC /* Url.framework in Embed Frameworks */,
-				FDDDD69F222419F5004CFFFC /* Task.framework in Embed Frameworks */,
-				FDDDD6762224194B004CFFFC /* SignPost.framework in Embed Frameworks */,
-				FDCB538922241D0F00FA6DD9 /* ProjectFolderWorker.framework in Embed Frameworks */,
-				FDDDD6A5222419F5004CFFFC /* SourceryWorker.framework in Embed Frameworks */,
-				FDDDD681222419C7004CFFFC /* Terminal.framework in Embed Frameworks */,
-				FDDDD684222419F5004CFFFC /* Arguments.framework in Embed Frameworks */,
-				FDCB538022241BF400FA6DD9 /* Result.framework in Embed Frameworks */,
-				FDDDD6AB222419F5004CFFFC /* ProjectFolderWorker.framework in Embed Frameworks */,
 				FDDDD6AD222419F5004CFFFC /* FoundationGenericHelper.framework in Embed Frameworks */,
-				FDDDD699222419F5004CFFFC /* Git.framework in Embed Frameworks */,
-				FDDDD68D222419F5004CFFFC /* POSIX.framework in Embed Frameworks */,
+				FD6B89CF2228761600902B4C /* SourceryWorker.framework in Embed Frameworks */,
+				FD6B89D52228761600902B4C /* SwiftFormatWorker.framework in Embed Frameworks */,
+				FD6B89B12228761600902B4C /* Arguments.framework in Embed Frameworks */,
+				FD6B89CC2228761600902B4C /* Url.framework in Embed Frameworks */,
+				FD6B89C62228761600902B4C /* Git.framework in Embed Frameworks */,
+				FD6B89BA2228761600902B4C /* POSIX.framework in Embed Frameworks */,
+				FD6B89AE2228761600902B4C /* Rainbow.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,6 +183,42 @@
 		FD1B88D521CE29DC0055C2C1 /* AnyRawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyRawRepresentable.swift; sourceTree = "<group>"; };
 		FD1B88D921CE2AC80055C2C1 /* FoundationGenericHelper-ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoundationGenericHelper-ios.h"; sourceTree = "<group>"; };
 		FD4E545C21D1128600B5A776 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		FD6B89A92228761600902B4C /* CLISpinner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CLISpinner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89AC2228761600902B4C /* Rainbow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Rainbow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89AF2228761600902B4C /* Arguments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Arguments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89B22228761600902B4C /* Keychain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Keychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89B52228761600902B4C /* Terminal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Terminal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89B82228761600902B4C /* POSIX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = POSIX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89BB2228761600902B4C /* XCBuild.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XCBuild.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89BE2228761600902B4C /* Errors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Errors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89C12228761600902B4C /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89C42228761600902B4C /* Git.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Git.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89C72228761600902B4C /* Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89CA2228761600902B4C /* Url.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Url.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89CD2228761600902B4C /* SourceryWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89D02228761600902B4C /* SignPost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SignPost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89D32228761600902B4C /* SwiftFormatWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFormatWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89D62228761600902B4C /* CupertinoJWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CupertinoJWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89D92228761600902B4C /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89DC2228761600902B4C /* SwiftFormat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFormat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89DF2228761F00902B4C /* Arguments.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Arguments.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Arguments.framework"; sourceTree = "<group>"; };
+		FD6B89E02228761F00902B4C /* POSIX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = POSIX.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/POSIX.framework"; sourceTree = "<group>"; };
+		FD6B89E12228761F00902B4C /* SwiftFormat.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftFormat.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/SwiftFormat.framework"; sourceTree = "<group>"; };
+		FD6B89E22228761F00902B4C /* CupertinoJWT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CupertinoJWT.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/CupertinoJWT.framework"; sourceTree = "<group>"; };
+		FD6B89E32228762000902B4C /* XCBuild.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCBuild.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/XCBuild.framework"; sourceTree = "<group>"; };
+		FD6B89E42228762000902B4C /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Result.framework"; sourceTree = "<group>"; };
+		FD6B89E52228762000902B4C /* SwiftFormatWorker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftFormatWorker.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/SwiftFormatWorker.framework"; sourceTree = "<group>"; };
+		FD6B89E62228762000902B4C /* SignPost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SignPost.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/SignPost.framework"; sourceTree = "<group>"; };
+		FD6B89E72228762000902B4C /* SourceryWorker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SourceryWorker.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/SourceryWorker.framework"; sourceTree = "<group>"; };
+		FD6B89E82228762000902B4C /* Git.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Git.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Git.framework"; sourceTree = "<group>"; };
+		FD6B89E92228762000902B4C /* CLISpinner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CLISpinner.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/CLISpinner.framework"; sourceTree = "<group>"; };
+		FD6B89EA2228762000902B4C /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Keychain.framework"; sourceTree = "<group>"; };
+		FD6B89EB2228762000902B4C /* Rainbow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rainbow.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Rainbow.framework"; sourceTree = "<group>"; };
+		FD6B89EC2228762000902B4C /* Task.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Task.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Task.framework"; sourceTree = "<group>"; };
+		FD6B89ED2228762000902B4C /* Url.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Url.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Url.framework"; sourceTree = "<group>"; };
+		FD6B89EE2228762000902B4C /* Terminal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Terminal.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Terminal.framework"; sourceTree = "<group>"; };
+		FD6B89EF2228762000902B4C /* Errors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Errors.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Errors.framework"; sourceTree = "<group>"; };
+		FD6B89F02228762000902B4C /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SourceryAutoProtocols.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/SourceryAutoProtocols.framework"; sourceTree = "<group>"; };
 		FD737D9221B03BD3001BB507 /* ZFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD737D9521B03BD3001BB507 /* ZFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFile.h; sourceTree = "<group>"; };
 		FD737D9621B03BD3001BB507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -210,24 +230,11 @@
 		FD737DB121B03C66001BB507 /* FileSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystem.swift; sourceTree = "<group>"; };
 		FD737DB921B03C71001BB507 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FD737DC021B03D25001BB507 /* ZFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDCA466F222427700005EBA3 /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCA467122242AC80005EBA3 /* ZFileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZFileTests.swift; path = ZFileTests/ZFileTests.swift; sourceTree = "<group>"; };
-		FDCA46BF22242BBC0005EBA3 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDCA46C122242BC30005EBA3 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDCA46C522242C900005EBA3 /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDCA46C922242E010005EBA3 /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCA46CF22242ED60005EBA3 /* iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCA46D322242ED60005EBA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDCA46DD22242F420005EBA3 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDCA46DF22242F480005EBA3 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCA46E6222430130005EBA3 /* macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = macOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCA46EA222430130005EBA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDCA46F4222430410005EBA3 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDCA46F6222430470005EBA3 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDCB537E22241BF400FA6DD9 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDCB538122241BFF00FA6DD9 /* SwiftFormat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFormat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDCB538422241CF800FA6DD9 /* CupertinoJWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CupertinoJWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDCB538722241D0F00FA6DD9 /* ProjectFolderWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProjectFolderWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDB92F521CD93F000B6D5E9 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDDB92FD21CD953400B6D5E9 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDB930A21CD955600B6D5E9 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,23 +244,6 @@
 		FDDDD6612224188F004CFFFC /* AutomateZFile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutomateZFile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDDD671222418D5004CFFFC /* AutomateZFile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AutomateZFile-Bridging-Header.h"; sourceTree = "<group>"; };
 		FDDDD672222418D5004CFFFC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		FDDDD6742224194B004CFFFC /* SignPost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SignPost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDDDD67F222419C7004CFFFC /* Terminal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Terminal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDDDD682222419F5004CFFFC /* Arguments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Arguments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDDDD685222419F5004CFFFC /* Keychain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Keychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDDDD688222419F5004CFFFC /* Terminal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Terminal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDDDD68B222419F5004CFFFC /* POSIX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = POSIX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDDDD68E222419F5004CFFFC /* XCBuild.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XCBuild.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDDDD691222419F5004CFFFC /* Errors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Errors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDDDD694222419F5004CFFFC /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDDDD697222419F5004CFFFC /* Git.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Git.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDDDD69A222419F5004CFFFC /* Deliver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Deliver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDDDD69D222419F5004CFFFC /* Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDDDD6A0222419F5004CFFFC /* Url.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Url.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDDDD6A3222419F5004CFFFC /* SourceryWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDDDD6A6222419F5004CFFFC /* SignPost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SignPost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDDDD6A9222419F5004CFFFC /* ProjectFolderWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProjectFolderWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDDDD6B022241AFC004CFFFC /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,7 +265,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDCA46CA22242E010005EBA3 /* SourceryAutoProtocols.framework in Frameworks */,
 				FD1B88BE21CE284C0055C2C1 /* FoundationGenericHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +273,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDCA46C622242C900005EBA3 /* SourceryAutoProtocols.framework in Frameworks */,
 				FD1B88CA21CE28A50055C2C1 /* FoundationGenericHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,8 +282,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDCA46E122242FDA0005EBA3 /* ZFileMock.framework in Frameworks */,
-				FDCA46E022242F480005EBA3 /* Nimble.framework in Frameworks */,
-				FDCA46DE22242F420005EBA3 /* Quick.framework in Frameworks */,
 				FDCA46D422242ED60005EBA3 /* ZFile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,8 +290,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDCA46F7222430470005EBA3 /* Nimble.framework in Frameworks */,
-				FDCA46F5222430410005EBA3 /* Quick.framework in Frameworks */,
 				FDCA46F32224303A0005EBA3 /* ZFileMock.framework in Frameworks */,
 				FDCA46EB222430130005EBA3 /* ZFile.framework in Frameworks */,
 			);
@@ -323,7 +307,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDCA4670222427700005EBA3 /* SourceryAutoProtocols.framework in Frameworks */,
 				FD1B88C121CE28620055C2C1 /* ZFile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,29 +315,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDDDD6A7222419F5004CFFFC /* SignPost.framework in Frameworks */,
-				FDDDD69B222419F5004CFFFC /* Deliver.framework in Frameworks */,
-				FDDDD68F222419F5004CFFFC /* XCBuild.framework in Frameworks */,
-				FDCB538222241BFF00FA6DD9 /* SwiftFormat.framework in Frameworks */,
-				FDDDD686222419F5004CFFFC /* Keychain.framework in Frameworks */,
-				FDDDD689222419F5004CFFFC /* Terminal.framework in Frameworks */,
-				FDDDD692222419F5004CFFFC /* Errors.framework in Frameworks */,
-				FDDDD695222419F5004CFFFC /* SourceryAutoProtocols.framework in Frameworks */,
-				FDDDD6B122241AFC004CFFFC /* Result.framework in Frameworks */,
-				FDCB538522241CF800FA6DD9 /* CupertinoJWT.framework in Frameworks */,
+				FD6B89BC2228761600902B4C /* XCBuild.framework in Frameworks */,
+				FD6B89C82228761600902B4C /* Task.framework in Frameworks */,
+				FD6B89DA2228761600902B4C /* Result.framework in Frameworks */,
+				FD6B89DD2228761600902B4C /* SwiftFormat.framework in Frameworks */,
+				FD6B89D72228761600902B4C /* CupertinoJWT.framework in Frameworks */,
+				FD6B89B32228761600902B4C /* Keychain.framework in Frameworks */,
+				FD6B89B62228761600902B4C /* Terminal.framework in Frameworks */,
+				FD6B89BF2228761600902B4C /* Errors.framework in Frameworks */,
+				FD6B89D12228761600902B4C /* SignPost.framework in Frameworks */,
+				FD6B89C22228761600902B4C /* SourceryAutoProtocols.framework in Frameworks */,
+				FD6B89AA2228761600902B4C /* CLISpinner.framework in Frameworks */,
 				FDDDD67B222419B8004CFFFC /* ZFile.framework in Frameworks */,
-				FDDDD6A1222419F5004CFFFC /* Url.framework in Frameworks */,
-				FDDDD69E222419F5004CFFFC /* Task.framework in Frameworks */,
-				FDDDD6752224194B004CFFFC /* SignPost.framework in Frameworks */,
-				FDCB538822241D0F00FA6DD9 /* ProjectFolderWorker.framework in Frameworks */,
-				FDDDD6A4222419F5004CFFFC /* SourceryWorker.framework in Frameworks */,
-				FDDDD680222419C7004CFFFC /* Terminal.framework in Frameworks */,
-				FDDDD683222419F5004CFFFC /* Arguments.framework in Frameworks */,
-				FDCB537F22241BF400FA6DD9 /* Result.framework in Frameworks */,
-				FDDDD6AA222419F5004CFFFC /* ProjectFolderWorker.framework in Frameworks */,
 				FDDDD6AC222419F5004CFFFC /* FoundationGenericHelper.framework in Frameworks */,
-				FDDDD698222419F5004CFFFC /* Git.framework in Frameworks */,
-				FDDDD68C222419F5004CFFFC /* POSIX.framework in Frameworks */,
+				FD6B89CE2228761600902B4C /* SourceryWorker.framework in Frameworks */,
+				FD6B89D42228761600902B4C /* SwiftFormatWorker.framework in Frameworks */,
+				FD6B89B02228761600902B4C /* Arguments.framework in Frameworks */,
+				FD6B89CB2228761600902B4C /* Url.framework in Frameworks */,
+				FD6B89C52228761600902B4C /* Git.framework in Frameworks */,
+				FD6B89B92228761600902B4C /* POSIX.framework in Frameworks */,
+				FD6B89AD2228761600902B4C /* Rainbow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +366,24 @@
 			children = (
 				FDDB92F621CD949700B6D5E9 /* Sources */,
 				FDDB92F721CD94B000B6D5E9 /* Tests */,
+				FD6B89DC2228761600902B4C /* SwiftFormat.framework */,
+				FD6B89D92228761600902B4C /* Result.framework */,
+				FD6B89D62228761600902B4C /* CupertinoJWT.framework */,
+				FD6B89D32228761600902B4C /* SwiftFormatWorker.framework */,
+				FD6B89D02228761600902B4C /* SignPost.framework */,
+				FD6B89CD2228761600902B4C /* SourceryWorker.framework */,
+				FD6B89CA2228761600902B4C /* Url.framework */,
+				FD6B89C72228761600902B4C /* Task.framework */,
+				FD6B89C42228761600902B4C /* Git.framework */,
+				FD6B89C12228761600902B4C /* SourceryAutoProtocols.framework */,
+				FD6B89BE2228761600902B4C /* Errors.framework */,
+				FD6B89BB2228761600902B4C /* XCBuild.framework */,
+				FD6B89B82228761600902B4C /* POSIX.framework */,
+				FD6B89B52228761600902B4C /* Terminal.framework */,
+				FD6B89B22228761600902B4C /* Keychain.framework */,
+				FD6B89AF2228761600902B4C /* Arguments.framework */,
+				FD6B89AC2228761600902B4C /* Rainbow.framework */,
+				FD6B89A92228761600902B4C /* CLISpinner.framework */,
 				FDCA46D022242ED60005EBA3 /* iOSTests */,
 				FDCA46E7222430130005EBA3 /* macOSTests */,
 				FD737D9321B03BD3001BB507 /* Products */,
@@ -428,36 +426,24 @@
 		FD737DB821B03C71001BB507 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FDCA46F6222430470005EBA3 /* Nimble.framework */,
-				FDCA46F4222430410005EBA3 /* Quick.framework */,
-				FDCA46DF22242F480005EBA3 /* Nimble.framework */,
-				FDCA46DD22242F420005EBA3 /* Quick.framework */,
-				FDCA46C922242E010005EBA3 /* SourceryAutoProtocols.framework */,
-				FDCA46C522242C900005EBA3 /* SourceryAutoProtocols.framework */,
-				FDCA46C122242BC30005EBA3 /* Nimble.framework */,
-				FDCA46BF22242BBC0005EBA3 /* Quick.framework */,
-				FDCA466F222427700005EBA3 /* SourceryAutoProtocols.framework */,
-				FDCB537E22241BF400FA6DD9 /* Result.framework */,
-				FDDDD6B022241AFC004CFFFC /* Result.framework */,
-				FDDDD6A9222419F5004CFFFC /* ProjectFolderWorker.framework */,
-				FDCB538722241D0F00FA6DD9 /* ProjectFolderWorker.framework */,
-				FDCB538422241CF800FA6DD9 /* CupertinoJWT.framework */,
-				FDCB538122241BFF00FA6DD9 /* SwiftFormat.framework */,
-				FDDDD697222419F5004CFFFC /* Git.framework */,
-				FDDDD694222419F5004CFFFC /* SourceryAutoProtocols.framework */,
-				FDDDD691222419F5004CFFFC /* Errors.framework */,
-				FDDDD68E222419F5004CFFFC /* XCBuild.framework */,
-				FDDDD68B222419F5004CFFFC /* POSIX.framework */,
-				FDDDD682222419F5004CFFFC /* Arguments.framework */,
-				FDDDD67F222419C7004CFFFC /* Terminal.framework */,
-				FDDDD685222419F5004CFFFC /* Keychain.framework */,
-				FDDDD688222419F5004CFFFC /* Terminal.framework */,
-				FDDDD6742224194B004CFFFC /* SignPost.framework */,
-				FDDDD6A6222419F5004CFFFC /* SignPost.framework */,
-				FDDDD6A3222419F5004CFFFC /* SourceryWorker.framework */,
-				FDDDD6A0222419F5004CFFFC /* Url.framework */,
-				FDDDD69D222419F5004CFFFC /* Task.framework */,
-				FDDDD69A222419F5004CFFFC /* Deliver.framework */,
+				FD6B89E12228761F00902B4C /* SwiftFormat.framework */,
+				FD6B89E42228762000902B4C /* Result.framework */,
+				FD6B89E22228761F00902B4C /* CupertinoJWT.framework */,
+				FD6B89E52228762000902B4C /* SwiftFormatWorker.framework */,
+				FD6B89E62228762000902B4C /* SignPost.framework */,
+				FD6B89E72228762000902B4C /* SourceryWorker.framework */,
+				FD6B89ED2228762000902B4C /* Url.framework */,
+				FD6B89EC2228762000902B4C /* Task.framework */,
+				FD6B89E82228762000902B4C /* Git.framework */,
+				FD6B89F02228762000902B4C /* SourceryAutoProtocols.framework */,
+				FD6B89EF2228762000902B4C /* Errors.framework */,
+				FD6B89E32228762000902B4C /* XCBuild.framework */,
+				FD6B89E02228761F00902B4C /* POSIX.framework */,
+				FD6B89EE2228762000902B4C /* Terminal.framework */,
+				FD6B89EA2228762000902B4C /* Keychain.framework */,
+				FD6B89DF2228761F00902B4C /* Arguments.framework */,
+				FD6B89EB2228762000902B4C /* Rainbow.framework */,
+				FD6B89E92228762000902B4C /* CLISpinner.framework */,
 				FD737DB921B03C71001BB507 /* Foundation.framework */,
 			);
 			name = Frameworks;

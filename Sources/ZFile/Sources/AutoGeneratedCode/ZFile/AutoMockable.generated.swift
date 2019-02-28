@@ -5,7 +5,7 @@ import SourceryAutoProtocols
 import ZFile
 
 
-// Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 
@@ -31,6 +31,50 @@ open class BundleProtocolMock: BundleProtocol {
     public init() {}
 
 
+
+  // MARK: - <fileforResource> - parameters
+
+  public var fileforResourceWithOfThrowableError: Error?
+  public var fileforResourceWithOfCallsCount = 0
+  public var fileforResourceWithOfCalled: Bool {
+    return fileforResourceWithOfCallsCount > 0
+  }
+  public var fileforResourceWithOfReceivedArguments: (name: (String), type: (String))?
+  public var fileforResourceWithOfReturnValue: FileProtocol?
+
+  // MARK: - <fileforResource> - closure mocks
+
+  public var fileforResourceWithOfClosure: ((String, String) throws  -> FileProtocol)? = nil
+
+
+
+  // MARK: - <fileforResource> - method mocked
+
+  open func fileforResource(with name: String, of type: String) throws -> FileProtocol {
+
+
+      // <fileforResource> - Throwable method implementation
+
+    if let error = fileforResourceWithOfThrowableError {
+        throw error
+    }
+
+      fileforResourceWithOfCallsCount += 1
+      fileforResourceWithOfReceivedArguments = (name: name, type: type)
+
+      // <fileforResource> - Return Value mock implementation
+
+      guard let closureReturn = fileforResourceWithOfClosure else {
+          guard let returnValue = fileforResourceWithOfReturnValue else {
+              let message = "No returnValue implemented for fileforResourceWithOfClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+                 throw error
+          }
+          return returnValue
+      }
+
+      return try closureReturn(name, type)
+  }
 
   // MARK: - <string> - parameters
 
@@ -538,6 +582,40 @@ open class FileProtocolMock: FileProtocol {
       return try closureReturn(folder)
   }
 
+  // MARK: - <init> - parameters
+
+  public var initThrowableError: Error?
+
+  // MARK: - <init> - closure mocks
+
+  public var initClosure: (() throws  -> Void)? = nil
+
+
+  // MARK: - <init> - initializer mocked
+
+  public required init() throws {
+     try? initClosure?()
+  }
+
+
+  // MARK: - <init> - parameters
+
+  public var initPathThrowableError: Error?
+  public var initPathReceivedPath: String?
+
+  // MARK: - <init> - closure mocks
+
+  public var initPathClosure: ((String) throws  -> Void)? = nil
+
+
+  // MARK: - <init> - initializer mocked
+
+  public required init(path: String) throws {
+      initPathReceivedPath = path
+     try? initPathClosure?(path)
+  }
+
+
   // MARK: - <parentFolder> - parameters
 
   public var parentFolderThrowableError: Error?
@@ -717,40 +795,6 @@ open class FileProtocolMock: FileProtocol {
       try deleteClosure?()
 
   }
-
-  // MARK: - <init> - parameters
-
-  public var initThrowableError: Error?
-
-  // MARK: - <init> - closure mocks
-
-  public var initClosure: (() throws  -> Void)? = nil
-
-
-  // MARK: - <init> - initializer mocked
-
-  public required init() throws {
-     try? initClosure?()
-  }
-
-
-  // MARK: - <init> - parameters
-
-  public var initPathThrowableError: Error?
-  public var initPathReceivedPath: String?
-
-  // MARK: - <init> - closure mocks
-
-  public var initPathClosure: ((String) throws  -> Void)? = nil
-
-
-  // MARK: - <init> - initializer mocked
-
-  public required init(path: String) throws {
-      initPathReceivedPath = path
-     try? initPathClosure?(path)
-  }
-
 }
 
 
@@ -1100,9 +1144,6 @@ open class FileSystemProtocolMock: FileSystemProtocol {
           guard let returnValue = itemKindAtReturnValue else {
               let message = "No returnValue implemented for itemKindAtClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-              os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
-
-              return nil
           }
           return returnValue
       }
@@ -1348,6 +1389,14 @@ open class FolderProtocolMock: FolderProtocol {
               os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
 
               return false
+              {% elif method.returnTypeName.isOptional %}
+              os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
+
+              return nil
+              {% else %}
+              os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
+
+              return {% call swiftifyMethod method %}ReturnValue!
           }
           return returnValue
       }
@@ -1518,6 +1567,14 @@ open class FolderProtocolMock: FolderProtocol {
               os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
 
               return false
+              {% elif method.returnTypeName.isOptional %}
+              os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
+
+              return nil
+              {% else %}
+              os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
+
+              return {% call swiftifyMethod method %}ReturnValue!
           }
           return returnValue
       }
@@ -1817,9 +1874,6 @@ open class FolderProtocolMock: FolderProtocol {
           guard let returnValue = makeFileSequenceRecursiveIncludeHiddenReturnValue else {
               let message = "No returnValue implemented for makeFileSequenceRecursiveIncludeHiddenClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-              os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
-
-              return makeFileSequenceRecursiveIncludeHiddenReturnValue!
           }
           return returnValue
       }
@@ -1912,6 +1966,40 @@ open class FolderProtocolMock: FolderProtocol {
 
       return try closureReturn()
   }
+
+  // MARK: - <init> - parameters
+
+  public var initThrowableError: Error?
+
+  // MARK: - <init> - closure mocks
+
+  public var initClosure: (() throws  -> Void)? = nil
+
+
+  // MARK: - <init> - initializer mocked
+
+  public required init() throws {
+     try? initClosure?()
+  }
+
+
+  // MARK: - <init> - parameters
+
+  public var initPathThrowableError: Error?
+  public var initPathReceivedPath: String?
+
+  // MARK: - <init> - closure mocks
+
+  public var initPathClosure: ((String) throws  -> Void)? = nil
+
+
+  // MARK: - <init> - initializer mocked
+
+  public required init(path: String) throws {
+      initPathReceivedPath = path
+     try? initPathClosure?(path)
+  }
+
 
   // MARK: - <parentFolder> - parameters
 
@@ -2092,40 +2180,6 @@ open class FolderProtocolMock: FolderProtocol {
       try deleteClosure?()
 
   }
-
-  // MARK: - <init> - parameters
-
-  public var initThrowableError: Error?
-
-  // MARK: - <init> - closure mocks
-
-  public var initClosure: (() throws  -> Void)? = nil
-
-
-  // MARK: - <init> - initializer mocked
-
-  public required init() throws {
-     try? initClosure?()
-  }
-
-
-  // MARK: - <init> - parameters
-
-  public var initPathThrowableError: Error?
-  public var initPathReceivedPath: String?
-
-  // MARK: - <init> - closure mocks
-
-  public var initPathClosure: ((String) throws  -> Void)? = nil
-
-
-  // MARK: - <init> - initializer mocked
-
-  public required init(path: String) throws {
-      initPathReceivedPath = path
-     try? initPathClosure?(path)
-  }
-
 }
 
 
