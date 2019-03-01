@@ -5,7 +5,7 @@ import SourceryAutoProtocols
 import ZFile
 
 
-// Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 
@@ -31,6 +31,54 @@ open class BundleProtocolMock: BundleProtocol {
     public init() {}
 
 
+
+  // MARK: - <fileforResource> - parameters
+
+  public var fileforResourceWithOfThrowableError: Error?
+  public var fileforResourceWithOfCallsCount = 0
+  public var fileforResourceWithOfCalled: Bool {
+    return fileforResourceWithOfCallsCount > 0
+  }
+  public var fileforResourceWithOfReceivedArguments: (name: (String), type: (String))?
+  public var fileforResourceWithOfReturnValue: FileProtocol?
+
+  // MARK: - <fileforResource> - closure mocks
+
+  public var fileforResourceWithOfClosure: ((String, String) throws  -> FileProtocol)? = nil
+
+
+
+  // MARK: - <fileforResource> - method mocked
+
+  open func fileforResource(with name: String, of type: String) throws -> FileProtocol {
+
+
+      // <fileforResource> - Throwable method implementation
+
+    if let error = fileforResourceWithOfThrowableError {
+        throw error
+    }
+
+      fileforResourceWithOfCallsCount += 1
+      fileforResourceWithOfReceivedArguments = (name: name, type: type)
+
+      // <fileforResource> - Return Value mock implementation
+
+      guard let closureReturn = fileforResourceWithOfClosure else {
+          guard let returnValue = fileforResourceWithOfReturnValue else {
+              let message = "No returnValue implemented for fileforResourceWithOfClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement FileProtocol
+
+              throw error
+
+          }
+          return returnValue
+      }
+
+      return try closureReturn(name, type)
+  }
 
   // MARK: - <string> - parameters
 
@@ -68,7 +116,11 @@ open class BundleProtocolMock: BundleProtocol {
           guard let returnValue = stringForReturnValue else {
               let message = "No returnValue implemented for stringForClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement String
+
+              throw error
+
           }
           return returnValue
       }
@@ -150,7 +202,11 @@ open class FileProtocolMock: FileProtocol {
           guard let returnValue = readAllLinesReturnValue else {
               let message = "No returnValue implemented for readAllLinesClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement [String]
+
+              throw error
+
           }
           return returnValue
       }
@@ -192,7 +248,11 @@ open class FileProtocolMock: FileProtocol {
           guard let returnValue = readReturnValue else {
               let message = "No returnValue implemented for readClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement Data
+
+              throw error
+
           }
           return returnValue
       }
@@ -234,7 +294,11 @@ open class FileProtocolMock: FileProtocol {
           guard let returnValue = readAsStringReturnValue else {
               let message = "No returnValue implemented for readAsStringClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement String
+
+              throw error
+
           }
           return returnValue
       }
@@ -276,7 +340,11 @@ open class FileProtocolMock: FileProtocol {
           guard let returnValue = readAsIntReturnValue else {
               let message = "No returnValue implemented for readAsIntClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement Int
+
+              throw error
+
           }
           return returnValue
       }
@@ -315,7 +383,7 @@ open class FileProtocolMock: FileProtocol {
 
       // <write> - Void return mock implementation
 
-      try writeDataClosure?(data)
+        try writeDataClosure?(data)
 
   }
 
@@ -350,7 +418,7 @@ open class FileProtocolMock: FileProtocol {
 
       // <write> - Void return mock implementation
 
-      try writeStringClosure?(string)
+        try writeStringClosure?(string)
 
   }
 
@@ -385,7 +453,7 @@ open class FileProtocolMock: FileProtocol {
 
       // <write> - Void return mock implementation
 
-      try writeStringEncodingClosure?(string, encoding)
+        try writeStringEncodingClosure?(string, encoding)
 
   }
 
@@ -420,7 +488,7 @@ open class FileProtocolMock: FileProtocol {
 
       // <append> - Void return mock implementation
 
-      try appendDataClosure?(data)
+        try appendDataClosure?(data)
 
   }
 
@@ -455,7 +523,7 @@ open class FileProtocolMock: FileProtocol {
 
       // <append> - Void return mock implementation
 
-      try appendStringClosure?(string)
+        try appendStringClosure?(string)
 
   }
 
@@ -490,7 +558,7 @@ open class FileProtocolMock: FileProtocol {
 
       // <append> - Void return mock implementation
 
-      try appendStringEncodingClosure?(string, encoding)
+        try appendStringEncodingClosure?(string, encoding)
 
   }
 
@@ -530,13 +598,51 @@ open class FileProtocolMock: FileProtocol {
           guard let returnValue = copyToReturnValue else {
               let message = "No returnValue implemented for copyToClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FileProtocol
+
+              throw error
+
           }
           return returnValue
       }
 
       return try closureReturn(folder)
   }
+
+  // MARK: - <init> - parameters
+
+  public var initThrowableError: Error?
+
+  // MARK: - <init> - closure mocks
+
+  public var initClosure: (() throws  -> Void)? = nil
+
+
+  // MARK: - <init> - initializer mocked
+
+  public required init() throws {
+     try? initClosure?()
+  }
+
+
+  // MARK: - <init> - parameters
+
+  public var initPathThrowableError: Error?
+  public var initPathReceivedPath: String?
+
+  // MARK: - <init> - closure mocks
+
+  public var initPathClosure: ((String) throws  -> Void)? = nil
+
+
+  // MARK: - <init> - initializer mocked
+
+  public required init(path: String) throws {
+      initPathReceivedPath = path
+     try? initPathClosure?(path)
+  }
+
 
   // MARK: - <parentFolder> - parameters
 
@@ -572,7 +678,11 @@ open class FileProtocolMock: FileProtocol {
           guard let returnValue = parentFolderReturnValue else {
               let message = "No returnValue implemented for parentFolderClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FolderProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -611,7 +721,7 @@ open class FileProtocolMock: FileProtocol {
 
       // <rename> - Void return mock implementation
 
-      try renameToClosure?(newName)
+        try renameToClosure?(newName)
 
   }
 
@@ -646,7 +756,7 @@ open class FileProtocolMock: FileProtocol {
 
       // <rename> - Void return mock implementation
 
-      try renameToKeepExtensionClosure?(newName, keepExtension)
+        try renameToKeepExtensionClosure?(newName, keepExtension)
 
   }
 
@@ -681,7 +791,7 @@ open class FileProtocolMock: FileProtocol {
 
       // <move> - Void return mock implementation
 
-      try moveToClosure?(newParent)
+        try moveToClosure?(newParent)
 
   }
 
@@ -714,43 +824,9 @@ open class FileProtocolMock: FileProtocol {
 
       // <delete> - Void return mock implementation
 
-      try deleteClosure?()
+        try deleteClosure?()
 
   }
-
-  // MARK: - <init> - parameters
-
-  public var initThrowableError: Error?
-
-  // MARK: - <init> - closure mocks
-
-  public var initClosure: (() throws  -> Void)? = nil
-
-
-  // MARK: - <init> - initializer mocked
-
-  public required init() throws {
-     try? initClosure?()
-  }
-
-
-  // MARK: - <init> - parameters
-
-  public var initPathThrowableError: Error?
-  public var initPathReceivedPath: String?
-
-  // MARK: - <init> - closure mocks
-
-  public var initPathClosure: ((String) throws  -> Void)? = nil
-
-
-  // MARK: - <init> - initializer mocked
-
-  public required init(path: String) throws {
-      initPathReceivedPath = path
-     try? initPathClosure?(path)
-  }
-
 }
 
 
@@ -844,7 +920,11 @@ open class FileSystemProtocolMock: FileSystemProtocol {
           guard let returnValue = createFileAtReturnValue else {
               let message = "No returnValue implemented for createFileAtClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FileProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -888,7 +968,11 @@ open class FileSystemProtocolMock: FileSystemProtocol {
           guard let returnValue = createFileAtDataContentsReturnValue else {
               let message = "No returnValue implemented for createFileAtDataContentsClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FileProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -932,7 +1016,11 @@ open class FileSystemProtocolMock: FileSystemProtocol {
           guard let returnValue = createFileIfNeededAtReturnValue else {
               let message = "No returnValue implemented for createFileIfNeededAtClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FileProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -976,7 +1064,11 @@ open class FileSystemProtocolMock: FileSystemProtocol {
           guard let returnValue = createFileIfNeededAtContentsReturnValue else {
               let message = "No returnValue implemented for createFileIfNeededAtContentsClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FileProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -1020,7 +1112,11 @@ open class FileSystemProtocolMock: FileSystemProtocol {
           guard let returnValue = createFolderAtReturnValue else {
               let message = "No returnValue implemented for createFolderAtClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FolderProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -1064,7 +1160,11 @@ open class FileSystemProtocolMock: FileSystemProtocol {
           guard let returnValue = createFolderIfNeededAtReturnValue else {
               let message = "No returnValue implemented for createFolderIfNeededAtClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FolderProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -1100,9 +1200,14 @@ open class FileSystemProtocolMock: FileSystemProtocol {
           guard let returnValue = itemKindAtReturnValue else {
               let message = "No returnValue implemented for itemKindAtClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-              os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
+
+              // You should implement FileSystem.Item.Kind?
+
+              os_log("❌ %@", type: .error, "\(error)")
 
               return nil
+
+
           }
           return returnValue
       }
@@ -1179,7 +1284,11 @@ open class FolderProtocolMock: FolderProtocol {
           guard let returnValue = mostRecentSubfolderReturnValue else {
               let message = "No returnValue implemented for mostRecentSubfolderClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FolderProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -1221,7 +1330,11 @@ open class FolderProtocolMock: FolderProtocol {
           guard let returnValue = mostRecentFileReturnValue else {
               let message = "No returnValue implemented for mostRecentFileClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FileProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -1265,7 +1378,11 @@ open class FolderProtocolMock: FolderProtocol {
           guard let returnValue = fileNamedReturnValue else {
               let message = "No returnValue implemented for fileNamedClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FileProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -1309,7 +1426,11 @@ open class FolderProtocolMock: FolderProtocol {
           guard let returnValue = fileAtPathReturnValue else {
               let message = "No returnValue implemented for fileAtPathClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FileProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -1345,9 +1466,14 @@ open class FolderProtocolMock: FolderProtocol {
           guard let returnValue = containsFileNamedReturnValue else {
               let message = "No returnValue implemented for containsFileNamedClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-              os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
 
-              return false
+              // You should implement Bool
+
+              os_log("❌ %@", type: .error, "\(error)")
+
+              fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
+
+
           }
           return returnValue
       }
@@ -1391,7 +1517,11 @@ open class FolderProtocolMock: FolderProtocol {
           guard let returnValue = firstFolderWithReturnValue else {
               let message = "No returnValue implemented for firstFolderWithClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FolderProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -1435,7 +1565,11 @@ open class FolderProtocolMock: FolderProtocol {
           guard let returnValue = subfolderNamedReturnValue else {
               let message = "No returnValue implemented for subfolderNamedClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FolderProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -1479,7 +1613,11 @@ open class FolderProtocolMock: FolderProtocol {
           guard let returnValue = subfolderAtPathReturnValue else {
               let message = "No returnValue implemented for subfolderAtPathClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FolderProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -1515,9 +1653,14 @@ open class FolderProtocolMock: FolderProtocol {
           guard let returnValue = containsSubfolderNamedReturnValue else {
               let message = "No returnValue implemented for containsSubfolderNamedClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-              os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
 
-              return false
+              // You should implement Bool
+
+              os_log("❌ %@", type: .error, "\(error)")
+
+              fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
+
+
           }
           return returnValue
       }
@@ -1561,7 +1704,11 @@ open class FolderProtocolMock: FolderProtocol {
           guard let returnValue = createFileIfNeededNamedReturnValue else {
               let message = "No returnValue implemented for createFileIfNeededNamedClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FileProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -1605,7 +1752,11 @@ open class FolderProtocolMock: FolderProtocol {
           guard let returnValue = createFileNamedReturnValue else {
               let message = "No returnValue implemented for createFileNamedClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FileProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -1649,7 +1800,11 @@ open class FolderProtocolMock: FolderProtocol {
           guard let returnValue = createFileNamedDataContentsReturnValue else {
               let message = "No returnValue implemented for createFileNamedDataContentsClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FileProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -1693,7 +1848,11 @@ open class FolderProtocolMock: FolderProtocol {
           guard let returnValue = createFileNamedContentsReturnValue else {
               let message = "No returnValue implemented for createFileNamedContentsClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FileProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -1737,7 +1896,11 @@ open class FolderProtocolMock: FolderProtocol {
           guard let returnValue = createSubfolderNamedReturnValue else {
               let message = "No returnValue implemented for createSubfolderNamedClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FolderProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -1781,7 +1944,11 @@ open class FolderProtocolMock: FolderProtocol {
           guard let returnValue = createSubfolderIfNeededWithNameReturnValue else {
               let message = "No returnValue implemented for createSubfolderIfNeededWithNameClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FolderProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -1817,9 +1984,14 @@ open class FolderProtocolMock: FolderProtocol {
           guard let returnValue = makeFileSequenceRecursiveIncludeHiddenReturnValue else {
               let message = "No returnValue implemented for makeFileSequenceRecursiveIncludeHiddenClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-              os_log("🧙‍♂️ 🔥 %@", type: .error, "\(error)")
 
-              return makeFileSequenceRecursiveIncludeHiddenReturnValue!
+              // You should implement FileSystemSequence<File>
+
+              os_log("❌ %@", type: .error, "\(error)")
+
+              fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
+
+
           }
           return returnValue
       }
@@ -1863,13 +2035,97 @@ open class FolderProtocolMock: FolderProtocol {
           guard let returnValue = copyToReturnValue else {
               let message = "No returnValue implemented for copyToClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement Folder
+
+              throw error
+
           }
           return returnValue
       }
 
       return try closureReturn(folder)
   }
+
+  // MARK: - <url> - parameters
+
+  public var urlThrowableError: Error?
+  public var urlCallsCount = 0
+  public var urlCalled: Bool {
+    return urlCallsCount > 0
+  }
+  public var urlReturnValue: URL?
+
+  // MARK: - <url> - closure mocks
+
+  public var urlClosure: (() throws  -> URL)? = nil
+
+
+
+  // MARK: - <url> - method mocked
+
+  open func url() throws -> URL {
+
+
+      // <url> - Throwable method implementation
+
+    if let error = urlThrowableError {
+        throw error
+    }
+
+      urlCallsCount += 1
+
+      // <url> - Return Value mock implementation
+
+      guard let closureReturn = urlClosure else {
+          guard let returnValue = urlReturnValue else {
+              let message = "No returnValue implemented for urlClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement URL
+
+              throw error
+
+          }
+          return returnValue
+      }
+
+      return try closureReturn()
+  }
+
+  // MARK: - <init> - parameters
+
+  public var initThrowableError: Error?
+
+  // MARK: - <init> - closure mocks
+
+  public var initClosure: (() throws  -> Void)? = nil
+
+
+  // MARK: - <init> - initializer mocked
+
+  public required init() throws {
+     try? initClosure?()
+  }
+
+
+  // MARK: - <init> - parameters
+
+  public var initPathThrowableError: Error?
+  public var initPathReceivedPath: String?
+
+  // MARK: - <init> - closure mocks
+
+  public var initPathClosure: ((String) throws  -> Void)? = nil
+
+
+  // MARK: - <init> - initializer mocked
+
+  public required init(path: String) throws {
+      initPathReceivedPath = path
+     try? initPathClosure?(path)
+  }
+
 
   // MARK: - <parentFolder> - parameters
 
@@ -1905,7 +2161,11 @@ open class FolderProtocolMock: FolderProtocol {
           guard let returnValue = parentFolderReturnValue else {
               let message = "No returnValue implemented for parentFolderClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FolderProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -1944,7 +2204,7 @@ open class FolderProtocolMock: FolderProtocol {
 
       // <rename> - Void return mock implementation
 
-      try renameToClosure?(newName)
+        try renameToClosure?(newName)
 
   }
 
@@ -1979,7 +2239,7 @@ open class FolderProtocolMock: FolderProtocol {
 
       // <rename> - Void return mock implementation
 
-      try renameToKeepExtensionClosure?(newName, keepExtension)
+        try renameToKeepExtensionClosure?(newName, keepExtension)
 
   }
 
@@ -2014,7 +2274,7 @@ open class FolderProtocolMock: FolderProtocol {
 
       // <move> - Void return mock implementation
 
-      try moveToClosure?(newParent)
+        try moveToClosure?(newParent)
 
   }
 
@@ -2047,43 +2307,9 @@ open class FolderProtocolMock: FolderProtocol {
 
       // <delete> - Void return mock implementation
 
-      try deleteClosure?()
+        try deleteClosure?()
 
   }
-
-  // MARK: - <init> - parameters
-
-  public var initThrowableError: Error?
-
-  // MARK: - <init> - closure mocks
-
-  public var initClosure: (() throws  -> Void)? = nil
-
-
-  // MARK: - <init> - initializer mocked
-
-  public required init() throws {
-     try? initClosure?()
-  }
-
-
-  // MARK: - <init> - parameters
-
-  public var initPathThrowableError: Error?
-  public var initPathReceivedPath: String?
-
-  // MARK: - <init> - closure mocks
-
-  public var initPathClosure: ((String) throws  -> Void)? = nil
-
-
-  // MARK: - <init> - initializer mocked
-
-  public required init(path: String) throws {
-      initPathReceivedPath = path
-     try? initPathClosure?(path)
-  }
-
 }
 
 
@@ -2154,7 +2380,11 @@ open class ItemProtocolMock: ItemProtocol {
           guard let returnValue = parentFolderReturnValue else {
               let message = "No returnValue implemented for parentFolderClosure"
               let error = SourceryMockError.implementErrorCaseFor(message)
-                 throw error
+
+              // You should implement FolderProtocol
+
+              throw error
+
           }
           return returnValue
       }
@@ -2193,7 +2423,7 @@ open class ItemProtocolMock: ItemProtocol {
 
       // <rename> - Void return mock implementation
 
-      try renameToClosure?(newName)
+        try renameToClosure?(newName)
 
   }
 
@@ -2228,7 +2458,7 @@ open class ItemProtocolMock: ItemProtocol {
 
       // <rename> - Void return mock implementation
 
-      try renameToKeepExtensionClosure?(newName, keepExtension)
+        try renameToKeepExtensionClosure?(newName, keepExtension)
 
   }
 
@@ -2263,7 +2493,7 @@ open class ItemProtocolMock: ItemProtocol {
 
       // <move> - Void return mock implementation
 
-      try moveToClosure?(newParent)
+        try moveToClosure?(newParent)
 
   }
 
@@ -2296,7 +2526,7 @@ open class ItemProtocolMock: ItemProtocol {
 
       // <delete> - Void return mock implementation
 
-      try deleteClosure?()
+        try deleteClosure?()
 
   }
 }

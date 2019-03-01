@@ -55,6 +55,7 @@ open class File: FileSystem.Item, FileProtocol, AutoGenerateSelectiveProtocol {
         case writeFailed
         /// Thrown when a file couldn't be read, either because it was malformed or because it has been deleted
         case readFailed
+        case invalid(path: String)
         
         /// A string describing the error
         public var description: String {
@@ -63,6 +64,8 @@ open class File: FileSystem.Item, FileProtocol, AutoGenerateSelectiveProtocol {
                 return "Failed to write to file"
             case .readFailed:
                 return "Failed to read file"
+            case let .invalid(path: path):
+                return "Invalid path: \(path)"
             }
         }
     }
@@ -88,6 +91,10 @@ open class File: FileSystem.Item, FileProtocol, AutoGenerateSelectiveProtocol {
         try super.init(path: path, kind: .file, using: .default)
     }
     
+    public func url() throws -> URL {
+        
+        return URL(fileURLWithPath: self.path)
+    }
     /**
      *  Read the data contained within this file
      *

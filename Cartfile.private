@@ -1,11 +1,7 @@
+
 # Automation
 
-github "doozMen/highway"
-
-# Auto generate Code
-
-github "doozMen/Sourcery"
-github "doozMen/template-sourcery"
+github "Bolides/highway"
 
 # Testing
 

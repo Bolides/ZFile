@@ -4,3 +4,6 @@
 /Sources/ZFile/.sourcery-FoundationGenericHelper.yml
 /Sources/ZFile/.sourcery-ZFile.yml
 xcuserdata
+/Carthage
+/Sources/ZFile/.build
+/.build

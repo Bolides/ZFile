@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDB7AA2421CD84960045DDA8"
-               BuildableName = "AutomateZFile.app"
-               BlueprintName = "AutomateZFile"
-               ReferencedContainer = "container:AutomateZFile.xcodeproj">
+               BlueprintIdentifier = "FDDB92FC21CD953400B6D5E9"
+               BuildableName = "ZFileMock.framework"
+               BlueprintName = "ZFileMock-macos"
+               ReferencedContainer = "container:ZFile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDB7AA2421CD84960045DDA8"
-            BuildableName = "AutomateZFile.app"
-            BlueprintName = "AutomateZFile"
-            ReferencedContainer = "container:AutomateZFile.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDB7AA2421CD84960045DDA8"
-            BuildableName = "AutomateZFile.app"
-            BlueprintName = "AutomateZFile"
-            ReferencedContainer = "container:AutomateZFile.xcodeproj">
+            BlueprintIdentifier = "FDDB92FC21CD953400B6D5E9"
+            BuildableName = "ZFileMock.framework"
+            BlueprintName = "ZFileMock-macos"
+            ReferencedContainer = "container:ZFile.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDB7AA2421CD84960045DDA8"
-            BuildableName = "AutomateZFile.app"
-            BlueprintName = "AutomateZFile"
-            ReferencedContainer = "container:AutomateZFile.xcodeproj">
+            BlueprintIdentifier = "FDDB92FC21CD953400B6D5E9"
+            BuildableName = "ZFileMock.framework"
+            BlueprintName = "ZFileMock-macos"
+            ReferencedContainer = "container:ZFile.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

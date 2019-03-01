@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDB7AA2421CD84960045DDA8"
+               BlueprintIdentifier = "FDDDD6602224188F004CFFFC"
                BuildableName = "AutomateZFile.app"
                BlueprintName = "AutomateZFile"
-               ReferencedContainer = "container:AutomateZFile.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDB7AA3621CD84970045DDA8"
-               BuildableName = "AutomateZFileTests-macos.xctest"
-               BlueprintName = "AutomateZFileTests-macos"
-               ReferencedContainer = "container:AutomateZFile.xcodeproj">
+               ReferencedContainer = "container:ZFile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,24 +28,14 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDB7AA3621CD84970045DDA8"
-               BuildableName = "AutomateZFileTests-macos.xctest"
-               BlueprintName = "AutomateZFileTests-macos"
-               ReferencedContainer = "container:AutomateZFile.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDB7AA2421CD84960045DDA8"
+            BlueprintIdentifier = "FDDDD6602224188F004CFFFC"
             BuildableName = "AutomateZFile.app"
             BlueprintName = "AutomateZFile"
-            ReferencedContainer = "container:AutomateZFile.xcodeproj">
+            ReferencedContainer = "container:ZFile.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -79,12 +55,22 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDB7AA2421CD84960045DDA8"
+            BlueprintIdentifier = "FDDDD6602224188F004CFFFC"
             BuildableName = "AutomateZFile.app"
             BlueprintName = "AutomateZFile"
-            ReferencedContainer = "container:AutomateZFile.xcodeproj">
+            ReferencedContainer = "container:ZFile.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-srcRoot /../../../../../../../"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-verbose"
+            isEnabled = "NO">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -98,10 +84,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDB7AA2421CD84960045DDA8"
+            BlueprintIdentifier = "FDDDD6602224188F004CFFFC"
             BuildableName = "AutomateZFile.app"
             BlueprintName = "AutomateZFile"
-            ReferencedContainer = "container:AutomateZFile.xcodeproj">
+            ReferencedContainer = "container:ZFile.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -12,15 +12,47 @@
 		FD1B88C121CE28620055C2C1 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD737D9221B03BD3001BB507 /* ZFile.framework */; };
 		FD1B88C721CE28910055C2C1 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD737DC021B03D25001BB507 /* ZFile.framework */; };
 		FD1B88CA21CE28A50055C2C1 /* FoundationGenericHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B88B421CE27D80055C2C1 /* FoundationGenericHelper.framework */; };
-		FD1B88D021CE292D0055C2C1 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B88CF21CE292D0055C2C1 /* SourceryAutoProtocols.framework */; };
-		FD1B88D221CE29390055C2C1 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B88D121CE29390055C2C1 /* SourceryAutoProtocols.framework */; };
 		FD1B88D321CE29970055C2C1 /* BundleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1B889221CE253C0055C2C1 /* BundleProtocol.swift */; };
 		FD1B88D421CE29980055C2C1 /* BundleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1B889221CE253C0055C2C1 /* BundleProtocol.swift */; };
 		FD1B88D621CE29DC0055C2C1 /* AnyRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1B88D521CE29DC0055C2C1 /* AnyRawRepresentable.swift */; };
 		FD1B88D721CE29DC0055C2C1 /* AnyRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1B88D521CE29DC0055C2C1 /* AnyRawRepresentable.swift */; };
 		FD1B88DA21CE2AE70055C2C1 /* FoundationGenericHelper-ios.h in Headers */ = {isa = PBXBuildFile; fileRef = FD1B88D921CE2AC80055C2C1 /* FoundationGenericHelper-ios.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD4E542B21D1104C00B5A776 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4E542A21D1104C00B5A776 /* SourceryAutoProtocols.framework */; };
-		FD4E542D21D1105E00B5A776 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4E542C21D1105E00B5A776 /* SourceryAutoProtocols.framework */; };
+		FD6B89AA2228761600902B4C /* CLISpinner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89A92228761600902B4C /* CLISpinner.framework */; };
+		FD6B89AB2228761600902B4C /* CLISpinner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89A92228761600902B4C /* CLISpinner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89AD2228761600902B4C /* Rainbow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89AC2228761600902B4C /* Rainbow.framework */; };
+		FD6B89AE2228761600902B4C /* Rainbow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89AC2228761600902B4C /* Rainbow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89B02228761600902B4C /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89AF2228761600902B4C /* Arguments.framework */; };
+		FD6B89B12228761600902B4C /* Arguments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89AF2228761600902B4C /* Arguments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89B32228761600902B4C /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89B22228761600902B4C /* Keychain.framework */; };
+		FD6B89B42228761600902B4C /* Keychain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89B22228761600902B4C /* Keychain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89B62228761600902B4C /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89B52228761600902B4C /* Terminal.framework */; };
+		FD6B89B72228761600902B4C /* Terminal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89B52228761600902B4C /* Terminal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89B92228761600902B4C /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89B82228761600902B4C /* POSIX.framework */; };
+		FD6B89BA2228761600902B4C /* POSIX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89B82228761600902B4C /* POSIX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89BC2228761600902B4C /* XCBuild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89BB2228761600902B4C /* XCBuild.framework */; };
+		FD6B89BD2228761600902B4C /* XCBuild.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89BB2228761600902B4C /* XCBuild.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89BF2228761600902B4C /* Errors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89BE2228761600902B4C /* Errors.framework */; };
+		FD6B89C02228761600902B4C /* Errors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89BE2228761600902B4C /* Errors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89C22228761600902B4C /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89C12228761600902B4C /* SourceryAutoProtocols.framework */; };
+		FD6B89C32228761600902B4C /* SourceryAutoProtocols.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89C12228761600902B4C /* SourceryAutoProtocols.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89C52228761600902B4C /* Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89C42228761600902B4C /* Git.framework */; };
+		FD6B89C62228761600902B4C /* Git.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89C42228761600902B4C /* Git.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89C82228761600902B4C /* Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89C72228761600902B4C /* Task.framework */; };
+		FD6B89C92228761600902B4C /* Task.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89C72228761600902B4C /* Task.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89CB2228761600902B4C /* Url.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89CA2228761600902B4C /* Url.framework */; };
+		FD6B89CC2228761600902B4C /* Url.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89CA2228761600902B4C /* Url.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89CE2228761600902B4C /* SourceryWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89CD2228761600902B4C /* SourceryWorker.framework */; };
+		FD6B89CF2228761600902B4C /* SourceryWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89CD2228761600902B4C /* SourceryWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89D12228761600902B4C /* SignPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89D02228761600902B4C /* SignPost.framework */; };
+		FD6B89D22228761600902B4C /* SignPost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89D02228761600902B4C /* SignPost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89D42228761600902B4C /* SwiftFormatWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89D32228761600902B4C /* SwiftFormatWorker.framework */; };
+		FD6B89D52228761600902B4C /* SwiftFormatWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89D32228761600902B4C /* SwiftFormatWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89D72228761600902B4C /* CupertinoJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89D62228761600902B4C /* CupertinoJWT.framework */; };
+		FD6B89D82228761600902B4C /* CupertinoJWT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89D62228761600902B4C /* CupertinoJWT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89DA2228761600902B4C /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89D92228761600902B4C /* Result.framework */; };
+		FD6B89DB2228761600902B4C /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89D92228761600902B4C /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD6B89DD2228761600902B4C /* SwiftFormat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89DC2228761600902B4C /* SwiftFormat.framework */; };
+		FD6B89DE2228761600902B4C /* SwiftFormat.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89DC2228761600902B4C /* SwiftFormat.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD737DA321B03BD3001BB507 /* ZFile.h in Headers */ = {isa = PBXBuildFile; fileRef = FD737D9521B03BD3001BB507 /* ZFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD737DB221B03C66001BB507 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DAC21B03C66001BB507 /* File.swift */; };
 		FD737DB321B03C66001BB507 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DAD21B03C66001BB507 /* Folder.swift */; };
@@ -34,8 +66,22 @@
 		FD737DCB21B03D30001BB507 /* FileSystemInterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DAE21B03C66001BB507 /* FileSystemInterator.swift */; };
 		FD737DCC21B03D30001BB507 /* FileSystemSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DB021B03C66001BB507 /* FileSystemSequence.swift */; };
 		FD737DCD21B03D30001BB507 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD737DAD21B03C66001BB507 /* Folder.swift */; };
+		FD847B7B222886A3008A22D2 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD847B7A222886A3008A22D2 /* SourceryAutoProtocols.framework */; };
+		FD847B7D222886C6008A22D2 /* SourceryAutoProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD847B7C222886C6008A22D2 /* SourceryAutoProtocols.framework */; };
+		FDCA46D422242ED60005EBA3 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD737D9221B03BD3001BB507 /* ZFile.framework */; };
+		FDCA46DC22242F200005EBA3 /* ZFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA467122242AC80005EBA3 /* ZFileTests.swift */; };
+		FDCA46E122242FDA0005EBA3 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB930A21CD955600B6D5E9 /* ZFileMock.framework */; };
+		FDCA46EB222430130005EBA3 /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD737DC021B03D25001BB507 /* ZFile.framework */; };
+		FDCA46F32224303A0005EBA3 /* ZFileMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDB92FD21CD953400B6D5E9 /* ZFileMock.framework */; };
+		FDCA46F82224306C0005EBA3 /* ZFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA467122242AC80005EBA3 /* ZFileTests.swift */; };
 		FDDB932321CD99C100B6D5E9 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB92F521CD93F000B6D5E9 /* AutoMockable.generated.swift */; };
 		FDDB932421CD99C600B6D5E9 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB92F521CD93F000B6D5E9 /* AutoMockable.generated.swift */; };
+		FDDDD673222418D5004CFFFC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDDD672222418D5004CFFFC /* main.swift */; };
+		FDDDD67A2224199D004CFFFC /* ZFileSourceryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDDD65A22241854004CFFFC /* ZFileSourceryWorker.swift */; };
+		FDDDD67B222419B8004CFFFC /* ZFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD737DC021B03D25001BB507 /* ZFile.framework */; };
+		FDDDD67C222419B8004CFFFC /* ZFile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD737DC021B03D25001BB507 /* ZFile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDDDD6AC222419F5004CFFFC /* FoundationGenericHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B88B421CE27D80055C2C1 /* FoundationGenericHelper.framework */; };
+		FDDDD6AD222419F5004CFFFC /* FoundationGenericHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B88B421CE27D80055C2C1 /* FoundationGenericHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +113,68 @@
 			remoteGlobalIDString = FD1B88B321CE27D80055C2C1;
 			remoteInfo = "FoundationGenericHelper-macos";
 		};
+		FDCA46D522242ED60005EBA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD737D8921B03BD3001BB507 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD737D9121B03BD3001BB507;
+			remoteInfo = "ZFile-iOS";
+		};
+		FDCA46EC222430130005EBA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD737D8921B03BD3001BB507 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD737DBF21B03D25001BB507;
+			remoteInfo = "ZFile-macos";
+		};
+		FDDDD67D222419B8004CFFFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD737D8921B03BD3001BB507 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD737DBF21B03D25001BB507;
+			remoteInfo = "ZFile-macos";
+		};
+		FDDDD6AE222419F5004CFFFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD737D8921B03BD3001BB507 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD1B88B321CE27D80055C2C1;
+			remoteInfo = "FoundationGenericHelper-macos";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FDDDD6772224194B004CFFFC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FD6B89BD2228761600902B4C /* XCBuild.framework in Embed Frameworks */,
+				FD6B89C92228761600902B4C /* Task.framework in Embed Frameworks */,
+				FD6B89DB2228761600902B4C /* Result.framework in Embed Frameworks */,
+				FD6B89DE2228761600902B4C /* SwiftFormat.framework in Embed Frameworks */,
+				FD6B89D82228761600902B4C /* CupertinoJWT.framework in Embed Frameworks */,
+				FD6B89B42228761600902B4C /* Keychain.framework in Embed Frameworks */,
+				FD6B89B72228761600902B4C /* Terminal.framework in Embed Frameworks */,
+				FD6B89C02228761600902B4C /* Errors.framework in Embed Frameworks */,
+				FD6B89D22228761600902B4C /* SignPost.framework in Embed Frameworks */,
+				FD6B89C32228761600902B4C /* SourceryAutoProtocols.framework in Embed Frameworks */,
+				FD6B89AB2228761600902B4C /* CLISpinner.framework in Embed Frameworks */,
+				FDDDD67C222419B8004CFFFC /* ZFile.framework in Embed Frameworks */,
+				FDDDD6AD222419F5004CFFFC /* FoundationGenericHelper.framework in Embed Frameworks */,
+				FD6B89CF2228761600902B4C /* SourceryWorker.framework in Embed Frameworks */,
+				FD6B89D52228761600902B4C /* SwiftFormatWorker.framework in Embed Frameworks */,
+				FD6B89B12228761600902B4C /* Arguments.framework in Embed Frameworks */,
+				FD6B89CC2228761600902B4C /* Url.framework in Embed Frameworks */,
+				FD6B89C62228761600902B4C /* Git.framework in Embed Frameworks */,
+				FD6B89BA2228761600902B4C /* POSIX.framework in Embed Frameworks */,
+				FD6B89AE2228761600902B4C /* Rainbow.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FD1B889221CE253C0055C2C1 /* BundleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleProtocol.swift; sourceTree = "<group>"; };
@@ -75,14 +182,45 @@
 		FD1B88B421CE27D80055C2C1 /* FoundationGenericHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoundationGenericHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1B88B621CE27D80055C2C1 /* FoundationGenericHelper-macos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoundationGenericHelper-macos.h"; sourceTree = "<group>"; };
 		FD1B88B721CE27D80055C2C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD1B88CD21CE29120055C2C1 /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD1B88CF21CE292D0055C2C1 /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD1B88D121CE29390055C2C1 /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1B88D521CE29DC0055C2C1 /* AnyRawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyRawRepresentable.swift; sourceTree = "<group>"; };
 		FD1B88D921CE2AC80055C2C1 /* FoundationGenericHelper-ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoundationGenericHelper-ios.h"; sourceTree = "<group>"; };
-		FD4E542A21D1104C00B5A776 /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD4E542C21D1105E00B5A776 /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD4E545C21D1128600B5A776 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		FD6B89A92228761600902B4C /* CLISpinner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CLISpinner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89AC2228761600902B4C /* Rainbow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Rainbow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89AF2228761600902B4C /* Arguments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Arguments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89B22228761600902B4C /* Keychain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Keychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89B52228761600902B4C /* Terminal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Terminal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89B82228761600902B4C /* POSIX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = POSIX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89BB2228761600902B4C /* XCBuild.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XCBuild.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89BE2228761600902B4C /* Errors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Errors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89C12228761600902B4C /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89C42228761600902B4C /* Git.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Git.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89C72228761600902B4C /* Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89CA2228761600902B4C /* Url.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Url.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89CD2228761600902B4C /* SourceryWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89D02228761600902B4C /* SignPost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SignPost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89D32228761600902B4C /* SwiftFormatWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFormatWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89D62228761600902B4C /* CupertinoJWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CupertinoJWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89D92228761600902B4C /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89DC2228761600902B4C /* SwiftFormat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftFormat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B89DF2228761F00902B4C /* Arguments.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Arguments.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Arguments.framework"; sourceTree = "<group>"; };
+		FD6B89E02228761F00902B4C /* POSIX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = POSIX.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/POSIX.framework"; sourceTree = "<group>"; };
+		FD6B89E12228761F00902B4C /* SwiftFormat.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftFormat.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/SwiftFormat.framework"; sourceTree = "<group>"; };
+		FD6B89E22228761F00902B4C /* CupertinoJWT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CupertinoJWT.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/CupertinoJWT.framework"; sourceTree = "<group>"; };
+		FD6B89E32228762000902B4C /* XCBuild.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCBuild.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/XCBuild.framework"; sourceTree = "<group>"; };
+		FD6B89E42228762000902B4C /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Result.framework"; sourceTree = "<group>"; };
+		FD6B89E52228762000902B4C /* SwiftFormatWorker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftFormatWorker.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/SwiftFormatWorker.framework"; sourceTree = "<group>"; };
+		FD6B89E62228762000902B4C /* SignPost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SignPost.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/SignPost.framework"; sourceTree = "<group>"; };
+		FD6B89E72228762000902B4C /* SourceryWorker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SourceryWorker.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/SourceryWorker.framework"; sourceTree = "<group>"; };
+		FD6B89E82228762000902B4C /* Git.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Git.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Git.framework"; sourceTree = "<group>"; };
+		FD6B89E92228762000902B4C /* CLISpinner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CLISpinner.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/CLISpinner.framework"; sourceTree = "<group>"; };
+		FD6B89EA2228762000902B4C /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Keychain.framework"; sourceTree = "<group>"; };
+		FD6B89EB2228762000902B4C /* Rainbow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rainbow.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Rainbow.framework"; sourceTree = "<group>"; };
+		FD6B89EC2228762000902B4C /* Task.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Task.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Task.framework"; sourceTree = "<group>"; };
+		FD6B89ED2228762000902B4C /* Url.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Url.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Url.framework"; sourceTree = "<group>"; };
+		FD6B89EE2228762000902B4C /* Terminal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Terminal.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Terminal.framework"; sourceTree = "<group>"; };
+		FD6B89EF2228762000902B4C /* Errors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Errors.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Errors.framework"; sourceTree = "<group>"; };
+		FD6B89F02228762000902B4C /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SourceryAutoProtocols.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/SourceryAutoProtocols.framework"; sourceTree = "<group>"; };
 		FD737D9221B03BD3001BB507 /* ZFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD737D9521B03BD3001BB507 /* ZFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFile.h; sourceTree = "<group>"; };
 		FD737D9621B03BD3001BB507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,9 +232,22 @@
 		FD737DB121B03C66001BB507 /* FileSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystem.swift; sourceTree = "<group>"; };
 		FD737DB921B03C71001BB507 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FD737DC021B03D25001BB507 /* ZFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD847B7A222886A3008A22D2 /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD847B7C222886C6008A22D2 /* SourceryAutoProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourceryAutoProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCA467122242AC80005EBA3 /* ZFileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZFileTests.swift; path = ZFileTests/ZFileTests.swift; sourceTree = "<group>"; };
+		FDCA46CF22242ED60005EBA3 /* iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCA46D322242ED60005EBA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDCA46E6222430130005EBA3 /* macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = macOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCA46EA222430130005EBA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDDB92F521CD93F000B6D5E9 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		FDDB92FD21CD953400B6D5E9 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDB930A21CD955600B6D5E9 /* ZFileMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZFileMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDDD65622241854004CFFFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDDDD65A22241854004CFFFC /* ZFileSourceryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZFileSourceryWorker.swift; sourceTree = "<group>"; };
+		FDDDD65C22241854004CFFFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDDDD6612224188F004CFFFC /* AutomateZFile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutomateZFile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDDD671222418D5004CFFFC /* AutomateZFile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AutomateZFile-Bridging-Header.h"; sourceTree = "<group>"; };
+		FDDDD672222418D5004CFFFC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +255,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD1B88D021CE292D0055C2C1 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +262,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD1B88D221CE29390055C2C1 /* SourceryAutoProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +269,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD4E542B21D1104C00B5A776 /* SourceryAutoProtocols.framework in Frameworks */,
+				FD847B7D222886C6008A22D2 /* SourceryAutoProtocols.framework in Frameworks */,
 				FD1B88BE21CE284C0055C2C1 /* FoundationGenericHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,8 +278,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD4E542D21D1105E00B5A776 /* SourceryAutoProtocols.framework in Frameworks */,
+				FD847B7B222886A3008A22D2 /* SourceryAutoProtocols.framework in Frameworks */,
 				FD1B88CA21CE28A50055C2C1 /* FoundationGenericHelper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDCA46CC22242ED60005EBA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDCA46E122242FDA0005EBA3 /* ZFileMock.framework in Frameworks */,
+				FDCA46D422242ED60005EBA3 /* ZFile.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDCA46E3222430130005EBA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDCA46F32224303A0005EBA3 /* ZFileMock.framework in Frameworks */,
+				FDCA46EB222430130005EBA3 /* ZFile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +314,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD1B88C121CE28620055C2C1 /* ZFile.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDDDD65E2224188F004CFFFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD6B89BC2228761600902B4C /* XCBuild.framework in Frameworks */,
+				FD6B89C82228761600902B4C /* Task.framework in Frameworks */,
+				FD6B89DA2228761600902B4C /* Result.framework in Frameworks */,
+				FD6B89DD2228761600902B4C /* SwiftFormat.framework in Frameworks */,
+				FD6B89D72228761600902B4C /* CupertinoJWT.framework in Frameworks */,
+				FD6B89B32228761600902B4C /* Keychain.framework in Frameworks */,
+				FD6B89B62228761600902B4C /* Terminal.framework in Frameworks */,
+				FD6B89BF2228761600902B4C /* Errors.framework in Frameworks */,
+				FD6B89D12228761600902B4C /* SignPost.framework in Frameworks */,
+				FD6B89C22228761600902B4C /* SourceryAutoProtocols.framework in Frameworks */,
+				FD6B89AA2228761600902B4C /* CLISpinner.framework in Frameworks */,
+				FDDDD67B222419B8004CFFFC /* ZFile.framework in Frameworks */,
+				FDDDD6AC222419F5004CFFFC /* FoundationGenericHelper.framework in Frameworks */,
+				FD6B89CE2228761600902B4C /* SourceryWorker.framework in Frameworks */,
+				FD6B89D42228761600902B4C /* SwiftFormatWorker.framework in Frameworks */,
+				FD6B89B02228761600902B4C /* Arguments.framework in Frameworks */,
+				FD6B89CB2228761600902B4C /* Url.framework in Frameworks */,
+				FD6B89C52228761600902B4C /* Git.framework in Frameworks */,
+				FD6B89B92228761600902B4C /* POSIX.framework in Frameworks */,
+				FD6B89AD2228761600902B4C /* Rainbow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +372,26 @@
 			children = (
 				FDDB92F621CD949700B6D5E9 /* Sources */,
 				FDDB92F721CD94B000B6D5E9 /* Tests */,
+				FD6B89DC2228761600902B4C /* SwiftFormat.framework */,
+				FD6B89D92228761600902B4C /* Result.framework */,
+				FD6B89D62228761600902B4C /* CupertinoJWT.framework */,
+				FD6B89D32228761600902B4C /* SwiftFormatWorker.framework */,
+				FD6B89D02228761600902B4C /* SignPost.framework */,
+				FD6B89CD2228761600902B4C /* SourceryWorker.framework */,
+				FD6B89CA2228761600902B4C /* Url.framework */,
+				FD6B89C72228761600902B4C /* Task.framework */,
+				FD6B89C42228761600902B4C /* Git.framework */,
+				FD6B89C12228761600902B4C /* SourceryAutoProtocols.framework */,
+				FD6B89BE2228761600902B4C /* Errors.framework */,
+				FD6B89BB2228761600902B4C /* XCBuild.framework */,
+				FD6B89B82228761600902B4C /* POSIX.framework */,
+				FD6B89B52228761600902B4C /* Terminal.framework */,
+				FD6B89B22228761600902B4C /* Keychain.framework */,
+				FD6B89AF2228761600902B4C /* Arguments.framework */,
+				FD6B89AC2228761600902B4C /* Rainbow.framework */,
+				FD6B89A92228761600902B4C /* CLISpinner.framework */,
+				FDCA46D022242ED60005EBA3 /* iOSTests */,
+				FDCA46E7222430130005EBA3 /* macOSTests */,
 				FD737D9321B03BD3001BB507 /* Products */,
 				FD737DB821B03C71001BB507 /* Frameworks */,
 			);
@@ -192,6 +406,9 @@
 				FDDB930A21CD955600B6D5E9 /* ZFileMock.framework */,
 				FD1B88A721CE27B70055C2C1 /* FoundationGenericHelper.framework */,
 				FD1B88B421CE27D80055C2C1 /* FoundationGenericHelper.framework */,
+				FDDDD6612224188F004CFFFC /* AutomateZFile.app */,
+				FDCA46CF22242ED60005EBA3 /* iOSTests.xctest */,
+				FDCA46E6222430130005EBA3 /* macOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,14 +432,45 @@
 		FD737DB821B03C71001BB507 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FD4E542C21D1105E00B5A776 /* SourceryAutoProtocols.framework */,
-				FD4E542A21D1104C00B5A776 /* SourceryAutoProtocols.framework */,
-				FD1B88D121CE29390055C2C1 /* SourceryAutoProtocols.framework */,
-				FD1B88CF21CE292D0055C2C1 /* SourceryAutoProtocols.framework */,
-				FD1B88CD21CE29120055C2C1 /* SourceryAutoProtocols.framework */,
+				FD847B7C222886C6008A22D2 /* SourceryAutoProtocols.framework */,
+				FD847B7A222886A3008A22D2 /* SourceryAutoProtocols.framework */,
+				FD6B89E12228761F00902B4C /* SwiftFormat.framework */,
+				FD6B89E42228762000902B4C /* Result.framework */,
+				FD6B89E22228761F00902B4C /* CupertinoJWT.framework */,
+				FD6B89E52228762000902B4C /* SwiftFormatWorker.framework */,
+				FD6B89E62228762000902B4C /* SignPost.framework */,
+				FD6B89E72228762000902B4C /* SourceryWorker.framework */,
+				FD6B89ED2228762000902B4C /* Url.framework */,
+				FD6B89EC2228762000902B4C /* Task.framework */,
+				FD6B89E82228762000902B4C /* Git.framework */,
+				FD6B89F02228762000902B4C /* SourceryAutoProtocols.framework */,
+				FD6B89EF2228762000902B4C /* Errors.framework */,
+				FD6B89E32228762000902B4C /* XCBuild.framework */,
+				FD6B89E02228761F00902B4C /* POSIX.framework */,
+				FD6B89EE2228762000902B4C /* Terminal.framework */,
+				FD6B89EA2228762000902B4C /* Keychain.framework */,
+				FD6B89DF2228761F00902B4C /* Arguments.framework */,
+				FD6B89EB2228762000902B4C /* Rainbow.framework */,
+				FD6B89E92228762000902B4C /* CLISpinner.framework */,
 				FD737DB921B03C71001BB507 /* Foundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDCA46D022242ED60005EBA3 /* iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA46D322242ED60005EBA3 /* Info.plist */,
+			);
+			path = iOSTests;
+			sourceTree = "<group>";
+		};
+		FDCA46E7222430130005EBA3 /* macOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA46EA222430130005EBA3 /* Info.plist */,
+			);
+			path = macOSTests;
 			sourceTree = "<group>";
 		};
 		FDDB92F221CD93F000B6D5E9 /* AutoGeneratedCode */ = {
@@ -247,6 +495,7 @@
 		FDDB92F621CD949700B6D5E9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				FDDDD65322241854004CFFFC /* AutomateZFile */,
 				FD1B88B521CE27D80055C2C1 /* FoundationGenericHelper */,
 				FDDB92F221CD93F000B6D5E9 /* AutoGeneratedCode */,
 				FD737D9421B03BD3001BB507 /* ZFile */,
@@ -257,8 +506,21 @@
 		FDDB92F721CD94B000B6D5E9 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				FDCA467122242AC80005EBA3 /* ZFileTests.swift */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		FDDDD65322241854004CFFFC /* AutomateZFile */ = {
+			isa = PBXGroup;
+			children = (
+				FDDDD65622241854004CFFFC /* Assets.xcassets */,
+				FDDDD65A22241854004CFFFC /* ZFileSourceryWorker.swift */,
+				FDDDD672222418D5004CFFFC /* main.swift */,
+				FDDDD65C22241854004CFFFC /* Info.plist */,
+				FDDDD671222418D5004CFFFC /* AutomateZFile-Bridging-Header.h */,
+			);
+			path = AutomateZFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +648,42 @@
 			productReference = FD737DC021B03D25001BB507 /* ZFile.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		FDCA46CE22242ED60005EBA3 /* iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDCA46D722242ED60005EBA3 /* Build configuration list for PBXNativeTarget "iOSTests" */;
+			buildPhases = (
+				FDCA46CB22242ED60005EBA3 /* Sources */,
+				FDCA46CC22242ED60005EBA3 /* Frameworks */,
+				FDCA46CD22242ED60005EBA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDCA46D622242ED60005EBA3 /* PBXTargetDependency */,
+			);
+			name = iOSTests;
+			productName = iOSTests;
+			productReference = FDCA46CF22242ED60005EBA3 /* iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FDCA46E5222430130005EBA3 /* macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDCA46EE222430130005EBA3 /* Build configuration list for PBXNativeTarget "macOSTests" */;
+			buildPhases = (
+				FDCA46E2222430130005EBA3 /* Sources */,
+				FDCA46E3222430130005EBA3 /* Frameworks */,
+				FDCA46E4222430130005EBA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDCA46ED222430130005EBA3 /* PBXTargetDependency */,
+			);
+			name = macOSTests;
+			productName = macOSTests;
+			productReference = FDCA46E6222430130005EBA3 /* macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FDDB92FC21CD953400B6D5E9 /* ZFileMock-macos */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDDB930221CD953400B6D5E9 /* Build configuration list for PBXNativeTarget "ZFileMock-macos" */;
@@ -424,6 +722,26 @@
 			productReference = FDDB930A21CD955600B6D5E9 /* ZFileMock.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		FDDDD6602224188F004CFFFC /* AutomateZFile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDDDD66C22241891004CFFFC /* Build configuration list for PBXNativeTarget "AutomateZFile" */;
+			buildPhases = (
+				FDDDD65D2224188F004CFFFC /* Sources */,
+				FDDDD65E2224188F004CFFFC /* Frameworks */,
+				FDDDD65F2224188F004CFFFC /* Resources */,
+				FDDDD6772224194B004CFFFC /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDDDD67E222419B8004CFFFC /* PBXTargetDependency */,
+				FDDDD6AF222419F5004CFFFC /* PBXTargetDependency */,
+			);
+			name = AutomateZFile;
+			productName = AutomateZFile;
+			productReference = FDDDD6612224188F004CFFFC /* AutomateZFile.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -449,11 +767,21 @@
 					FD737DBF21B03D25001BB507 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					FDCA46CE22242ED60005EBA3 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					FDCA46E5222430130005EBA3 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					FDDB92FC21CD953400B6D5E9 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 					FDDB930921CD955600B6D5E9 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					FDDDD6602224188F004CFFFC = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -463,6 +791,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = FD737D8821B03BD3001BB507;
 			productRefGroup = FD737D9321B03BD3001BB507 /* Products */;
@@ -475,6 +804,9 @@
 				FDDB92FC21CD953400B6D5E9 /* ZFileMock-macos */,
 				FD1B88A621CE27B70055C2C1 /* FoundationGenericHelper-ios */,
 				FD1B88B321CE27D80055C2C1 /* FoundationGenericHelper-macos */,
+				FDDDD6602224188F004CFFFC /* AutomateZFile */,
+				FDCA46CE22242ED60005EBA3 /* iOSTests */,
+				FDCA46E5222430130005EBA3 /* macOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -508,6 +840,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDCA46CD22242ED60005EBA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDCA46E4222430130005EBA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDDB92FB21CD953400B6D5E9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -516,6 +862,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FDDB930821CD955600B6D5E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDDDD65F2224188F004CFFFC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -569,6 +922,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDCA46CB22242ED60005EBA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDCA46DC22242F200005EBA3 /* ZFileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDCA46E2222430130005EBA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDCA46F82224306C0005EBA3 /* ZFileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDDB92F921CD953400B6D5E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -582,6 +951,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDDB932421CD99C600B6D5E9 /* AutoMockable.generated.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDDDD65D2224188F004CFFFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDDDD67A2224199D004CFFFC /* ZFileSourceryWorker.swift in Sources */,
+				FDDDD673222418D5004CFFFC /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +985,26 @@
 			isa = PBXTargetDependency;
 			target = FD1B88B321CE27D80055C2C1 /* FoundationGenericHelper-macos */;
 			targetProxy = FD1B88C821CE289B0055C2C1 /* PBXContainerItemProxy */;
+		};
+		FDCA46D622242ED60005EBA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD737D9121B03BD3001BB507 /* ZFile-iOS */;
+			targetProxy = FDCA46D522242ED60005EBA3 /* PBXContainerItemProxy */;
+		};
+		FDCA46ED222430130005EBA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD737DBF21B03D25001BB507 /* ZFile-macos */;
+			targetProxy = FDCA46EC222430130005EBA3 /* PBXContainerItemProxy */;
+		};
+		FDDDD67E222419B8004CFFFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD737DBF21B03D25001BB507 /* ZFile-macos */;
+			targetProxy = FDDDD67D222419B8004CFFFC /* PBXContainerItemProxy */;
+		};
+		FDDDD6AF222419F5004CFFFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD1B88B321CE27D80055C2C1 /* FoundationGenericHelper-macos */;
+			targetProxy = FDDDD6AE222419F5004CFFFC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -666,11 +1064,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -694,11 +1091,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -716,6 +1112,425 @@
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
+		};
+		FD61D97E221C772F00CC87F8 /* BetaRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Sources/$(PRODUCT_NAME)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:)";
+				PRODUCT_NAME = ZFile;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = BetaRelease;
+		};
+		FD61D97F221C772F00CC87F8 /* BetaRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.ZFile;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = BetaRelease;
+		};
+		FD61D980221C772F00CC87F8 /* BetaRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/ZFile/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "be.dooz.ZFileMock-ios";
+				PRODUCT_NAME = ZFileMock;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = BetaRelease;
+		};
+		FD61D981221C772F00CC87F8 /* BetaRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "be.dooz.ZFile-macos";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = BetaRelease;
+		};
+		FD61D982221C772F00CC87F8 /* BetaRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Sources/ZFile/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "be.dooz.ZFileMock-macos";
+				PRODUCT_NAME = ZFileMock;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = BetaRelease;
+		};
+		FD61D983221C772F00CC87F8 /* BetaRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.FoundationGenericHelper;
+				PRODUCT_NAME = FoundationGenericHelper;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = BetaRelease;
+		};
+		FD61D984221C772F00CC87F8 /* BetaRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.FoundationGenericHelper;
+				PRODUCT_NAME = FoundationGenericHelper;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = BetaRelease;
+		};
+		FD61D985221C773700CC87F8 /* Local */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Sources/$(PRODUCT_NAME)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:)";
+				PRODUCT_NAME = ZFile;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Local;
+		};
+		FD61D986221C773700CC87F8 /* Local */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.ZFile;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Local;
+		};
+		FD61D987221C773700CC87F8 /* Local */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/ZFile/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "be.dooz.ZFileMock-ios";
+				PRODUCT_NAME = ZFileMock;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Local;
+		};
+		FD61D988221C773700CC87F8 /* Local */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "be.dooz.ZFile-macos";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Local;
+		};
+		FD61D989221C773700CC87F8 /* Local */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Sources/ZFile/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "be.dooz.ZFileMock-macos";
+				PRODUCT_NAME = ZFileMock;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Local;
+		};
+		FD61D98A221C773700CC87F8 /* Local */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.FoundationGenericHelper;
+				PRODUCT_NAME = FoundationGenericHelper;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Local;
+		};
+		FD61D98B221C773700CC87F8 /* Local */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.FoundationGenericHelper;
+				PRODUCT_NAME = FoundationGenericHelper;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Local;
 		};
 		FD737DA421B03BD3001BB507 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -895,9 +1710,9 @@
 		FD737DC621B03D26001BB507 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -919,9 +1734,9 @@
 		FD737DC721B03D26001BB507 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -940,220 +1755,165 @@
 			};
 			name = Release;
 		};
-		FDAB3C50220DEEDC004DEC7F /* Local */ = {
+		FDCA46D822242ED60005EBA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Sources/$(PRODUCT_NAME)/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:)";
-				PRODUCT_NAME = ZFile;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Local;
-		};
-		FDAB3C51220DEEDC004DEC7F /* Local */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.ZFile;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Local;
-		};
-		FDAB3C52220DEEDC004DEC7F /* Local */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sources/ZFile/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "be.dooz.ZFileMock-ios";
-				PRODUCT_NAME = ZFileMock;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Local;
-		};
-		FDAB3C53220DEEDC004DEC7F /* Local */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "be.dooz.ZFile-macos";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-			};
-			name = Local;
-		};
-		FDAB3C54220DEEDC004DEC7F /* Local */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Sources/ZFile/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "be.dooz.ZFileMock-macos";
-				PRODUCT_NAME = ZFileMock;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-			};
-			name = Local;
-		};
-		FDAB3C55220DEEDC004DEC7F /* Local */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = WWFDRU947Q;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INFOPLIST_FILE = iOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.FoundationGenericHelper;
-				PRODUCT_NAME = FoundationGenericHelper;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.iOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FDCA46D922242ED60005EBA3 /* Local */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
+				INFOPLIST_FILE = iOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.iOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Local;
 		};
-		FDAB3C56220DEEDC004DEC7F /* Local */ = {
+		FDCA46DA22242ED60005EBA3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
+				INFOPLIST_FILE = iOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.iOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FDCA46DB22242ED60005EBA3 /* BetaRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WWFDRU947Q;
+				INFOPLIST_FILE = iOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.iOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = BetaRelease;
+		};
+		FDCA46EF222430130005EBA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WWFDRU947Q;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INFOPLIST_FILE = macOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
+					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.FoundationGenericHelper;
-				PRODUCT_NAME = FoundationGenericHelper;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.macOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		FDCA46F0222430130005EBA3 /* Local */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = macOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.macOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SWIFT_VERSION = 4.2;
 			};
 			name = Local;
+		};
+		FDCA46F1222430130005EBA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = macOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.macOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		FDCA46F2222430130005EBA3 /* BetaRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = macOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.macOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = BetaRelease;
 		};
 		FDDB930321CD953400B6D5E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1247,6 +2007,108 @@
 			};
 			name = Release;
 		};
+		FDDDD66D22241891004CFFFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/AutomateZFile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.AutomateZFile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/AutomateZFile/AutomateZFile-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		FDDDD66E22241891004CFFFC /* Local */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/AutomateZFile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.AutomateZFile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/AutomateZFile/AutomateZFile-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Local;
+		};
+		FDDDD66F22241891004CFFFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/AutomateZFile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.AutomateZFile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/AutomateZFile/AutomateZFile-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		FDDDD67022241891004CFFFC /* BetaRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/AutomateZFile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = be.dooz.AutomateZFile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/AutomateZFile/AutomateZFile-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+			};
+			name = BetaRelease;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1254,8 +2116,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD1B88AD21CE27B70055C2C1 /* Debug */,
-				FDAB3C55220DEEDC004DEC7F /* Local */,
+				FD61D98A221C773700CC87F8 /* Local */,
 				FD1B88AE21CE27B70055C2C1 /* Release */,
+				FD61D983221C772F00CC87F8 /* BetaRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1264,8 +2127,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD1B88BA21CE27D80055C2C1 /* Debug */,
-				FDAB3C56220DEEDC004DEC7F /* Local */,
+				FD61D98B221C773700CC87F8 /* Local */,
 				FD1B88BB21CE27D80055C2C1 /* Release */,
+				FD61D984221C772F00CC87F8 /* BetaRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1274,8 +2138,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD737DA421B03BD3001BB507 /* Debug */,
-				FDAB3C50220DEEDC004DEC7F /* Local */,
+				FD61D985221C773700CC87F8 /* Local */,
 				FD737DA521B03BD3001BB507 /* Release */,
+				FD61D97E221C772F00CC87F8 /* BetaRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1284,8 +2149,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD737DA721B03BD3001BB507 /* Debug */,
-				FDAB3C51220DEEDC004DEC7F /* Local */,
+				FD61D986221C773700CC87F8 /* Local */,
 				FD737DA821B03BD3001BB507 /* Release */,
+				FD61D97F221C772F00CC87F8 /* BetaRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1294,8 +2160,31 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD737DC621B03D26001BB507 /* Debug */,
-				FDAB3C53220DEEDC004DEC7F /* Local */,
+				FD61D988221C773700CC87F8 /* Local */,
 				FD737DC721B03D26001BB507 /* Release */,
+				FD61D981221C772F00CC87F8 /* BetaRelease */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDCA46D722242ED60005EBA3 /* Build configuration list for PBXNativeTarget "iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDCA46D822242ED60005EBA3 /* Debug */,
+				FDCA46D922242ED60005EBA3 /* Local */,
+				FDCA46DA22242ED60005EBA3 /* Release */,
+				FDCA46DB22242ED60005EBA3 /* BetaRelease */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDCA46EE222430130005EBA3 /* Build configuration list for PBXNativeTarget "macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDCA46EF222430130005EBA3 /* Debug */,
+				FDCA46F0222430130005EBA3 /* Local */,
+				FDCA46F1222430130005EBA3 /* Release */,
+				FDCA46F2222430130005EBA3 /* BetaRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1304,8 +2193,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FDDB930321CD953400B6D5E9 /* Debug */,
-				FDAB3C54220DEEDC004DEC7F /* Local */,
+				FD61D989221C773700CC87F8 /* Local */,
 				FDDB930421CD953400B6D5E9 /* Release */,
+				FD61D982221C772F00CC87F8 /* BetaRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1314,8 +2204,20 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FDDB931021CD955600B6D5E9 /* Debug */,
-				FDAB3C52220DEEDC004DEC7F /* Local */,
+				FD61D987221C773700CC87F8 /* Local */,
 				FDDB931121CD955600B6D5E9 /* Release */,
+				FD61D980221C772F00CC87F8 /* BetaRelease */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDDDD66C22241891004CFFFC /* Build configuration list for PBXNativeTarget "AutomateZFile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDDDD66D22241891004CFFFC /* Debug */,
+				FDDDD66E22241891004CFFFC /* Local */,
+				FDDDD66F22241891004CFFFC /* Release */,
+				FDDDD67022241891004CFFFC /* BetaRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
