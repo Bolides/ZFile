@@ -13,17 +13,19 @@ import SourceryWorker
 
 let signPost = SignPost.shared
 let dispatchGroup = DispatchGroup()
-let sourceryWorker = try ZFileSourceryWorker(disk: try Disk(), signPost: signPost)
 
 var fail = false
+var sourceryWorker: ZFileSourceryWorker?
 
 do {
+    sourceryWorker = try ZFileSourceryWorker(disk: try Disk(), signPost: signPost)
+
     signPost.message("🚀 ZFile automate started ... ")
     signPost.message("🚀 Sourcery started ... ")
 
-    try sourceryWorker.attemptCreateWorkers()
+    try sourceryWorker?.attemptCreateWorkers()
     
-    sourceryWorker.workers?.forEach {
+    sourceryWorker?.workers?.forEach {
         dispatchGroup.enter()
         $0.attempt {
             do {
@@ -39,7 +41,6 @@ do {
     }
 } catch {
     signPost.error("\(error)")
-    dispatchGroup.leave()
 }
 
 dispatchGroup.notify(queue: DispatchQueue.main) {
