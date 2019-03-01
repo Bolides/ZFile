@@ -10,5 +10,5 @@ github "Bolides/CupertinoJWT"
 
 # Auto generate Code
 
-github "doozMen/Sourcery"
+github "doozMen/Sourcery" "0.15.1"
 github "doozMen/template-sourcery"

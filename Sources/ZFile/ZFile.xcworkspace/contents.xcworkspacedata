@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../../template-sourcery/Sources/stencil/AutoMockable.stencil">
+   </FileRef>
+   <FileRef
       location = "group:ZFile.xcodeproj">
    </FileRef>
    <FileRef
