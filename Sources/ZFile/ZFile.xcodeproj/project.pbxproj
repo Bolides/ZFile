@@ -23,8 +23,6 @@
 		FD6B89AE2228761600902B4C /* Rainbow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89AC2228761600902B4C /* Rainbow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD6B89B02228761600902B4C /* Arguments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89AF2228761600902B4C /* Arguments.framework */; };
 		FD6B89B12228761600902B4C /* Arguments.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89AF2228761600902B4C /* Arguments.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FD6B89B32228761600902B4C /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89B22228761600902B4C /* Keychain.framework */; };
-		FD6B89B42228761600902B4C /* Keychain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89B22228761600902B4C /* Keychain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD6B89B62228761600902B4C /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89B52228761600902B4C /* Terminal.framework */; };
 		FD6B89B72228761600902B4C /* Terminal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89B52228761600902B4C /* Terminal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD6B89B92228761600902B4C /* POSIX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6B89B82228761600902B4C /* POSIX.framework */; };
@@ -155,7 +153,6 @@
 				FD6B89DB2228761600902B4C /* Result.framework in Embed Frameworks */,
 				FD6B89DE2228761600902B4C /* SwiftFormat.framework in Embed Frameworks */,
 				FD6B89D82228761600902B4C /* CupertinoJWT.framework in Embed Frameworks */,
-				FD6B89B42228761600902B4C /* Keychain.framework in Embed Frameworks */,
 				FD6B89B72228761600902B4C /* Terminal.framework in Embed Frameworks */,
 				FD6B89C02228761600902B4C /* Errors.framework in Embed Frameworks */,
 				FD6B89D22228761600902B4C /* SignPost.framework in Embed Frameworks */,
@@ -188,7 +185,6 @@
 		FD6B89A92228761600902B4C /* CLISpinner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CLISpinner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6B89AC2228761600902B4C /* Rainbow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Rainbow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6B89AF2228761600902B4C /* Arguments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Arguments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD6B89B22228761600902B4C /* Keychain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Keychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6B89B52228761600902B4C /* Terminal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Terminal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6B89B82228761600902B4C /* POSIX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = POSIX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6B89BB2228761600902B4C /* XCBuild.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XCBuild.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,7 +210,6 @@
 		FD6B89E72228762000902B4C /* SourceryWorker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SourceryWorker.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/SourceryWorker.framework"; sourceTree = "<group>"; };
 		FD6B89E82228762000902B4C /* Git.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Git.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Git.framework"; sourceTree = "<group>"; };
 		FD6B89E92228762000902B4C /* CLISpinner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CLISpinner.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/CLISpinner.framework"; sourceTree = "<group>"; };
-		FD6B89EA2228762000902B4C /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Keychain.framework"; sourceTree = "<group>"; };
 		FD6B89EB2228762000902B4C /* Rainbow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rainbow.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Rainbow.framework"; sourceTree = "<group>"; };
 		FD6B89EC2228762000902B4C /* Task.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Task.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Task.framework"; sourceTree = "<group>"; };
 		FD6B89ED2228762000902B4C /* Url.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Url.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Url.framework"; sourceTree = "<group>"; };
@@ -326,7 +321,6 @@
 				FD6B89DA2228761600902B4C /* Result.framework in Frameworks */,
 				FD6B89DD2228761600902B4C /* SwiftFormat.framework in Frameworks */,
 				FD6B89D72228761600902B4C /* CupertinoJWT.framework in Frameworks */,
-				FD6B89B32228761600902B4C /* Keychain.framework in Frameworks */,
 				FD6B89B62228761600902B4C /* Terminal.framework in Frameworks */,
 				FD6B89BF2228761600902B4C /* Errors.framework in Frameworks */,
 				FD6B89D12228761600902B4C /* SignPost.framework in Frameworks */,
@@ -386,7 +380,6 @@
 				FD6B89BB2228761600902B4C /* XCBuild.framework */,
 				FD6B89B82228761600902B4C /* POSIX.framework */,
 				FD6B89B52228761600902B4C /* Terminal.framework */,
-				FD6B89B22228761600902B4C /* Keychain.framework */,
 				FD6B89AF2228761600902B4C /* Arguments.framework */,
 				FD6B89AC2228761600902B4C /* Rainbow.framework */,
 				FD6B89A92228761600902B4C /* CLISpinner.framework */,
@@ -448,7 +441,6 @@
 				FD6B89E32228762000902B4C /* XCBuild.framework */,
 				FD6B89E02228761F00902B4C /* POSIX.framework */,
 				FD6B89EE2228762000902B4C /* Terminal.framework */,
-				FD6B89EA2228762000902B4C /* Keychain.framework */,
 				FD6B89DF2228761F00902B4C /* Arguments.framework */,
 				FD6B89EB2228762000902B4C /* Rainbow.framework */,
 				FD6B89E92228762000902B4C /* CLISpinner.framework */,
