@@ -12,7 +12,6 @@ import ZFile
 import ZFileMock
 import SourceryAutoProtocols
 
-
 class FileSpec: QuickSpec {
 
     override func spec() {
