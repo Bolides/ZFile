@@ -10,34 +10,19 @@ It builds:
 
 # Build ZFile
 
-Building is done with Xcode and not with Carthage. You can chose to checkout with submodules or just checkout without building.
+## Swift Package
 
-## If you w
-```bash
-cd Sources
-carthage update --use-submodules --nobuild
-```
+Preferred is using [swift package](https://github.com/apple/swift-package-manager/blob/master/Documentation/)
+add `.package(url: "https://github.com/doozMen/ZFile", from: "2.0.0"),`
+
+then to `swift build` in your project
+
+---
+
+## Carthage
+
+Building is done with Xcode and not with Carthage. You can chose to checkout with submodules or just checkout without building.
 
 # Integrate ZFile
 
-2 projects build the code. The project you should is in your project is ZFile.xcodeproj. AutomateZFile.xcproj builds all dependencies, runs tests and generates mock code.
-
-So how to use it.
-
-
-``` bash
-
-cd <#Sources#>
-atom Cartfile
-
-# Add lines to Cartfile
-# github "doozMen/ZFile" "v1.0"
-
-carthage update --use-submodules --nobuild
-cd /Sources/<#project#>
-open <#project#>.xcodeproj
-
-# add ZFile.xcodeprojet as a subproject like in AutomateZFile
-# embed ZFile in your project, it will be added to embed, link and target dependencies so you always have the correct version for release and debug products.
-
-```
+Add `ZFile.xcodeproj` as sub project to your project
