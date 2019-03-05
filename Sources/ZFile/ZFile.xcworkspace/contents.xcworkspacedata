@@ -2,25 +2,19 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../Carthage/Checkouts/SignPost/SignPost.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../Carthage/Checkouts/template-sourcery/template-sourcery.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:ZFile.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:../../Carthage/Checkouts/CLISpinner/CLISpinner.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:../../Carthage/Checkouts/Rainbow/Rainbow.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:../../Carthage/Checkouts/highway/Sources/highway/Highway.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:../../Carthage/Checkouts/Nimble/Nimble.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:../../Carthage/Checkouts/Quick/Quick.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:../../Carthage/Checkouts/CupertinoJWT/CupertinoJWT.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:../../Carthage/Checkouts/Result/Result.xcodeproj">
