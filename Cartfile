@@ -1,4 +1,6 @@
 
+github "doozMen/SignPost" ~> 1.0.0
+
 # Automation
 
 github "antitypical/Result" ~> 4.0
@@ -11,4 +13,4 @@ github "Bolides/CupertinoJWT"
 # Auto generate Code
 
 github "doozMen/Sourcery"
-github "doozMen/template-sourcery"
+github "doozMen/template-sourcery" ~> 1.2.0
