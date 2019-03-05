@@ -7,3 +7,4 @@ xcuserdata
 /Carthage
 /Sources/ZFile/.build
 /.build
+/Sources/Carthage
