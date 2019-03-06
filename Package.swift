@@ -19,8 +19,8 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/Quick/Quick", from: "2.0.0"),
-        .package(url: "https://github.com/Quick/Nimble",  from: "8.0.0"),
+        .package(url: "https://github.com/Quick/Quick", from: "1.3.0"),
+        .package(url: "https://github.com/Quick/Nimble",  from: "7.0.0"),
         .package(url: "https://www.github.com/doozMen/SignPost", from: "1.0.0"),
         .package(url: "https://www.github.com/doozMen/template-sourcery", from: "1.2.0"),
     ],
