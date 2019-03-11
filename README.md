@@ -1,4 +1,4 @@
-# ZFile
+# ZFile [![Build Status](https://app.bitrise.io/app/75d3763f28ab948f/status.svg?token=4g01pJlpXjphb32XTKik2g&branch=master)](https://app.bitrise.io/app/75d3763f28ab948f)
 
 An effort to have a throwable alternative to using files
 
