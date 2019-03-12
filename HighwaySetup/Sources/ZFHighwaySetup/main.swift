@@ -26,7 +26,6 @@ do {
     zfRunner = ZFRunner(sourcery: sourceryWorker)
     
     try zfRunner?.runSourcery()
-    try zfRunner?.runTests()
     
     dispatchGroup.notify(queue: DispatchQueue.main) {
         
@@ -34,8 +33,15 @@ do {
             signPost.error("")
             exit(EXIT_FAILURE)
         }
-        signPost.message("🚀 ZFile automate finished ✅")
-        exit(EXIT_SUCCESS)
+        do {
+            try zfRunner?.runTests()
+            signPost.message("🚀 ZFile automate ✅")
+            exit(EXIT_SUCCESS)
+        } catch {
+            signPost.error("\(error)")
+            signPost.error("🚀 ZFile automate ❌")
+            exit(EXIT_FAILURE)
+        }
     }
     
     dispatchMain()

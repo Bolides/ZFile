@@ -44,12 +44,19 @@ public struct ZFRunner: ZFRunnerProtocol, AutoGenerateProtocol {
 
         signPost.message("🧪  Testing ...")
 
-        let task = try Task(commandName: "swift")
-        task.arguments = Arguments(["test"])
+        do {
+            let task = try Task(commandName: "swift")
+            task.arguments = Arguments(["test"])
+            
+            let testOutput = TestReport(output: try sourcery.terminal.runProcess(task.toProcess))
+            signPost.verbose("\(testOutput)")
+            signPost.message("🧪  Testing ✅")
+        } catch TerminalWorker.Error.unknownTask(errorOutput: let output) {
+            let testOutput = TestReport(output: output)
+            signPost.error("\(testOutput)")
+            signPost.message("🧪  Testing ❌")
+        }
         
-        let testOutput = TestReport(output: try sourcery.terminal.runProcess(task.toProcess))
-        signPost.verbose("\(testOutput)")
-        signPost.message("🧪  Testing ✅")
     }
     
 }

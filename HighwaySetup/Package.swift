@@ -43,7 +43,12 @@ let package = Package(
             dependencies: [
                 "ZFRunner",
                 "SourceryAutoProtocols",
-                "SignPost"
+                "SignPost",
+                "SourceryWorker",
+                "Terminal",
+                "HighwayDispatch",
+                "Errors",
+                "Arguments"
             ],
             path: "Sources/Generated/ZFRunner"
         ),
