@@ -25,6 +25,8 @@ do
     let dependencies = try SwiftPackageDependencyService().swiftPackage
     let dump = try SwiftPackageDumpService(swiftPackageDependencies: dependencies).swiftPackageDump
 
+    FileManager.default.changeCurrentDirectoryPath(try dependencies.srcRoot().parentFolder().path)
+
     let sourceryWorker = try ZFileSourceryWorker(dependencies: dependencies, dump: dump, dispatchGroup: dispatchGroup)
     let swiftformat = try SwiftFormatWorker(folderToFormatRecursive: try dependencies.srcRoot().parentFolder())
     let gitHooks = GitHooksWorker(swiftPackageDependencies: dependencies, swiftPackageDump: dump, gitHooksFolder: try dependencies.srcRoot().parentFolder().subfolder(named: ".git/hooks"))
@@ -43,12 +45,12 @@ do
         do
         {
             try zfRunner?.addTSHighWaySetupToGitHooks()
-            
+
             zfRunner?.runSwiftFormat()
             dispatchGroup.wait()
-            
+
             try zfRunner?.runTests()
-            
+
             signPost.message("🚀 ZFile automate ✅")
             exit(EXIT_SUCCESS)
         }

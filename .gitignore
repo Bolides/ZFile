@@ -9,3 +9,6 @@ xcuserdata
 /.build
 /Sources/Carthage
 /.swiftformat.md
+/ZFHighwaySetup/Sources/.sourcery-ZFHighwaySetup.yml
+/ZFHighwaySetup/Sources/.sourcery-ZFRunner.yml
+/ZFile.xcodeproj
