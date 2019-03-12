@@ -1,0 +1,8 @@
+sources:
+- "/Users/stijnwillems/Documents/dev.nosync/Open/ZFile/HighwaySetup/Sources/ZFHighwaySetup/"
+- "/Users/stijnwillems/Documents/dev.nosync/Open/ZFile/HighwaySetup/.build/checkouts/template-sourcery-1946259736413044527/Sources/SourceryAutoProtocols/SourceryAutoProtocols.swift"
+
+templates:
+- "/Users/stijnwillems/Documents/dev.nosync/Open/ZFile/HighwaySetup/.build/checkouts/template-sourcery-1946259736413044527/"
+output:
+ "/Users/stijnwillems/Documents/dev.nosync/Open/ZFile/HighwaySetup/Sources/Generated/ZFHighwaySetup/"

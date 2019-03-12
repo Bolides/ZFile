@@ -11,50 +11,43 @@ import SignPost
 import Arguments
 import SourceryWorker
 import Terminal
+import ZFRunner
 
 let signPost = SignPost.shared
 let dispatchGroup = DispatchGroup()
 
-var fail = false
 var sourceryWorker: ZFileSourceryWorker?
 
 do {
     let dependencies = try SwiftPackageDependencyService().swiftPackage
     let dump = try SwiftPackageDumpService(swiftPackageDependencies: dependencies).swiftPackageDump
     
-    sourceryWorker = try ZFileSourceryWorker(dependencies: dependencies, dump: dump)
+    sourceryWorker = try ZFileSourceryWorker(dependencies: dependencies, dump: dump, dispatchGroup: dispatchGroup)
 
     signPost.message("🚀 ZFile automate started ... ")
     signPost.message("🚀 Sourcery started ... ")
 
     try sourceryWorker?.attemptCreateWorkers()
     
-    sourceryWorker?.workers?.forEach {
-        dispatchGroup.enter()
-        $0.attempt {
-            do {
-                let output = try $0()
-                signPost.verbose("\(output.joined(separator: "\n"))")
-                dispatchGroup.leave()
-            } catch {
-                fail = true
-                signPost.error("\(error)")
-                dispatchGroup.leave()
-            }
+    dispatchGroup.enter()
+    sourceryWorker?.attemptRunSourcery()
+    
+    dispatchGroup.notify(queue: DispatchQueue.main) {
+        
+        guard let fail = sourceryWorker?.fail, !fail else {
+            signPost.error("")
+            exit(EXIT_FAILURE)
         }
+        signPost.message("🚀 ZFile automate finished ✅")
+        exit(EXIT_SUCCESS)
     }
+    
+    dispatchMain()
+
 } catch {
     signPost.error("\(error)")
+    exit(EXIT_FAILURE)
 }
 
-dispatchGroup.notify(queue: DispatchQueue.main) {
 
-    guard !fail else {
-        signPost.error("")
-        exit(EXIT_FAILURE)
-    }
-    signPost.message("🚀 ZFile automate finished ✅")
-    exit(EXIT_SUCCESS)
-}
 
-dispatchMain()

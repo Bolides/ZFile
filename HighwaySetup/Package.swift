@@ -10,6 +10,10 @@ let package = Package(
         .executable(
             name: "ZFHighwaySetup",
             targets: ["ZFHighwaySetup"]),
+        .library(
+            name: "ZFRunner",
+        targets: ["ZFRunner"]
+            )
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -24,16 +28,23 @@ let package = Package(
         .target(
             name: "ZFHighwaySetup",
             dependencies: [
-              "SourceryAutoProtocols",
-              "ZFile",
-              "Terminal",
-              "SourceryWorker",
-              "SignPost",
-              "Arguments",
-              "Errors"
+              "ZFRunner"
             ],
             path: "Sources/ZFHighwaySetup"
           ),
+        .target(
+            name: "ZFRunner",
+            dependencies: [
+                "SourceryAutoProtocols",
+                "ZFile",
+                "Terminal",
+                "SourceryWorker",
+                "SignPost",
+                "Arguments",
+                "Errors",
+                "HighwayDispatch"
+            ]
+        ),
         .testTarget(
             name: "ZFHighwaySetupTests",
             dependencies: ["ZFHighwaySetup"],
