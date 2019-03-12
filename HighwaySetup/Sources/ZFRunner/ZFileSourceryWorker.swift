@@ -15,7 +15,7 @@ import SignPost
 import Arguments
 import HighwayDispatch
 
-public protocol ZFileSourceryWorkerProtocol {
+public protocol ZFileSourceryWorkerProtocol: AutoMockable {
     // sourcery:inline:ZFileSourceryWorker.AutoGenerateProtocol
     static var queue: HighwayDispatchProtocol { get }
     var fail: Bool { get set }
@@ -80,7 +80,7 @@ public class ZFileSourceryWorker: ZFileSourceryWorkerProtocol, AutoGenerateProto
        
         let sourceryExecutable = try sourceryBuilder.attemptToBuildSourceryIfNeeded()
         
-        let sourcerySequence = try dump.products.map { product in
+        let sourcerySequence = try dump.products.filter { !$0.name.hasSuffix("Mock")}.map { product in
             return try Sourcery(
                 productName: product.name,
                 swiftPackageDependencies: dependencies,

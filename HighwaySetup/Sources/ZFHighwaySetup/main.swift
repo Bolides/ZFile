@@ -26,6 +26,7 @@ do {
     zfRunner = ZFRunner(sourcery: sourceryWorker)
     
     try zfRunner?.runSourcery()
+    try zfRunner?.runTests()
     
     dispatchGroup.notify(queue: DispatchQueue.main) {
         

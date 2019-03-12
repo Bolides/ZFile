@@ -23,6 +23,7 @@ import Foundation
     // sourcery:inline:ZFRunner.AutoGenerateProtocol
     var sourcery: ZFileSourceryWorkerProtocol { get }
     var fail: Bool { get }
+    var signPost: SignPostProtocol { get }
 
     func runSourcery() throws 
     func runTests() throws 

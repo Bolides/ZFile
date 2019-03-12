@@ -1,15 +1,25 @@
-import XCTest
-@testable import HighwaySetup
+import Quick
+import Nimble
+import ZFRunner
 
-final class ZFHighwaySetupTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(HighwaySetup().text, "Hello, World!")
+class ZFRunnerSpec: QuickSpec {
+    
+    override func spec() {
+        
+        describe("ZFRunner") {
+            
+            var sut: ZFRunner?
+            
+//            var terminal
+//            beforeEach {
+//                
+//                sut = ZFRunner(sourcery: <#T##ZFileSourceryWorkerProtocol#>, signPost: <#T##SignPostProtocol#>)
+//            }
+//            
+//            it("<#describe what should happen#>") {
+//                
+//            }
+        }
     }
-
-    static var allTests = [
-        ("testExample", testExample),
-    ]
 }
+
