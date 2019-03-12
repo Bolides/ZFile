@@ -10,6 +10,7 @@ import Foundation
 import SignPost
 import Arguments
 import SourceryWorker
+import Terminal
 
 let signPost = SignPost.shared
 let dispatchGroup = DispatchGroup()
@@ -18,7 +19,10 @@ var fail = false
 var sourceryWorker: ZFileSourceryWorker?
 
 do {
-    sourceryWorker = try ZFileSourceryWorker(disk: try Disk(), signPost: signPost)
+    let dependencies = try SwiftPackageDependencyService().swiftPackage
+    let dump = try SwiftPackageDumpService(swiftPackageDependencies: dependencies).swiftPackageDump
+    
+    sourceryWorker = try ZFileSourceryWorker(dependencies: dependencies, dump: dump)
 
     signPost.message("🚀 ZFile automate started ... ")
     signPost.message("🚀 Sourcery started ... ")
