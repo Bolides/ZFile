@@ -7,20 +7,4 @@ import SignPost
 
 let signPost = SignPost.shared
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // MARK: - OBJECTIVE-C
-

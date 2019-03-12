@@ -6,57 +6,64 @@
 //  Copyright © 2019 dooz. All rights reserved.
 //
 
-import Foundation
-import SignPost
 import Arguments
+import Foundation
+import GitHooks
+import SignPost
 import SourceryWorker
+import SwiftFormatWorker
 import Terminal
 import ZFRunner
-import SwiftFormatWorker
-import GitHooks
 
 let signPost = SignPost.shared
 let dispatchGroup = DispatchGroup()
 
 var zfRunner: ZFRunner?
 
-do {
+do
+{
     let dependencies = try SwiftPackageDependencyService().swiftPackage
     let dump = try SwiftPackageDumpService(swiftPackageDependencies: dependencies).swiftPackageDump
-    
+
     let sourceryWorker = try ZFileSourceryWorker(dependencies: dependencies, dump: dump, dispatchGroup: dispatchGroup)
     let swiftformat = try SwiftFormatWorker(folderToFormatRecursive: try dependencies.srcRoot().parentFolder())
     let gitHooks = GitHooksWorker(swiftPackageDependencies: dependencies, swiftPackageDump: dump, gitHooksFolder: try dependencies.srcRoot().parentFolder().subfolder(named: ".git/hooks"))
-    
+
     zfRunner = ZFRunner(sourcery: sourceryWorker, swiftformat: swiftformat, gitHooks: gitHooks)
-    
+
     try zfRunner?.runSourcery()
-    
-    dispatchGroup.notify(queue: DispatchQueue.main) {
-        
-        guard let fail = zfRunner?.fail, !fail else {
+
+    dispatchGroup.notify(queue: DispatchQueue.main)
+    {
+        guard let fail = zfRunner?.fail, !fail else
+        {
             signPost.error("")
             exit(EXIT_FAILURE)
         }
-        do {
+        do
+        {
             try zfRunner?.addTSHighWaySetupToGitHooks()
-//            zfRunner?.runSwiftFormat()
+            
+            zfRunner?.runSwiftFormat()
+            dispatchGroup.wait()
+            
             try zfRunner?.runTests()
+            
             signPost.message("🚀 ZFile automate ✅")
             exit(EXIT_SUCCESS)
-        } catch {
+        }
+        catch
+        {
             signPost.error("\(error)")
             signPost.error("🚀 ZFile automate ❌")
             exit(EXIT_FAILURE)
         }
     }
-    
-    dispatchMain()
 
-} catch {
+    dispatchMain()
+}
+catch
+{
     signPost.error("\(error)")
     exit(EXIT_FAILURE)
 }
-
-
-

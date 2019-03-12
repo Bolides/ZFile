@@ -8,15 +8,17 @@
 
 import Foundation
 
-public struct AnyRawRepresentable<RawValue>: RawRepresentable  {
-    
+public struct AnyRawRepresentable<RawValue>: RawRepresentable
+{
     public let rawValue: RawValue
-    
-    public init<R>( _ proxy: R) where R: RawRepresentable, R.RawValue == RawValue {
-        self.rawValue = proxy.rawValue
+
+    public init<R>(_ proxy: R) where R: RawRepresentable, R.RawValue == RawValue
+    {
+        rawValue = proxy.rawValue
     }
-    
-    public init?(rawValue: RawValue) {
+
+    public init?(rawValue: RawValue)
+    {
         self.rawValue = rawValue
     }
 }

@@ -9,21 +9,25 @@ let package = Package(
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
             name: "ZFile",
-            targets: ["ZFile"]),
+            targets: ["ZFile"]
+        ),
         .library(
             name: "ZFileMock",
-            targets: ["ZFileMock"]),
+            targets: ["ZFileMock"]
+        ),
         .library(
             name: "FoundationGenericHelper",
-            targets: ["FoundationGenericHelper"]),
+            targets: ["FoundationGenericHelper"]
+        ),
         .library(
             name: "FoundationGenericHelperMock",
-            targets: ["FoundationGenericHelperMock"])
+            targets: ["FoundationGenericHelperMock"]
+        ),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/Quick/Quick", from: "1.3.0"),
-        .package(url: "https://github.com/Quick/Nimble",  from: "7.0.0"),
+        .package(url: "https://github.com/Quick/Nimble", from: "7.0.0"),
         .package(url: "https://www.github.com/doozMen/SignPost", from: "1.0.0"),
         .package(url: "https://www.github.com/doozMen/template-sourcery", from: "1.2.0"),
     ],
@@ -51,6 +55,6 @@ let package = Package(
         .testTarget(
             name: "ZFileTests",
             dependencies: ["ZFile", "ZFileMock", "Quick", "Nimble"]
-        )
+        ),
     ]
 )

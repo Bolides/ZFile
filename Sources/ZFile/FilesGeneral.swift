@@ -24,22 +24,25 @@
 
 import Foundation
 
-
-extension String {
-    var pathComponents: [String] {
+extension String
+{
+    var pathComponents: [String]
+    {
         return components(separatedBy: "/")
     }
 }
 
-extension ProcessInfo {
-    var homeFolderPath: String {
+extension ProcessInfo
+{
+    var homeFolderPath: String
+    {
         return environment["HOME"]!
     }
 }
 
-#if os(Linux) && !(swift(>=4.1))
-private extension ObjCBool {
-var boolValue: Bool { return Bool(self) }
-}
+#if os(Linux) && !swift(>=4.1)
+    private extension ObjCBool
+    {
+        var boolValue: Bool { return Bool(self) }
+    }
 #endif
-

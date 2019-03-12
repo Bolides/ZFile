@@ -14,52 +14,57 @@ import SourceryAutoProtocols
  *  You initialize this class with a path, or by asking a folder to return a file for a given name
  */
 // sourcery:skipPublicInit
-public protocol FileProtocol: ItemProtocol, FileSystemIterable, AutoMockable {
-    
+public protocol FileProtocol: ItemProtocol, FileSystemIterable, AutoMockable
+{
     /// sourcery:inline:File.AutoGenerateSelectiveProtocol
-    var localizedDate: String {  get }
+    var localizedDate: String { get }
 
-    func readAllLines() throws  -> [String]
-    func read() throws  -> Data
-    func readAsString() throws  -> String
-    func readAsInt() throws  -> Int
-    func write(data: Data) throws 
-    func write(string: String) throws 
-    func write(string: String, encoding: String.Encoding) throws 
-    func append(data: Data) throws 
-    func append(string: String) throws 
-    func append(string: String, encoding: String.Encoding) throws 
-    func copy(to folder: FolderProtocol) throws  -> FileProtocol
-    
+    func readAllLines() throws -> [String]
+    func read() throws -> Data
+    func readAsString() throws -> String
+    func readAsInt() throws -> Int
+    func write(data: Data) throws
+    func write(string: String) throws
+    func write(string: String, encoding: String.Encoding) throws
+    func append(data: Data) throws
+    func append(string: String) throws
+    func append(string: String, encoding: String.Encoding) throws
+    func copy(to folder: FolderProtocol) throws -> FileProtocol
+
     /// sourcery:end
 }
 
-open class File: FileSystem.Item, FileProtocol, AutoGenerateSelectiveProtocol {
-    
+open class File: FileSystem.Item, FileProtocol, AutoGenerateSelectiveProtocol
+{
     // sourcery:selectedForProtocol
-    public func readAllLines() throws -> [String] {
+    public func readAllLines() throws -> [String]
+    {
         return try readAsString().components(separatedBy: "\n")
     }
-    
+
     // sourcery:selectedForProtocol
-    public var localizedDate: String {
+    public var localizedDate: String
+    {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .full
         return formatter.string(from: modificationDate)
     }
-    
+
     /// Error type specific to file-related operations
-    public enum Error: Swift.Error, CustomStringConvertible {
+    public enum Error: Swift.Error, CustomStringConvertible
+    {
         /// Thrown when a file couldn't be written to
         case writeFailed
         /// Thrown when a file couldn't be read, either because it was malformed or because it has been deleted
         case readFailed
         case invalid(path: String)
-        
+
         /// A string describing the error
-        public var description: String {
-            switch self {
+        public var description: String
+        {
+            switch self
+            {
             case .writeFailed:
                 return "Failed to write to file"
             case .readFailed:
@@ -69,11 +74,12 @@ open class File: FileSystem.Item, FileProtocol, AutoGenerateSelectiveProtocol {
             }
         }
     }
-    
-    public required init() throws {
+
+    public required init() throws
+    {
         try super.init(path: "\(Date().timeIntervalSince1970)", kind: .file, using: .default)
     }
-    
+
     /**
      *  Initialize an instance of this class with a path pointing to a file
      *
@@ -83,64 +89,76 @@ open class File: FileSystem.Item, FileProtocol, AutoGenerateSelectiveProtocol {
      *  - throws: `FileSystemItem.Error` in case an empty path was given, or if the path given doesn't
      *    point to a readable file.
      */
-    public init(path: String, fileManager: FileManager) throws {
+    public init(path: String, fileManager: FileManager) throws
+    {
         try super.init(path: path, kind: .file, using: fileManager)
     }
-    
-    public required init(path: String) throws {
+
+    public required init(path: String) throws
+    {
         try super.init(path: path, kind: .file, using: .default)
     }
-    
-    public func url() throws -> URL {
-        
-        return URL(fileURLWithPath: self.path)
+
+    public func url() throws -> URL
+    {
+        return URL(fileURLWithPath: path)
     }
+
     /**
      *  Read the data contained within this file
      *
      *  - throws: `File.Error.readFailed` if the file's data couldn't be read
      */
     // sourcery:selectedForProtocol
-    public func read() throws -> Data {
-        do {
+    public func read() throws -> Data
+    {
+        do
+        {
             return try Data(contentsOf: URL(fileURLWithPath: path))
-        } catch {
+        }
+        catch
+        {
             throw Error.readFailed
         }
     }
-    
+
     /**
      *  Read the data contained within this file, and convert it to a string
      *
      *  - throws: `File.Error.readFailed` if the file's data couldn't be read as a string
      */
     // sourcery:selectedForProtocol
-    public func readAsString() throws -> String {
+    public func readAsString() throws -> String
+    {
         return try readAsString(encoding: .utf8)
     }
-    
-    public func readAsString(encoding: String.Encoding) throws -> String {
-        guard let string = try String(data: read(), encoding: encoding) else {
+
+    public func readAsString(encoding: String.Encoding) throws -> String
+    {
+        guard let string = try String(data: read(), encoding: encoding) else
+        {
             throw Error.readFailed
         }
-        
+
         return string
     }
-    
+
     /**
      *  Read the data contained within this file, and convert it to an int
      *
      *  - throws: `File.Error.readFailed` if the file's data couldn't be read as an int
      */
     // sourcery:selectedForProtocol
-    public func readAsInt() throws -> Int {
-        guard let int = try Int(readAsString()) else {
+    public func readAsInt() throws -> Int
+    {
+        guard let int = try Int(readAsString()) else
+        {
             throw Error.readFailed
         }
-        
+
         return int
     }
-    
+
     /**
      *  Write data to the file, replacing its current content
      *
@@ -149,14 +167,18 @@ open class File: FileSystem.Item, FileProtocol, AutoGenerateSelectiveProtocol {
      *  - throws: `File.Error.writeFailed` if the file couldn't be written to
      */
     // sourcery:selectedForProtocol
-    public func write(data: Data) throws {
-        do {
+    public func write(data: Data) throws
+    {
+        do
+        {
             try data.write(to: URL(fileURLWithPath: path))
-        } catch {
+        }
+        catch
+        {
             throw Error.writeFailed
         }
     }
-    
+
     /**
      *  Write a string to the file, replacing its current content
      *
@@ -166,19 +188,22 @@ open class File: FileSystem.Item, FileProtocol, AutoGenerateSelectiveProtocol {
      *  - throws: `File.Error.writeFailed` if the string couldn't be encoded, or written to the file
      */
     // sourcery:selectedForProtocol
-    public func write(string: String) throws {
+    public func write(string: String) throws
+    {
         try write(string: string, encoding: .utf8)
     }
-    
+
     // sourcery:selectedForProtocol
-    public func write(string: String, encoding: String.Encoding) throws {
-        guard let data = string.data(using: encoding) else {
+    public func write(string: String, encoding: String.Encoding) throws
+    {
+        guard let data = string.data(using: encoding) else
+        {
             throw Error.writeFailed
         }
-        
+
         try write(data: data)
     }
-    
+
     /**
      *  Append data to the end of the file
      *
@@ -187,17 +212,21 @@ open class File: FileSystem.Item, FileProtocol, AutoGenerateSelectiveProtocol {
      *  - throws: `File.Error.writeFailed` if the file couldn't be written to
      */
     // sourcery:selectedForProtocol
-    public func append(data: Data) throws {
-        do {
+    public func append(data: Data) throws
+    {
+        do
+        {
             let handle = try FileHandle(forWritingTo: URL(fileURLWithPath: path))
             handle.seekToEndOfFile()
             handle.write(data)
             handle.closeFile()
-        } catch {
+        }
+        catch
+        {
             throw Error.writeFailed
         }
     }
-    
+
     /**
      *  Append a string to the end of the file
      *
@@ -207,19 +236,22 @@ open class File: FileSystem.Item, FileProtocol, AutoGenerateSelectiveProtocol {
      *  - throws: `File.Error.writeFailed` if the string couldn't be encoded, or written to the file
      */
     // sourcery:selectedForProtocol
-    public func append(string: String) throws {
+    public func append(string: String) throws
+    {
         try append(string: string, encoding: .utf8)
     }
-    
+
     // sourcery:selectedForProtocol
-    public func append(string: String, encoding: String.Encoding) throws {
-        guard let data = string.data(using: encoding) else {
+    public func append(string: String, encoding: String.Encoding) throws
+    {
+        guard let data = string.data(using: encoding) else
+        {
             throw Error.writeFailed
         }
-        
+
         try append(data: data)
     }
-    
+
     /**
      *  Copy this file to a new folder
      *
@@ -228,13 +260,17 @@ open class File: FileSystem.Item, FileProtocol, AutoGenerateSelectiveProtocol {
      *  - throws: `FileSystem.Item.OperationError.copyFailed` if the file couldn't be copied
      */
     // sourcery:selectedForProtocol
-    @discardableResult public func copy(to folder: FolderProtocol) throws -> FileProtocol {
+    @discardableResult public func copy(to folder: FolderProtocol) throws -> FileProtocol
+    {
         let newPath = folder.path + name
-        
-        do {
+
+        do
+        {
             try fileManager.copyItem(atPath: path, toPath: newPath)
             return try File(path: newPath)
-        } catch {
+        }
+        catch
+        {
             throw OperationError.copyFailed(self, error: "\(error)")
         }
     }

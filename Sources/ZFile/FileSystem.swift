@@ -11,12 +11,12 @@ import Foundation
 
 // sourcery:AutoMockable
 // sourcery:skipPublicInit
-public protocol FileSystemProtocol {
-    
+public protocol FileSystemProtocol
+{
     /// sourcery:inline:FileSystem.AutoGenerateSelectiveProtocol
-    var temporaryFolder: Folder {  get }
-    var homeFolder: Folder {  get }
-    var currentFolder: Folder {  get }
+    var temporaryFolder: Folder { get }
+    var homeFolder: Folder { get }
+    var currentFolder: Folder { get }
 
     init()
     init(using fileManager: FileManager)
@@ -26,16 +26,16 @@ public protocol FileSystemProtocol {
     func createFileIfNeeded(at path: String, contents: Data) throws -> FileProtocol
     func createFolder(at path: String) throws -> FolderProtocol
     func createFolderIfNeeded(at path: String) throws -> FolderProtocol
-    func itemKind(at path: String)-> FileSystem.Item.Kind?
-    
+    func itemKind(at path: String) -> FileSystem.Item.Kind?
+
     /// sourcery:end
-    
 }
 
 // MARK: - FileSystemIterable
 
 /// Protocol adopted by file system types that may be iterated over (this protocol is an implementation detail)
-public protocol FileSystemIterable {
+public protocol FileSystemIterable
+{
     /// Initialize an instance with a path that is the date and a file manager that is the default. Creates if needed.
     init() throws
     /// Initialize an instance with a path and a file manager
@@ -46,22 +46,22 @@ public protocol FileSystemIterable {
 
 // sourcery:AutoMockable
 // sourcery:skipPublicInit
-public protocol ItemProtocol {
-    
+public protocol ItemProtocol
+{
     /// sourcery:inline:FileSystem.Item.AutoGenerateSelectiveProtocol
-    var path: String {   get }
-    var name: String {   get }
-    var nameExcludingExtension: String {   get }
-    var `extension`: String? {  get }
-    var modificationDate: Date {   get }
-    var description: String {   get }
+    var path: String { get }
+    var name: String { get }
+    var nameExcludingExtension: String { get }
+    var `extension`: String? { get }
+    var modificationDate: Date { get }
+    var description: String { get }
 
     func parentFolder() throws -> FolderProtocol
-    func rename(to newName: String) throws 
-    func rename(to newName: String, keepExtension: Bool) throws 
-    func move(to newParent: Folder) throws 
-    func delete() throws 
-    
+    func rename(to newName: String) throws
+    func rename(to newName: String, keepExtension: Bool) throws
+    func move(to newParent: Folder) throws
+    func delete() throws
+
     /// sourcery:end
 }
 
@@ -74,11 +74,12 @@ public protocol ItemProtocol {
  *  To open other files & folders, use the `File` and `Folder` class respectively.
  */
 // sourcery:AutoGenerateSelectiveProtocol
-public class FileSystem: FileSystemProtocol {
+public class FileSystem: FileSystemProtocol
+{
     public static let shared = FileSystem()
-    
+
     let fileManager: FileManager
-    
+
     /**
      *  Class that represents an item that's stored by a file system
      *
@@ -87,18 +88,22 @@ public class FileSystem: FileSystemProtocol {
      *  to perform operations that are supported by both files & folders.
      */
     // sourcery:AutoGenerateSelectiveProtocol
-    open class Item: Equatable, CustomStringConvertible, ItemProtocol {
+    open class Item: Equatable, CustomStringConvertible, ItemProtocol
+    {
         /// Errror type used for invalid paths for files or folders
-        public enum PathError: Error, Equatable, CustomStringConvertible {
+        public enum PathError: Error, Equatable, CustomStringConvertible
+        {
             /// Thrown when an empty path was given when initializing a file
             case empty
             /// Thrown when an item of the expected type wasn't found for a given path (contains the path)
             case invalid(String)
             case nonMatchingKind(expectedKind: Kind, gotKind: Kind, path: String)
-            
+
             /// Operator used to compare two instances for equality
-            public static func == (lhs: PathError, rhs: PathError) -> Bool {
-                switch (lhs, rhs) {
+            public static func == (lhs: PathError, rhs: PathError) -> Bool
+            {
+                switch (lhs, rhs)
+                {
                 case (.empty, .empty):
                     return true
                 case let (.invalid(pathA), .invalid(pathB)):
@@ -109,10 +114,12 @@ public class FileSystem: FileSystemProtocol {
                     return false
                 }
             }
-            
+
             /// A string describing the error
-            public var description: String {
-                switch self {
+            public var description: String
+            {
+                switch self
+                {
                 case .empty:
                     return "Empty path given"
                 case let .invalid(path):
@@ -122,9 +129,10 @@ public class FileSystem: FileSystemProtocol {
                 }
             }
         }
-        
+
         /// Error type used for failed operations run on files or folders
-        public enum OperationError: Error, Equatable {
+        public enum OperationError: Error, Equatable
+        {
             /// Thrown when a file or folder couldn't be renamed (contains the item)
             case renameFailed(Item, error: String)
             /// Thrown when a file or folder couldn't be moved (contains the item)
@@ -134,107 +142,122 @@ public class FileSystem: FileSystemProtocol {
             /// Thrown when a file or folder couldn't be deleted (contains the item)
             case deleteFailed(Item, error: String)
         }
-        
+
         /// Operator used to compare two instances for equality
-        public static func == (lhs: Item, rhs: Item) -> Bool {
-            guard lhs.kind == rhs.kind else {
+        public static func == (lhs: Item, rhs: Item) -> Bool
+        {
+            guard lhs.kind == rhs.kind else
+            {
                 return false
             }
-            
+
             return lhs.path == rhs.path
         }
-        
+
         /// The path of the item, relative to the root of the file system
         // sourcery:selectedForProtocol
         // sourcery:onlyGet
         public private(set) var path: String
-        
+
         /// The name of the item (including any extension)
         // sourcery:selectedForProtocol
         // sourcery:onlyGet
         public private(set) var name: String
-        
+
         /// The name of the item (excluding any extension)
         // sourcery:selectedForProtocol
         // sourcery:onlyGet
-        public var nameExcludingExtension: String {
-            guard let `extension` = `extension` else {
+        public var nameExcludingExtension: String
+        {
+            guard let `extension` = `extension` else
+            {
                 return name
             }
-            
+
             let endIndex = name.index(name.endIndex, offsetBy: -`extension`.count - 1)
             return String(name[..<endIndex])
         }
-        
+
         /// Any extension that the item has
         // sourcery:selectedForProtocol
-        public var `extension`: String? {
+        public var `extension`: String?
+        {
             let components = name.components(separatedBy: ".")
-            
-            guard components.count > 1 else {
+
+            guard components.count > 1 else
+            {
                 return nil
             }
-            
+
             return components.last
         }
-        
+
         /// The date when the item was last modified
         // sourcery:selectedForProtocol
         // sourcery:onlyGet
         public private(set) lazy var modificationDate: Date = self.loadModificationDate()
-        
+
         /// The folder that the item is contained in, or `nil` if this item is the root folder of the file system
         // sourcery:skipProtocol
-        public var parent: Folder? {
-            return fileManager.parentPath(for: path).flatMap { parentPath in
+        public var parent: Folder?
+        {
+            return fileManager.parentPath(for: path).flatMap
+            { parentPath in
                 try? Folder(path: parentPath, fileManager: fileManager)
             }
         }
-        
+
         // sourcery:selectedForProtocol
-        public func parentFolder() throws -> FolderProtocol {
-            guard let parent = self.parent else {
+        public func parentFolder() throws -> FolderProtocol
+        {
+            guard let parent = self.parent else
+            {
                 throw Folder.Error.creatingFolderFailed
             }
-            
+
             return parent
         }
-        
+
         /// A string describing the item
         // sourcery:selectedForProtocol
         // sourcery:onlyGet
-        public var description: String {
+        public var description: String
+        {
             return "\(kind)(name: \(name), path: \(path))"
         }
-        
+
         let kind: Kind
         let fileManager: FileManager
-        
-        init(path: String, kind: Kind, using fileManager: FileManager) throws {
-            guard !path.isEmpty else {
+
+        init(path: String, kind: Kind, using fileManager: FileManager) throws
+        {
+            guard !path.isEmpty else
+            {
                 throw PathError.empty
             }
-            
+
             let path = try fileManager.absolutePath(for: path)
-            
-            guard fileManager.itemKind(atPath: path) == kind else {
+
+            guard fileManager.itemKind(atPath: path) == kind else
+            {
                 throw PathError.invalid(path)
             }
-            
+
             self.path = path
             self.fileManager = fileManager
             self.kind = kind
-            
+
             let pathComponents = path.pathComponents
-            
-            switch kind {
+
+            switch kind
+            {
             case .file:
                 name = pathComponents.last!
             case .folder:
                 name = pathComponents[pathComponents.count - 2]
             }
         }
-        
+
         /**
          *  Rename the item
          *
@@ -244,44 +267,54 @@ public class FileSystem: FileSystemProtocol {
          *  - throws: `FileSystem.Item.OperationError.renameFailed` if the item couldn't be renamed
          */
         // sourcery:selectedForProtocol
-        public func rename(to newName: String) throws {
+        public func rename(to newName: String) throws
+        {
             try rename(to: newName, keepExtension: true)
         }
-        
+
         // sourcery:selectedForProtocol
-        public func rename(to newName: String, keepExtension: Bool) throws {
-            guard let parent = parent else {
+        public func rename(to newName: String, keepExtension: Bool) throws
+        {
+            guard let parent = parent else
+            {
                 throw OperationError.renameFailed(self, error: "no parent")
             }
-            
+
             var newName = newName
-            
-            if keepExtension {
-                if let `extension` = `extension` {
+
+            if keepExtension
+            {
+                if let `extension` = `extension`
+                {
                     let extensionString = ".\(`extension`)"
-                    
-                    if !newName.hasSuffix(extensionString) {
+
+                    if !newName.hasSuffix(extensionString)
+                    {
                         newName += extensionString
                     }
                 }
             }
-            
+
             var newPath = parent.path + newName
-            
-            if kind == .folder && !newPath.hasSuffix("/") {
+
+            if kind == .folder, !newPath.hasSuffix("/")
+            {
                 newPath += "/"
             }
-            
-            do {
+
+            do
+            {
                 try fileManager.moveItem(atPath: path, toPath: newPath)
-                
+
                 name = newName
                 path = newPath
-            } catch {
+            }
+            catch
+            {
                 throw OperationError.renameFailed(self, error: "\(error)")
             }
         }
-        
+
         /**
          *  Move this item to a new folder
          *
@@ -290,21 +323,26 @@ public class FileSystem: FileSystemProtocol {
          *  - throws: `FileSystem.Item.OperationError.moveFailed` if the item couldn't be moved
          */
         // sourcery:selectedForProtocol
-        public func move(to newParent: Folder) throws {
+        public func move(to newParent: Folder) throws
+        {
             var newPath = newParent.path + name
-            
-            if kind == .folder && !newPath.hasSuffix("/") {
+
+            if kind == .folder, !newPath.hasSuffix("/")
+            {
                 newPath += "/"
             }
-            
-            do {
+
+            do
+            {
                 try fileManager.moveItem(atPath: path, toPath: newPath)
                 path = newPath
-            } catch {
+            }
+            catch
+            {
                 throw OperationError.moveFailed(self, error: "\(error)")
             }
         }
-        
+
         /**
          *  Delete the item from disk
          *
@@ -313,48 +351,57 @@ public class FileSystem: FileSystemProtocol {
          *  - throws: `FileSystem.Item.OperationError.deleteFailed` if the item coudn't be deleted
          */
         // sourcery:selectedForProtocol
-        public func delete() throws {
-            do {
+        public func delete() throws
+        {
+            do
+            {
                 try fileManager.removeItem(atPath: path)
-            } catch {
+            }
+            catch
+            {
                 throw OperationError.deleteFailed(self, error: "\(error)")
             }
         }
     }
-    
+
     /// A reference to the temporary folder used by this file system
     // sourcery:selectedForProtocol
-    public var temporaryFolder: Folder {
+    public var temporaryFolder: Folder
+    {
         return try! Folder(path: NSTemporaryDirectory(), fileManager: fileManager)
     }
-    
+
     /// A reference to the current user's home folder
     // sourcery:selectedForProtocol
-    public var homeFolder: Folder {
+    public var homeFolder: Folder
+    {
         return try! Folder(path: ProcessInfo.processInfo.homeFolderPath, fileManager: fileManager)
     }
-    
+
     // A reference to the folder that is the current working directory
     // sourcery:selectedForProtocol
-    public var currentFolder: Folder {
+    public var currentFolder: Folder
+    {
         return try! Folder(path: "")
     }
-    
+
     /**
      *  Initialize an instance of this class
      *
      *  - parameter fileManager: Optionally give a custom file manager to use to perform operations
      */
     // sourcery:selectedForProtocol
-    public required init() {
-        self.fileManager = .default
+    public required init()
+    {
+        fileManager = .default
     }
-    
+
     // sourcery:selectedForProtocol
-    public required init(using fileManager: FileManager) {
+    public required init(using fileManager: FileManager)
+    {
         self.fileManager = fileManager
     }
-    
+
     /**
      *  Create a new file at a given path
      *
@@ -366,27 +413,33 @@ public class FileSystem: FileSystemProtocol {
      *  - returns: The file that was created
      */
     // sourcery:selectedForProtocol
-    @discardableResult public func createFile(at path: String) throws -> FileProtocol {
+    @discardableResult public func createFile(at path: String) throws -> FileProtocol
+    {
         return try createFile(at: path, dataContents: Data())
     }
-    
+
     // sourcery:selectedForProtocol
-    @discardableResult public func createFile(at path: String, dataContents: Data) throws -> FileProtocol {
+    @discardableResult public func createFile(at path: String, dataContents: Data) throws -> FileProtocol
+    {
         let path = try fileManager.absolutePath(for: path)
-        
-        guard let parentPath = fileManager.parentPath(for: path) else {
+
+        guard let parentPath = fileManager.parentPath(for: path) else
+        {
             throw File.Error.writeFailed
         }
-        
-        do {
+
+        do
+        {
             let index = path.index(path.startIndex, offsetBy: parentPath.count + 1)
             let name = String(path[index...])
             return try createFolder(at: parentPath).createFile(named: name, dataContents: dataContents)
-        } catch {
+        }
+        catch
+        {
             throw File.Error.writeFailed
         }
     }
-    
+
     /**
      *  Either return an existing file, or create a new one, at a given path.
      *
@@ -398,18 +451,22 @@ public class FileSystem: FileSystemProtocol {
      *  - returns: The file that was either created or found.
      */
     // sourcery:selectedForProtocol
-    @discardableResult public func createFileIfNeeded(at path: String) throws -> FileProtocol  {
+    @discardableResult public func createFileIfNeeded(at path: String) throws -> FileProtocol
+    {
         return try createFileIfNeeded(at: path, contents: Data())
     }
+
     // sourcery:selectedForProtocol
-    @discardableResult public func createFileIfNeeded(at path: String, contents: Data) throws -> FileProtocol {
-        if let existingFile = try? File(path: path, fileManager: fileManager) {
+    @discardableResult public func createFileIfNeeded(at path: String, contents: Data) throws -> FileProtocol
+    {
+        if let existingFile = try? File(path: path, fileManager: fileManager)
+        {
             return existingFile
         }
-        
+
         return try createFile(at: path, dataContents: contents)
     }
-    
+
     /**
      *  Create a new folder at a given path
      *
@@ -421,16 +478,20 @@ public class FileSystem: FileSystemProtocol {
      *  - returns: The folder that was created
      */
     // sourcery:selectedForProtocol
-    @discardableResult public func createFolder(at path: String) throws -> FolderProtocol {
-        do {
+    @discardableResult public func createFolder(at path: String) throws -> FolderProtocol
+    {
+        do
+        {
             let path = try fileManager.absolutePath(for: path)
             try fileManager.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
             return try Folder(path: path, fileManager: fileManager)
-        } catch {
+        }
+        catch
+        {
             throw Folder.Error.creatingFolderFailed
         }
     }
-    
+
     /**
      *  Either return an existing folder, or create a new one, at a given path
      *
@@ -440,124 +501,149 @@ public class FileSystem: FileSystemProtocol {
      *  - throws: `Folder.Error.creatingFolderFailed`
      */
     // sourcery:selectedForProtocol
-    @discardableResult public func createFolderIfNeeded(at path: String) throws -> FolderProtocol {
-        if let existingFolder = try? Folder(path: path, fileManager: fileManager) {
+    @discardableResult public func createFolderIfNeeded(at path: String) throws -> FolderProtocol
+    {
+        if let existingFolder = try? Folder(path: path, fileManager: fileManager)
+        {
             return existingFolder
         }
-        
+
         return try createFolder(at: path)
     }
-    
+
     // sourcery:selectedForProtocol
-    public func itemKind(at path: String) -> FileSystem.Item.Kind? {
+    public func itemKind(at path: String) -> FileSystem.Item.Kind?
+    {
         return fileManager.itemKind(atPath: path)
     }
 }
 
-
 // MARK: - Extensions
-
-
 
 // MARK: - FileManager
 
-extension FileManager {
-    func itemKind(atPath path: String) -> FileSystem.Item.Kind? {
+extension FileManager
+{
+    func itemKind(atPath path: String) -> FileSystem.Item.Kind?
+    {
         var objCBool: ObjCBool = false
-        
-        guard fileExists(atPath: path, isDirectory: &objCBool) else {
+
+        guard fileExists(atPath: path, isDirectory: &objCBool) else
+        {
             return nil
         }
-        
-        if objCBool.boolValue {
+
+        if objCBool.boolValue
+        {
             return .folder
         }
-        
+
         return .file
     }
-    
-    func itemNames(inFolderAtPath path: String) -> [String] {
-        do {
+
+    func itemNames(inFolderAtPath path: String) -> [String]
+    {
+        do
+        {
             return try contentsOfDirectory(atPath: path).sorted()
-        } catch {
+        }
+        catch
+        {
             return []
         }
     }
-    
-    func absolutePath(for path: String) throws -> String {
-        if path.hasPrefix("/") {
+
+    func absolutePath(for path: String) throws -> String
+    {
+        if path.hasPrefix("/")
+        {
             return try pathByFillingInParentReferences(for: path)
         }
-        
-        if path.hasPrefix("~") {
+
+        if path.hasPrefix("~")
+        {
             let prefixEndIndex = path.index(after: path.startIndex)
-            
+
             let path = path.replacingCharacters(
                 in: path.startIndex ..< prefixEndIndex,
                 with: ProcessInfo.processInfo.homeFolderPath
             )
-            
+
             return try pathByFillingInParentReferences(for: path)
         }
-        
+
         return try pathByFillingInParentReferences(for: path, prependCurrentFolderPath: true)
     }
-    
-    func parentPath(for path: String) -> String? {
-        guard path != "/" else {
+
+    func parentPath(for path: String) -> String?
+    {
+        guard path != "/" else
+        {
             return nil
         }
-        
+
         var pathComponents = path.pathComponents
-        
-        if path.hasSuffix("/") {
+
+        if path.hasSuffix("/")
+        {
             pathComponents.removeLast(2)
-        } else {
+        }
+        else
+        {
             pathComponents.removeLast()
         }
-        
+
         return pathComponents.joined(separator: "/")
     }
-    
-    func pathByFillingInParentReferences(for path: String, prependCurrentFolderPath: Bool = false) throws -> String {
+
+    func pathByFillingInParentReferences(for path: String, prependCurrentFolderPath: Bool = false) throws -> String
+    {
         var path = path
         var filledIn = false
-        
-        while let parentReferenceRange = path.range(of: "../") {
+
+        while let parentReferenceRange = path.range(of: "../")
+        {
             let currentFolderPath = String(path[..<parentReferenceRange.lowerBound])
-            
-            guard let currentFolder = try? Folder(path: currentFolderPath) else {
+
+            guard let currentFolder = try? Folder(path: currentFolderPath) else
+            {
                 throw FileSystem.Item.PathError.invalid(path)
             }
-            
-            guard let parent = currentFolder.parent else {
+
+            guard let parent = currentFolder.parent else
+            {
                 throw FileSystem.Item.PathError.invalid(path)
             }
-            
+
             path = path.replacingCharacters(in: path.startIndex ..< parentReferenceRange.upperBound, with: parent.path)
             filledIn = true
         }
-        
-        if prependCurrentFolderPath {
-            guard filledIn else {
+
+        if prependCurrentFolderPath
+        {
+            guard filledIn else
+            {
                 return currentDirectoryPath + "/" + path
             }
         }
-        
+
         return path
     }
 }
 
-
 // MARK: - Item
 
-public extension FileSystem.Item {
-    public enum Kind: CustomStringConvertible {
+public extension FileSystem.Item
+{
+    enum Kind: CustomStringConvertible
+    {
         case file
         case folder
-        
-        public var description: String {
-            switch self {
+
+        public var description: String
+        {
+            switch self
+            {
             case .file:
                 return "File"
             case .folder:
@@ -565,8 +651,9 @@ public extension FileSystem.Item {
             }
         }
     }
-    
-    func loadModificationDate() -> Date {
+
+    func loadModificationDate() -> Date
+    {
         let attributes = try! fileManager.attributesOfItem(atPath: path)
         return attributes[FileAttributeKey.modificationDate] as! Date
     }
@@ -575,31 +662,36 @@ public extension FileSystem.Item {
 // MARK: - For MAC if NOT LINUX
 
 #if !os(Linux)
-extension FileSystem {
-    /// A reference to the document folder used by this file system.
-    
-    public var documentFolder: Folder? {
-        guard let url = try? fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) else {
-            return nil
-        }
-        
-        return try? Folder(path: url.path, fileManager: fileManager)
-    }
-    
-    /// A reference to the library folder used by this file system.
-    public var libraryFolder: Folder? {
-        guard let url = try? fileManager.url(for: .libraryDirectory, in: .userDomainMask, appropriateFor: nil, create: false) else {
-            return nil
-        }
-        
-        return try? Folder(path: url.path, fileManager: fileManager)
-    }
-    
-    /// A reference to the cache folder used by this file system.
-    public func cacheFolder() throws -> Folder {
-        let url = try fileManager.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-        return try Folder(path: url.path, fileManager: fileManager)
-    }
-}
-#endif
+    extension FileSystem
+    {
+        /// A reference to the document folder used by this file system.
 
+        public var documentFolder: Folder?
+        {
+            guard let url = try? fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) else
+            {
+                return nil
+            }
+
+            return try? Folder(path: url.path, fileManager: fileManager)
+        }
+
+        /// A reference to the library folder used by this file system.
+        public var libraryFolder: Folder?
+        {
+            guard let url = try? fileManager.url(for: .libraryDirectory, in: .userDomainMask, appropriateFor: nil, create: false) else
+            {
+                return nil
+            }
+
+            return try? Folder(path: url.path, fileManager: fileManager)
+        }
+
+        /// A reference to the cache folder used by this file system.
+        public func cacheFolder() throws -> Folder
+        {
+            let url = try fileManager.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            return try Folder(path: url.path, fileManager: fileManager)
+        }
+    }
+#endif

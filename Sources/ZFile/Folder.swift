@@ -14,41 +14,41 @@ import os
  */
 // sourcery:AutoMockable
 // sourcery:skipPublicInit
-public protocol FolderProtocol: ItemProtocol, FileSystemIterable {
-    
+public protocol FolderProtocol: ItemProtocol, FileSystemIterable
+{
     /// sourcery:inline:Folder.AutoGenerateSelectiveProtocol
 
     func mostRecentSubfolder() throws -> FolderProtocol
     func mostRecentFile() throws -> FileProtocol
     func file(named fileName: String) throws -> FileProtocol
     func file(atPath filePath: String) throws -> FileProtocol
-    func containsFile(named fileName: String)-> Bool
+    func containsFile(named fileName: String) -> Bool
     func firstFolder(with prefix: String) throws -> FolderProtocol
     func subfolder(named folderName: String) throws -> FolderProtocol
     func subfolder(atPath folderPath: String) throws -> FolderProtocol
-    func containsSubfolder(named folderName: String)-> Bool
+    func containsSubfolder(named folderName: String) -> Bool
     func createFileIfNeeded(named fileName: String) throws -> FileProtocol
     func createFile(named fileName: String) throws -> FileProtocol
     func createFile(named fileName: String, dataContents data: Data) throws -> FileProtocol
     func createFile(named fileName: String, contents: String) throws -> FileProtocol
     func createSubfolder(named folderName: String) throws -> FolderProtocol
     func createSubfolderIfNeeded(withName folderName: String) throws -> FolderProtocol
-    func makeFileSequence(recursive: Bool, includeHidden: Bool)-> FileSystemSequence<File>
+    func makeFileSequence(recursive: Bool, includeHidden: Bool) -> FileSystemSequence<File>
     func copy(to folder: FolderProtocol) throws -> Folder
-    
+
     func url() throws -> URL
     /// sourcery:end
 }
 
-open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible {
-    
+open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
+{
     // sourcery:skipProtocol
-    public var debugDescription: String {
+    public var debugDescription: String
+    {
         let formatter = DateFormatter()
         formatter.timeStyle = .full
         formatter.dateStyle = .medium
-        
-        
+
         return """
         Folder with:
         
@@ -57,22 +57,25 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
         
         """
     }
-    
+
     /// Error type specific to folder-related operations
-    public enum Error: Swift.Error, CustomStringConvertible {
+    public enum Error: Swift.Error, CustomStringConvertible
+    {
         /// Thrown when a folder couldn't be created
         case creatingFolderFailed
         case noParent
         case nofolderWithPrefix(String)
         case noSubfolders(inFolder: FolderProtocol)
         case invalid(path: String)
-        
+
         @available(*, deprecated: 1.4.0, renamed: "creatingFolderFailed")
         case creatingSubfolderFailed
-        
+
         /// A string describing the error
-        public var description: String {
-            switch self {
+        public var description: String
+        {
+            switch self
+            {
             case .creatingFolderFailed:
                 return "Failed to create folder"
             case .creatingSubfolderFailed:
@@ -88,38 +91,42 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
             }
         }
     }
-    
-    
+
     /// The sequence of files that are contained within this folder (non-recursive)
-    public var files: FileSystemSequence<File> {
+    public var files: FileSystemSequence<File>
+    {
         return makeFileSequence()
     }
-    
+
     /// The sequence of folders that are subfolers of this folder (non-recursive)
-    public var subfolders: FileSystemSequence<Folder> {
+    public var subfolders: FileSystemSequence<Folder>
+    {
         return makeSubfolderSequence()
     }
-    
+
     /// A reference to the folder that is the current working directory
-    public static var current: Folder {
+    public static var current: Folder
+    {
         return FileSystem(using: .default).currentFolder
     }
-    
+
     /// A reference to the current user's home folder
-    public static var home: Folder {
+    public static var home: Folder
+    {
         return FileSystem(using: .default).homeFolder
     }
-    
+
     /// A reference to the temporary folder used by this file system
-    public static var temporary: Folder {
+    public static var temporary: Folder
+    {
         return FileSystem(using: .default).temporaryFolder
     }
-    
-    public required init() {
+
+    public required init()
+    {
         try! super.init(path: "\(Date().timeIntervalSince1970)", kind: .folder, using: .default)
     }
-    
-    
+
     /**
      *  Initialize an instance of this class with a path pointing to a folder
      *
@@ -129,20 +136,23 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *  - throws: `FileSystemItem.Error` in case an empty path was given, or if the path given doesn't
      *    point to a readable folder.
      */
-    public required init(path: String) throws {
+    public required init(path: String) throws
+    {
         var path = path
-        
-        if path.isEmpty {
+
+        if path.isEmpty
+        {
             path = FileManager.default.currentDirectoryPath
         }
-        
-        if !path.hasSuffix("/") {
+
+        if !path.hasSuffix("/")
+        {
             path += "/"
         }
-        
+
         try super.init(path: path, kind: .folder, using: .default)
     }
-    
+
     /**
      *  Initialize an instance of this class with a path pointing to a folder
      *
@@ -152,21 +162,23 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *  - throws: `FileSystemItem.Error` in case an empty path was given, or if the path given doesn't
      *    point to a readable folder.
      */
-    public init(path: String, fileManager: FileManager) throws {
+    public init(path: String, fileManager: FileManager) throws
+    {
         var path = path
-        
-        if path.isEmpty {
+
+        if path.isEmpty
+        {
             path = fileManager.currentDirectoryPath
         }
-        
-        if !path.hasSuffix("/") {
+
+        if !path.hasSuffix("/")
+        {
             path += "/"
         }
-        
+
         try super.init(path: path, kind: .folder, using: fileManager)
     }
-    
-    
+
     /**
      *  Initialize an instance of this class with a relative path pointing to a folder
      *
@@ -176,39 +188,47 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *  - throws: `FileSystemItem.Error` in case an empty path was given, or if the path given doesn't
      *    point to a readable folder.
      */
-    public init(relativePath: String, to folder: FolderProtocol = FileSystem.shared.currentFolder, using fileManager: FileManager = FileManager.default) throws {        
+    public init(relativePath: String, to folder: FolderProtocol = FileSystem.shared.currentFolder, using fileManager: FileManager = FileManager.default) throws
+    {
         try super.init(path: folder.path.appending(relativePath), kind: .folder, using: fileManager)
     }
-    
+
     /**
      Most recent folder
      */
     // sourcery:selectedForProtocol
-    public func mostRecentSubfolder() throws -> FolderProtocol {
-        guard let result = (makeSubfolderSequence().sorted { $0.modificationDate > $1.modificationDate }.first) else {
+    public func mostRecentSubfolder() throws -> FolderProtocol
+    {
+        guard let result = (makeSubfolderSequence().sorted { $0.modificationDate > $1.modificationDate }.first) else
+        {
             throw Folder.Error.noSubfolders(inFolder: self)
         }
         return result
     }
-    
+
     /**
      Most recent folder
      */
     // sourcery:selectedForProtocol
-    public func mostRecentFile() throws -> FileProtocol {
-        guard let result = (makeFileSequence().sorted { $0.modificationDate > $1.modificationDate }.first) else {
+    public func mostRecentFile() throws -> FileProtocol
+    {
+        guard let result = (makeFileSequence().sorted { $0.modificationDate > $1.modificationDate }.first) else
+        {
             throw Folder.Error.noSubfolders(inFolder: self)
         }
         return result
     }
-    
-    public func url() throws -> URL {
-        guard let url = URL(string: self.path) else {
+
+    public func url() throws -> URL
+    {
+        guard let url = URL(string: self.path) else
+        {
             throw Error.noParent
         }
-        
+
         return url
     }
+
     /**
      *  Return a file with a given name that is contained in this folder
      *
@@ -217,10 +237,11 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *  - throws: `File.PathError.invalid` if the file couldn't be found
      */
     // sourcery:selectedForProtocol
-    public func file(named fileName: String) throws -> FileProtocol {
+    public func file(named fileName: String) throws -> FileProtocol
+    {
         return try File(path: path + fileName, fileManager: fileManager)
     }
-    
+
     /**
      *  Return a file at a given path that is contained in this folder's tree
      *
@@ -229,29 +250,33 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *  - throws: `File.PathError.invalid` if the file couldn't be found
      */
     // sourcery:selectedForProtocol
-    public func file(atPath filePath: String) throws -> FileProtocol {
+    public func file(atPath filePath: String) throws -> FileProtocol
+    {
         return try File(path: path + filePath, fileManager: fileManager)
     }
-    
+
     /**
      *  Return whether this folder contains a file with a given name
      *
      *  - parameter fileName: The name of the file to check for
      */
     // sourcery:selectedForProtocol
-    public func containsFile(named fileName: String) -> Bool {
+    public func containsFile(named fileName: String) -> Bool
+    {
         return (try? file(named: fileName)) != nil
     }
-    
+
     // sourcery:selectedForProtocol
-    public func firstFolder(with prefix: String) throws -> FolderProtocol {
-        guard let folder = (subfolders.filter { $0.name.hasPrefix(prefix) }.first) else {
+    public func firstFolder(with prefix: String) throws -> FolderProtocol
+    {
+        guard let folder = (subfolders.filter { $0.name.hasPrefix(prefix) }.first) else
+        {
             throw Error.creatingFolderFailed
         }
-        
+
         return folder
     }
-    
+
     /**
      *  Return a folder with a given name that is contained in this folder
      *
@@ -260,10 +285,11 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *  - throws: `Folder.PathError.invalid` if the folder couldn't be found
      */
     // sourcery:selectedForProtocol
-    public func subfolder(named folderName: String) throws -> FolderProtocol {
+    public func subfolder(named folderName: String) throws -> FolderProtocol
+    {
         return try Folder(path: path + folderName, fileManager: fileManager)
     }
-    
+
     /**
      *  Return a folder at a given path that is contained in this folder's tree
      *
@@ -272,20 +298,22 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *  - throws: `Folder.PathError.invalid` if the folder couldn't be found
      */
     // sourcery:selectedForProtocol
-    public func subfolder(atPath folderPath: String) throws -> FolderProtocol {
+    public func subfolder(atPath folderPath: String) throws -> FolderProtocol
+    {
         return try Folder(path: path + folderPath, fileManager: fileManager)
     }
-    
+
     /**
      *  Return whether this folder contains a subfolder with a given name
      *
      *  - parameter folderName: The name of the folder to check for
      */
     // sourcery:selectedForProtocol
-    public func containsSubfolder(named folderName: String) -> Bool {
+    public func containsSubfolder(named folderName: String) -> Bool
+    {
         return (try? subfolder(named: folderName)) != nil
     }
-    
+
     /**
      *  Create a file in this folder and return it
      *
@@ -297,11 +325,12 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *  - returns: The file that was created
      */
     // sourcery:selectedForProtocol
-    @discardableResult public func createFileIfNeeded(named fileName: String) throws -> FileProtocol {
-        let pathWithSlash = "\(self.path.hasSuffix("/") ? self.path : "\(self.path)/")"
+    @discardableResult public func createFileIfNeeded(named fileName: String) throws -> FileProtocol
+    {
+        let pathWithSlash = "\(path.hasSuffix("/") ? path : "\(path)/")"
         return try FileSystem(using: .default).createFileIfNeeded(at: "\(pathWithSlash)\(fileName)", contents: Data())
     }
-    
+
     /**
      *  Create a file in this folder and return it
      *
@@ -313,21 +342,24 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *  - returns: The file that was created
      */
     // sourcery:selectedForProtocol
-    @discardableResult public func createFile(named fileName: String) throws -> FileProtocol {
+    @discardableResult public func createFile(named fileName: String) throws -> FileProtocol
+    {
         return try createFile(named: fileName, dataContents: Data())
     }
-    
+
     // sourcery:selectedForProtocol
-    @discardableResult public func createFile(named fileName: String, dataContents data: Data) throws -> FileProtocol {
+    @discardableResult public func createFile(named fileName: String, dataContents data: Data) throws -> FileProtocol
+    {
         let filePath = path + fileName
-        
-        guard fileManager.createFile(atPath: filePath, contents: data, attributes: nil) else {
+
+        guard fileManager.createFile(atPath: filePath, contents: data, attributes: nil) else
+        {
             throw File.Error.writeFailed
         }
-        
+
         return try File(path: filePath, fileManager: fileManager)
     }
-    
+
     /**
      *  Create a file in this folder and return it
      *
@@ -340,16 +372,18 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *  - returns: The file that was created
      */
     // sourcery:selectedForProtocol
-    @discardableResult public func createFile(named fileName: String, contents: String) throws -> FileProtocol {
+    @discardableResult public func createFile(named fileName: String, contents: String) throws -> FileProtocol
+    {
         return try createFile(named: fileName, contents: contents, encoding: .utf8)
     }
-    
-    @discardableResult public func createFile(named fileName: String, contents: String, encoding: String.Encoding) throws -> FileProtocol {
+
+    @discardableResult public func createFile(named fileName: String, contents: String, encoding: String.Encoding) throws -> FileProtocol
+    {
         let file = try createFile(named: fileName)
         try file.write(string: contents, encoding: encoding)
         return file
     }
-    
+
     /**
      *  Either return an existing file, or create a new one, for a given name
      *
@@ -359,15 +393,17 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *
      *  - throws: `File.Error.writeFailed` if the file couldn't be created
      */
-    
-    @discardableResult public func createFileIfNeeded(withName fileName: String, contents dataExpression: @autoclosure () -> Data = .init()) throws -> FileProtocol {
-        if let existingFile = try? file(named: fileName) {
+
+    @discardableResult public func createFileIfNeeded(withName fileName: String, contents dataExpression: @autoclosure () -> Data = .init()) throws -> FileProtocol
+    {
+        if let existingFile = try? file(named: fileName)
+        {
             return existingFile
         }
-        
+
         return try createFile(named: fileName, dataContents: dataExpression())
     }
-    
+
     /**
      *  Create a subfolder of this folder and return it
      *
@@ -378,17 +414,21 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *  - returns: The folder that was created
      */
     // sourcery:selectedForProtocol
-    @discardableResult public func createSubfolder(named folderName: String) throws -> FolderProtocol {
+    @discardableResult public func createSubfolder(named folderName: String) throws -> FolderProtocol
+    {
         let subfolderPath = path + folderName
-        
-        do {
+
+        do
+        {
             try fileManager.createDirectory(atPath: subfolderPath, withIntermediateDirectories: false, attributes: nil)
             return try Folder(path: subfolderPath, fileManager: fileManager)
-        } catch {
+        }
+        catch
+        {
             throw Error.creatingFolderFailed
         }
     }
-    
+
     /**
      *  Either return an existing subfolder, or create a new one, for a given name
      *
@@ -397,14 +437,16 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *  - throws: `Folder.Error.creatingFolderFailed`
      */
     // sourcery:selectedForProtocol
-    @discardableResult public func createSubfolderIfNeeded(withName folderName: String) throws -> FolderProtocol {
-        if let existingFolder = try? subfolder(named: folderName) {
+    @discardableResult public func createSubfolderIfNeeded(withName folderName: String) throws -> FolderProtocol
+    {
+        if let existingFolder = try? subfolder(named: folderName)
+        {
             return existingFolder
         }
-        
+
         return try createSubfolder(named: folderName)
     }
-    
+
     /**
      *  Create a sequence containing the files that are contained within this folder
      *
@@ -413,16 +455,18 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *
      *  If `recursive = true` the folder tree will be traversed depth-first
      */
-    
-    public func makeFileSequence() -> FileSystemSequence<File>  {
+
+    public func makeFileSequence() -> FileSystemSequence<File>
+    {
         return makeFileSequence(recursive: false, includeHidden: false)
     }
-    
+
     // sourcery:selectedForProtocol
-    public func makeFileSequence(recursive: Bool, includeHidden: Bool) -> FileSystemSequence<File> {
+    public func makeFileSequence(recursive: Bool, includeHidden: Bool) -> FileSystemSequence<File>
+    {
         return FileSystemSequence(folder: self, recursive: recursive, includeHidden: includeHidden, using: fileManager)
     }
-    
+
     /**
      *  Create a sequence containing the folders that are subfolders of this folder
      *
@@ -431,23 +475,25 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *
      *  If `recursive = true` the folder tree will be traversed depth-first
      */
-    
-    public func makeSubfolderSequence(recursive: Bool = false, includeHidden: Bool = false) -> FileSystemSequence<Folder> {
+
+    public func makeSubfolderSequence(recursive: Bool = false, includeHidden: Bool = false) -> FileSystemSequence<Folder>
+    {
         return FileSystemSequence(folder: self, recursive: recursive, includeHidden: includeHidden, using: fileManager)
     }
-    
+
     /**
      *  Move the contents (both files and subfolders) of this folder to a new parent folder
      *
      *  - parameter newParent: The new parent folder that the contents of this folder should be moved to
      *  - parameter includeHidden: Whether hidden (dot) files should be moved (default: false)
      */
-    
-    public func moveContents(to newParent: Folder, includeHidden: Bool = false) throws {
+
+    public func moveContents(to newParent: Folder, includeHidden: Bool = false) throws
+    {
         try makeFileSequence(recursive: false, includeHidden: includeHidden).forEach { try $0.move(to: newParent) }
         try makeSubfolderSequence(includeHidden: includeHidden).forEach { try $0.move(to: newParent) }
     }
-    
+
     /**
      *  Empty this folder, removing all of its content
      *
@@ -455,12 +501,13 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *
      *  This will still keep the folder itself on disk. If you wish to delete the folder as well, call `delete()` on it.
      */
-    
-    public func empty(includeHidden: Bool = false) throws {
+
+    public func empty(includeHidden: Bool = false) throws
+    {
         try makeFileSequence(recursive: false, includeHidden: includeHidden).forEach { try $0.delete() }
         try makeSubfolderSequence(includeHidden: includeHidden).forEach { try $0.delete() }
     }
-    
+
     /**
      *  Copy this folder to a new folder
      *
@@ -469,15 +516,18 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *  - throws: `FileSystem.Item.OperationError.copyFailed` if the folder couldn't be copied
      */
     // sourcery:selectedForProtocol
-    @discardableResult public func copy(to folder: FolderProtocol) throws -> Folder {
+    @discardableResult public func copy(to folder: FolderProtocol) throws -> Folder
+    {
         let newPath = folder.path + name
-        
-        do {
+
+        do
+        {
             try fileManager.copyItem(atPath: path, toPath: newPath)
             return try Folder(path: newPath)
-        } catch {
+        }
+        catch
+        {
             throw OperationError.copyFailed(self, error: "\(error)")
         }
     }
 }
-
