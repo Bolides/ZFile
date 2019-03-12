@@ -12,15 +12,21 @@ import Arguments
 import Terminal
 import SignPost
 import XCBuild
+import SwiftFormatWorker
+import GitHooks
 
 public protocol ZFRunnerProtocol: AutoMockable {
     // sourcery:inline:ZFRunner.AutoGenerateProtocol
     var sourcery: ZFileSourceryWorkerProtocol { get }
     var fail: Bool { get }
     var signPost: SignPostProtocol { get }
+    var swiftformat: SwiftFormatWorkerProtocol { get }
+    var gitHooks: GitHooksWorkerProtocol { get }
 
     func runSourcery() throws 
     func runTests() throws 
+    func runSwiftFormat()
+    func addTSHighWaySetupToGitHooks() throws 
     // sourcery:end
 }
 
@@ -29,10 +35,19 @@ public struct ZFRunner: ZFRunnerProtocol, AutoGenerateProtocol {
     public let sourcery: ZFileSourceryWorkerProtocol
     public var fail: Bool { return sourcery.fail }
     public let signPost: SignPostProtocol
+    public let swiftformat: SwiftFormatWorkerProtocol
+    public let gitHooks: GitHooksWorkerProtocol
     
-    public init(sourcery: ZFileSourceryWorkerProtocol, signPost: SignPostProtocol = SignPost.shared) {
+    public init(
+        sourcery: ZFileSourceryWorkerProtocol,
+        swiftformat: SwiftFormatWorkerProtocol,
+        gitHooks: GitHooksWorkerProtocol,
+        signPost: SignPostProtocol = SignPost.shared
+    ) {
         self.sourcery = sourcery
         self.signPost = signPost
+        self.swiftformat = swiftformat
+        self.gitHooks = gitHooks
     }
     
     public func runSourcery() throws {
@@ -57,6 +72,34 @@ public struct ZFRunner: ZFRunnerProtocol, AutoGenerateProtocol {
             signPost.message("🧪  Testing ❌")
         }
         
+    }
+    
+    public func runSwiftFormat()
+    {
+        signPost.message("🧹 swiftformat started ...")
+        sourcery.dispatchGroup.enter()
+        swiftformat.attempt
+            { syncOutput in
+                do
+                {
+                    try syncOutput()
+                    self.signPost.message("🧹 swiftformat ✅")
+                    self.sourcery.dispatchGroup.leave()
+                }
+                catch
+                {
+                    self.signPost.error("\(error)")
+                    self.signPost.message("🧹 swiftformat ❌")
+                    
+                    self.sourcery.dispatchGroup.leave()
+                    exit(EXIT_FAILURE)
+                }
+        }
+    }
+    
+    public func addTSHighWaySetupToGitHooks() throws
+    {
+        try gitHooks.addPrePushToGitHooks()
     }
     
 }

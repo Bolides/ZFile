@@ -8,3 +8,4 @@ xcuserdata
 /Sources/ZFile/.build
 /.build
 /Sources/Carthage
+/.swiftformat.md

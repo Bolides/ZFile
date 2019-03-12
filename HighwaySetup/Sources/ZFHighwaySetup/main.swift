@@ -12,6 +12,8 @@ import Arguments
 import SourceryWorker
 import Terminal
 import ZFRunner
+import SwiftFormatWorker
+import GitHooks
 
 let signPost = SignPost.shared
 let dispatchGroup = DispatchGroup()
@@ -23,7 +25,10 @@ do {
     let dump = try SwiftPackageDumpService(swiftPackageDependencies: dependencies).swiftPackageDump
     
     let sourceryWorker = try ZFileSourceryWorker(dependencies: dependencies, dump: dump, dispatchGroup: dispatchGroup)
-    zfRunner = ZFRunner(sourcery: sourceryWorker)
+    let swiftformat = try SwiftFormatWorker(folderToFormatRecursive: try dependencies.srcRoot().parentFolder())
+    let gitHooks = GitHooksWorker(swiftPackageDependencies: dependencies, swiftPackageDump: dump, gitHooksFolder: try dependencies.srcRoot().parentFolder().subfolder(named: ".git/hooks"))
+    
+    zfRunner = ZFRunner(sourcery: sourceryWorker, swiftformat: swiftformat, gitHooks: gitHooks)
     
     try zfRunner?.runSourcery()
     
@@ -34,6 +39,8 @@ do {
             exit(EXIT_FAILURE)
         }
         do {
+            try zfRunner?.addTSHighWaySetupToGitHooks()
+//            zfRunner?.runSwiftFormat()
             try zfRunner?.runTests()
             signPost.message("🚀 ZFile automate ✅")
             exit(EXIT_SUCCESS)

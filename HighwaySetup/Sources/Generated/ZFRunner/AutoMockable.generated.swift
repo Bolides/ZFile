@@ -1,10 +1,12 @@
 import Arguments
 import Errors
 import Foundation
+import GitHooks
 import HighwayDispatch
 import SignPost
 import SourceryAutoProtocols
 import SourceryWorker
+import SwiftFormatWorker
 import Terminal
 import ZFRunner
 
@@ -52,6 +54,16 @@ open class ZFRunnerProtocolMock: ZFRunnerProtocol {
       set(value) { underlyingSignPost = value }
   }
   public  var underlyingSignPost: SignPostProtocol!
+  public  var swiftformat: SwiftFormatWorkerProtocol {
+      get { return underlyingSwiftformat }
+      set(value) { underlyingSwiftformat = value }
+  }
+  public  var underlyingSwiftformat: SwiftFormatWorkerProtocol!
+  public  var gitHooks: GitHooksWorkerProtocol {
+      get { return underlyingGitHooks }
+      set(value) { underlyingGitHooks = value }
+  }
+  public  var underlyingGitHooks: GitHooksWorkerProtocol!
 
 
   // MARK: - <runSourcery> - parameters
@@ -117,6 +129,64 @@ open class ZFRunnerProtocolMock: ZFRunnerProtocol {
       // <runTests> - Void return mock implementation
 
         try runTestsClosure?()
+
+  }
+
+  // MARK: - <runSwiftFormat> - parameters
+
+  public var runSwiftFormatCallsCount = 0
+  public var runSwiftFormatCalled: Bool {
+    return runSwiftFormatCallsCount > 0
+  }
+
+  // MARK: - <runSwiftFormat> - closure mocks
+
+  public var runSwiftFormatClosure: (()  -> Void)? = nil
+
+
+
+  // MARK: - <runSwiftFormat> - method mocked
+
+  open func runSwiftFormat() {
+
+      runSwiftFormatCallsCount += 1
+
+      // <runSwiftFormat> - Void return mock implementation
+
+        runSwiftFormatClosure?()
+
+  }
+
+  // MARK: - <addTSHighWaySetupToGitHooks> - parameters
+
+  public var addTSHighWaySetupToGitHooksThrowableError: Error?
+  public var addTSHighWaySetupToGitHooksCallsCount = 0
+  public var addTSHighWaySetupToGitHooksCalled: Bool {
+    return addTSHighWaySetupToGitHooksCallsCount > 0
+  }
+
+  // MARK: - <addTSHighWaySetupToGitHooks> - closure mocks
+
+  public var addTSHighWaySetupToGitHooksClosure: (() throws  -> Void)? = nil
+
+
+
+  // MARK: - <addTSHighWaySetupToGitHooks> - method mocked
+
+  open func addTSHighWaySetupToGitHooks() throws {
+
+
+      // <addTSHighWaySetupToGitHooks> - Throwable method implementation
+
+    if let error = addTSHighWaySetupToGitHooksThrowableError {
+        throw error
+    }
+
+      addTSHighWaySetupToGitHooksCallsCount += 1
+
+      // <addTSHighWaySetupToGitHooks> - Void return mock implementation
+
+        try addTSHighWaySetupToGitHooksClosure?()
 
   }
 }

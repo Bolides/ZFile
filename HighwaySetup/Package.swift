@@ -48,7 +48,9 @@ let package = Package(
                 "Terminal",
                 "HighwayDispatch",
                 "Errors",
-                "Arguments"
+                "Arguments",
+                "SwiftFormatWorker",
+                "GitHooks"
             ],
             path: "Sources/Generated/ZFRunner"
         ),
@@ -63,7 +65,9 @@ let package = Package(
                 "Arguments",
                 "Errors",
                 "HighwayDispatch",
-                "XCBuild"
+                "XCBuild",
+                "SwiftFormatWorker",
+                "GitHooks"
             ]
         ),
         .testTarget(

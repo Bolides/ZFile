@@ -24,9 +24,13 @@ import Foundation
     var sourcery: ZFileSourceryWorkerProtocol { get }
     var fail: Bool { get }
     var signPost: SignPostProtocol { get }
+    var swiftformat: SwiftFormatWorkerProtocol { get }
+    var gitHooks: GitHooksWorkerProtocol { get }
 
     func runSourcery() throws 
     func runTests() throws 
+    func runSwiftFormat()
+    func addTSHighWaySetupToGitHooks() throws 
     // sourcery:end
 // Generated protocol inline for ZFileSourceryWorker -> See code in the file of that type
     // sourcery:inline:ZFileSourceryWorker.AutoGenerateProtocol
