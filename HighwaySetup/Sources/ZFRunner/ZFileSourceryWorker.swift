@@ -22,6 +22,8 @@ public protocol ZFileSourceryWorkerProtocol {
     var dependencies: SwiftPackageDependenciesProtocol { get }
     var sourceryBuilder: SourceryBuilderProtocol { get }
     var dump: SwiftPackageDumpProtocol { get }
+    var terminal: TerminalWorkerProtocol { get }
+    var dispatchGroup: DispatchGroup { get }
 
     init(
       dependencies: SwiftPackageDependenciesProtocol,
@@ -46,12 +48,13 @@ public class ZFileSourceryWorker: ZFileSourceryWorkerProtocol, AutoGenerateProto
     public let dependencies: SwiftPackageDependenciesProtocol
     public let sourceryBuilder: SourceryBuilderProtocol
     public let dump: SwiftPackageDumpProtocol
+    public let terminal: TerminalWorkerProtocol
+    public let dispatchGroup: DispatchGroup
     
     private let signPost: SignPostProtocol
     private var workers: [SourceryWorkerProtocol]?
-    private let dispatchGroup: DispatchGroup
+    
     private let queue: HighwayDispatchProtocol
-    private let terminal: TerminalWorkerProtocol
     
     // sourcery:includeInitInProtocol
     required public init(
@@ -90,12 +93,12 @@ public class ZFileSourceryWorker: ZFileSourceryWorkerProtocol, AutoGenerateProto
     }
     
     public func attemptRunSourcery() {
-        
+        dispatchGroup.enter()
         queue.async {
             self.workers?.forEach { worker in
-                self.dispatchGroup.enter()
                 self.signPost.message("🧙🏻‍♂️ \(worker.sourcery.name)")
-                
+
+                self.dispatchGroup.enter()                
                 worker.attempt {
                     do {
                         let output = try $0()
@@ -112,8 +115,8 @@ public class ZFileSourceryWorker: ZFileSourceryWorkerProtocol, AutoGenerateProto
                     }
                 }
             }
+            self.dispatchGroup.leave()
         }
-        dispatchGroup.leave()
     }
 
 }

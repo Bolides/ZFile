@@ -19,6 +19,14 @@ import Foundation
 
 
 
+// Generated protocol inline for ZFRunner -> See code in the file of that type
+    // sourcery:inline:ZFRunner.AutoGenerateProtocol
+    var sourcery: ZFileSourceryWorkerProtocol { get }
+    var fail: Bool { get }
+
+    func runSourcery() throws 
+    func runTests() throws 
+    // sourcery:end
 // Generated protocol inline for ZFileSourceryWorker -> See code in the file of that type
     // sourcery:inline:ZFileSourceryWorker.AutoGenerateProtocol
     static var queue: HighwayDispatchProtocol { get }
@@ -26,6 +34,8 @@ import Foundation
     var dependencies: SwiftPackageDependenciesProtocol { get }
     var sourceryBuilder: SourceryBuilderProtocol { get }
     var dump: SwiftPackageDumpProtocol { get }
+    var terminal: TerminalWorkerProtocol { get }
+    var dispatchGroup: DispatchGroup { get }
 
     init(
       dependencies: SwiftPackageDependenciesProtocol,

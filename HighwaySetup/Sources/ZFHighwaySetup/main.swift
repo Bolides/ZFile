@@ -16,25 +16,20 @@ import ZFRunner
 let signPost = SignPost.shared
 let dispatchGroup = DispatchGroup()
 
-var sourceryWorker: ZFileSourceryWorker?
+var zfRunner: ZFRunner?
 
 do {
     let dependencies = try SwiftPackageDependencyService().swiftPackage
     let dump = try SwiftPackageDumpService(swiftPackageDependencies: dependencies).swiftPackageDump
     
-    sourceryWorker = try ZFileSourceryWorker(dependencies: dependencies, dump: dump, dispatchGroup: dispatchGroup)
-
-    signPost.message("🚀 ZFile automate started ... ")
-    signPost.message("🚀 Sourcery started ... ")
-
-    try sourceryWorker?.attemptCreateWorkers()
+    let sourceryWorker = try ZFileSourceryWorker(dependencies: dependencies, dump: dump, dispatchGroup: dispatchGroup)
+    zfRunner = ZFRunner(sourcery: sourceryWorker)
     
-    dispatchGroup.enter()
-    sourceryWorker?.attemptRunSourcery()
+    try zfRunner?.runSourcery()
     
     dispatchGroup.notify(queue: DispatchQueue.main) {
         
-        guard let fail = sourceryWorker?.fail, !fail else {
+        guard let fail = zfRunner?.fail, !fail else {
             signPost.error("")
             exit(EXIT_FAILURE)
         }
