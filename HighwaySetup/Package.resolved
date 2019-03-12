@@ -33,8 +33,8 @@
         "repositoryURL": "https://www.github.com/doozMen/Highway",
         "state": {
           "branch": null,
-          "revision": "13dabcbf244e1ed591a2fa9e97b888a52f5217b8",
-          "version": "2.4.9"
+          "revision": "e767798750a8b32622a3f7b4e08d903740192f16",
+          "version": "2.4.10"
         }
       },
       {
@@ -105,8 +105,8 @@
         "repositoryURL": "https://www.github.com/doozMen/Sourcery",
         "state": {
           "branch": null,
-          "revision": "5d5e0b7cc4e40428deb14dd5bac38d31a241d97e",
-          "version": "0.16.3"
+          "revision": "71e34e576d1723d710b66655d22e67db38229a39",
+          "version": "0.16.4"
         }
       },
       {

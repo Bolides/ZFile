@@ -13,9 +13,9 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://www.github.com/doozMen/Highway", "2.4.9"..<"3.0.0"),
-        .package(url: "https://www.github.com/doozMen/template-sourcery", "1.3.2"..<"2.0.0"),
-        .package(url: "https://www.github.com/doozMen/ZFile", "2.0.0"..<"3.0.0"),
+        .package(url: "https://www.github.com/doozDev/Highway", "2.4.10"..<"3.0.0"),
+        .package(url: "https://www.github.com/doozDev/template-sourcery", "1.3.2"..<"2.0.0"),
+        .package(url: "https://www.github.com/doozDev/ZFile", "2.0.0"..<"3.0.0"),
         .package(url: "https://www.github.com/doozMen/SignPost", "1.0.0"..<"2.0.0")
     ],
     targets: [
