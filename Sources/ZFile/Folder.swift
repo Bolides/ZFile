@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import os
 /**
  *  Class representing a folder that's stored by a file system
  *

@@ -9,11 +9,11 @@
 import Arguments
 import Foundation
 import GitHooks
+import Highway
 import SignPost
 import SourceryWorker
 import SwiftFormatWorker
 import Terminal
-import Highway
 import ZFile
 
 let signPost = SignPost.shared
@@ -21,21 +21,21 @@ let dispatchGroup = DispatchGroup()
 
 var zfRunner: HighwayRunner?
 
-func handleTestOutput(_ testOutput: @escaping HighwayRunner.SyncTestOutput) { do { signPost.verbose( "\(try testOutput())" ) } catch { signPost.error("\(error)") } }
-func handleSourceryOutput(_ sourceryOutput: @escaping SourceryWorker.SyncOutput) { do { signPost.verbose( "\(try sourceryOutput())" ) } catch { signPost.error("\(error)") } }
-func handleSwiftformat(_ sourceryOutput: @escaping HighwayRunner.SyncSwiftformat) { do { signPost.verbose( "\(try sourceryOutput())" ) } catch { signPost.error("\(error)") } }
+func handleTestOutput(_ testOutput: @escaping HighwayRunner.SyncTestOutput) { do { signPost.verbose("\(try testOutput())") } catch { signPost.error("\(error)") } }
+func handleSourceryOutput(_ sourceryOutput: @escaping SourceryWorker.SyncOutput) { do { signPost.verbose("\(try sourceryOutput())") } catch { signPost.error("\(error)") } }
+func handleSwiftformat(_ sourceryOutput: @escaping HighwayRunner.SyncSwiftformat) { do { signPost.verbose("\(try sourceryOutput())") } catch { signPost.error("\(error)") } }
 
 signPost.message("🚀 ZFHighwaySetup ...")
 do
 {
     let setupDependencies = try DependencyService().dependency
     let setupRoot = try setupDependencies.srcRoot()
-    
+
     FileManager.default.changeCurrentDirectoryPath(try setupRoot.parentFolder().path)
-    
+
     let rootDependencies = try DependencyService().dependency
-    
-    let highway = try Highway(srcRootDependencies: rootDependencies, extraFolders: [])
+
+    let highway = try Highway(srcRootDependencies: rootDependencies, extraFolders: [setupRoot])
 
     zfRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 

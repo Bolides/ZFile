@@ -14,7 +14,7 @@ let package = Package(
         .library(
             name: "ZFileMock",
             targets: ["ZFileMock"]
-        )
+        ),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -22,7 +22,7 @@ let package = Package(
         .package(url: "https://github.com/Quick/Nimble", from: "7.0.0"),
         .package(url: "https://www.github.com/doozMen/SignPost", from: "1.0.0"),
         .package(url: "https://www.github.com/dooZDev/template-sourcery", "1.3.3" ..< "2.0.0"),
-        .package(url: "https://www.github.com/doozMen/Sourcery", "0.16.3" ..< "1.0.0")
+        .package(url: "https://www.github.com/doozMen/Sourcery", "0.16.3" ..< "1.0.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.

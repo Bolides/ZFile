@@ -1,24 +1,30 @@
 import Foundation
+import SignPost
 import SourceryAutoProtocols
 import ZFile
-import SignPost
+
 
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
-
-
-
-
-
-
-
-
-
-
-
+import SignPost
 
 let signPost = SignPost.shared
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // MARK: - BundleProtocolMock
 
@@ -68,7 +74,6 @@ open class BundleProtocolMock: BundleProtocol {
               // You should implement FileProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -116,7 +121,6 @@ open class BundleProtocolMock: BundleProtocol {
               // You should implement String
 
               throw error
-
           }
           return returnValue
       }
@@ -129,10 +133,6 @@ open class BundleProtocolMock: BundleProtocol {
 // MARK: - FileProtocolMock
 
 open class FileProtocolMock: FileProtocol {
-    public required init?(possbilyInvalidPath: String) {
-        return nil
-    }
-    
 
 
   public  var localizedDate: String {
@@ -206,7 +206,6 @@ open class FileProtocolMock: FileProtocol {
               // You should implement [String]
 
               throw error
-
           }
           return returnValue
       }
@@ -252,7 +251,6 @@ open class FileProtocolMock: FileProtocol {
               // You should implement Data
 
               throw error
-
           }
           return returnValue
       }
@@ -298,7 +296,6 @@ open class FileProtocolMock: FileProtocol {
               // You should implement String
 
               throw error
-
           }
           return returnValue
       }
@@ -344,7 +341,6 @@ open class FileProtocolMock: FileProtocol {
               // You should implement Int
 
               throw error
-
           }
           return returnValue
       }
@@ -602,7 +598,6 @@ open class FileProtocolMock: FileProtocol {
               // You should implement FileProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -644,6 +639,23 @@ open class FileProtocolMock: FileProtocol {
   }
 
 
+  // MARK: - <init?> - parameters
+
+  public var initPossbilyInvalidPathReceivedPossbilyInvalidPath: String?
+
+  // MARK: - <init?> - closure mocks
+
+  public var initPossbilyInvalidPathClosure: ((String)  -> Void)? = nil
+
+
+  // MARK: - <init?> - initializer mocked
+
+  public required init?(possbilyInvalidPath: String) {
+      initPossbilyInvalidPathReceivedPossbilyInvalidPath = possbilyInvalidPath
+    initPossbilyInvalidPathClosure?(possbilyInvalidPath)
+  }
+
+
   // MARK: - <parentFolder> - parameters
 
   public var parentFolderThrowableError: Error?
@@ -682,7 +694,6 @@ open class FileProtocolMock: FileProtocol {
               // You should implement FolderProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -924,7 +935,6 @@ open class FileSystemProtocolMock: FileSystemProtocol {
               // You should implement FileProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -972,7 +982,6 @@ open class FileSystemProtocolMock: FileSystemProtocol {
               // You should implement FileProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -1020,7 +1029,6 @@ open class FileSystemProtocolMock: FileSystemProtocol {
               // You should implement FileProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -1068,7 +1076,6 @@ open class FileSystemProtocolMock: FileSystemProtocol {
               // You should implement FileProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -1116,7 +1123,6 @@ open class FileSystemProtocolMock: FileSystemProtocol {
               // You should implement FolderProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -1164,7 +1170,6 @@ open class FileSystemProtocolMock: FileSystemProtocol {
               // You should implement FolderProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -1203,11 +1208,9 @@ open class FileSystemProtocolMock: FileSystemProtocol {
 
               // You should implement FileSystem.Item.Kind?
 
-              signPost.message("❌ \(error)")
+              signPost.error("❌ \(error)")
 
               return nil
-
-
           }
           return returnValue
       }
@@ -1220,11 +1223,6 @@ open class FileSystemProtocolMock: FileSystemProtocol {
 // MARK: - FolderProtocolMock
 
 open class FolderProtocolMock: FolderProtocol {
-    public required init?(possbilyInvalidPath: String) {
-        return nil
-        
-    }
-    
 
 
   public  var path: String {
@@ -1293,7 +1291,6 @@ open class FolderProtocolMock: FolderProtocol {
               // You should implement FolderProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -1339,7 +1336,6 @@ open class FolderProtocolMock: FolderProtocol {
               // You should implement FileProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -1387,7 +1383,6 @@ open class FolderProtocolMock: FolderProtocol {
               // You should implement FileProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -1435,7 +1430,6 @@ open class FolderProtocolMock: FolderProtocol {
               // You should implement FileProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -1474,11 +1468,9 @@ open class FolderProtocolMock: FolderProtocol {
 
               // You should implement Bool
 
-              signPost.message("❌ \(error)")
+              signPost.error("❌ \(error)")
 
               fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
-
-
           }
           return returnValue
       }
@@ -1526,7 +1518,6 @@ open class FolderProtocolMock: FolderProtocol {
               // You should implement FolderProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -1574,7 +1565,6 @@ open class FolderProtocolMock: FolderProtocol {
               // You should implement FolderProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -1622,7 +1612,6 @@ open class FolderProtocolMock: FolderProtocol {
               // You should implement FolderProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -1661,11 +1650,9 @@ open class FolderProtocolMock: FolderProtocol {
 
               // You should implement Bool
 
-              signPost.message("❌ \(error)")
+              signPost.error("❌ \(error)")
 
               fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
-
-
           }
           return returnValue
       }
@@ -1713,7 +1700,6 @@ open class FolderProtocolMock: FolderProtocol {
               // You should implement FileProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -1761,7 +1747,6 @@ open class FolderProtocolMock: FolderProtocol {
               // You should implement FileProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -1809,7 +1794,6 @@ open class FolderProtocolMock: FolderProtocol {
               // You should implement FileProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -1857,7 +1841,6 @@ open class FolderProtocolMock: FolderProtocol {
               // You should implement FileProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -1905,7 +1888,6 @@ open class FolderProtocolMock: FolderProtocol {
               // You should implement FolderProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -1953,7 +1935,6 @@ open class FolderProtocolMock: FolderProtocol {
               // You should implement FolderProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -1992,11 +1973,9 @@ open class FolderProtocolMock: FolderProtocol {
 
               // You should implement FileSystemSequence<File>
 
-              signPost.message("❌ \(error)")
+              signPost.error("❌ \(error)")
 
               fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
-
-
           }
           return returnValue
       }
@@ -2044,7 +2023,6 @@ open class FolderProtocolMock: FolderProtocol {
               // You should implement Folder
 
               throw error
-
           }
           return returnValue
       }
@@ -2090,7 +2068,6 @@ open class FolderProtocolMock: FolderProtocol {
               // You should implement URL
 
               throw error
-
           }
           return returnValue
       }
@@ -2132,6 +2109,23 @@ open class FolderProtocolMock: FolderProtocol {
   }
 
 
+  // MARK: - <init?> - parameters
+
+  public var initPossbilyInvalidPathReceivedPossbilyInvalidPath: String?
+
+  // MARK: - <init?> - closure mocks
+
+  public var initPossbilyInvalidPathClosure: ((String)  -> Void)? = nil
+
+
+  // MARK: - <init?> - initializer mocked
+
+  public required init?(possbilyInvalidPath: String) {
+      initPossbilyInvalidPathReceivedPossbilyInvalidPath = possbilyInvalidPath
+    initPossbilyInvalidPathClosure?(possbilyInvalidPath)
+  }
+
+
   // MARK: - <parentFolder> - parameters
 
   public var parentFolderThrowableError: Error?
@@ -2170,7 +2164,6 @@ open class FolderProtocolMock: FolderProtocol {
               // You should implement FolderProtocol
 
               throw error
-
           }
           return returnValue
       }
@@ -2389,7 +2382,6 @@ open class ItemProtocolMock: ItemProtocol {
               // You should implement FolderProtocol
 
               throw error
-
           }
           return returnValue
       }
