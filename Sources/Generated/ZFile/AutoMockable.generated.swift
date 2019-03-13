@@ -131,6 +131,10 @@ open class BundleProtocolMock: BundleProtocol {
 // MARK: - FileProtocolMock
 
 open class FileProtocolMock: FileProtocol {
+    public required init?(possbilyInvalidPath: String) {
+        return nil
+    }
+    
 
 
   public  var localizedDate: String {
@@ -1218,6 +1222,11 @@ open class FileSystemProtocolMock: FileSystemProtocol {
 // MARK: - FolderProtocolMock
 
 open class FolderProtocolMock: FolderProtocol {
+    public required init?(possbilyInvalidPath: String) {
+        return nil
+        
+    }
+    
 
 
   public  var path: String {
