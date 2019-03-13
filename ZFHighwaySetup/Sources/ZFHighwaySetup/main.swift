@@ -35,7 +35,7 @@ do
     
     let rootDependencies = try DependencyService().dependency
     
-    let highway = try Highway(srcRootDependencies: rootDependencies, extraFolders: [setupRoot])
+    let highway = try Highway(srcRootDependencies: rootDependencies, extraFolders: [])
 
     zfRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 

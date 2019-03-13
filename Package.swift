@@ -14,15 +14,7 @@ let package = Package(
         .library(
             name: "ZFileMock",
             targets: ["ZFileMock"]
-        ),
-        .library(
-            name: "FoundationGenericHelper",
-            targets: ["FoundationGenericHelper"]
-        ),
-        .library(
-            name: "FoundationGenericHelperMock",
-            targets: ["FoundationGenericHelperMock"]
-        ),
+        )
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -37,21 +29,12 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "ZFile",
-            dependencies: ["SourceryAutoProtocols", "FoundationGenericHelper"]
-        ),
-        .target(
-            name: "FoundationGenericHelperMock",
-            dependencies: ["FoundationGenericHelper", "SignPost"],
-            path: "Sources/Generated/FoundationGenericHelper"
+            dependencies: ["SourceryAutoProtocols"]
         ),
         .target(
             name: "ZFileMock",
-            dependencies: ["ZFile", "FoundationGenericHelper", "SignPost"],
+            dependencies: ["ZFile", "SignPost"],
             path: "Sources/Generated/ZFile"
-        ),
-        .target(
-            name: "FoundationGenericHelper",
-            dependencies: []
         ),
         .testTarget(
             name: "ZFileTests",

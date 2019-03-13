@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import FoundationGenericHelper
 import SourceryAutoProtocols
 
 // MARK: - Bundle complies to BundleProtocol
