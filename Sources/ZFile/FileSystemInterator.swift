@@ -59,9 +59,9 @@ public class FileSystemIterator<T: ItemProtocol>: IteratorProtocol where T: File
         }
 
         let nextItemPath = folder.path + nextItemName
-        let nextItem = try? T(path: nextItemPath)
+        let nextItem = T(possbilyInvalidPath: nextItemPath)
 
-        if recursive, let folder = (nextItem as? Folder) ?? (try? Folder(path: nextItemPath))
+        if recursive, let folder = (nextItem as? Folder) ?? Folder(possbilyInvalidPath: nextItemPath)
         {
             let child = FileSystemIterator(folder: folder, recursive: true, includeHidden: includeHidden, using: fileManager)
             childIteratorQueue.append(child)

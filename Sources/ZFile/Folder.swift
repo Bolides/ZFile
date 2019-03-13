@@ -122,6 +122,8 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
         return FileSystem(using: .default).temporaryFolder
     }
 
+    // MARK: - Init
+
     public required init()
     {
         try! super.init(path: "\(Date().timeIntervalSince1970)", kind: .folder, using: .default)
@@ -192,6 +194,25 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
     {
         try super.init(path: folder.path.appending(relativePath), kind: .folder, using: fileManager)
     }
+
+    public required init?(possbilyInvalidPath: String)
+    {
+        var path = possbilyInvalidPath
+
+        if path.isEmpty
+        {
+            path = FileManager.default.currentDirectoryPath
+        }
+
+        if !path.hasSuffix("/")
+        {
+            path += "/"
+        }
+
+        super.init(possiblyInvalidPath: path, kind: .folder, using: .default)
+    }
+
+    // MARK: - Public fundtion
 
     /**
      Most recent folder

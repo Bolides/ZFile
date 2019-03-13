@@ -12,3 +12,5 @@ xcuserdata
 /ZFHighwaySetup/Sources/.sourcery-ZFHighwaySetup.yml
 /ZFHighwaySetup/Sources/.sourcery-ZFRunner.yml
 /ZFile.xcodeproj
+/Sources/.sourcery-FoundationGenericHelper.yml
+/Sources/.sourcery-ZFile.yml

@@ -40,6 +40,7 @@ public protocol FileSystemIterable
     init() throws
     /// Initialize an instance with a path and a file manager
     init(path: String) throws
+    init?(possbilyInvalidPath: String)
 }
 
 // MARK: - ItemProtocol
@@ -229,6 +230,8 @@ public class FileSystem: FileSystemProtocol
         let kind: Kind
         let fileManager: FileManager
 
+        // MARK: - Init
+
         init(path: String, kind: Kind, using fileManager: FileManager) throws
         {
             guard !path.isEmpty else
@@ -241,6 +244,35 @@ public class FileSystem: FileSystemProtocol
             guard fileManager.itemKind(atPath: path) == kind else
             {
                 throw PathError.invalid(path)
+            }
+
+            self.path = path
+            self.fileManager = fileManager
+            self.kind = kind
+
+            let pathComponents = path.pathComponents
+
+            switch kind
+            {
+            case .file:
+                name = pathComponents.last!
+            case .folder:
+                name = pathComponents[pathComponents.count - 2]
+            }
+        }
+
+        public init?(possiblyInvalidPath: String, kind: Kind, using fileManager: FileManager)
+        {
+            guard !possiblyInvalidPath.isEmpty else
+            {
+                return nil
+            }
+
+            let _path = try? fileManager.absolutePath(for: possiblyInvalidPath)
+
+            guard let path = _path, fileManager.itemKind(atPath: path) == kind else
+            {
+                return nil
             }
 
             self.path = path

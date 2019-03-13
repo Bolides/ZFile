@@ -13,51 +13,57 @@ import SignPost
 import SourceryWorker
 import SwiftFormatWorker
 import Terminal
-import ZFRunner
+import Highway
+import ZFile
 
 let signPost = SignPost.shared
 let dispatchGroup = DispatchGroup()
 
-var zfRunner: ZFRunner?
+var zfRunner: HighwayRunner?
 
+func handleTestOutput(_ testOutput: @escaping HighwayRunner.SyncTestOutput) { do { signPost.verbose( "\(try testOutput())" ) } catch { signPost.error("\(error)") } }
+func handleSourceryOutput(_ sourceryOutput: @escaping SourceryWorker.SyncOutput) { do { signPost.verbose( "\(try sourceryOutput())" ) } catch { signPost.error("\(error)") } }
+func handleSwiftformat(_ sourceryOutput: @escaping HighwayRunner.SyncSwiftformat) { do { signPost.verbose( "\(try sourceryOutput())" ) } catch { signPost.error("\(error)") } }
+
+signPost.message("🚀 ZFHighwaySetup ...")
 do
 {
-    let dependencies = try SwiftPackageDependencyService().swiftPackage
-    let dump = try SwiftPackageDumpService(swiftPackageDependencies: dependencies).swiftPackageDump
+    let setupDependencies = try DependencyService().dependency
+    let setupRoot = try setupDependencies.srcRoot()
+    
+    FileManager.default.changeCurrentDirectoryPath(try setupRoot.parentFolder().path)
+    
+    let rootDependencies = try DependencyService().dependency
+    
+    let highway = try Highway(srcRootDependencies: rootDependencies, extraFolders: [setupRoot])
 
-    FileManager.default.changeCurrentDirectoryPath(try dependencies.srcRoot().parentFolder().path)
+    zfRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 
-    let sourceryWorker = try ZFileSourceryWorker(dependencies: dependencies, dump: dump, dispatchGroup: dispatchGroup)
-    let swiftformat = try SwiftFormatWorker(folderToFormatRecursive: try dependencies.srcRoot().parentFolder())
-    let gitHooks = GitHooksWorker(swiftPackageDependencies: dependencies, swiftPackageDump: dump, gitHooksFolder: try dependencies.srcRoot().parentFolder().subfolder(named: ".git/hooks"))
-
-    zfRunner = ZFRunner(sourcery: sourceryWorker, swiftformat: swiftformat, gitHooks: gitHooks)
-
-    try zfRunner?.runSourcery()
+    zfRunner?.runSourcery(handleSourceryOutput)
 
     dispatchGroup.notify(queue: DispatchQueue.main)
     {
-        guard let fail = zfRunner?.fail, !fail else
+        guard let errors = zfRunner?.errors, errors.count == 0 else
         {
             signPost.error("")
             exit(EXIT_FAILURE)
         }
         do
         {
-            try zfRunner?.addTSHighWaySetupToGitHooks()
+            try zfRunner?.addGithooksPrePush()
 
-            zfRunner?.runSwiftFormat()
+            zfRunner?.runSwiftformat(handleSwiftformat)
             dispatchGroup.wait()
 
-            try zfRunner?.runTests()
+            zfRunner?.runTests(handleTestOutput)
 
-            signPost.message("🚀 ZFile automate ✅")
+            signPost.message("🚀 ZFHighwaySetup ✅")
             exit(EXIT_SUCCESS)
         }
         catch
         {
             signPost.error("\(error)")
-            signPost.error("🚀 ZFile automate ❌")
+            signPost.message("🚀 ZFHighwaySetup ❌")
             exit(EXIT_FAILURE)
         }
     }
@@ -67,5 +73,6 @@ do
 catch
 {
     signPost.error("\(error)")
+    signPost.message("🚀 ZFHighwaySetup ❌")
     exit(EXIT_FAILURE)
 }

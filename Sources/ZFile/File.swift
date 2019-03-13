@@ -75,6 +75,8 @@ open class File: FileSystem.Item, FileProtocol, AutoGenerateSelectiveProtocol
         }
     }
 
+    // MARK: - Init
+
     public required init() throws
     {
         try super.init(path: "\(Date().timeIntervalSince1970)", kind: .file, using: .default)
@@ -98,6 +100,13 @@ open class File: FileSystem.Item, FileProtocol, AutoGenerateSelectiveProtocol
     {
         try super.init(path: path, kind: .file, using: .default)
     }
+
+    public required init?(possbilyInvalidPath: String)
+    {
+        super.init(possiblyInvalidPath: possbilyInvalidPath, kind: .file, using: .default)
+    }
+
+    // MARK: - Public Functions
 
     public func url() throws -> URL
     {

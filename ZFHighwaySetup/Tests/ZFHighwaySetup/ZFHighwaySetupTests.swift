@@ -1,24 +1,14 @@
 import Nimble
 import Quick
-import ZFRunner
+import Highway
 
-class ZFRunnerSpec: QuickSpec
+class ZFHighwaySetupSpec: QuickSpec
 {
     override func spec()
     {
-        describe("ZFRunner")
+        pending("⚠️ ZFHighwaySetup")
         {
-            var sut: ZFRunner?
-
-//            var terminal
-//            beforeEach {
-//
-//                sut = ZFRunner(sourcery: <#T##ZFileSourceryWorkerProtocol#>, signPost: <#T##SignPostProtocol#>)
-//            }
-//
-//            it("<#describe what should happen#>") {
-//
-//            }
+ 
         }
     }
 }
