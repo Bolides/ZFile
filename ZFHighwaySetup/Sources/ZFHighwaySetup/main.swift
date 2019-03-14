@@ -29,9 +29,9 @@ signPost.message("🚀 ZFHighwaySetup ...")
 do
 {
     let setupRoot = try File(path: #file).parentFolder().parentFolder().parentFolder()
-    let rootPackage = try Highway.package(for: setupRoot.parentFolder())
+    let rootPackage = (package: try Highway.package(for: setupRoot.parentFolder()), executable: "None")
 
-    let highway = try Highway(rootPackage: rootPackage, highwaySetupPackage: nil)
+    let highway = try Highway(package: rootPackage, githooksType: nil)
 
     zfRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 
@@ -44,24 +44,25 @@ do
             signPost.error("")
             exit(EXIT_FAILURE)
         }
-        do
+        zfRunner?.runSwiftformat(handleSwiftformat)
+        dispatchGroup.wait()
+
+        guard let errors2 = zfRunner?.errors, errors2.count == 0 else
         {
-            try zfRunner?.addGithooksPrePush()
-
-            zfRunner?.runSwiftformat(handleSwiftformat)
-            dispatchGroup.wait()
-
-            zfRunner?.runTests(handleTestOutput)
-
-            signPost.message("🚀 ZFHighwaySetup ✅")
-            exit(EXIT_SUCCESS)
-        }
-        catch
-        {
-            signPost.error("\(error)")
-            signPost.message("🚀 ZFHighwaySetup ❌")
+            signPost.error("")
             exit(EXIT_FAILURE)
         }
+
+        zfRunner?.runTests(handleTestOutput)
+        dispatchGroup.wait()
+        guard let errors3 = zfRunner?.errors, errors3.count == 0 else
+        {
+            signPost.error("")
+            exit(EXIT_FAILURE)
+        }
+
+        signPost.message("🚀 ZFHighwaySetup ✅")
+        exit(EXIT_SUCCESS)
     }
 
     dispatchMain()
