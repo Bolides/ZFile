@@ -33,8 +33,8 @@
         "repositoryURL": "https://www.github.com/doozDev/Highway",
         "state": {
           "branch": null,
-          "revision": "75d34dcf19129b738dc18ca1efef64aeac5de751",
-          "version": "2.4.18"
+          "revision": "38595dfa112f5b9220adcffa7833a6ce3d2d175c",
+          "version": "2.4.20"
         }
       },
       {
@@ -168,8 +168,8 @@
         "repositoryURL": "https://www.github.com/doozMen/template-sourcery",
         "state": {
           "branch": null,
-          "revision": "5997146f39c2955970cecec8c6a8e5c0225c1b45",
-          "version": "1.3.3"
+          "revision": "f45e97d22c567fbce08dacff1d6655d1ddf6ab65",
+          "version": "1.4.1"
         }
       },
       {

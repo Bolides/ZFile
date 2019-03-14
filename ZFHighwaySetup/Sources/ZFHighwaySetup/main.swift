@@ -28,14 +28,10 @@ func handleSwiftformat(_ sourceryOutput: @escaping HighwayRunner.SyncSwiftformat
 signPost.message("🚀 ZFHighwaySetup ...")
 do
 {
-    let setupDependencies = try DependencyService().dependency
-    let setupRoot = try setupDependencies.srcRoot()
+    let setupRoot = try File(path: #file).parentFolder().parentFolder().parentFolder()
+    let rootPackage = try Highway.package(for: setupRoot.parentFolder())
 
-    FileManager.default.changeCurrentDirectoryPath(try setupRoot.parentFolder().path)
-
-    let rootDependencies = try DependencyService().dependency
-
-    let highway = try Highway(srcRootDependencies: rootDependencies, extraFolders: [setupRoot])
+    let highway = try Highway(rootPackage: rootPackage, highwaySetupPackage: nil)
 
     zfRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 
