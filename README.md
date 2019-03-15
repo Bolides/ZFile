@@ -8,7 +8,29 @@ It builds:
 2. FoundationGenericHelpers
 3. Mocks for both
 
-# Build ZFile
+# Build setup
+
+ZFile is setup using [Highway](https://www.github.com/dooZdev/Highway)
+
+For the first use do
+
+``` bash
+#!/bin/sh
+
+cd /Users/stijnwillems/Documents/dooZ/Open/template-sourcery/ZFHighwaySetup
+# Build setup executable
+if [ ! -f ./.build/x86_64-apple-macosx10.10/release/ZFHighwaySetup ]; then
+echo "TSHighwaySetup, not found - building for source"
+swift build --product TSHighwaySetup -c release --static-swift-stdlib
+fi
+
+# Execute the script
+./.build/x86_64-apple-macosx10.10/release/ZFHighwaySetup
+# Allow push on success
+```
+After that for every push you do code will be generated and tast will run before the push can complete successfully.
+
+# Add ZFile to your project
 
 ## Swift Package
 

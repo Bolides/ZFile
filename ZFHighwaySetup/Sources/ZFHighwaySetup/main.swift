@@ -25,15 +25,21 @@ func handleTestOutput(_ testOutput: @escaping HighwayRunner.SyncTestOutput) { do
 func handleSourceryOutput(_ sourceryOutput: @escaping SourceryWorker.SyncOutput) { do { signPost.verbose("\(try sourceryOutput())") } catch { signPost.error("\(error)") } }
 func handleSwiftformat(_ sourceryOutput: @escaping HighwayRunner.SyncSwiftformat) { do { signPost.verbose("\(try sourceryOutput())") } catch { signPost.error("\(error)") } }
 
-signPost.message("🚀 ZFHighwaySetup ...")
 do
 {
-    let setupRoot = try File(path: #file).parentFolder().parentFolder().parentFolder()
-    let rootPackage = (package: try Highway.package(for: setupRoot.parentFolder()), executable: "None")
+    let gitHooksSetup = GithooksSetup()
 
-    let highway = try Highway(package: rootPackage, githooksType: nil)
+    let zfileRoot = try File(path: #file).parentFolder().parentFolder().parentFolder().parentFolder()
+    let dependencyService = DependencyService(in: zfileRoot)
+    let zfilePackage = try Highway.package(for: zfileRoot, dependencyService: dependencyService)
+    signPost.message("🚀 \(zfilePackage.name) ...")
+
+    let zfHighwaySetupFolder = try zfileRoot.subfolder(named: "ZFHighwaySetup")
+    let highway = try Highway(rootPackage: zfilePackage, highwaySetupPackage: nil, dependencyService: dependencyService, swiftPackageWithSourceryFolder: zfHighwaySetupFolder)
 
     zfRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
+
+    try gitHooksSetup.write(in: zfileRoot)
 
     zfRunner?.runSourcery(handleSourceryOutput)
 

@@ -7,9 +7,7 @@ import ZFile
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
-import SignPost
 
-let signPost = SignPost.shared
 
 
 
@@ -1208,7 +1206,7 @@ open class FileSystemProtocolMock: FileSystemProtocol {
 
               // You should implement FileSystem.Item.Kind?
 
-              signPost.error("❌ \(error)")
+              print("❌ \(error)")
 
               return nil
           }
@@ -1468,7 +1466,7 @@ open class FolderProtocolMock: FolderProtocol {
 
               // You should implement Bool
 
-              signPost.error("❌ \(error)")
+              print("❌ \(error)")
 
               fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
           }
@@ -1650,7 +1648,7 @@ open class FolderProtocolMock: FolderProtocol {
 
               // You should implement Bool
 
-              signPost.error("❌ \(error)")
+              print("❌ \(error)")
 
               fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
           }
@@ -1973,7 +1971,7 @@ open class FolderProtocolMock: FolderProtocol {
 
               // You should implement FileSystemSequence<File>
 
-              signPost.error("❌ \(error)")
+              print("❌ \(error)")
 
               fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
           }
