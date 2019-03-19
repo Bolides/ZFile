@@ -1,4 +1,5 @@
-# ZFile [![Build Status](https://app.bitrise.io/app/75d3763f28ab948f/status.svg?token=4g01pJlpXjphb32XTKik2g&branch=master)](https://app.bitrise.io/app/75d3763f28ab948f)
+# ZFile 
+> Test - Integrate - Build status: [@dooZdev ![Build Status](https://app.bitrise.io/app/75d3763f28ab948f/status.svg?token=4g01pJlpXjphb32XTKik2g&branch=master)](https://app.bitrise.io/app/75d3763f28ab948f) [@Bolides ![Build Status](https://app.bitrise.io/app/4faaf8e78ed06df4/status.svg?token=dxnoGo0MM3jHeiS8SGBokQ&branch=master)](https://app.bitrise.io/app/4faaf8e78ed06df4)
 
 An effort to have a throwable alternative to using files
 
