@@ -7,11 +7,11 @@
 //
 
 import Foundation
-import SourceryAutoProtocols
 
 // MARK: - Bundle complies to BundleProtocol
 
-public protocol BundleProtocol: AutoMockable
+// sourcery:AutoMockable
+public protocol BundleProtocol
 {
     /// sourcery:inline:Bundle.AutoGenerateProtocol
 
@@ -20,7 +20,8 @@ public protocol BundleProtocol: AutoMockable
     /// sourcery:end
 }
 
-extension Bundle: BundleProtocol, AutoGenerateProtocol
+// sourcery:AutoGenerateProtocol
+extension Bundle: BundleProtocol
 {
     public enum Error: Swift.Error
     {

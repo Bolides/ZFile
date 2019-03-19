@@ -21,25 +21,24 @@ let package = Package(
         ),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/Quick/Quick", from: "1.3.0"),
-        .package(url: "https://github.com/Quick/Nimble", from: "7.0.0"),
-        .package(url: "https://www.github.com/doozMen/SignPost", from: "1.0.0"),
-        .package(url: "https://www.github.com/dooZdev/template-sourcery", "1.3.7" ..< "2.0.0"),
+        
+        // MARK: - Testing
+        .package(url: "https://github.com/Quick/Quick", "1.3.0" ..< "2.1.0"),
+        .package(url: "https://github.com/Quick/Nimble", "7.0.0" ..< "8.1.0"),
     ],
     targets: [
         // MARK: - Target
 
         .target(
             name: "ZFile",
-            dependencies: ["SourceryAutoProtocols"]
+            dependencies: []
         ),
 
         // MARK: - Target - Mock
 
         .target(
             name: "ZFileMock",
-            dependencies: ["ZFile", "SignPost"],
+            dependencies: ["ZFile"],
             path: "Sources/Generated/ZFile"
         ),
 

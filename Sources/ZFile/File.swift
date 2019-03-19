@@ -6,17 +6,16 @@
 //
 
 import Foundation
-import SourceryAutoProtocols
 
 /**
  *  Class representing a file that's stored by a file system
  *
  *  You initialize this class with a path, or by asking a folder to return a file for a given name
  */
-// sourcery:skipPublicInit
-public protocol FileProtocol: ItemProtocol, FileSystemIterable, AutoMockable
+// sourcery:AutoMockable
+public protocol FileProtocol: ItemProtocol, FileSystemIterable
 {
-    /// sourcery:inline:File.AutoGenerateSelectiveProtocol
+    // sourcery:inline:File.AutoGenerateSelectiveProtocol
     var localizedDate: String { get }
 
     func readAllLines() throws -> [String]
@@ -31,10 +30,11 @@ public protocol FileProtocol: ItemProtocol, FileSystemIterable, AutoMockable
     func append(string: String, encoding: String.Encoding) throws
     func copy(to folder: FolderProtocol) throws -> FileProtocol
 
-    /// sourcery:end
+    // sourcery:end
 }
 
-open class File: FileSystem.Item, FileProtocol, AutoGenerateSelectiveProtocol
+// sourcery:AutoGenerateSelectiveProtocol
+open class File: FileSystem.Item, FileProtocol
 {
     // sourcery:selectedForProtocol
     public func readAllLines() throws -> [String]
