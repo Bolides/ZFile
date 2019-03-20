@@ -21,8 +21,8 @@ let package = Package(
         ),
     ],
     dependencies: [
-        
         // MARK: - Testing
+
         .package(url: "https://github.com/Quick/Quick", "1.3.0" ..< "2.1.0"),
         .package(url: "https://github.com/Quick/Nimble", "7.0.0" ..< "8.1.0"),
     ],

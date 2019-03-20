@@ -31,11 +31,13 @@ do
 
     let zfileRoot = try File(path: #file).parentFolder().parentFolder().parentFolder().parentFolder()
     let dependencyService = DependencyService(in: zfileRoot)
-    let zfilePackage = try Highway.package(for: zfileRoot, dependencyService: dependencyService)
-    signPost.message("🚀 \(zfilePackage.name) ...")
+    let dumpService = DumpService(swiftPackageFolder: zfileRoot)
+    let package = try Highway.package(for: zfileRoot, dependencyService: dependencyService, dumpService: dumpService)
+    let sourceryBuilder = SourceryBuilder(dependencyService: DependencyService(in: try zfileRoot.subfolder(named: "ZFHighwaySetup")))
 
-    let zfHighwaySetupFolder = try zfileRoot.subfolder(named: "ZFHighwaySetup")
-    let highway = try Highway(rootPackage: zfilePackage, highwaySetupPackage: nil, dependencyService: dependencyService, swiftPackageWithSourceryFolder: zfHighwaySetupFolder)
+    let highway = try Highway(package: (package: package, executable: "ZFHighwaySetup"), dependencyService: dependencyService, sourceryBuilder: sourceryBuilder)
+
+    signPost.message("🚀 \(highway.package.package.name) ...")
 
     zfRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 
@@ -67,7 +69,7 @@ do
             exit(EXIT_FAILURE)
         }
 
-        signPost.message("🚀 ZFHighwaySetup ✅")
+        signPost.message("🚀 \(highway.package.package.name) ✅")
         exit(EXIT_SUCCESS)
     }
 

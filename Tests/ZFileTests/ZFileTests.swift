@@ -12,6 +12,8 @@ import SourceryAutoProtocols
 import ZFile
 import ZFileMock
 
+extension String: Swift.Error {}
+
 class FileSpec: QuickSpec
 {
     override func spec()
@@ -54,8 +56,11 @@ class FileSpec: QuickSpec
             {
                 it("throws for not implemented stuff")
                 {
+                    let expectedError = "implementErrorCaseFor(\"No returnValue implemented for copyToClosure\")"
                     expect { try sut.copy(to: FolderProtocolMock()) }
-                        .to(throwError(SourceryMockError.implementErrorCaseFor("No returnValue implemented for copyToClosure")))
+                        .to(throwError(closure: { actualError in
+                            expect ("\(actualError)") == expectedError
+                        }))
                 }
             }
         }

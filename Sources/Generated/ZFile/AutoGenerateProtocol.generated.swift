@@ -19,28 +19,6 @@ import Foundation
 
 
 
-// Generated protocol inline for Bundle -> See code in the file of that type
-    // sourcery:inline:Bundle.AutoGenerateProtocol
-
-    func fileforResource(with name: String, of type: String) throws  -> FileProtocol
-    func string(for key: AnyRawRepresentable<String>) throws  -> String
-    // sourcery:end
-// Selective Generated protocol inline for File -> See code in the file of that type
-    // sourcery:inline:File.AutoGenerateSelectiveProtocol
-    var localizedDate: String {  get }
-
-    func readAllLines() throws  -> [String]
-    func read() throws  -> Data
-    func readAsString() throws  -> String
-    func readAsInt() throws  -> Int
-    func write(data: Data) throws 
-    func write(string: String) throws 
-    func write(string: String, encoding: String.Encoding) throws 
-    func append(data: Data) throws 
-    func append(string: String) throws 
-    func append(string: String, encoding: String.Encoding) throws 
-    func copy(to folder: FolderProtocol) throws  -> FileProtocol
-    // sourcery:end
 // Generated protocol inline for  -> See code in the file of that type
 
 // Generated protocol inline for  -> See code in the file of that type
