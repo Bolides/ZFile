@@ -23,18 +23,23 @@ public struct GithooksSetup: GithooksSetupProtocol, AutoGenerateProtocol
     public static let shared: GithooksSetupProtocol = GithooksSetup()
 
     public static let script: String = """
-    #!/bin/sh
-    
-    cd ./ZFHighwaySetup
-    # Build setup executable
-    if [ ! -f ./.build/x86_64-apple-macosx10.10/release/ZFHighwaySetup ]; then
-    echo "TSHighwaySetup, not found - building for source"
-    swift build --product ZFHighwaySetup -c release --static-swift-stdlib
-    fi
-    
-    # Execute the script
-    ./.build/x86_64-apple-macosx10.10/release/ZFHighwaySetup
-    # Allow push on success
+        #!/usr/bin/env bash
+        # fail if any commands fails
+        set -e
+        # debug log
+        set -x
+
+        cd ./ZFHighwaySetup
+        # Build setup executable
+        if [ ! -f ./.build/x86_64-apple-macosx10.10/release/ZFHighwaySetup ]; then
+        echo "🚀 ZFHighwaySetup, not found - building ..."
+        swift build --product ZFHighwaySetup -c release --static-swift-stdlib
+        echo "🚀 ZFHighwaySetup, not found - building ✅"
+
+        fi
+
+        # Execute the script
+        ./.build/x86_64-apple-macosx10.10/release/ZFHighwaySetup
     """
 
     public func write(in folder: FolderProtocol) throws

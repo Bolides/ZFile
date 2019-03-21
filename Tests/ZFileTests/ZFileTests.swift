@@ -8,7 +8,6 @@
 
 import Nimble
 import Quick
-import SourceryAutoProtocols
 import ZFile
 import ZFileMock
 
@@ -59,7 +58,7 @@ class FileSpec: QuickSpec
                     let expectedError = "implementErrorCaseFor(\"No returnValue implemented for copyToClosure\")"
                     expect { try sut.copy(to: FolderProtocolMock()) }
                         .to(throwError(closure: { actualError in
-                            expect ("\(actualError)") == expectedError
+                            expect("\(actualError)") == expectedError
                         }))
                 }
             }
