@@ -16,7 +16,7 @@ let package = Package(
     dependencies: [
         // MARK: - External Packages
 
-        .package(url: "https://www.github.com/Bolides/Highway", "2.6.11" ..< "3.0.0"),
+        .package(url: "https://www.github.com/Bolides/Highway", "2.6.12" ..< "3.0.0"),
         .package(url: "https://www.github.com/Quick/Quick", "1.3.4" ..< "2.1.0"),
         .package(url: "https://www.github.com/Quick/Nimble", "7.3.4" ..< "8.1.0"),
         .package(url: "https://www.github.com/dooZdev/template-sourcery", "1.4.1" ..< "2.0.0"),
