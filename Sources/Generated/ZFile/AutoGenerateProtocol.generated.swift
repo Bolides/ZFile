@@ -68,6 +68,10 @@ import Foundation
     func createFolder(at path: String) throws  -> FolderProtocol
     func createFolderIfNeeded(at path: String) throws  -> FolderProtocol
     func itemKind(at path: String) -> FileSystem.Item.Kind?
+    func file(path: String) throws  -> FileProtocol
+    func file(possbilyInvalidPath: String) -> FileProtocol?
+    func folder(path: String) throws  -> FolderProtocol
+    func folder(possbilyInvalidPath: String) -> FolderProtocol?
     func cacheFolder() throws  -> Folder
     // sourcery:end
 // type.annotations.AutoGenerateProtocol for FileSystem end

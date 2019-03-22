@@ -29,6 +29,10 @@ public protocol FileSystemProtocol
     func createFolder(at path: String) throws -> FolderProtocol
     func createFolderIfNeeded(at path: String) throws -> FolderProtocol
     func itemKind(at path: String) -> FileSystem.Item.Kind?
+    func file(path: String) throws -> FileProtocol
+    func file(possbilyInvalidPath: String) -> FileProtocol?
+    func folder(path: String) throws -> FolderProtocol
+    func folder(possbilyInvalidPath: String) -> FolderProtocol?
     func cacheFolder() throws -> Folder
 
     // sourcery:end
@@ -440,6 +444,8 @@ public class FileSystem: FileSystemProtocol
         self.fileManager = fileManager
     }
 
+    // MARK: - File CREATE
+
     /**
      *  Create a new file at a given path
      *
@@ -547,9 +553,35 @@ public class FileSystem: FileSystemProtocol
         return try createFolder(at: path)
     }
 
+    // MARK: - Inspection
+
     public func itemKind(at path: String) -> FileSystem.Item.Kind?
     {
         return fileManager.itemKind(atPath: path)
+    }
+
+    // MARK: - File retrieval
+
+    public func file(path: String) throws -> FileProtocol
+    {
+        return try File(path: path)
+    }
+
+    public func file(possbilyInvalidPath: String) -> FileProtocol?
+    {
+        return File(possbilyInvalidPath: possbilyInvalidPath)
+    }
+
+    // MARK: - Folder Retrieval
+
+    public func folder(path: String) throws -> FolderProtocol
+    {
+        return try Folder(path: path)
+    }
+
+    public func folder(possbilyInvalidPath: String) -> FolderProtocol?
+    {
+        return Folder(possbilyInvalidPath: possbilyInvalidPath)
     }
 }
 
