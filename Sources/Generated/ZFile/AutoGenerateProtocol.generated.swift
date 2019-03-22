@@ -14,31 +14,36 @@ import Foundation
 //: - of the above it does not add it if  // sourcery:skipProtocol
 //: ---
 
-/*
 
 
 
 
-// Generated protocol inline for  -> See code in the file of that type
 
-// Generated protocol inline for  -> See code in the file of that type
+// type.all.annotations.AutoGenerateProtocol for Bundle -> See code in the file of that type
 
-// Generated protocol inline for  -> See code in the file of that type
+// type.all.annotations.AutoGenerateProtocol for File -> See code in the file of that type
 
-// Generated protocol inline for  -> See code in the file of that type
+// type.all.annotations.AutoGenerateProtocol for FileSystem -> See code in the file of that type
 
-// Generated protocol inline for  -> See code in the file of that type
+// type.all.annotations.AutoGenerateProtocol for FileSystem.Item -> See code in the file of that type
 
-// Generated protocol inline for  -> See code in the file of that type
+// type.all.annotations.AutoGenerateProtocol for Folder -> See code in the file of that type
 
-// Generated protocol inline for  -> See code in the file of that type
 
-// Generated protocol inline for  -> See code in the file of that type
-
-// Generated protocol inline for  -> See code in the file of that type
-
-// Generated protocol inline for  -> See code in the file of that type
-
-// Generated protocol inline for  -> See code in the file of that type
-
-*/
+// AnyRawRepresentable searched for AutoGenerateProtocol
+// Bundle searched for AutoGenerateProtocol
+// Bundle.Error searched for AutoGenerateProtocol
+// File searched for AutoGenerateProtocol
+// File.Error searched for AutoGenerateProtocol
+// FileManager searched for AutoGenerateProtocol
+// FileSystem searched for AutoGenerateProtocol
+// FileSystem.Item searched for AutoGenerateProtocol
+// FileSystem.Item.Kind searched for AutoGenerateProtocol
+// FileSystem.Item.OperationError searched for AutoGenerateProtocol
+// FileSystem.Item.PathError searched for AutoGenerateProtocol
+// FileSystemIterator searched for AutoGenerateProtocol
+// FileSystemSequence searched for AutoGenerateProtocol
+// Folder searched for AutoGenerateProtocol
+// Folder.Error searched for AutoGenerateProtocol
+// ProcessInfo searched for AutoGenerateProtocol
+// String searched for AutoGenerateProtocol
