@@ -37,14 +37,17 @@ public protocol FolderProtocol: ItemProtocol, FileSystemIterable
     func createFile(named fileName: String, dataContents data: Data) throws -> FileProtocol
     func createFile(named fileName: String, contents: String) throws -> FileProtocol
     func createFile(named fileName: String, contents: String, encoding: String.Encoding) throws -> FileProtocol
-    func createFileIfNeeded(withName fileName: String, contents dataExpression: @autoclosure () -> Data = .init()) throws -> FileProtocol
+    func createFileIfNeeded(withName fileName: String, contents dataExpression: @escaping () -> Data) throws -> FileProtocol
     func createSubfolder(named folderName: String) throws -> FolderProtocol
     func createSubfolderIfNeeded(withName folderName: String) throws -> FolderProtocol
     func makeFileSequence() -> FileSystemSequence<File>
     func makeFileSequence(recursive: Bool, includeHidden: Bool) -> FileSystemSequence<File>
-    func makeSubfolderSequence(recursive: Bool = false, includeHidden: Bool = false) -> FileSystemSequence<Folder>
-    func moveContents(to newParent: Folder, includeHidden: Bool = false) throws
-    func empty(includeHidden: Bool = false) throws
+    func makeSubfolderSequence(includeHidden: Bool) -> FileSystemSequence<Folder>
+    func makeSubfolderSequence() -> FileSystemSequence<Folder>
+    func makeSubfolderSequence(recursive: Bool, includeHidden: Bool) -> FileSystemSequence<Folder>
+    func moveContents(to newParent: Folder, includeHidden: Bool) throws
+    func empty() throws
+    func empty(includeHidden: Bool) throws
     func copy(to folder: FolderProtocol) throws -> Folder
 
     // sourcery:end
@@ -424,7 +427,7 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *  - throws: `File.Error.writeFailed` if the file couldn't be created
      */
 
-    @discardableResult public func createFileIfNeeded(withName fileName: String, contents dataExpression: @autoclosure () -> Data = .init()) throws -> FileProtocol
+    @discardableResult public func createFileIfNeeded(withName fileName: String, contents dataExpression: @escaping () -> Data) throws -> FileProtocol
     {
         if let existingFile = try? file(named: fileName)
         {
@@ -505,7 +508,17 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *  If `recursive = true` the folder tree will be traversed depth-first
      */
 
-    public func makeSubfolderSequence(recursive: Bool = false, includeHidden: Bool = false) -> FileSystemSequence<Folder>
+    public func makeSubfolderSequence(includeHidden: Bool) -> FileSystemSequence<Folder>
+    {
+        return makeSubfolderSequence(recursive: false, includeHidden: includeHidden)
+    }
+
+    public func makeSubfolderSequence() -> FileSystemSequence<Folder>
+    {
+        return makeSubfolderSequence(recursive: false, includeHidden: false)
+    }
+
+    public func makeSubfolderSequence(recursive: Bool, includeHidden: Bool) -> FileSystemSequence<Folder>
     {
         return FileSystemSequence(folder: self, recursive: recursive, includeHidden: includeHidden, using: fileManager)
     }
@@ -517,7 +530,7 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *  - parameter includeHidden: Whether hidden (dot) files should be moved (default: false)
      */
 
-    public func moveContents(to newParent: Folder, includeHidden: Bool = false) throws
+    public func moveContents(to newParent: Folder, includeHidden: Bool) throws
     {
         try makeFileSequence(recursive: false, includeHidden: includeHidden).forEach { try $0.move(to: newParent) }
         try makeSubfolderSequence(includeHidden: includeHidden).forEach { try $0.move(to: newParent) }
@@ -531,7 +544,12 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *  This will still keep the folder itself on disk. If you wish to delete the folder as well, call `delete()` on it.
      */
 
-    public func empty(includeHidden: Bool = false) throws
+    public func empty() throws
+    {
+        return try empty(includeHidden: false)
+    }
+
+    public func empty(includeHidden: Bool) throws
     {
         try makeFileSequence(recursive: false, includeHidden: includeHidden).forEach { try $0.delete() }
         try makeSubfolderSequence(includeHidden: includeHidden).forEach { try $0.delete() }

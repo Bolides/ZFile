@@ -80,10 +80,9 @@ import Foundation
     var `extension`: String? { get }
     var modificationDate: Date { get }
     var description: String { get }
-    var kind: Kind { get }
+    var kind: FileSystem.Item.Kind { get }
     var fileManager: FileManager { get }
 
-    static func == (lhs: Item, rhs: Item) -> Bool
     func parentFolder() throws  -> FolderProtocol
     func rename(to newName: String) throws 
     func rename(to newName: String, keepExtension: Bool) throws 
@@ -116,14 +115,17 @@ import Foundation
     func createFile(named fileName: String, dataContents data: Data) throws  -> FileProtocol
     func createFile(named fileName: String, contents: String) throws  -> FileProtocol
     func createFile(named fileName: String, contents: String, encoding: String.Encoding) throws  -> FileProtocol
-    func createFileIfNeeded(withName fileName: String, contents dataExpression: @autoclosure () -> Data = .init()) throws  -> FileProtocol
+    func createFileIfNeeded(withName fileName: String, contents dataExpression: @escaping () -> Data) throws  -> FileProtocol
     func createSubfolder(named folderName: String) throws  -> FolderProtocol
     func createSubfolderIfNeeded(withName folderName: String) throws  -> FolderProtocol
     func makeFileSequence() -> FileSystemSequence<File>
     func makeFileSequence(recursive: Bool, includeHidden: Bool) -> FileSystemSequence<File>
-    func makeSubfolderSequence(recursive: Bool = false, includeHidden: Bool = false) -> FileSystemSequence<Folder>
-    func moveContents(to newParent: Folder, includeHidden: Bool = false) throws 
-    func empty(includeHidden: Bool = false) throws 
+    func makeSubfolderSequence(includeHidden: Bool) -> FileSystemSequence<Folder>
+    func makeSubfolderSequence() -> FileSystemSequence<Folder>
+    func makeSubfolderSequence(recursive: Bool, includeHidden: Bool) -> FileSystemSequence<Folder>
+    func moveContents(to newParent: Folder, includeHidden: Bool) throws 
+    func empty() throws 
+    func empty(includeHidden: Bool) throws 
     func copy(to folder: FolderProtocol) throws  -> Folder
     // sourcery:end
 // type.annotations.AutoGenerateProtocol for Folder end

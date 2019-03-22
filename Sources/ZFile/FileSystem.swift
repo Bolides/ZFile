@@ -58,10 +58,9 @@ public protocol ItemProtocol
     var `extension`: String? { get }
     var modificationDate: Date { get }
     var description: String { get }
-    var kind: Kind { get }
+    var kind: FileSystem.Item.Kind { get }
     var fileManager: FileManager { get }
 
-    static func == (lhs: Item, rhs: Item) -> Bool
     func parentFolder() throws -> FolderProtocol
     func rename(to newName: String) throws
     func rename(to newName: String, keepExtension: Bool) throws
@@ -85,7 +84,7 @@ public class FileSystem: FileSystemProtocol
 {
     public static let shared = FileSystem()
 
-    let fileManager: FileManager
+    public let fileManager: FileManager
 
     /**
      *  Class that represents an item that's stored by a file system
@@ -108,6 +107,7 @@ public class FileSystem: FileSystemProtocol
             case nonMatchingKind(expectedKind: Kind, gotKind: Kind, path: String)
 
             /// Operator used to compare two instances for equality
+            // sourcery:skipProtocol
             public static func == (lhs: PathError, rhs: PathError) -> Bool
             {
                 switch (lhs, rhs)
@@ -124,6 +124,7 @@ public class FileSystem: FileSystemProtocol
             }
 
             /// A string describing the error
+            // sourcery:skipProtocol
             public var description: String
             {
                 switch self
@@ -152,6 +153,7 @@ public class FileSystem: FileSystemProtocol
         }
 
         /// Operator used to compare two instances for equality
+        // sourcery:skipProtocol
         public static func == (lhs: Item, rhs: Item) -> Bool
         {
             guard lhs.kind == rhs.kind else
@@ -233,8 +235,8 @@ public class FileSystem: FileSystemProtocol
             return "\(kind)(name: \(name), path: \(path))"
         }
 
-        let kind: Kind
-        let fileManager: FileManager
+        public let kind: FileSystem.Item.Kind
+        public let fileManager: FileManager
 
         // MARK: - Init
 
