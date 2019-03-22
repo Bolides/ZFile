@@ -15,10 +15,16 @@ import Foundation
 // sourcery:skipPublicInit
 public protocol FolderProtocol: ItemProtocol, FileSystemIterable
 {
-    /// sourcery:inline:Folder.AutoGenerateSelectiveProtocol
+    // sourcery:inline:Folder.AutoGenerateProtocol
+    var files: FileSystemSequence<File> { get }
+    var subfolders: FileSystemSequence<Folder> { get }
+    static var current: Folder { get }
+    static var home: Folder { get }
+    static var temporary: Folder { get }
 
     func mostRecentSubfolder() throws -> FolderProtocol
     func mostRecentFile() throws -> FileProtocol
+    func url() throws -> URL
     func file(named fileName: String) throws -> FileProtocol
     func file(atPath filePath: String) throws -> FileProtocol
     func containsFile(named fileName: String) -> Bool
@@ -30,15 +36,21 @@ public protocol FolderProtocol: ItemProtocol, FileSystemIterable
     func createFile(named fileName: String) throws -> FileProtocol
     func createFile(named fileName: String, dataContents data: Data) throws -> FileProtocol
     func createFile(named fileName: String, contents: String) throws -> FileProtocol
+    func createFile(named fileName: String, contents: String, encoding: String.Encoding) throws -> FileProtocol
+    func createFileIfNeeded(withName fileName: String, contents dataExpression: @autoclosure () -> Data = .init()) throws -> FileProtocol
     func createSubfolder(named folderName: String) throws -> FolderProtocol
     func createSubfolderIfNeeded(withName folderName: String) throws -> FolderProtocol
+    func makeFileSequence() -> FileSystemSequence<File>
     func makeFileSequence(recursive: Bool, includeHidden: Bool) -> FileSystemSequence<File>
+    func makeSubfolderSequence(recursive: Bool = false, includeHidden: Bool = false) -> FileSystemSequence<Folder>
+    func moveContents(to newParent: Folder, includeHidden: Bool = false) throws
+    func empty(includeHidden: Bool = false) throws
     func copy(to folder: FolderProtocol) throws -> Folder
 
-    func url() throws -> URL
-    /// sourcery:end
+    // sourcery:end
 }
 
+// sourcery:AutoGenerateProtocol
 open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
 {
     // sourcery:skipProtocol
@@ -216,7 +228,7 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
     /**
      Most recent folder
      */
-    // sourcery:selectedForProtocol
+
     public func mostRecentSubfolder() throws -> FolderProtocol
     {
         guard let result = (makeSubfolderSequence().sorted { $0.modificationDate > $1.modificationDate }.first) else
@@ -229,7 +241,7 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
     /**
      Most recent folder
      */
-    // sourcery:selectedForProtocol
+
     public func mostRecentFile() throws -> FileProtocol
     {
         guard let result = (makeFileSequence().sorted { $0.modificationDate > $1.modificationDate }.first) else
@@ -256,7 +268,7 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *
      *  - throws: `File.PathError.invalid` if the file couldn't be found
      */
-    // sourcery:selectedForProtocol
+
     public func file(named fileName: String) throws -> FileProtocol
     {
         return try File(path: path + fileName, fileManager: fileManager)
@@ -269,7 +281,7 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *
      *  - throws: `File.PathError.invalid` if the file couldn't be found
      */
-    // sourcery:selectedForProtocol
+
     public func file(atPath filePath: String) throws -> FileProtocol
     {
         return try File(path: path + filePath, fileManager: fileManager)
@@ -280,13 +292,12 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *
      *  - parameter fileName: The name of the file to check for
      */
-    // sourcery:selectedForProtocol
+
     public func containsFile(named fileName: String) -> Bool
     {
         return (try? file(named: fileName)) != nil
     }
 
-    // sourcery:selectedForProtocol
     public func firstFolder(with prefix: String) throws -> FolderProtocol
     {
         guard let folder = (subfolders.filter { $0.name.hasPrefix(prefix) }.first) else
@@ -304,7 +315,7 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *
      *  - throws: `Folder.PathError.invalid` if the folder couldn't be found
      */
-    // sourcery:selectedForProtocol
+
     public func subfolder(named folderName: String) throws -> FolderProtocol
     {
         return try Folder(path: path + folderName, fileManager: fileManager)
@@ -317,7 +328,7 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *
      *  - throws: `Folder.PathError.invalid` if the folder couldn't be found
      */
-    // sourcery:selectedForProtocol
+
     public func subfolder(atPath folderPath: String) throws -> FolderProtocol
     {
         return try Folder(path: path + folderPath, fileManager: fileManager)
@@ -328,7 +339,7 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *
      *  - parameter folderName: The name of the folder to check for
      */
-    // sourcery:selectedForProtocol
+
     public func containsSubfolder(named folderName: String) -> Bool
     {
         return (try? subfolder(named: folderName)) != nil
@@ -344,7 +355,7 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *
      *  - returns: The file that was created
      */
-    // sourcery:selectedForProtocol
+
     @discardableResult public func createFileIfNeeded(named fileName: String) throws -> FileProtocol
     {
         let pathWithSlash = "\(path.hasSuffix("/") ? path : "\(path)/")"
@@ -361,13 +372,12 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *
      *  - returns: The file that was created
      */
-    // sourcery:selectedForProtocol
+
     @discardableResult public func createFile(named fileName: String) throws -> FileProtocol
     {
         return try createFile(named: fileName, dataContents: Data())
     }
 
-    // sourcery:selectedForProtocol
     @discardableResult public func createFile(named fileName: String, dataContents data: Data) throws -> FileProtocol
     {
         let filePath = path + fileName
@@ -391,7 +401,7 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *
      *  - returns: The file that was created
      */
-    // sourcery:selectedForProtocol
+
     @discardableResult public func createFile(named fileName: String, contents: String) throws -> FileProtocol
     {
         return try createFile(named: fileName, contents: contents, encoding: .utf8)
@@ -433,7 +443,7 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *
      *  - returns: The folder that was created
      */
-    // sourcery:selectedForProtocol
+
     @discardableResult public func createSubfolder(named folderName: String) throws -> FolderProtocol
     {
         let subfolderPath = path + folderName
@@ -456,7 +466,7 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *
      *  - throws: `Folder.Error.creatingFolderFailed`
      */
-    // sourcery:selectedForProtocol
+
     @discardableResult public func createSubfolderIfNeeded(withName folderName: String) throws -> FolderProtocol
     {
         if let existingFolder = try? subfolder(named: folderName)
@@ -481,7 +491,6 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
         return makeFileSequence(recursive: false, includeHidden: false)
     }
 
-    // sourcery:selectedForProtocol
     public func makeFileSequence(recursive: Bool, includeHidden: Bool) -> FileSystemSequence<File>
     {
         return FileSystemSequence(folder: self, recursive: recursive, includeHidden: includeHidden, using: fileManager)
@@ -535,7 +544,7 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
      *
      *  - throws: `FileSystem.Item.OperationError.copyFailed` if the folder couldn't be copied
      */
-    // sourcery:selectedForProtocol
+
     @discardableResult public func copy(to folder: FolderProtocol) throws -> Folder
     {
         let newPath = folder.path + name

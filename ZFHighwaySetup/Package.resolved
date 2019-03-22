@@ -33,8 +33,8 @@
         "repositoryURL": "https://www.github.com/Bolides/Highway",
         "state": {
           "branch": null,
-          "revision": "dfa1a8ff5d8fede6876010fb6f96272c42272318",
-          "version": "2.6.12"
+          "revision": "3a9b71aaa60318c03eb5b92e17cc35f5e793fa10",
+          "version": "2.6.18"
         }
       },
       {
@@ -159,8 +159,8 @@
         "repositoryURL": "https://www.github.com/dooZdev/template-sourcery",
         "state": {
           "branch": null,
-          "revision": "c2950d2587b7c498b946ce15016c744d15f56a27",
-          "version": "1.4.1"
+          "revision": "a4fc0fe7bb3aab8fba6af5391e2483bbf9d951f9",
+          "version": "1.4.3"
         }
       },
       {
@@ -186,8 +186,8 @@
         "repositoryURL": "https://www.github.com/Bolides/ZFile",
         "state": {
           "branch": null,
-          "revision": "e95eb4030d54aaa372b469635982164a07f7b90b",
-          "version": "2.3.2"
+          "revision": "e8aed66d29dc6b11dc75141f77857fbcbbd76e50",
+          "version": "2.3.3"
         }
       }
     ]

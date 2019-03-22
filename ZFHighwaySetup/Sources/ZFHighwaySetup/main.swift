@@ -35,9 +35,9 @@ do
     let package = try Highway.package(for: zfileRoot, dependencyService: dependencyService, dumpService: dumpService)
     let sourceryBuilder = SourceryBuilder(dependencyService: DependencyService(in: try zfileRoot.subfolder(named: "ZFHighwaySetup")))
 
-    let highway = try Highway(package: (package: package, executable: "ZFHighwaySetup"), dependencyService: dependencyService, sourceryBuilder: sourceryBuilder)
+    let highway = try Highway(package: package, dependencyService: dependencyService, sourceryBuilder: sourceryBuilder, highwaySetupExecutableName: "ZFHighwaySetup")
 
-    signPost.message("🚀 \(highway.package.package.name) ...")
+    signPost.message("🚀 \(highway.package.name) ...")
 
     zfRunner = HighwayRunner(highway: highway, dispatchGroup: dispatchGroup)
 
@@ -69,7 +69,7 @@ do
             exit(EXIT_FAILURE)
         }
 
-        signPost.message("🚀 \(highway.package.package.name) ✅")
+        signPost.message("🚀 \(highway.package.name) ✅")
         exit(EXIT_SUCCESS)
     }
 
