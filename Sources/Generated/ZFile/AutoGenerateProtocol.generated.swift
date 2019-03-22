@@ -14,24 +14,32 @@ import Foundation
 //: - of the above it does not add it if  // sourcery:skipProtocol
 //: ---
 
+// version 5.5
 /*
 
 
 
 
-// Generated protocol inline for Bundle -> See code in the file of that type
+
+
+// type.annotations.AutoGenerateProtocol for Bundle -> See code in the file of that type
+
     // sourcery:inline:Bundle.AutoGenerateProtocol
 
     func fileforResource(with name: String, of type: String) throws  -> FileProtocol
     func string(for key: AnyRawRepresentable<String>) throws  -> String
     // sourcery:end
-// Selective Generated protocol inline for File -> See code in the file of that type
-    // sourcery:inline:File.AutoGenerateSelectiveProtocol
-    var localizedDate: String {  get }
+// type.annotations.AutoGenerateProtocol for Bundle end
+// type.annotations.AutoGenerateProtocol for File -> See code in the file of that type
+
+    // sourcery:inline:File.AutoGenerateProtocol
+    var localizedDate: String { get }
 
     func readAllLines() throws  -> [String]
+    func url() throws  -> URL
     func read() throws  -> Data
     func readAsString() throws  -> String
+    func readAsString(encoding: String.Encoding) throws  -> String
     func readAsInt() throws  -> Int
     func write(data: Data) throws 
     func write(string: String) throws 
@@ -41,26 +49,88 @@ import Foundation
     func append(string: String, encoding: String.Encoding) throws 
     func copy(to folder: FolderProtocol) throws  -> FileProtocol
     // sourcery:end
-// Generated protocol inline for  -> See code in the file of that type
+// type.annotations.AutoGenerateProtocol for File end
+// type.annotations.AutoGenerateProtocol for FileSystem -> See code in the file of that type
 
-// Generated protocol inline for  -> See code in the file of that type
+    // sourcery:inline:FileSystem.AutoGenerateProtocol
+    static var shared: FileSystem { get }
+    var fileManager: FileManager { get }
+    var temporaryFolder: Folder { get }
+    var homeFolder: Folder { get }
+    var currentFolder: Folder { get }
+    var documentFolder: Folder? { get }
+    var libraryFolder: Folder? { get }
 
-// Generated protocol inline for  -> See code in the file of that type
+    func createFile(at path: String) throws  -> FileProtocol
+    func createFile(at path: String, dataContents: Data) throws  -> FileProtocol
+    func createFileIfNeeded(at path: String) throws  -> FileProtocol
+    func createFileIfNeeded(at path: String, contents: Data) throws  -> FileProtocol
+    func createFolder(at path: String) throws  -> FolderProtocol
+    func createFolderIfNeeded(at path: String) throws  -> FolderProtocol
+    func itemKind(at path: String) -> FileSystem.Item.Kind?
+    func file(path: String) throws  -> FileProtocol
+    func file(possbilyInvalidPath: String) -> FileProtocol?
+    func folder(path: String) throws  -> FolderProtocol
+    func folder(possbilyInvalidPath: String) -> FolderProtocol?
+    func cacheFolder() throws  -> Folder
+    // sourcery:end
+// type.annotations.AutoGenerateProtocol for FileSystem end
+// type.annotations.AutoGenerateProtocol for FileSystem.Item -> See code in the file of that type
 
-// Generated protocol inline for  -> See code in the file of that type
+    // sourcery:inline:FileSystem.Item.AutoGenerateProtocol
+    var path: String { get }
+    var name: String { get }
+    var nameExcludingExtension: String { get }
+    var `extension`: String? { get }
+    var modificationDate: Date { get }
+    var description: String { get }
+    var kind: FileSystem.Item.Kind { get }
+    var fileManager: FileManager { get }
 
-// Generated protocol inline for  -> See code in the file of that type
+    func parentFolder() throws  -> FolderProtocol
+    func rename(to newName: String) throws 
+    func rename(to newName: String, keepExtension: Bool) throws 
+    func move(to newParent: Folder) throws 
+    func delete() throws 
+    func loadModificationDate() -> Date
+    // sourcery:end
+// type.annotations.AutoGenerateProtocol for FileSystem.Item end
+// type.annotations.AutoGenerateProtocol for Folder -> See code in the file of that type
 
-// Generated protocol inline for  -> See code in the file of that type
+    // sourcery:inline:Folder.AutoGenerateProtocol
+    var files: FileSystemSequence<File> { get }
+    var subfolders: FileSystemSequence<Folder> { get }
+    static var current: Folder { get }
+    static var home: Folder { get }
+    static var temporary: Folder { get }
 
-// Generated protocol inline for  -> See code in the file of that type
-
-// Generated protocol inline for  -> See code in the file of that type
-
-// Generated protocol inline for  -> See code in the file of that type
-
-// Generated protocol inline for  -> See code in the file of that type
-
-// Generated protocol inline for  -> See code in the file of that type
-
+    func mostRecentSubfolder() throws  -> FolderProtocol
+    func mostRecentFile() throws  -> FileProtocol
+    func url() throws  -> URL
+    func file(named fileName: String) throws  -> FileProtocol
+    func file(atPath filePath: String) throws  -> FileProtocol
+    func containsFile(named fileName: String) -> Bool
+    func firstFolder(with prefix: String) throws  -> FolderProtocol
+    func subfolder(named folderName: String) throws  -> FolderProtocol
+    func subfolder(atPath folderPath: String) throws  -> FolderProtocol
+    func containsSubfolder(named folderName: String) -> Bool
+    func createFileIfNeeded(named fileName: String) throws  -> FileProtocol
+    func createFile(named fileName: String) throws  -> FileProtocol
+    func createFile(named fileName: String, dataContents data: Data) throws  -> FileProtocol
+    func createFile(named fileName: String, contents: String) throws  -> FileProtocol
+    func createFile(named fileName: String, contents: String, encoding: String.Encoding) throws  -> FileProtocol
+    func createFileIfNeeded(withName fileName: String, contents dataExpression: @escaping () -> Data) throws  -> FileProtocol
+    func createSubfolder(named folderName: String) throws  -> FolderProtocol
+    func createSubfolderIfNeeded(withName folderName: String) throws  -> FolderProtocol
+    func makeFileSequence() -> FileSystemSequence<File>
+    func makeFileSequence(recursive: Bool, includeHidden: Bool) -> FileSystemSequence<File>
+    func makeSubfolderSequence(includeHidden: Bool) -> FileSystemSequence<Folder>
+    func makeSubfolderSequence() -> FileSystemSequence<Folder>
+    func makeSubfolderSequence(recursive: Bool, includeHidden: Bool) -> FileSystemSequence<Folder>
+    func moveContents(to newParent: Folder, includeHidden: Bool) throws 
+    func empty() throws 
+    func empty(includeHidden: Bool) throws 
+    func copy(to folder: FolderProtocol) throws  -> Folder
+    // sourcery:end
+// type.annotations.AutoGenerateProtocol for Folder end
 */

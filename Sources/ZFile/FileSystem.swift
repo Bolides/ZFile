@@ -10,16 +10,17 @@ import Foundation
 // MARK: - FileSystemProtocol
 
 // sourcery:AutoMockable
-// sourcery:skipPublicInit
 public protocol FileSystemProtocol
 {
-    /// sourcery:inline:FileSystem.AutoGenerateSelectiveProtocol
+    // sourcery:inline:FileSystem.AutoGenerateProtocol
+    static var shared: FileSystem { get }
+    var fileManager: FileManager { get }
     var temporaryFolder: Folder { get }
     var homeFolder: Folder { get }
     var currentFolder: Folder { get }
+    var documentFolder: Folder? { get }
+    var libraryFolder: Folder? { get }
 
-    init()
-    init(using fileManager: FileManager)
     func createFile(at path: String) throws -> FileProtocol
     func createFile(at path: String, dataContents: Data) throws -> FileProtocol
     func createFileIfNeeded(at path: String) throws -> FileProtocol
@@ -27,13 +28,20 @@ public protocol FileSystemProtocol
     func createFolder(at path: String) throws -> FolderProtocol
     func createFolderIfNeeded(at path: String) throws -> FolderProtocol
     func itemKind(at path: String) -> FileSystem.Item.Kind?
+    func file(path: String) throws -> FileProtocol
+    func file(possbilyInvalidPath: String) -> FileProtocol?
+    func folder(path: String) throws -> FolderProtocol
+    func folder(possbilyInvalidPath: String) -> FolderProtocol?
+    func cacheFolder() throws -> Folder
 
-    /// sourcery:end
+    // sourcery:end
 }
 
 // MARK: - FileSystemIterable
 
 /// Protocol adopted by file system types that may be iterated over (this protocol is an implementation detail)
+// sourcery:AutoMockable
+// sourcery:skipPublicInit
 public protocol FileSystemIterable
 {
     /// Initialize an instance with a path that is the date and a file manager that is the default. Creates if needed.
@@ -45,25 +53,27 @@ public protocol FileSystemIterable
 
 // MARK: - ItemProtocol
 
-// sourcery:AutoMockable
-// sourcery:skipPublicInit
+// sourcery:AutoMockable, skipPublicInit
 public protocol ItemProtocol
 {
-    /// sourcery:inline:FileSystem.Item.AutoGenerateSelectiveProtocol
+    // sourcery:inline:FileSystem.Item.AutoGenerateProtocol
     var path: String { get }
     var name: String { get }
     var nameExcludingExtension: String { get }
     var `extension`: String? { get }
     var modificationDate: Date { get }
     var description: String { get }
+    var kind: FileSystem.Item.Kind { get }
+    var fileManager: FileManager { get }
 
     func parentFolder() throws -> FolderProtocol
     func rename(to newName: String) throws
     func rename(to newName: String, keepExtension: Bool) throws
     func move(to newParent: Folder) throws
     func delete() throws
+    func loadModificationDate() -> Date
 
-    /// sourcery:end
+    // sourcery:end
 }
 
 /**
@@ -74,12 +84,12 @@ public protocol ItemProtocol
  *
  *  To open other files & folders, use the `File` and `Folder` class respectively.
  */
-// sourcery:AutoGenerateSelectiveProtocol
+// sourcery:AutoGenerateProtocol
 public class FileSystem: FileSystemProtocol
 {
     public static let shared = FileSystem()
 
-    let fileManager: FileManager
+    public let fileManager: FileManager
 
     /**
      *  Class that represents an item that's stored by a file system
@@ -88,7 +98,8 @@ public class FileSystem: FileSystemProtocol
      *  implementations, `File` and `Folder`. You can use the APIs available on this class
      *  to perform operations that are supported by both files & folders.
      */
-    // sourcery:AutoGenerateSelectiveProtocol
+
+    // sourcery:AutoGenerateProtocol
     open class Item: Equatable, CustomStringConvertible, ItemProtocol
     {
         /// Errror type used for invalid paths for files or folders
@@ -101,6 +112,7 @@ public class FileSystem: FileSystemProtocol
             case nonMatchingKind(expectedKind: Kind, gotKind: Kind, path: String)
 
             /// Operator used to compare two instances for equality
+            // sourcery:skipProtocol
             public static func == (lhs: PathError, rhs: PathError) -> Bool
             {
                 switch (lhs, rhs)
@@ -117,6 +129,7 @@ public class FileSystem: FileSystemProtocol
             }
 
             /// A string describing the error
+            // sourcery:skipProtocol
             public var description: String
             {
                 switch self
@@ -145,6 +158,7 @@ public class FileSystem: FileSystemProtocol
         }
 
         /// Operator used to compare two instances for equality
+        // sourcery:skipProtocol
         public static func == (lhs: Item, rhs: Item) -> Bool
         {
             guard lhs.kind == rhs.kind else
@@ -156,17 +170,17 @@ public class FileSystem: FileSystemProtocol
         }
 
         /// The path of the item, relative to the root of the file system
-        // sourcery:selectedForProtocol
+
         // sourcery:onlyGet
         public private(set) var path: String
 
         /// The name of the item (including any extension)
-        // sourcery:selectedForProtocol
+
         // sourcery:onlyGet
         public private(set) var name: String
 
         /// The name of the item (excluding any extension)
-        // sourcery:selectedForProtocol
+
         // sourcery:onlyGet
         public var nameExcludingExtension: String
         {
@@ -180,7 +194,7 @@ public class FileSystem: FileSystemProtocol
         }
 
         /// Any extension that the item has
-        // sourcery:selectedForProtocol
+
         public var `extension`: String?
         {
             let components = name.components(separatedBy: ".")
@@ -194,7 +208,7 @@ public class FileSystem: FileSystemProtocol
         }
 
         /// The date when the item was last modified
-        // sourcery:selectedForProtocol
+
         // sourcery:onlyGet
         public private(set) lazy var modificationDate: Date = self.loadModificationDate()
 
@@ -208,7 +222,6 @@ public class FileSystem: FileSystemProtocol
             }
         }
 
-        // sourcery:selectedForProtocol
         public func parentFolder() throws -> FolderProtocol
         {
             guard let parent = self.parent else
@@ -220,15 +233,15 @@ public class FileSystem: FileSystemProtocol
         }
 
         /// A string describing the item
-        // sourcery:selectedForProtocol
+
         // sourcery:onlyGet
         public var description: String
         {
             return "\(kind)(name: \(name), path: \(path))"
         }
 
-        let kind: Kind
-        let fileManager: FileManager
+        public let kind: FileSystem.Item.Kind
+        public let fileManager: FileManager
 
         // MARK: - Init
 
@@ -298,13 +311,12 @@ public class FileSystem: FileSystemProtocol
          *
          *  - throws: `FileSystem.Item.OperationError.renameFailed` if the item couldn't be renamed
          */
-        // sourcery:selectedForProtocol
+
         public func rename(to newName: String) throws
         {
             try rename(to: newName, keepExtension: true)
         }
 
-        // sourcery:selectedForProtocol
         public func rename(to newName: String, keepExtension: Bool) throws
         {
             guard let parent = parent else
@@ -354,7 +366,7 @@ public class FileSystem: FileSystemProtocol
          *
          *  - throws: `FileSystem.Item.OperationError.moveFailed` if the item couldn't be moved
          */
-        // sourcery:selectedForProtocol
+
         public func move(to newParent: Folder) throws
         {
             var newPath = newParent.path + name
@@ -382,7 +394,7 @@ public class FileSystem: FileSystemProtocol
          *
          *  - throws: `FileSystem.Item.OperationError.deleteFailed` if the item coudn't be deleted
          */
-        // sourcery:selectedForProtocol
+
         public func delete() throws
         {
             do
@@ -397,21 +409,21 @@ public class FileSystem: FileSystemProtocol
     }
 
     /// A reference to the temporary folder used by this file system
-    // sourcery:selectedForProtocol
+
     public var temporaryFolder: Folder
     {
         return try! Folder(path: NSTemporaryDirectory(), fileManager: fileManager)
     }
 
     /// A reference to the current user's home folder
-    // sourcery:selectedForProtocol
+
     public var homeFolder: Folder
     {
         return try! Folder(path: ProcessInfo.processInfo.homeFolderPath, fileManager: fileManager)
     }
 
     // A reference to the folder that is the current working directory
-    // sourcery:selectedForProtocol
+
     public var currentFolder: Folder
     {
         return try! Folder(path: "")
@@ -422,17 +434,18 @@ public class FileSystem: FileSystemProtocol
      *
      *  - parameter fileManager: Optionally give a custom file manager to use to perform operations
      */
-    // sourcery:selectedForProtocol
+
     public required init()
     {
         fileManager = .default
     }
 
-    // sourcery:selectedForProtocol
     public required init(using fileManager: FileManager)
     {
         self.fileManager = fileManager
     }
+
+    // MARK: - File CREATE
 
     /**
      *  Create a new file at a given path
@@ -444,13 +457,12 @@ public class FileSystem: FileSystemProtocol
      *
      *  - returns: The file that was created
      */
-    // sourcery:selectedForProtocol
+
     @discardableResult public func createFile(at path: String) throws -> FileProtocol
     {
         return try createFile(at: path, dataContents: Data())
     }
 
-    // sourcery:selectedForProtocol
     @discardableResult public func createFile(at path: String, dataContents: Data) throws -> FileProtocol
     {
         let path = try fileManager.absolutePath(for: path)
@@ -482,13 +494,12 @@ public class FileSystem: FileSystemProtocol
      *
      *  - returns: The file that was either created or found.
      */
-    // sourcery:selectedForProtocol
+
     @discardableResult public func createFileIfNeeded(at path: String) throws -> FileProtocol
     {
         return try createFileIfNeeded(at: path, contents: Data())
     }
 
-    // sourcery:selectedForProtocol
     @discardableResult public func createFileIfNeeded(at path: String, contents: Data) throws -> FileProtocol
     {
         if let existingFile = try? File(path: path, fileManager: fileManager)
@@ -509,7 +520,7 @@ public class FileSystem: FileSystemProtocol
      *
      *  - returns: The folder that was created
      */
-    // sourcery:selectedForProtocol
+
     @discardableResult public func createFolder(at path: String) throws -> FolderProtocol
     {
         do
@@ -532,7 +543,7 @@ public class FileSystem: FileSystemProtocol
      *
      *  - throws: `Folder.Error.creatingFolderFailed`
      */
-    // sourcery:selectedForProtocol
+
     @discardableResult public func createFolderIfNeeded(at path: String) throws -> FolderProtocol
     {
         if let existingFolder = try? Folder(path: path, fileManager: fileManager)
@@ -543,10 +554,35 @@ public class FileSystem: FileSystemProtocol
         return try createFolder(at: path)
     }
 
-    // sourcery:selectedForProtocol
+    // MARK: - Inspection
+
     public func itemKind(at path: String) -> FileSystem.Item.Kind?
     {
         return fileManager.itemKind(atPath: path)
+    }
+
+    // MARK: - File retrieval
+
+    public func file(path: String) throws -> FileProtocol
+    {
+        return try File(path: path)
+    }
+
+    public func file(possbilyInvalidPath: String) -> FileProtocol?
+    {
+        return File(possbilyInvalidPath: possbilyInvalidPath)
+    }
+
+    // MARK: - Folder Retrieval
+
+    public func folder(path: String) throws -> FolderProtocol
+    {
+        return try Folder(path: path)
+    }
+
+    public func folder(possbilyInvalidPath: String) -> FolderProtocol?
+    {
+        return Folder(possbilyInvalidPath: possbilyInvalidPath)
     }
 }
 
