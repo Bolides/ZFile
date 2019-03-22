@@ -10,7 +10,6 @@ import Foundation
 // MARK: - FileSystemProtocol
 
 // sourcery:AutoMockable
-// sourcery:skipPublicInit
 public protocol FileSystemProtocol
 {
     // sourcery:inline:FileSystem.AutoGenerateProtocol
@@ -41,6 +40,8 @@ public protocol FileSystemProtocol
 // MARK: - FileSystemIterable
 
 /// Protocol adopted by file system types that may be iterated over (this protocol is an implementation detail)
+// sourcery:AutoMockable
+// sourcery:skipPublicInit
 public protocol FileSystemIterable
 {
     /// Initialize an instance with a path that is the date and a file manager that is the default. Creates if needed.

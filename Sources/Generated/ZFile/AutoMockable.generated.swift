@@ -977,10 +977,71 @@ open class FileProtocolMock: FileProtocol {
 }
 
 
+// MARK: - FileSystemIterableMock
+
+open class FileSystemIterableMock: FileSystemIterable {
+
+
+
+
+  // MARK: - <init> - parameters
+
+  public var initThrowableError: Error?
+
+  // MARK: - <init> - closure mocks
+
+  public var initClosure: (() throws  -> Void)? = nil
+
+
+  // MARK: - <init> - initializer mocked
+
+  public required init() throws {
+     try? initClosure?()
+  }
+
+
+  // MARK: - <init> - parameters
+
+  public var initPathThrowableError: Error?
+  public var initPathReceivedPath: String?
+
+  // MARK: - <init> - closure mocks
+
+  public var initPathClosure: ((String) throws  -> Void)? = nil
+
+
+  // MARK: - <init> - initializer mocked
+
+  public required init(path: String) throws {
+      initPathReceivedPath = path
+     try? initPathClosure?(path)
+  }
+
+
+  // MARK: - <init?> - parameters
+
+  public var initPossbilyInvalidPathReceivedPossbilyInvalidPath: String?
+
+  // MARK: - <init?> - closure mocks
+
+  public var initPossbilyInvalidPathClosure: ((String)  -> Void)? = nil
+
+
+  // MARK: - <init?> - initializer mocked
+
+  public required init?(possbilyInvalidPath: String) {
+      initPossbilyInvalidPathReceivedPossbilyInvalidPath = possbilyInvalidPath
+    initPossbilyInvalidPathClosure?(possbilyInvalidPath)
+  }
+
+}
+
+
 // MARK: - FileSystemProtocolMock
 
 open class FileSystemProtocolMock: FileSystemProtocol {
 
+    public init() {}
 
   public static var shared: FileSystem {
       get { return underlyingShared }
