@@ -33,8 +33,8 @@
         "repositoryURL": "https://www.github.com/Bolides/Highway",
         "state": {
           "branch": null,
-          "revision": "3a9b71aaa60318c03eb5b92e17cc35f5e793fa10",
-          "version": "2.6.18"
+          "revision": "da845580235b230e59fa041299c0758f9d4759fe",
+          "version": "2.7.1"
         }
       },
       {
@@ -186,8 +186,8 @@
         "repositoryURL": "https://www.github.com/Bolides/ZFile",
         "state": {
           "branch": null,
-          "revision": "e8aed66d29dc6b11dc75141f77857fbcbbd76e50",
-          "version": "2.3.3"
+          "revision": "ea6b633dbd78afaa811ff2b99e1d64884d0224da",
+          "version": "2.4.1"
         }
       }
     ]
