@@ -1571,6 +1571,33 @@ open class FileSystemProtocolMock: FileSystemProtocol {
       return closureReturn(possbilyInvalidPath)
   }
 
+  // MARK: - <changeCurrentDirectory> - parameters
+
+  public var changeCurrentDirectoryToCallsCount = 0
+  public var changeCurrentDirectoryToCalled: Bool {
+    return changeCurrentDirectoryToCallsCount > 0
+  }
+  public var changeCurrentDirectoryToReceivedFolder: FolderProtocol?
+
+  // MARK: - <changeCurrentDirectory> - closure mocks
+
+  public var changeCurrentDirectoryToClosure: ((FolderProtocol)  -> Void)? = nil
+
+
+
+  // MARK: - <changeCurrentDirectory> - method mocked
+
+  open func changeCurrentDirectory(to folder: FolderProtocol) {
+
+      changeCurrentDirectoryToCallsCount += 1
+      changeCurrentDirectoryToReceivedFolder = folder
+
+      // <changeCurrentDirectory> - Void return mock implementation
+
+        changeCurrentDirectoryToClosure?(folder)
+
+  }
+
   // MARK: - <cacheFolder> - parameters
 
   public var cacheFolderThrowableError: Error?

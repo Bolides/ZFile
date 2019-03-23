@@ -32,6 +32,7 @@ public protocol FileSystemProtocol
     func file(possbilyInvalidPath: String) -> FileProtocol?
     func folder(path: String) throws -> FolderProtocol
     func folder(possbilyInvalidPath: String) -> FolderProtocol?
+    func changeCurrentDirectory(to folder: FolderProtocol)
     func cacheFolder() throws -> Folder
 
     // sourcery:end
@@ -75,6 +76,8 @@ public protocol ItemProtocol
 
     // sourcery:end
 }
+
+// MARK: - FileSystem
 
 /**
  *  Class that represents a file system
@@ -408,6 +411,8 @@ public class FileSystem: FileSystemProtocol
         }
     }
 
+    // MARK: - Common Folders
+
     /// A reference to the temporary folder used by this file system
 
     public var temporaryFolder: Folder
@@ -428,6 +433,8 @@ public class FileSystem: FileSystemProtocol
     {
         return try! Folder(path: "")
     }
+
+    // MARK: - Init
 
     /**
      *  Initialize an instance of this class
@@ -583,6 +590,13 @@ public class FileSystem: FileSystemProtocol
     public func folder(possbilyInvalidPath: String) -> FolderProtocol?
     {
         return Folder(possbilyInvalidPath: possbilyInvalidPath)
+    }
+
+    // MARK: - CurrentDirectory
+
+    public func changeCurrentDirectory(to folder: FolderProtocol)
+    {
+        fileManager.changeCurrentDirectoryPath(folder.path)
     }
 }
 

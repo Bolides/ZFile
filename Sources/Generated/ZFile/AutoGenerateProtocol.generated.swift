@@ -72,6 +72,7 @@ import Foundation
     func file(possbilyInvalidPath: String) -> FileProtocol?
     func folder(path: String) throws  -> FolderProtocol
     func folder(possbilyInvalidPath: String) -> FolderProtocol?
+    func changeCurrentDirectory(to folder: FolderProtocol)
     func cacheFolder() throws  -> Folder
     // sourcery:end
 // type.annotations.AutoGenerateProtocol for FileSystem end
