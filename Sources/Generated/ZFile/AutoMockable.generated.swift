@@ -1,12 +1,9 @@
 import Foundation
-import SignPost
-import SourceryAutoProtocols
 import ZFile
 
 
 // Generated using Sourcery 0.15.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
-
 
 
 
@@ -164,6 +161,16 @@ open class FileProtocolMock: FileProtocol {
       set(value) { underlyingDescription = value }
   }
   public  var underlyingDescription: String = "AutoMockable filled value"
+  public  var kind: FileSystem.Item.Kind {
+      get { return underlyingKind }
+      set(value) { underlyingKind = value }
+  }
+  public  var underlyingKind: FileSystem.Item.Kind!
+  public  var fileManager: FileManager {
+      get { return underlyingFileManager }
+      set(value) { underlyingFileManager = value }
+  }
+  public  var underlyingFileManager: FileManager!
 
 
   // MARK: - <readAllLines> - parameters
@@ -202,6 +209,51 @@ open class FileProtocolMock: FileProtocol {
               let error = SourceryMockError.implementErrorCaseFor(message)
 
               // You should implement [String]
+
+              throw error
+          }
+          return returnValue
+      }
+
+      return try closureReturn()
+  }
+
+  // MARK: - <url> - parameters
+
+  public var urlThrowableError: Error?
+  public var urlCallsCount = 0
+  public var urlCalled: Bool {
+    return urlCallsCount > 0
+  }
+  public var urlReturnValue: URL?
+
+  // MARK: - <url> - closure mocks
+
+  public var urlClosure: (() throws  -> URL)? = nil
+
+
+
+  // MARK: - <url> - method mocked
+
+  open func url() throws -> URL {
+
+
+      // <url> - Throwable method implementation
+
+    if let error = urlThrowableError {
+        throw error
+    }
+
+      urlCallsCount += 1
+
+      // <url> - Return Value mock implementation
+
+      guard let closureReturn = urlClosure else {
+          guard let returnValue = urlReturnValue else {
+              let message = "No returnValue implemented for urlClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement URL
 
               throw error
           }
@@ -299,6 +351,53 @@ open class FileProtocolMock: FileProtocol {
       }
 
       return try closureReturn()
+  }
+
+  // MARK: - <readAsString> - parameters
+
+  public var readAsStringEncodingThrowableError: Error?
+  public var readAsStringEncodingCallsCount = 0
+  public var readAsStringEncodingCalled: Bool {
+    return readAsStringEncodingCallsCount > 0
+  }
+  public var readAsStringEncodingReceivedEncoding: String.Encoding?
+  public var readAsStringEncodingReturnValue: String?
+
+  // MARK: - <readAsString> - closure mocks
+
+  public var readAsStringEncodingClosure: ((String.Encoding) throws  -> String)? = nil
+
+
+
+  // MARK: - <readAsString> - method mocked
+
+  open func readAsString(encoding: String.Encoding) throws -> String {
+
+
+      // <readAsString> - Throwable method implementation
+
+    if let error = readAsStringEncodingThrowableError {
+        throw error
+    }
+
+      readAsStringEncodingCallsCount += 1
+      readAsStringEncodingReceivedEncoding = encoding
+
+      // <readAsString> - Return Value mock implementation
+
+      guard let closureReturn = readAsStringEncodingClosure else {
+          guard let returnValue = readAsStringEncodingReturnValue else {
+              let message = "No returnValue implemented for readAsStringEncodingClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement String
+
+              throw error
+          }
+          return returnValue
+      }
+
+      return try closureReturn(encoding)
   }
 
   // MARK: - <readAsInt> - parameters
@@ -836,6 +935,105 @@ open class FileProtocolMock: FileProtocol {
         try deleteClosure?()
 
   }
+
+  // MARK: - <loadModificationDate> - parameters
+
+  public var loadModificationDateCallsCount = 0
+  public var loadModificationDateCalled: Bool {
+    return loadModificationDateCallsCount > 0
+  }
+  public var loadModificationDateReturnValue: Date?
+
+  // MARK: - <loadModificationDate> - closure mocks
+
+  public var loadModificationDateClosure: (()  -> Date)? = nil
+
+
+
+  // MARK: - <loadModificationDate> - method mocked
+
+  open func loadModificationDate() -> Date {
+
+      loadModificationDateCallsCount += 1
+
+      // <loadModificationDate> - Return Value mock implementation
+
+      guard let closureReturn = loadModificationDateClosure else {
+          guard let returnValue = loadModificationDateReturnValue else {
+              let message = "No returnValue implemented for loadModificationDateClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement Date
+
+              print("❌ \(error)")
+
+              fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
+          }
+          return returnValue
+      }
+
+      return closureReturn()
+  }
+}
+
+
+// MARK: - FileSystemIterableMock
+
+open class FileSystemIterableMock: FileSystemIterable {
+
+
+
+
+  // MARK: - <init> - parameters
+
+  public var initThrowableError: Error?
+
+  // MARK: - <init> - closure mocks
+
+  public var initClosure: (() throws  -> Void)? = nil
+
+
+  // MARK: - <init> - initializer mocked
+
+  public required init() throws {
+     try? initClosure?()
+  }
+
+
+  // MARK: - <init> - parameters
+
+  public var initPathThrowableError: Error?
+  public var initPathReceivedPath: String?
+
+  // MARK: - <init> - closure mocks
+
+  public var initPathClosure: ((String) throws  -> Void)? = nil
+
+
+  // MARK: - <init> - initializer mocked
+
+  public required init(path: String) throws {
+      initPathReceivedPath = path
+     try? initPathClosure?(path)
+  }
+
+
+  // MARK: - <init?> - parameters
+
+  public var initPossbilyInvalidPathReceivedPossbilyInvalidPath: String?
+
+  // MARK: - <init?> - closure mocks
+
+  public var initPossbilyInvalidPathClosure: ((String)  -> Void)? = nil
+
+
+  // MARK: - <init?> - initializer mocked
+
+  public required init?(possbilyInvalidPath: String) {
+      initPossbilyInvalidPathReceivedPossbilyInvalidPath = possbilyInvalidPath
+    initPossbilyInvalidPathClosure?(possbilyInvalidPath)
+  }
+
 }
 
 
@@ -843,7 +1041,18 @@ open class FileProtocolMock: FileProtocol {
 
 open class FileSystemProtocolMock: FileSystemProtocol {
 
+    public init() {}
 
+  public static var shared: FileSystem {
+      get { return underlyingShared }
+      set(value) { underlyingShared = value }
+  }
+  public static var underlyingShared: FileSystem!
+  public  var fileManager: FileManager {
+      get { return underlyingFileManager }
+      set(value) { underlyingFileManager = value }
+  }
+  public  var underlyingFileManager: FileManager!
   public  var temporaryFolder: Folder {
       get { return underlyingTemporaryFolder }
       set(value) { underlyingTemporaryFolder = value }
@@ -859,38 +1068,8 @@ open class FileSystemProtocolMock: FileSystemProtocol {
       set(value) { underlyingCurrentFolder = value }
   }
   public  var underlyingCurrentFolder: Folder!
-
-
-  // MARK: - <init> - parameters
-
-
-  // MARK: - <init> - closure mocks
-
-  public var initClosure: (()  -> Void)? = nil
-
-
-  // MARK: - <init> - initializer mocked
-
-  public required init() {
-    initClosure?()
-  }
-
-
-  // MARK: - <init> - parameters
-
-  public var initUsingReceivedFileManager: FileManager?
-
-  // MARK: - <init> - closure mocks
-
-  public var initUsingClosure: ((FileManager)  -> Void)? = nil
-
-
-  // MARK: - <init> - initializer mocked
-
-  public required init(using fileManager: FileManager) {
-      initUsingReceivedFileManager = fileManager
-    initUsingClosure?(fileManager)
-  }
+  public var documentFolder: Folder?
+  public var libraryFolder: Folder?
 
 
   // MARK: - <createFile> - parameters
@@ -1215,6 +1394,254 @@ open class FileSystemProtocolMock: FileSystemProtocol {
 
       return closureReturn(path)
   }
+
+  // MARK: - <file> - parameters
+
+  public var filePathThrowableError: Error?
+  public var filePathCallsCount = 0
+  public var filePathCalled: Bool {
+    return filePathCallsCount > 0
+  }
+  public var filePathReceivedPath: String?
+  public var filePathReturnValue: FileProtocol?
+
+  // MARK: - <file> - closure mocks
+
+  public var filePathClosure: ((String) throws  -> FileProtocol)? = nil
+
+
+
+  // MARK: - <file> - method mocked
+
+  open func file(path: String) throws -> FileProtocol {
+
+
+      // <file> - Throwable method implementation
+
+    if let error = filePathThrowableError {
+        throw error
+    }
+
+      filePathCallsCount += 1
+      filePathReceivedPath = path
+
+      // <file> - Return Value mock implementation
+
+      guard let closureReturn = filePathClosure else {
+          guard let returnValue = filePathReturnValue else {
+              let message = "No returnValue implemented for filePathClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement FileProtocol
+
+              throw error
+          }
+          return returnValue
+      }
+
+      return try closureReturn(path)
+  }
+
+  // MARK: - <file> - parameters
+
+  public var filePossbilyInvalidPathCallsCount = 0
+  public var filePossbilyInvalidPathCalled: Bool {
+    return filePossbilyInvalidPathCallsCount > 0
+  }
+  public var filePossbilyInvalidPathReceivedPossbilyInvalidPath: String?
+  public var filePossbilyInvalidPathReturnValue: FileProtocol??
+
+  // MARK: - <file> - closure mocks
+
+  public var filePossbilyInvalidPathClosure: ((String)  -> FileProtocol?)? = nil
+
+
+
+  // MARK: - <file> - method mocked
+
+  open func file(possbilyInvalidPath: String) -> FileProtocol? {
+
+      filePossbilyInvalidPathCallsCount += 1
+      filePossbilyInvalidPathReceivedPossbilyInvalidPath = possbilyInvalidPath
+
+      // <file> - Return Value mock implementation
+
+      guard let closureReturn = filePossbilyInvalidPathClosure else {
+          guard let returnValue = filePossbilyInvalidPathReturnValue else {
+              let message = "No returnValue implemented for filePossbilyInvalidPathClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement FileProtocol?
+
+              print("❌ \(error)")
+
+              return nil
+          }
+          return returnValue
+      }
+
+      return closureReturn(possbilyInvalidPath)
+  }
+
+  // MARK: - <folder> - parameters
+
+  public var folderPathThrowableError: Error?
+  public var folderPathCallsCount = 0
+  public var folderPathCalled: Bool {
+    return folderPathCallsCount > 0
+  }
+  public var folderPathReceivedPath: String?
+  public var folderPathReturnValue: FolderProtocol?
+
+  // MARK: - <folder> - closure mocks
+
+  public var folderPathClosure: ((String) throws  -> FolderProtocol)? = nil
+
+
+
+  // MARK: - <folder> - method mocked
+
+  open func folder(path: String) throws -> FolderProtocol {
+
+
+      // <folder> - Throwable method implementation
+
+    if let error = folderPathThrowableError {
+        throw error
+    }
+
+      folderPathCallsCount += 1
+      folderPathReceivedPath = path
+
+      // <folder> - Return Value mock implementation
+
+      guard let closureReturn = folderPathClosure else {
+          guard let returnValue = folderPathReturnValue else {
+              let message = "No returnValue implemented for folderPathClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement FolderProtocol
+
+              throw error
+          }
+          return returnValue
+      }
+
+      return try closureReturn(path)
+  }
+
+  // MARK: - <folder> - parameters
+
+  public var folderPossbilyInvalidPathCallsCount = 0
+  public var folderPossbilyInvalidPathCalled: Bool {
+    return folderPossbilyInvalidPathCallsCount > 0
+  }
+  public var folderPossbilyInvalidPathReceivedPossbilyInvalidPath: String?
+  public var folderPossbilyInvalidPathReturnValue: FolderProtocol??
+
+  // MARK: - <folder> - closure mocks
+
+  public var folderPossbilyInvalidPathClosure: ((String)  -> FolderProtocol?)? = nil
+
+
+
+  // MARK: - <folder> - method mocked
+
+  open func folder(possbilyInvalidPath: String) -> FolderProtocol? {
+
+      folderPossbilyInvalidPathCallsCount += 1
+      folderPossbilyInvalidPathReceivedPossbilyInvalidPath = possbilyInvalidPath
+
+      // <folder> - Return Value mock implementation
+
+      guard let closureReturn = folderPossbilyInvalidPathClosure else {
+          guard let returnValue = folderPossbilyInvalidPathReturnValue else {
+              let message = "No returnValue implemented for folderPossbilyInvalidPathClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement FolderProtocol?
+
+              print("❌ \(error)")
+
+              return nil
+          }
+          return returnValue
+      }
+
+      return closureReturn(possbilyInvalidPath)
+  }
+
+  // MARK: - <changeCurrentDirectory> - parameters
+
+  public var changeCurrentDirectoryToCallsCount = 0
+  public var changeCurrentDirectoryToCalled: Bool {
+    return changeCurrentDirectoryToCallsCount > 0
+  }
+  public var changeCurrentDirectoryToReceivedFolder: FolderProtocol?
+
+  // MARK: - <changeCurrentDirectory> - closure mocks
+
+  public var changeCurrentDirectoryToClosure: ((FolderProtocol)  -> Void)? = nil
+
+
+
+  // MARK: - <changeCurrentDirectory> - method mocked
+
+  open func changeCurrentDirectory(to folder: FolderProtocol) {
+
+      changeCurrentDirectoryToCallsCount += 1
+      changeCurrentDirectoryToReceivedFolder = folder
+
+      // <changeCurrentDirectory> - Void return mock implementation
+
+        changeCurrentDirectoryToClosure?(folder)
+
+  }
+
+  // MARK: - <cacheFolder> - parameters
+
+  public var cacheFolderThrowableError: Error?
+  public var cacheFolderCallsCount = 0
+  public var cacheFolderCalled: Bool {
+    return cacheFolderCallsCount > 0
+  }
+  public var cacheFolderReturnValue: Folder?
+
+  // MARK: - <cacheFolder> - closure mocks
+
+  public var cacheFolderClosure: (() throws  -> Folder)? = nil
+
+
+
+  // MARK: - <cacheFolder> - method mocked
+
+  open func cacheFolder() throws -> Folder {
+
+
+      // <cacheFolder> - Throwable method implementation
+
+    if let error = cacheFolderThrowableError {
+        throw error
+    }
+
+      cacheFolderCallsCount += 1
+
+      // <cacheFolder> - Return Value mock implementation
+
+      guard let closureReturn = cacheFolderClosure else {
+          guard let returnValue = cacheFolderReturnValue else {
+              let message = "No returnValue implemented for cacheFolderClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement Folder
+
+              throw error
+          }
+          return returnValue
+      }
+
+      return try closureReturn()
+  }
 }
 
 
@@ -1223,6 +1650,31 @@ open class FileSystemProtocolMock: FileSystemProtocol {
 open class FolderProtocolMock: FolderProtocol {
 
 
+  public  var files: FileSystemSequence<File> {
+      get { return underlyingFiles }
+      set(value) { underlyingFiles = value }
+  }
+  public  var underlyingFiles: FileSystemSequence<File>!
+  public  var subfolders: FileSystemSequence<Folder> {
+      get { return underlyingSubfolders }
+      set(value) { underlyingSubfolders = value }
+  }
+  public  var underlyingSubfolders: FileSystemSequence<Folder>!
+  public static var current: Folder {
+      get { return underlyingCurrent }
+      set(value) { underlyingCurrent = value }
+  }
+  public static var underlyingCurrent: Folder!
+  public static var home: Folder {
+      get { return underlyingHome }
+      set(value) { underlyingHome = value }
+  }
+  public static var underlyingHome: Folder!
+  public static var temporary: Folder {
+      get { return underlyingTemporary }
+      set(value) { underlyingTemporary = value }
+  }
+  public static var underlyingTemporary: Folder!
   public  var path: String {
       get { return underlyingPath }
       set(value) { underlyingPath = value }
@@ -1249,6 +1701,16 @@ open class FolderProtocolMock: FolderProtocol {
       set(value) { underlyingDescription = value }
   }
   public  var underlyingDescription: String = "AutoMockable filled value"
+  public  var kind: FileSystem.Item.Kind {
+      get { return underlyingKind }
+      set(value) { underlyingKind = value }
+  }
+  public  var underlyingKind: FileSystem.Item.Kind!
+  public  var fileManager: FileManager {
+      get { return underlyingFileManager }
+      set(value) { underlyingFileManager = value }
+  }
+  public  var underlyingFileManager: FileManager!
 
 
   // MARK: - <mostRecentSubfolder> - parameters
@@ -1332,6 +1794,51 @@ open class FolderProtocolMock: FolderProtocol {
               let error = SourceryMockError.implementErrorCaseFor(message)
 
               // You should implement FileProtocol
+
+              throw error
+          }
+          return returnValue
+      }
+
+      return try closureReturn()
+  }
+
+  // MARK: - <url> - parameters
+
+  public var urlThrowableError: Error?
+  public var urlCallsCount = 0
+  public var urlCalled: Bool {
+    return urlCallsCount > 0
+  }
+  public var urlReturnValue: URL?
+
+  // MARK: - <url> - closure mocks
+
+  public var urlClosure: (() throws  -> URL)? = nil
+
+
+
+  // MARK: - <url> - method mocked
+
+  open func url() throws -> URL {
+
+
+      // <url> - Throwable method implementation
+
+    if let error = urlThrowableError {
+        throw error
+    }
+
+      urlCallsCount += 1
+
+      // <url> - Return Value mock implementation
+
+      guard let closureReturn = urlClosure else {
+          guard let returnValue = urlReturnValue else {
+              let message = "No returnValue implemented for urlClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement URL
 
               throw error
           }
@@ -1846,6 +2353,100 @@ open class FolderProtocolMock: FolderProtocol {
       return try closureReturn(fileName, contents)
   }
 
+  // MARK: - <createFile> - parameters
+
+  public var createFileNamedContentsEncodingThrowableError: Error?
+  public var createFileNamedContentsEncodingCallsCount = 0
+  public var createFileNamedContentsEncodingCalled: Bool {
+    return createFileNamedContentsEncodingCallsCount > 0
+  }
+  public var createFileNamedContentsEncodingReceivedArguments: (fileName: (String), contents: (String), encoding: (String.Encoding))?
+  public var createFileNamedContentsEncodingReturnValue: FileProtocol?
+
+  // MARK: - <createFile> - closure mocks
+
+  public var createFileNamedContentsEncodingClosure: ((String, String, String.Encoding) throws  -> FileProtocol)? = nil
+
+
+
+  // MARK: - <createFile> - method mocked
+
+  open func createFile(named fileName: String, contents: String, encoding: String.Encoding) throws -> FileProtocol {
+
+
+      // <createFile> - Throwable method implementation
+
+    if let error = createFileNamedContentsEncodingThrowableError {
+        throw error
+    }
+
+      createFileNamedContentsEncodingCallsCount += 1
+      createFileNamedContentsEncodingReceivedArguments = (fileName: fileName, contents: contents, encoding: encoding)
+
+      // <createFile> - Return Value mock implementation
+
+      guard let closureReturn = createFileNamedContentsEncodingClosure else {
+          guard let returnValue = createFileNamedContentsEncodingReturnValue else {
+              let message = "No returnValue implemented for createFileNamedContentsEncodingClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement FileProtocol
+
+              throw error
+          }
+          return returnValue
+      }
+
+      return try closureReturn(fileName, contents, encoding)
+  }
+
+  // MARK: - <createFileIfNeeded> - parameters
+
+  public var createFileIfNeededWithNameContentsThrowableError: Error?
+  public var createFileIfNeededWithNameContentsCallsCount = 0
+  public var createFileIfNeededWithNameContentsCalled: Bool {
+    return createFileIfNeededWithNameContentsCallsCount > 0
+  }
+  public var createFileIfNeededWithNameContentsReceivedArguments: (fileName: (String), dataExpression: (() -> Data))?
+  public var createFileIfNeededWithNameContentsReturnValue: FileProtocol?
+
+  // MARK: - <createFileIfNeeded> - closure mocks
+
+  public var createFileIfNeededWithNameContentsClosure: ((String, @escaping () -> Data) throws  -> FileProtocol)? = nil
+
+
+
+  // MARK: - <createFileIfNeeded> - method mocked
+
+  open func createFileIfNeeded(withName fileName: String, contents dataExpression: @escaping () -> Data) throws -> FileProtocol {
+
+
+      // <createFileIfNeeded> - Throwable method implementation
+
+    if let error = createFileIfNeededWithNameContentsThrowableError {
+        throw error
+    }
+
+      createFileIfNeededWithNameContentsCallsCount += 1
+      createFileIfNeededWithNameContentsReceivedArguments = (fileName: fileName, dataExpression: dataExpression)
+
+      // <createFileIfNeeded> - Return Value mock implementation
+
+      guard let closureReturn = createFileIfNeededWithNameContentsClosure else {
+          guard let returnValue = createFileIfNeededWithNameContentsReturnValue else {
+              let message = "No returnValue implemented for createFileIfNeededWithNameContentsClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement FileProtocol
+
+              throw error
+          }
+          return returnValue
+      }
+
+      return try closureReturn(fileName, dataExpression)
+  }
+
   // MARK: - <createSubfolder> - parameters
 
   public var createSubfolderNamedThrowableError: Error?
@@ -1942,6 +2543,45 @@ open class FolderProtocolMock: FolderProtocol {
 
   // MARK: - <makeFileSequence> - parameters
 
+  public var makeFileSequenceCallsCount = 0
+  public var makeFileSequenceCalled: Bool {
+    return makeFileSequenceCallsCount > 0
+  }
+  public var makeFileSequenceReturnValue: FileSystemSequence<File>?
+
+  // MARK: - <makeFileSequence> - closure mocks
+
+  public var makeFileSequenceClosure: (()  -> FileSystemSequence<File>)? = nil
+
+
+
+  // MARK: - <makeFileSequence> - method mocked
+
+  open func makeFileSequence() -> FileSystemSequence<File> {
+
+      makeFileSequenceCallsCount += 1
+
+      // <makeFileSequence> - Return Value mock implementation
+
+      guard let closureReturn = makeFileSequenceClosure else {
+          guard let returnValue = makeFileSequenceReturnValue else {
+              let message = "No returnValue implemented for makeFileSequenceClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement FileSystemSequence<File>
+
+              print("❌ \(error)")
+
+              fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
+          }
+          return returnValue
+      }
+
+      return closureReturn()
+  }
+
+  // MARK: - <makeFileSequence> - parameters
+
   public var makeFileSequenceRecursiveIncludeHiddenCallsCount = 0
   public var makeFileSequenceRecursiveIncludeHiddenCalled: Bool {
     return makeFileSequenceRecursiveIncludeHiddenCallsCount > 0
@@ -1979,6 +2619,230 @@ open class FolderProtocolMock: FolderProtocol {
       }
 
       return closureReturn(recursive, includeHidden)
+  }
+
+  // MARK: - <makeSubfolderSequence> - parameters
+
+  public var makeSubfolderSequenceIncludeHiddenCallsCount = 0
+  public var makeSubfolderSequenceIncludeHiddenCalled: Bool {
+    return makeSubfolderSequenceIncludeHiddenCallsCount > 0
+  }
+  public var makeSubfolderSequenceIncludeHiddenReceivedIncludeHidden: Bool?
+  public var makeSubfolderSequenceIncludeHiddenReturnValue: FileSystemSequence<Folder>?
+
+  // MARK: - <makeSubfolderSequence> - closure mocks
+
+  public var makeSubfolderSequenceIncludeHiddenClosure: ((Bool)  -> FileSystemSequence<Folder>)? = nil
+
+
+
+  // MARK: - <makeSubfolderSequence> - method mocked
+
+  open func makeSubfolderSequence(includeHidden: Bool) -> FileSystemSequence<Folder> {
+
+      makeSubfolderSequenceIncludeHiddenCallsCount += 1
+      makeSubfolderSequenceIncludeHiddenReceivedIncludeHidden = includeHidden
+
+      // <makeSubfolderSequence> - Return Value mock implementation
+
+      guard let closureReturn = makeSubfolderSequenceIncludeHiddenClosure else {
+          guard let returnValue = makeSubfolderSequenceIncludeHiddenReturnValue else {
+              let message = "No returnValue implemented for makeSubfolderSequenceIncludeHiddenClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement FileSystemSequence<Folder>
+
+              print("❌ \(error)")
+
+              fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
+          }
+          return returnValue
+      }
+
+      return closureReturn(includeHidden)
+  }
+
+  // MARK: - <makeSubfolderSequence> - parameters
+
+  public var makeSubfolderSequenceCallsCount = 0
+  public var makeSubfolderSequenceCalled: Bool {
+    return makeSubfolderSequenceCallsCount > 0
+  }
+  public var makeSubfolderSequenceReturnValue: FileSystemSequence<Folder>?
+
+  // MARK: - <makeSubfolderSequence> - closure mocks
+
+  public var makeSubfolderSequenceClosure: (()  -> FileSystemSequence<Folder>)? = nil
+
+
+
+  // MARK: - <makeSubfolderSequence> - method mocked
+
+  open func makeSubfolderSequence() -> FileSystemSequence<Folder> {
+
+      makeSubfolderSequenceCallsCount += 1
+
+      // <makeSubfolderSequence> - Return Value mock implementation
+
+      guard let closureReturn = makeSubfolderSequenceClosure else {
+          guard let returnValue = makeSubfolderSequenceReturnValue else {
+              let message = "No returnValue implemented for makeSubfolderSequenceClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement FileSystemSequence<Folder>
+
+              print("❌ \(error)")
+
+              fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
+          }
+          return returnValue
+      }
+
+      return closureReturn()
+  }
+
+  // MARK: - <makeSubfolderSequence> - parameters
+
+  public var makeSubfolderSequenceRecursiveIncludeHiddenCallsCount = 0
+  public var makeSubfolderSequenceRecursiveIncludeHiddenCalled: Bool {
+    return makeSubfolderSequenceRecursiveIncludeHiddenCallsCount > 0
+  }
+  public var makeSubfolderSequenceRecursiveIncludeHiddenReceivedArguments: (recursive: (Bool), includeHidden: (Bool))?
+  public var makeSubfolderSequenceRecursiveIncludeHiddenReturnValue: FileSystemSequence<Folder>?
+
+  // MARK: - <makeSubfolderSequence> - closure mocks
+
+  public var makeSubfolderSequenceRecursiveIncludeHiddenClosure: ((Bool, Bool)  -> FileSystemSequence<Folder>)? = nil
+
+
+
+  // MARK: - <makeSubfolderSequence> - method mocked
+
+  open func makeSubfolderSequence(recursive: Bool, includeHidden: Bool) -> FileSystemSequence<Folder> {
+
+      makeSubfolderSequenceRecursiveIncludeHiddenCallsCount += 1
+      makeSubfolderSequenceRecursiveIncludeHiddenReceivedArguments = (recursive: recursive, includeHidden: includeHidden)
+
+      // <makeSubfolderSequence> - Return Value mock implementation
+
+      guard let closureReturn = makeSubfolderSequenceRecursiveIncludeHiddenClosure else {
+          guard let returnValue = makeSubfolderSequenceRecursiveIncludeHiddenReturnValue else {
+              let message = "No returnValue implemented for makeSubfolderSequenceRecursiveIncludeHiddenClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement FileSystemSequence<Folder>
+
+              print("❌ \(error)")
+
+              fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
+          }
+          return returnValue
+      }
+
+      return closureReturn(recursive, includeHidden)
+  }
+
+  // MARK: - <moveContents> - parameters
+
+  public var moveContentsToIncludeHiddenThrowableError: Error?
+  public var moveContentsToIncludeHiddenCallsCount = 0
+  public var moveContentsToIncludeHiddenCalled: Bool {
+    return moveContentsToIncludeHiddenCallsCount > 0
+  }
+  public var moveContentsToIncludeHiddenReceivedArguments: (newParent: (Folder), includeHidden: (Bool))?
+
+  // MARK: - <moveContents> - closure mocks
+
+  public var moveContentsToIncludeHiddenClosure: ((Folder, Bool) throws  -> Void)? = nil
+
+
+
+  // MARK: - <moveContents> - method mocked
+
+  open func moveContents(to newParent: Folder, includeHidden: Bool) throws {
+
+
+      // <moveContents> - Throwable method implementation
+
+    if let error = moveContentsToIncludeHiddenThrowableError {
+        throw error
+    }
+
+      moveContentsToIncludeHiddenCallsCount += 1
+      moveContentsToIncludeHiddenReceivedArguments = (newParent: newParent, includeHidden: includeHidden)
+
+      // <moveContents> - Void return mock implementation
+
+        try moveContentsToIncludeHiddenClosure?(newParent, includeHidden)
+
+  }
+
+  // MARK: - <empty> - parameters
+
+  public var emptyThrowableError: Error?
+  public var emptyCallsCount = 0
+  public var emptyCalled: Bool {
+    return emptyCallsCount > 0
+  }
+
+  // MARK: - <empty> - closure mocks
+
+  public var emptyClosure: (() throws  -> Void)? = nil
+
+
+
+  // MARK: - <empty> - method mocked
+
+  open func empty() throws {
+
+
+      // <empty> - Throwable method implementation
+
+    if let error = emptyThrowableError {
+        throw error
+    }
+
+      emptyCallsCount += 1
+
+      // <empty> - Void return mock implementation
+
+        try emptyClosure?()
+
+  }
+
+  // MARK: - <empty> - parameters
+
+  public var emptyIncludeHiddenThrowableError: Error?
+  public var emptyIncludeHiddenCallsCount = 0
+  public var emptyIncludeHiddenCalled: Bool {
+    return emptyIncludeHiddenCallsCount > 0
+  }
+  public var emptyIncludeHiddenReceivedIncludeHidden: Bool?
+
+  // MARK: - <empty> - closure mocks
+
+  public var emptyIncludeHiddenClosure: ((Bool) throws  -> Void)? = nil
+
+
+
+  // MARK: - <empty> - method mocked
+
+  open func empty(includeHidden: Bool) throws {
+
+
+      // <empty> - Throwable method implementation
+
+    if let error = emptyIncludeHiddenThrowableError {
+        throw error
+    }
+
+      emptyIncludeHiddenCallsCount += 1
+      emptyIncludeHiddenReceivedIncludeHidden = includeHidden
+
+      // <empty> - Void return mock implementation
+
+        try emptyIncludeHiddenClosure?(includeHidden)
+
   }
 
   // MARK: - <copy> - parameters
@@ -2026,51 +2890,6 @@ open class FolderProtocolMock: FolderProtocol {
       }
 
       return try closureReturn(folder)
-  }
-
-  // MARK: - <url> - parameters
-
-  public var urlThrowableError: Error?
-  public var urlCallsCount = 0
-  public var urlCalled: Bool {
-    return urlCallsCount > 0
-  }
-  public var urlReturnValue: URL?
-
-  // MARK: - <url> - closure mocks
-
-  public var urlClosure: (() throws  -> URL)? = nil
-
-
-
-  // MARK: - <url> - method mocked
-
-  open func url() throws -> URL {
-
-
-      // <url> - Throwable method implementation
-
-    if let error = urlThrowableError {
-        throw error
-    }
-
-      urlCallsCount += 1
-
-      // <url> - Return Value mock implementation
-
-      guard let closureReturn = urlClosure else {
-          guard let returnValue = urlReturnValue else {
-              let message = "No returnValue implemented for urlClosure"
-              let error = SourceryMockError.implementErrorCaseFor(message)
-
-              // You should implement URL
-
-              throw error
-          }
-          return returnValue
-      }
-
-      return try closureReturn()
   }
 
   // MARK: - <init> - parameters
@@ -2306,6 +3125,45 @@ open class FolderProtocolMock: FolderProtocol {
         try deleteClosure?()
 
   }
+
+  // MARK: - <loadModificationDate> - parameters
+
+  public var loadModificationDateCallsCount = 0
+  public var loadModificationDateCalled: Bool {
+    return loadModificationDateCallsCount > 0
+  }
+  public var loadModificationDateReturnValue: Date?
+
+  // MARK: - <loadModificationDate> - closure mocks
+
+  public var loadModificationDateClosure: (()  -> Date)? = nil
+
+
+
+  // MARK: - <loadModificationDate> - method mocked
+
+  open func loadModificationDate() -> Date {
+
+      loadModificationDateCallsCount += 1
+
+      // <loadModificationDate> - Return Value mock implementation
+
+      guard let closureReturn = loadModificationDateClosure else {
+          guard let returnValue = loadModificationDateReturnValue else {
+              let message = "No returnValue implemented for loadModificationDateClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement Date
+
+              print("❌ \(error)")
+
+              fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
+          }
+          return returnValue
+      }
+
+      return closureReturn()
+  }
 }
 
 
@@ -2340,6 +3198,16 @@ open class ItemProtocolMock: ItemProtocol {
       set(value) { underlyingDescription = value }
   }
   public  var underlyingDescription: String = "AutoMockable filled value"
+  public  var kind: FileSystem.Item.Kind {
+      get { return underlyingKind }
+      set(value) { underlyingKind = value }
+  }
+  public  var underlyingKind: FileSystem.Item.Kind!
+  public  var fileManager: FileManager {
+      get { return underlyingFileManager }
+      set(value) { underlyingFileManager = value }
+  }
+  public  var underlyingFileManager: FileManager!
 
 
   // MARK: - <parentFolder> - parameters
@@ -2524,8 +3392,74 @@ open class ItemProtocolMock: ItemProtocol {
         try deleteClosure?()
 
   }
+
+  // MARK: - <loadModificationDate> - parameters
+
+  public var loadModificationDateCallsCount = 0
+  public var loadModificationDateCalled: Bool {
+    return loadModificationDateCallsCount > 0
+  }
+  public var loadModificationDateReturnValue: Date?
+
+  // MARK: - <loadModificationDate> - closure mocks
+
+  public var loadModificationDateClosure: (()  -> Date)? = nil
+
+
+
+  // MARK: - <loadModificationDate> - method mocked
+
+  open func loadModificationDate() -> Date {
+
+      loadModificationDateCallsCount += 1
+
+      // <loadModificationDate> - Return Value mock implementation
+
+      guard let closureReturn = loadModificationDateClosure else {
+          guard let returnValue = loadModificationDateReturnValue else {
+              let message = "No returnValue implemented for loadModificationDateClosure"
+              let error = SourceryMockError.implementErrorCaseFor(message)
+
+              // You should implement Date
+
+              print("❌ \(error)")
+
+              fatalError("\(self) \(#function) should be mocked with return value or be able to throw")
+          }
+          return returnValue
+      }
+
+      return closureReturn()
+  }
 }
 
 
 // MARK: - OBJECTIVE-C
 
+
+
+// MARK: - Sourcery Errors
+
+public enum SourceryMockError: Swift.Error, Hashable
+{
+    case implementErrorCaseFor(String)
+    case subclassMockBeforeUsing(String)
+
+    public var debugDescription: String
+    {
+        switch self
+        {
+        case let .implementErrorCaseFor(message):
+            return """
+            🧙‍♂️ SourceryMockError.implementErrorCaseFor:
+            message: \(message)
+            """
+        case let .subclassMockBeforeUsing(message):
+            return """
+            \n
+            🧙‍♂️ SourceryMockError.subclassMockBeforeUsing:
+            message: \(message)
+            """
+        }
+    }
+}
