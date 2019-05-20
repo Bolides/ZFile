@@ -14,3 +14,4 @@ xcuserdata
 /ZFile.xcodeproj
 /Sources/.sourcery-FoundationGenericHelper.yml
 /Sources/.sourcery-ZFile.yml
+.build

@@ -82,7 +82,7 @@ open class Folder: FileSystem.Item, FolderProtocol, CustomDebugStringConvertible
         case noSubfolders(inFolder: FolderProtocol)
         case invalid(path: String)
 
-        @available(*, deprecated: 1.4.0, renamed: "creatingFolderFailed")
+        @available(*, deprecated, renamed: "creatingFolderFailed")
         case creatingSubfolderFailed
 
         /// A string describing the error
